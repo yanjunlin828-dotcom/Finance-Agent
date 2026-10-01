@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0.0",
+  "top_k_pages": 3,
+  "max_evidence_windows": 5,
+  "window_radius_lines": 2,
+  "maximum_window_characters": 1800,
+  "score_weights": {
+    "required": 10.0,
+    "optional": 3.0,
+    "context": 6.0,
+    "question_exact": 2.0,
+    "forbidden": -15.0
+  },
+  "maximum_occurrences_per_term": 3,
+  "rules": [
+    {
+      "rule_id": "operating_cash_flow_explanation",
+      "priority": 100,
+      "triggers": ["解释", "原因", "下降"],
+      "must_also_contain_any": ["经营活动现金流量净额", "经营现金流"],
+      "required_terms": ["经营活动产生的现金流量净额"],
+      "optional_terms": ["采购商品支付的货款增加", "同比下降", "变动原因", "订单需求"],
+      "context_terms": ["现金流", "变动说明"],
+      "forbidden_terms": []
+    },
+    {
+      "rule_id": "operating_cash_flow_numeric",
+      "priority": 70,
+      "triggers": ["经营活动产生的现金流量净额", "经营现金流"],
+      "must_also_contain_any": [],
+      "required_terms": ["经营活动产生的现金流量净额"],
+      "optional_terms": ["经营活动现金流入小计", "经营活动现金流出小计"],
+      "context_terms": ["合并现金流量表", "单位:元", "2024年度"],
+      "forbidden_terms": ["母公司现金流量表"]
+    },
+    {
+      "rule_id": "accounts_receivable_balance",
+      "priority": 70,
+      "triggers": ["应收账款"],
+      "must_also_contain_any": [],
+      "required_terms": ["应收账款"],
+      "optional_terms": ["流动资产", "期末余额", "2024年12月31日"],
+      "context_terms": ["合并资产负债表", "单位:元"],
+      "adjacency_bridge_terms": ["合并资产负债表"],
+      "forbidden_terms": ["母公司资产负债表"]
+    },
+    {
+      "rule_id": "main_business_and_products",
+      "priority": 70,
+      "triggers": ["主要业务", "主要产品", "主营业务", "业务和产品"],
+      "must_also_contain_any": [],
+      "required_terms": ["报告期内公司从事的主要业务"],
+      "optional_terms": ["半导体基础产品", "电子工艺装备", "电子元器件", "半导体装备", "真空及新能源装备"],
+      "context_terms": ["主要业务"],
+      "forbidden_terms": []
+    },
+    {
+      "rule_id": "revenue_numeric",
+      "priority": 60,
+      "triggers": ["营业收入", "营业总收入"],
+      "must_also_contain_any": [],
+      "required_terms": ["营业收入"],
+      "optional_terms": ["营业总收入", "2024年度"],
+      "context_terms": ["合并利润表", "单位:元"],
+      "forbidden_terms": ["母公司利润表"]
+    }
+  ]
+}

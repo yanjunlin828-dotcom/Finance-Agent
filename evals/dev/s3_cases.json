@@ -1,0 +1,501 @@
+{
+  "schema_version": "1.0.0",
+  "status": "FROZEN_BEFORE_RETRIEVAL_RESULTS",
+  "frozen_on": "2026-09-30",
+  "scope": "DEVELOPMENT_SET_NOT_HOLDOUT",
+  "label_method": "Source text read before retrieval; financial tables additionally rendered and visually checked; not user human-verification.",
+  "scoring_contract": "Top5 unique ranked parent pages. Macro necessary-page coverage is Recall@5; first answer-page rank is MRR@5. Expanded context Complete tracked separately; all 20 cases retained.",
+  "cases": [
+    {
+      "case_id": "S3-002371.SZ-2024-REVENUE",
+      "question": "根据合并利润表，2024年度和2023年度的营业收入分别是多少元？",
+      "company_id": "002371.SZ",
+      "reporting_year": 2024,
+      "as_of_date": "2025-04-30",
+      "corpus_snapshot_id": "s3-semiconductor-equipment-ar-v1",
+      "document_id": "cninfo-002371-2024-ar-1223309278",
+      "question_type": "NUMERIC",
+      "source_review_status": "SOURCE_TEXT_CHECKED",
+      "necessary_pages": [
+        {
+          "pdf_page": 95,
+          "excerpts": [
+            "合并利润表",
+            "2024年度 2023年度",
+            "29,838,069,162.26 22,079,458,092.37"
+          ]
+        }
+      ],
+      "answer_pages": [
+        95
+      ]
+    },
+    {
+      "case_id": "S3-002371.SZ-2024-OCF",
+      "question": "根据合并现金流量表，2024年度和2023年度的经营活动产生的现金流量净额分别是多少元？",
+      "company_id": "002371.SZ",
+      "reporting_year": 2024,
+      "as_of_date": "2025-04-30",
+      "corpus_snapshot_id": "s3-semiconductor-equipment-ar-v1",
+      "document_id": "cninfo-002371-2024-ar-1223309278",
+      "question_type": "NUMERIC",
+      "source_review_status": "SOURCE_TEXT_CHECKED",
+      "necessary_pages": [
+        {
+          "pdf_page": 99,
+          "excerpts": [
+            "合并现金流量表",
+            "2024年度 2023年度",
+            "1,573,165,054.27 2,365,007,734.54"
+          ]
+        }
+      ],
+      "answer_pages": [
+        99
+      ]
+    },
+    {
+      "case_id": "S3-002371.SZ-2024-AR",
+      "question": "根据合并资产负债表，2024年末与2023年末应收账款列示账面价值是多少元？同时提供表头与单位。",
+      "company_id": "002371.SZ",
+      "reporting_year": 2024,
+      "as_of_date": "2025-04-30",
+      "corpus_snapshot_id": "s3-semiconductor-equipment-ar-v1",
+      "document_id": "cninfo-002371-2024-ar-1223309278",
+      "question_type": "NUMERIC",
+      "source_review_status": "SOURCE_TEXT_CHECKED",
+      "necessary_pages": [
+        {
+          "pdf_page": 90,
+          "excerpts": [
+            "合并资产负债表",
+            "2024年12月31日",
+            "单位:元"
+          ]
+        },
+        {
+          "pdf_page": 91,
+          "excerpts": [
+            "项目 期末余额 期初余额",
+            "应收账款 6,044,952,733.01 3,767,378,764.55"
+          ]
+        }
+      ],
+      "answer_pages": [
+        91
+      ]
+    },
+    {
+      "case_id": "S3-002371.SZ-2024-BUSINESS",
+      "question": "公司主要业务是什么，主要产品有哪些？",
+      "company_id": "002371.SZ",
+      "reporting_year": 2024,
+      "as_of_date": "2025-04-30",
+      "corpus_snapshot_id": "s3-semiconductor-equipment-ar-v1",
+      "document_id": "cninfo-002371-2024-ar-1223309278",
+      "question_type": "BUSINESS",
+      "source_review_status": "SOURCE_TEXT_CHECKED",
+      "necessary_pages": [
+        {
+          "pdf_page": 16,
+          "excerpts": [
+            "主要产品为电子工艺装备和电子元器件",
+            "刻蚀、薄膜沉积、热处理、湿法、离子注入"
+          ]
+        }
+      ],
+      "answer_pages": [
+        16
+      ]
+    },
+    {
+      "case_id": "S3-002371.SZ-2024-EXPLANATION",
+      "question": "公司在年报中如何解释2024年经营活动产生的现金流量净额下降？",
+      "company_id": "002371.SZ",
+      "reporting_year": 2024,
+      "as_of_date": "2025-04-30",
+      "corpus_snapshot_id": "s3-semiconductor-equipment-ar-v1",
+      "document_id": "cninfo-002371-2024-ar-1223309278",
+      "question_type": "EXPLANATION",
+      "source_review_status": "SOURCE_TEXT_CHECKED",
+      "necessary_pages": [
+        {
+          "pdf_page": 31,
+          "excerpts": [
+            "比上年同期减少33.48%",
+            "采购商品支付的货款增加"
+          ]
+        }
+      ],
+      "answer_pages": [
+        31
+      ]
+    },
+    {
+      "case_id": "S3-688072.SH-2023-REVENUE",
+      "question": "根据合并利润表，2023年度和2022年度的营业收入分别是多少元？",
+      "company_id": "688072.SH",
+      "reporting_year": 2023,
+      "as_of_date": "2025-04-30",
+      "corpus_snapshot_id": "s3-semiconductor-equipment-ar-v1",
+      "document_id": "cninfo-688072-2023-ar-1219919649",
+      "question_type": "NUMERIC",
+      "source_review_status": "SOURCE_TEXT_CHECKED",
+      "necessary_pages": [
+        {
+          "pdf_page": 157,
+          "excerpts": [
+            "合并利润表",
+            "2023年度 2022年度",
+            "2,704,974,035.48 1,705,562,723.82"
+          ]
+        }
+      ],
+      "answer_pages": [
+        157
+      ]
+    },
+    {
+      "case_id": "S3-688072.SH-2023-OCF",
+      "question": "根据合并现金流量表，2023年度和2022年度的经营活动产生的现金流量净额分别是多少元？",
+      "company_id": "688072.SH",
+      "reporting_year": 2023,
+      "as_of_date": "2025-04-30",
+      "corpus_snapshot_id": "s3-semiconductor-equipment-ar-v1",
+      "document_id": "cninfo-688072-2023-ar-1219919649",
+      "question_type": "NUMERIC",
+      "source_review_status": "SOURCE_TEXT_CHECKED",
+      "necessary_pages": [
+        {
+          "pdf_page": 160,
+          "excerpts": [
+            "合并现金流量表",
+            "2023年度 2022年度",
+            "单位:元 币种:人民币"
+          ]
+        },
+        {
+          "pdf_page": 161,
+          "excerpts": [
+            "-1,657,342,652.77 247,625,867.82",
+            "量净额"
+          ]
+        }
+      ],
+      "answer_pages": [
+        161
+      ]
+    },
+    {
+      "case_id": "S3-688072.SH-2023-BUSINESS",
+      "question": "公司主要业务是什么，薄膜设备主要产品有哪些？",
+      "company_id": "688072.SH",
+      "reporting_year": 2023,
+      "as_of_date": "2025-04-30",
+      "corpus_snapshot_id": "s3-semiconductor-equipment-ar-v1",
+      "document_id": "cninfo-688072-2023-ar-1219919649",
+      "question_type": "BUSINESS",
+      "source_review_status": "SOURCE_TEXT_CHECKED",
+      "necessary_pages": [
+        {
+          "pdf_page": 32,
+          "excerpts": [
+            "高端半导体专用设备的研发、生产、销售与技术服务",
+            "PECVD、ALD、SACVD、HDPCVD"
+          ]
+        }
+      ],
+      "answer_pages": [
+        32
+      ]
+    },
+    {
+      "case_id": "S3-688072.SH-2023-EXPLANATION",
+      "question": "公司在年报中如何解释2023年经营活动产生的现金流量净额变动？",
+      "company_id": "688072.SH",
+      "reporting_year": 2023,
+      "as_of_date": "2025-04-30",
+      "corpus_snapshot_id": "s3-semiconductor-equipment-ar-v1",
+      "document_id": "cninfo-688072-2023-ar-1219919649",
+      "question_type": "EXPLANATION",
+      "source_review_status": "SOURCE_TEXT_CHECKED",
+      "necessary_pages": [
+        {
+          "pdf_page": 56,
+          "excerpts": [
+            "经营活动产生的现金流量净额变动原因说明",
+            "材料采购备货、发出商"
+          ]
+        }
+      ],
+      "answer_pages": [
+        56
+      ]
+    },
+    {
+      "case_id": "S3-688072.SH-2023-RISK",
+      "question": "年报如何披露技术创新风险及研发不能契合客户需求的影响？",
+      "company_id": "688072.SH",
+      "reporting_year": 2023,
+      "as_of_date": "2025-04-30",
+      "corpus_snapshot_id": "s3-semiconductor-equipment-ar-v1",
+      "document_id": "cninfo-688072-2023-ar-1219919649",
+      "question_type": "RISK",
+      "source_review_status": "SOURCE_TEXT_CHECKED",
+      "necessary_pages": [
+        {
+          "pdf_page": 54,
+          "excerpts": [
+            "技术创新风险",
+            "技术创新产品不能契合客户需求"
+          ]
+        }
+      ],
+      "answer_pages": [
+        54
+      ]
+    },
+    {
+      "case_id": "S3-688072.SH-2024-REVENUE",
+      "question": "根据合并利润表，2024年度和2023年度的营业收入分别是多少元？",
+      "company_id": "688072.SH",
+      "reporting_year": 2024,
+      "as_of_date": "2025-04-30",
+      "corpus_snapshot_id": "s3-semiconductor-equipment-ar-v1",
+      "document_id": "cninfo-688072-2024-ar-1223286833",
+      "question_type": "NUMERIC",
+      "source_review_status": "SOURCE_TEXT_CHECKED",
+      "necessary_pages": [
+        {
+          "pdf_page": 156,
+          "excerpts": [
+            "合并利润表",
+            "2024年度 2023年度",
+            "4,103,453,853.41 2,704,974,035.48"
+          ]
+        }
+      ],
+      "answer_pages": [
+        156
+      ]
+    },
+    {
+      "case_id": "S3-688072.SH-2024-OCF",
+      "question": "根据合并现金流量表，2024年度和2023年度的经营活动产生的现金流量净额分别是多少元？",
+      "company_id": "688072.SH",
+      "reporting_year": 2024,
+      "as_of_date": "2025-04-30",
+      "corpus_snapshot_id": "s3-semiconductor-equipment-ar-v1",
+      "document_id": "cninfo-688072-2024-ar-1223286833",
+      "question_type": "NUMERIC",
+      "source_review_status": "SOURCE_TEXT_CHECKED",
+      "necessary_pages": [
+        {
+          "pdf_page": 159,
+          "excerpts": [
+            "合并现金流量表",
+            "2024年度 2023年度",
+            "单位:元 币种:人民币"
+          ]
+        },
+        {
+          "pdf_page": 160,
+          "excerpts": [
+            "-282,525,331.06 -1,657,342,652.77",
+            "量净额"
+          ]
+        }
+      ],
+      "answer_pages": [
+        160
+      ]
+    },
+    {
+      "case_id": "S3-688072.SH-2024-BUSINESS",
+      "question": "公司主要业务是什么，薄膜设备与先进键合设备主要产品有哪些？",
+      "company_id": "688072.SH",
+      "reporting_year": 2024,
+      "as_of_date": "2025-04-30",
+      "corpus_snapshot_id": "s3-semiconductor-equipment-ar-v1",
+      "document_id": "cninfo-688072-2024-ar-1223286833",
+      "question_type": "BUSINESS",
+      "source_review_status": "SOURCE_TEXT_CHECKED",
+      "necessary_pages": [
+        {
+          "pdf_page": 31,
+          "excerpts": [
+            "高端半导体专用设备的研发、生产、销售与技术服务",
+            "PECVD、ALD、SACVD、HDPCVD、FlowableCVD"
+          ]
+        }
+      ],
+      "answer_pages": [
+        31
+      ]
+    },
+    {
+      "case_id": "S3-688072.SH-2024-EXPLANATION",
+      "question": "公司在年报中如何解释2024年经营活动产生的现金流量净额变动？",
+      "company_id": "688072.SH",
+      "reporting_year": 2024,
+      "as_of_date": "2025-04-30",
+      "corpus_snapshot_id": "s3-semiconductor-equipment-ar-v1",
+      "document_id": "cninfo-688072-2024-ar-1223286833",
+      "question_type": "EXPLANATION",
+      "source_review_status": "SOURCE_TEXT_CHECKED",
+      "necessary_pages": [
+        {
+          "pdf_page": 55,
+          "excerpts": [
+            "经营活动产生的现金流量净额变动原因说明",
+            "较上年同期增加263,048.18万元"
+          ]
+        }
+      ],
+      "answer_pages": [
+        55
+      ]
+    },
+    {
+      "case_id": "S3-688072.SH-2024-RISK",
+      "question": "年报如何披露产品验证周期延长可能影响收入确认及回款的风险？",
+      "company_id": "688072.SH",
+      "reporting_year": 2024,
+      "as_of_date": "2025-04-30",
+      "corpus_snapshot_id": "s3-semiconductor-equipment-ar-v1",
+      "document_id": "cninfo-688072-2024-ar-1223286833",
+      "question_type": "RISK",
+      "source_review_status": "SOURCE_TEXT_CHECKED",
+      "necessary_pages": [
+        {
+          "pdf_page": 53,
+          "excerpts": [
+            "收入确认及回款周期延后",
+            "验证周期延长"
+          ]
+        }
+      ],
+      "answer_pages": [
+        53
+      ]
+    },
+    {
+      "case_id": "S3-688082.SH-2024-REVENUE",
+      "question": "根据合并利润表，2024年度和2023年度的营业收入分别是多少元？",
+      "company_id": "688082.SH",
+      "reporting_year": 2024,
+      "as_of_date": "2025-04-30",
+      "corpus_snapshot_id": "s3-semiconductor-equipment-ar-v1",
+      "document_id": "cninfo-688082-2024-ar-1222651596",
+      "question_type": "NUMERIC",
+      "source_review_status": "SOURCE_TEXT_CHECKED",
+      "necessary_pages": [
+        {
+          "pdf_page": 130,
+          "excerpts": [
+            "合并利润表",
+            "2024年度 2023年度",
+            "5,617,740,375.66 3,888,342,742.05"
+          ]
+        }
+      ],
+      "answer_pages": [
+        130
+      ]
+    },
+    {
+      "case_id": "S3-688082.SH-2024-OCF",
+      "question": "根据合并现金流量表，2024年度和2023年度的经营活动产生的现金流量净额分别是多少元？",
+      "company_id": "688082.SH",
+      "reporting_year": 2024,
+      "as_of_date": "2025-04-30",
+      "corpus_snapshot_id": "s3-semiconductor-equipment-ar-v1",
+      "document_id": "cninfo-688082-2024-ar-1222651596",
+      "question_type": "NUMERIC",
+      "source_review_status": "SOURCE_TEXT_CHECKED",
+      "necessary_pages": [
+        {
+          "pdf_page": 134,
+          "excerpts": [
+            "合并现金流量表",
+            "2024年度 2023年度",
+            "1,216,142,991.74 -426,963,656.49"
+          ]
+        }
+      ],
+      "answer_pages": [
+        134
+      ]
+    },
+    {
+      "case_id": "S3-688082.SH-2024-BUSINESS",
+      "question": "公司主要业务是什么，半导体设备主要产品有哪些？",
+      "company_id": "688082.SH",
+      "reporting_year": 2024,
+      "as_of_date": "2025-04-30",
+      "corpus_snapshot_id": "s3-semiconductor-equipment-ar-v1",
+      "document_id": "cninfo-688082-2024-ar-1222651596",
+      "question_type": "BUSINESS",
+      "source_review_status": "SOURCE_TEXT_CHECKED",
+      "necessary_pages": [
+        {
+          "pdf_page": 17,
+          "excerpts": [
+            "半导体清洗设备、半导体电镀设备、立式炉管",
+            "无应力抛光设备"
+          ]
+        }
+      ],
+      "answer_pages": [
+        17
+      ]
+    },
+    {
+      "case_id": "S3-688082.SH-2024-EXPLANATION",
+      "question": "公司在年报中如何解释2024年经营活动产生的现金流量净额变动？",
+      "company_id": "688082.SH",
+      "reporting_year": 2024,
+      "as_of_date": "2025-04-30",
+      "corpus_snapshot_id": "s3-semiconductor-equipment-ar-v1",
+      "document_id": "cninfo-688082-2024-ar-1222651596",
+      "question_type": "EXPLANATION",
+      "source_review_status": "SOURCE_TEXT_CHECKED",
+      "necessary_pages": [
+        {
+          "pdf_page": 36,
+          "excerpts": [
+            "经营活动产生的现金流量净额变动原因说明",
+            "本期销售回款较上期增加",
+            "本期预收货款增加"
+          ]
+        }
+      ],
+      "answer_pages": [
+        36
+      ]
+    },
+    {
+      "case_id": "S3-688082.SH-2024-RISK",
+      "question": "年报如何披露技术研发方向、验收标准和关键零部件供应相关风险？",
+      "company_id": "688082.SH",
+      "reporting_year": 2024,
+      "as_of_date": "2025-04-30",
+      "corpus_snapshot_id": "s3-semiconductor-equipment-ar-v1",
+      "document_id": "cninfo-688082-2024-ar-1222651596",
+      "question_type": "RISK",
+      "source_review_status": "SOURCE_TEXT_CHECKED",
+      "necessary_pages": [
+        {
+          "pdf_page": 32,
+          "excerpts": [
+            "技术研发风险",
+            "技术研发投入无法取得预期效果"
+          ]
+        }
+      ],
+      "answer_pages": [
+        32
+      ]
+    }
+  ]
+}

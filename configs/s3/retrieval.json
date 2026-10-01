@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0.0",
+  "corpus_snapshot_id": "s3-semiconductor-equipment-ar-v1",
+  "chunker_version": "exact-span-line-window-v2",
+  "tokenizer_version": "jieba-0.42.1-finance-v1",
+  "embedding_model": "BAAI/bge-small-zh-v1.5",
+  "embedding_dimension": 512,
+  "distance": "Cosine",
+  "top_k": 5,
+  "candidate_k": 20,
+  "rrf_k": 60,
+  "max_chunk_characters": 400,
+  "overlap_lines": 2,
+  "document_type": "ANNUAL_REPORT_FULL",
+  "aliases": {
+    "002371.SZ": ["北方华创", "北方华创科技集团股份有限公司", "NAURA"],
+    "688072.SH": ["拓荆科技", "拓荆科技股份有限公司", "Piotech"],
+    "688082.SH": ["盛美上海", "盛美半导体设备（上海）股份有限公司", "ACM上海", "ACMR Shanghai"]
+  },
+  "query_expansions": {
+    "经营现金流": ["经营活动产生的现金流量净额", "经营活动现金流量净额"],
+    "研发投入": ["研发费用", "研发投入合计"],
+    "主营业务": ["主要业务", "主要产品"],
+    "应收账款": ["应收款项", "应收账款期末余额"]
+  },
+  "custom_terms": [
+    "北方华创", "拓荆科技", "盛美上海", "半导体设备", "薄膜沉积设备", "刻蚀设备",
+    "经营活动产生的现金流量净额", "营业收入", "应收账款", "研发投入", "合同负债"
+  ]
+}

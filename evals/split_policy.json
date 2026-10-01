@@ -1,0 +1,34 @@
+{
+  "version": "0.2.0",
+  "status": "DRAFT_S0",
+  "development_policy": {
+    "current_cases": "S0首批5题及边界用例全部属于开发集",
+    "target_case_count": 20,
+    "grouping_key": "fact_group_id",
+    "rule": "同一原始事实的数字题、文字题和改写题不得跨集合",
+    "rewrite_rule": "改写题只作鲁棒性检查，必须共享fact_group_id，不增加独立事实样本数"
+  },
+  "future_holdout": {
+    "reserved_company_ids": [
+      "688012.SH",
+      "688082.SH"
+    ],
+    "reserved_reporting_years": [
+      2022,
+      2023
+    ],
+    "status": "NOT_FROZEN_NO_HOLDOUT_VALIDITY_CLAIM",
+    "label_access_rule": "最终题集标签不得进入生产提示词、长期记忆或检索元数据",
+    "freeze_requirements": [
+      "先冻结公司/年度/原始事实组清单及哈希，再生成最终问题和标签",
+      "检查S0-S3开发题、提示词、人工复核和记忆中出现过的事实组并排除",
+      "资料进入检索语料允许，但文档覆盖不等于事实组隔离；已人工检查的同源事实不能再作留出"
+    ]
+  },
+  "limitations": [
+    "当前只有一家公司的一份年报，不能估计总体准确率",
+    "未来若总范围仍只有三家公司，必须披露外推限制",
+    "文档可以进入检索库，人工标准答案不能进入生产上下文",
+    "reserved_company_ids/years仅是预留意向，当前没有有效最终留出；S3已准备盛美上海2024资料，后续须做事实组交叉核查"
+  ]
+}

@@ -1,0 +1,532 @@
+{
+  "covered_codes": [
+    "CONNECTION_LOST"
+  ],
+  "description": "合成执行仅用于页面验收。",
+  "followups": [],
+  "frames": [
+    {
+      "events": [],
+      "expected": {
+        "auto_enter_report": false,
+        "enabled_operations": [
+          "CANCEL",
+          "NEW_TASK"
+        ],
+        "result_available": false,
+        "suggested_panel": "PROCESS"
+      },
+      "name": "connected",
+      "snapshot": {
+        "budget": {
+          "baseline_historical_estimate": null,
+          "currency": "USD",
+          "estimate_kind": "USAGE_ESTIMATE_NOT_INVOICE",
+          "note": "未提供金额表示未知，不能显示为零；组合总预算尚未建立。",
+          "pending_reservation": null,
+          "settled_estimate": null,
+          "source": null,
+          "total_calls": null
+        },
+        "outputs": [],
+        "provenance": {
+          "kind": "SYNTHETIC",
+          "label": "合成页面场景，非真实研究执行",
+          "notes": [
+            "数据模型与状态规则用于W1验收；操作只在样本内生效。"
+          ],
+          "source_artifacts": [],
+          "source_revalidation": "NOT_CHECKED"
+        },
+        "publication": {
+          "business_validation": "UNKNOWN",
+          "files": [],
+          "publication_status": null,
+          "reasons": [],
+          "result_available": false,
+          "scope_matches": null,
+          "verification": "NOT_PUBLISHED"
+        },
+        "research": {
+          "calculation_slots": {},
+          "calculations": [],
+          "claims": [],
+          "dependency_issues": [],
+          "documents": [],
+          "evidence": [],
+          "gaps": [],
+          "observations": [],
+          "report_markdown": null,
+          "supplement": null
+        },
+        "runtime": {
+          "cancel_requested": false,
+          "checkpoint_sha256": null,
+          "clarification_status": "NONE",
+          "connection_state": "CONNECTED",
+          "current_step_id": null,
+          "event_cursor": 0,
+          "event_stream_id": "fixture:reconnect:v1",
+          "queue_state": "UNKNOWN",
+          "resume_readiness": "UNKNOWN",
+          "waiting_gap_ids": [],
+          "worker_state": "UNKNOWN"
+        },
+        "schema_version": "1.0.0",
+        "steps": [],
+        "task": {
+          "access_mode": "MOCK",
+          "available_actions": [
+            {
+              "authority": "READ_ONLY",
+              "enabled": false,
+              "operation": "VIEW_REPORT",
+              "reason": "正式报告尚未通过发布核验。"
+            },
+            {
+              "authority": "READ_ONLY",
+              "enabled": false,
+              "operation": "VIEW_STEPS",
+              "reason": "当前记录没有可用的独立步骤或补查历史。"
+            },
+            {
+              "authority": "READ_ONLY",
+              "enabled": false,
+              "operation": "VIEW_EVIDENCE",
+              "reason": "当前记录没有可读取的原文。"
+            },
+            {
+              "authority": "SIMULATED",
+              "enabled": false,
+              "operation": "FOLLOWUP",
+              "reason": "追问需要已发布结果和可写入的当前会话。"
+            },
+            {
+              "authority": "SIMULATED",
+              "enabled": true,
+              "operation": "CANCEL",
+              "reason": null
+            },
+            {
+              "authority": "SIMULATED",
+              "enabled": false,
+              "operation": "CLARIFY",
+              "reason": "仅当前等待检查点可接收新的澄清决定。"
+            },
+            {
+              "authority": "SIMULATED",
+              "enabled": false,
+              "operation": "RESUME",
+              "reason": "恢复需要协调层明确核验安全；等待任务还需要已记录决定。"
+            },
+            {
+              "authority": "SIMULATED",
+              "enabled": true,
+              "operation": "NEW_TASK",
+              "reason": null
+            }
+          ],
+          "baseline": null,
+          "company_labels": {
+            "002371.SZ": "北方华创",
+            "688072.SH": "拓荆科技",
+            "688082.SH": "盛美上海"
+          },
+          "context": {
+            "as_of_date": "2025-04-30",
+            "company_ids": [
+              "002371.SZ",
+              "688072.SH",
+              "688082.SH"
+            ],
+            "corpus_snapshot_id": "s3-semiconductor-equipment-ar-v1",
+            "fiscal_years": [
+              2023,
+              2024
+            ],
+            "protocol_config_sha256": "0a9a877083f262f29407bfcfa0c7d3bea39c31bfc83e83e1db5c7be68c6ed52a",
+            "protocol_id": "revenue_quality_v1",
+            "protocol_version": "1.0.0",
+            "run_id": "fixture-reconnect"
+          },
+          "created_at": null,
+          "execution_mode": "REPLAY",
+          "origin": "WEB_FIXTURE",
+          "question": "【页面样本】比较收入、经营现金流和应收账款，核查披露与局限。",
+          "task_id": "fixture-reconnect",
+          "task_status": "RUNNING",
+          "workflow": "B1"
+        },
+        "ui": {
+          "anchor": null,
+          "editing_followup": false,
+          "follow_progress": true,
+          "manual_browsing": false,
+          "panel": "PROCESS",
+          "reader_open": false,
+          "reduced_motion": false,
+          "scroll_y": 0,
+          "selected_evidence_id": null,
+          "selected_round": null,
+          "selected_step_id": null,
+          "text_selection_active": false
+        }
+      }
+    },
+    {
+      "events": [],
+      "expected": {
+        "auto_enter_report": false,
+        "enabled_operations": [],
+        "result_available": false,
+        "suggested_panel": "PROCESS"
+      },
+      "name": "disconnected-not-failed",
+      "snapshot": {
+        "budget": {
+          "baseline_historical_estimate": null,
+          "currency": "USD",
+          "estimate_kind": "USAGE_ESTIMATE_NOT_INVOICE",
+          "note": "未提供金额表示未知，不能显示为零；组合总预算尚未建立。",
+          "pending_reservation": null,
+          "settled_estimate": null,
+          "source": null,
+          "total_calls": null
+        },
+        "outputs": [],
+        "provenance": {
+          "kind": "SYNTHETIC",
+          "label": "合成页面场景，非真实研究执行",
+          "notes": [
+            "数据模型与状态规则用于W1验收；操作只在样本内生效。"
+          ],
+          "source_artifacts": [],
+          "source_revalidation": "NOT_CHECKED"
+        },
+        "publication": {
+          "business_validation": "UNKNOWN",
+          "files": [],
+          "publication_status": null,
+          "reasons": [],
+          "result_available": false,
+          "scope_matches": null,
+          "verification": "NOT_PUBLISHED"
+        },
+        "research": {
+          "calculation_slots": {},
+          "calculations": [],
+          "claims": [],
+          "dependency_issues": [],
+          "documents": [],
+          "evidence": [],
+          "gaps": [],
+          "observations": [],
+          "report_markdown": null,
+          "supplement": null
+        },
+        "runtime": {
+          "cancel_requested": false,
+          "checkpoint_sha256": null,
+          "clarification_status": "NONE",
+          "connection_state": "DISCONNECTED",
+          "current_step_id": null,
+          "event_cursor": 0,
+          "event_stream_id": "fixture:reconnect:v1",
+          "queue_state": "UNKNOWN",
+          "resume_readiness": "UNKNOWN",
+          "waiting_gap_ids": [],
+          "worker_state": "UNKNOWN"
+        },
+        "schema_version": "1.0.0",
+        "steps": [],
+        "task": {
+          "access_mode": "MOCK",
+          "available_actions": [
+            {
+              "authority": "READ_ONLY",
+              "enabled": false,
+              "operation": "VIEW_REPORT",
+              "reason": "正式报告尚未通过发布核验。"
+            },
+            {
+              "authority": "READ_ONLY",
+              "enabled": false,
+              "operation": "VIEW_STEPS",
+              "reason": "当前记录没有可用的独立步骤或补查历史。"
+            },
+            {
+              "authority": "READ_ONLY",
+              "enabled": false,
+              "operation": "VIEW_EVIDENCE",
+              "reason": "当前记录没有可读取的原文。"
+            },
+            {
+              "authority": "SIMULATED",
+              "enabled": false,
+              "operation": "FOLLOWUP",
+              "reason": "连接尚未恢复，先核对任务状态。"
+            },
+            {
+              "authority": "SIMULATED",
+              "enabled": false,
+              "operation": "CANCEL",
+              "reason": "连接尚未恢复，先核对任务状态。"
+            },
+            {
+              "authority": "SIMULATED",
+              "enabled": false,
+              "operation": "CLARIFY",
+              "reason": "连接尚未恢复，先核对任务状态。"
+            },
+            {
+              "authority": "SIMULATED",
+              "enabled": false,
+              "operation": "RESUME",
+              "reason": "连接尚未恢复，先核对任务状态。"
+            },
+            {
+              "authority": "SIMULATED",
+              "enabled": false,
+              "operation": "NEW_TASK",
+              "reason": "连接尚未恢复，先核对任务状态。"
+            }
+          ],
+          "baseline": null,
+          "company_labels": {
+            "002371.SZ": "北方华创",
+            "688072.SH": "拓荆科技",
+            "688082.SH": "盛美上海"
+          },
+          "context": {
+            "as_of_date": "2025-04-30",
+            "company_ids": [
+              "002371.SZ",
+              "688072.SH",
+              "688082.SH"
+            ],
+            "corpus_snapshot_id": "s3-semiconductor-equipment-ar-v1",
+            "fiscal_years": [
+              2023,
+              2024
+            ],
+            "protocol_config_sha256": "0a9a877083f262f29407bfcfa0c7d3bea39c31bfc83e83e1db5c7be68c6ed52a",
+            "protocol_id": "revenue_quality_v1",
+            "protocol_version": "1.0.0",
+            "run_id": "fixture-reconnect"
+          },
+          "created_at": null,
+          "execution_mode": "REPLAY",
+          "origin": "WEB_FIXTURE",
+          "question": "【页面样本】比较收入、经营现金流和应收账款，核查披露与局限。",
+          "task_id": "fixture-reconnect",
+          "task_status": "RUNNING",
+          "workflow": "B1"
+        },
+        "ui": {
+          "anchor": null,
+          "editing_followup": false,
+          "follow_progress": true,
+          "manual_browsing": false,
+          "panel": "PROCESS",
+          "reader_open": false,
+          "reduced_motion": false,
+          "scroll_y": 0,
+          "selected_evidence_id": null,
+          "selected_round": null,
+          "selected_step_id": null,
+          "text_selection_active": false
+        }
+      }
+    },
+    {
+      "events": [
+        {
+          "action_id": null,
+          "attempt": null,
+          "event_stream_id": "fixture:reconnect:v1",
+          "instance_id": null,
+          "journal_key": null,
+          "occurred_at": null,
+          "origin": "WEB_FIXTURE",
+          "output_ids": [],
+          "round": null,
+          "seq": 2,
+          "source": null,
+          "source_event_ids": [],
+          "step_id": null,
+          "task_id": "fixture-reconnect",
+          "type": "CONNECTION_STATE"
+        }
+      ],
+      "expected": {
+        "auto_enter_report": false,
+        "enabled_operations": [
+          "CANCEL",
+          "NEW_TASK"
+        ],
+        "result_available": false,
+        "suggested_panel": "PROCESS"
+      },
+      "name": "reconciled",
+      "snapshot": {
+        "budget": {
+          "baseline_historical_estimate": null,
+          "currency": "USD",
+          "estimate_kind": "USAGE_ESTIMATE_NOT_INVOICE",
+          "note": "未提供金额表示未知，不能显示为零；组合总预算尚未建立。",
+          "pending_reservation": null,
+          "settled_estimate": null,
+          "source": null,
+          "total_calls": null
+        },
+        "outputs": [],
+        "provenance": {
+          "kind": "SYNTHETIC",
+          "label": "合成页面场景，非真实研究执行",
+          "notes": [
+            "数据模型与状态规则用于W1验收；操作只在样本内生效。"
+          ],
+          "source_artifacts": [],
+          "source_revalidation": "NOT_CHECKED"
+        },
+        "publication": {
+          "business_validation": "UNKNOWN",
+          "files": [],
+          "publication_status": null,
+          "reasons": [],
+          "result_available": false,
+          "scope_matches": null,
+          "verification": "NOT_PUBLISHED"
+        },
+        "research": {
+          "calculation_slots": {},
+          "calculations": [],
+          "claims": [],
+          "dependency_issues": [],
+          "documents": [],
+          "evidence": [],
+          "gaps": [],
+          "observations": [],
+          "report_markdown": null,
+          "supplement": null
+        },
+        "runtime": {
+          "cancel_requested": false,
+          "checkpoint_sha256": null,
+          "clarification_status": "NONE",
+          "connection_state": "CONNECTED",
+          "current_step_id": null,
+          "event_cursor": 2,
+          "event_stream_id": "fixture:reconnect:v1",
+          "queue_state": "UNKNOWN",
+          "resume_readiness": "UNKNOWN",
+          "waiting_gap_ids": [],
+          "worker_state": "UNKNOWN"
+        },
+        "schema_version": "1.0.0",
+        "steps": [],
+        "task": {
+          "access_mode": "MOCK",
+          "available_actions": [
+            {
+              "authority": "READ_ONLY",
+              "enabled": false,
+              "operation": "VIEW_REPORT",
+              "reason": "正式报告尚未通过发布核验。"
+            },
+            {
+              "authority": "READ_ONLY",
+              "enabled": false,
+              "operation": "VIEW_STEPS",
+              "reason": "当前记录没有可用的独立步骤或补查历史。"
+            },
+            {
+              "authority": "READ_ONLY",
+              "enabled": false,
+              "operation": "VIEW_EVIDENCE",
+              "reason": "当前记录没有可读取的原文。"
+            },
+            {
+              "authority": "SIMULATED",
+              "enabled": false,
+              "operation": "FOLLOWUP",
+              "reason": "追问需要已发布结果和可写入的当前会话。"
+            },
+            {
+              "authority": "SIMULATED",
+              "enabled": true,
+              "operation": "CANCEL",
+              "reason": null
+            },
+            {
+              "authority": "SIMULATED",
+              "enabled": false,
+              "operation": "CLARIFY",
+              "reason": "仅当前等待检查点可接收新的澄清决定。"
+            },
+            {
+              "authority": "SIMULATED",
+              "enabled": false,
+              "operation": "RESUME",
+              "reason": "恢复需要协调层明确核验安全；等待任务还需要已记录决定。"
+            },
+            {
+              "authority": "SIMULATED",
+              "enabled": true,
+              "operation": "NEW_TASK",
+              "reason": null
+            }
+          ],
+          "baseline": null,
+          "company_labels": {
+            "002371.SZ": "北方华创",
+            "688072.SH": "拓荆科技",
+            "688082.SH": "盛美上海"
+          },
+          "context": {
+            "as_of_date": "2025-04-30",
+            "company_ids": [
+              "002371.SZ",
+              "688072.SH",
+              "688082.SH"
+            ],
+            "corpus_snapshot_id": "s3-semiconductor-equipment-ar-v1",
+            "fiscal_years": [
+              2023,
+              2024
+            ],
+            "protocol_config_sha256": "0a9a877083f262f29407bfcfa0c7d3bea39c31bfc83e83e1db5c7be68c6ed52a",
+            "protocol_id": "revenue_quality_v1",
+            "protocol_version": "1.0.0",
+            "run_id": "fixture-reconnect"
+          },
+          "created_at": null,
+          "execution_mode": "REPLAY",
+          "origin": "WEB_FIXTURE",
+          "question": "【页面样本】比较收入、经营现金流和应收账款，核查披露与局限。",
+          "task_id": "fixture-reconnect",
+          "task_status": "RUNNING",
+          "workflow": "B1"
+        },
+        "ui": {
+          "anchor": null,
+          "editing_followup": false,
+          "follow_progress": true,
+          "manual_browsing": false,
+          "panel": "PROCESS",
+          "reader_open": false,
+          "reduced_motion": false,
+          "scroll_y": 0,
+          "selected_evidence_id": null,
+          "selected_round": null,
+          "selected_step_id": null,
+          "text_selection_active": false
+        }
+      }
+    }
+  ],
+  "scenario_id": "reconnect",
+  "schema_version": "1.0.0",
+  "synthetic_execution": true,
+  "title": "断连与恢复保持同任务"
+}

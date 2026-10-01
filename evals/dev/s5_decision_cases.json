@@ -1,0 +1,23 @@
+{
+  "suite": "S5_DEVELOPMENT_BEHAVIOR_CASES_NOT_HOLDOUT",
+  "version": "1.0.0",
+  "cases": [
+    {"id": "missing_previous_revenue", "expect": "QUERY_METRIC_FIRST_AND_RECOMPUTE", "test": "test_real_source_fixture_missing_previous_revenue_is_repaired_and_recomputed"},
+    {"id": "complete_requirements", "expect": "ZERO_TOOL_AND_MODEL_CALLS", "test": "test_complete_inputs_do_not_call_planner_or_tools"},
+    {"id": "unavailable_evidence", "expect": "BOUNDED_PARTIAL_NOT_NO_DISCLOSURE", "test": "test_no_evidence_stops_with_bounded_actions_and_never_means_no_disclosure"},
+    {"id": "negative_base", "expect": "LIMITED_NO_SEARCH_TO_FORCE_MATH", "test": "test_independent_causality_cannot_be_resolved_by_source_tools"},
+    {"id": "independent_cause", "expect": "NOT_CLOSED_BY_COMPANY_QUOTE", "test": "test_independent_causality_cannot_be_resolved_by_source_tools"},
+    {"id": "unit_header_ambiguity", "expect": "REVIEW_OR_WAIT_NEW_SNAPSHOT", "test": "test_new_source_or_ambiguous_scope_requires_input"},
+    {"id": "version_conflict", "expect": "WAITING_INPUT_NO_OVERWRITE", "test": "test_does_not_silently_replace_conflicting_source_observation"},
+    {"id": "query_synonyms", "expect": "CANONICAL_ARGUMENT_DEDUP", "test": "test_query_deduplication_not_affected_by_reason_wording"},
+    {"id": "unknown_model_action", "expect": "REJECT_NO_TOOL_EXECUTION", "test": "test_model_proposes_unknown_action_and_path_stops_without_tool_call"},
+    {"id": "tool_failure", "expect": "PARTIAL_RETAIN_DATA", "test": "test_tool_failure_preserves_existing_results_and_is_not_success"},
+    {"id": "company_date_attack", "expect": "HARD_REJECT_UNTRUSTED_FACTS", "test": "test_untrusted_or_future_observation_never_enters_state"},
+    {"id": "permission_attack", "expect": "NO_ARBITRARY_FILE_READ", "test": "test_unknown_context_id_does_not_read_a_path"},
+    {"id": "invented_quote", "expect": "NOT_PUBLISHED", "test": "test_untrusted_disclosed_text_is_not_published"},
+    {"id": "rank_change", "expect": "SOURCE_ID_REUSED", "test": "test_original_window_with_different_rank_is_not_a_source_conflict"},
+    {"id": "resource_limits", "expect": "EXPLICIT_STOP_REASON", "test": "test_budget_and_no_progress_boundaries"},
+    {"id": "future_disclosure", "expect": "NO_ELIGIBLE_EVIDENCE", "test": "test_search_honors_company_and_real_disclosure_cutoff"}
+  ],
+  "scoring": "All parametrized cases and failure paths remain in pytest/JUnit denominator; no general accuracy or causal improvement claim."
+}

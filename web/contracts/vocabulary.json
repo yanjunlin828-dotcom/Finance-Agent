@@ -1,0 +1,168 @@
+{
+  "b1_stations": [
+    {
+      "group": "建立事实",
+      "label": "确认范围",
+      "node_id": "validate_context"
+    },
+    {
+      "group": "建立事实",
+      "label": "核对财务",
+      "node_id": "load_financials"
+    },
+    {
+      "group": "建立事实",
+      "label": "计算指标",
+      "node_id": "calculate"
+    },
+    {
+      "group": "形成解释",
+      "label": "识别现象",
+      "node_id": "detect_phenomena"
+    },
+    {
+      "group": "形成解释",
+      "label": "提出候选解释",
+      "node_id": "propose_hypotheses"
+    },
+    {
+      "group": "形成解释",
+      "label": "查找年报说明",
+      "node_id": "collect_fixed_evidence"
+    },
+    {
+      "group": "审查与成文",
+      "label": "整理结论与未决问题",
+      "node_id": "review_claims"
+    },
+    {
+      "group": "审查与成文",
+      "label": "整理报告",
+      "node_id": "write_report"
+    },
+    {
+      "group": "审查与成文",
+      "label": "核对报告记录",
+      "node_id": "validate_report"
+    }
+  ],
+  "b2_stations": [
+    {
+      "label": "识别缺口",
+      "node_id": "audit_gaps"
+    },
+    {
+      "label": "选择动作",
+      "node_id": "plan_actions"
+    },
+    {
+      "label": "执行与核验",
+      "node_id": "execute_actions"
+    },
+    {
+      "label": "整理补查报告",
+      "node_id": "write_supplement_report"
+    }
+  ],
+  "calculation_status": {
+    "INCOMPARABLE": "口径不可比较",
+    "MISSING_INPUT": "缺少输入",
+    "NEGATIVE_BASE": "负基数，不输出普通增长率",
+    "VALID": "有效计算",
+    "ZERO_DENOMINATOR": "分母为零"
+  },
+  "closing_conditions": [
+    "VERIFIED_METRIC",
+    "VERIFIED_SOURCE_WINDOW",
+    "ATTRIBUTED_EXPLANATION",
+    "INDEPENDENT_REVIEW",
+    "NEW_SNAPSHOT_OR_USER_INPUT",
+    "NOT_REPAIRABLE_BY_SEARCH"
+  ],
+  "followup": {
+    "ANSWERED_FROM_REVIEWED_RECORDS": "基于已审核记录回答",
+    "INSUFFICIENT_EVIDENCE": "当前记录不足以回答",
+    "NEEDS_CLARIFICATION": "请明确追问专题",
+    "NEW_RUN_REQUIRED": "范围已变化，需要新研究"
+  },
+  "gap_status": [
+    "OPEN",
+    "RESOLVED",
+    "LIMITED",
+    "WAITING_INPUT",
+    "FAILED"
+  ],
+  "gap_status_labels": {
+    "FAILED": "本次处理失败",
+    "LIMITED": "保留局限",
+    "OPEN": "待处理",
+    "RESOLVED": "已满足该缺口关闭条件",
+    "WAITING_INPUT": "等待决定"
+  },
+  "gap_types": [
+    "MISSING_METRIC",
+    "DISCLOSURE_CONTEXT",
+    "CONTEXT_REVIEW",
+    "MISSING_EXPLANATION",
+    "INDEPENDENT_CONFIRMATION",
+    "INVALID_CALCULATION",
+    "TABLE_REVIEW",
+    "SOURCE_VERSION",
+    "MODEL_FAILURE",
+    "SOURCE_REQUEST"
+  ],
+  "observation_status": {
+    "MISSING": "缺少数值",
+    "NOT_APPLICABLE": "不适用",
+    "OBSERVED": "有来源数值",
+    "REVIEW_REQUIRED": "需要复核"
+  },
+  "operations": {
+    "CANCEL": "取消研究",
+    "CLARIFY": "提交决定",
+    "FOLLOWUP": "追问已审核记录",
+    "NEW_TASK": "新建研究",
+    "RESUME": "恢复研究",
+    "VIEW_EVIDENCE": "查看原文",
+    "VIEW_REPORT": "查看报告",
+    "VIEW_STEPS": "查看过程"
+  },
+  "schema_version": "1.0.0",
+  "stop_reason": {
+    "ACTION_BUDGET": "达到工具动作上限",
+    "ALL_RESOLVED": "当前记录判定缺口已关闭",
+    "MODEL_PLAN_REJECTED_OR_BUDGET": "动作计划、模型调用或预算受到限制",
+    "NEEDS_INPUT": "需要明确决定或资料",
+    "NO_ACTIONABLE_GAPS": "当前没有合法可执行动作，仍有局限",
+    "NO_PROGRESS": "连续补查没有新增进展",
+    "QUOTE_REVIEW_FAILED": "新增引用没有通过复核",
+    "REQUIRES_NEW_SNAPSHOT": "需要新资料快照",
+    "ROUND_LIMIT": "达到补查轮数上限",
+    "TOOL_FAILURE": "工具执行失败，保留已有成果"
+  },
+  "task_status": {
+    "BLOCKED": "需要核对后再处理",
+    "CANCELLED": "研究已取消",
+    "COMPLETED": "研究已完成",
+    "CREATED": "已创建，准备执行",
+    "FAILED": "研究执行失败",
+    "PARTIAL": "报告仍有未决问题",
+    "RUNNING": "正在研究",
+    "WAITING_INPUT": "等待你的决定"
+  },
+  "tool_result": {
+    "FOUND": "找到候选资料，接受状态另行核验",
+    "NEEDS_INPUT": "需要你的决定",
+    "NO_EVIDENCE": "本轮未召回适用资料，不代表未披露",
+    "REQUIRES_NEW_SNAPSHOT": "需要新资料快照",
+    "REVIEW_REQUIRED": "资料仍需复核"
+  },
+  "tools": [
+    "QUERY_METRIC",
+    "SEARCH_DISCLOSURE",
+    "READ_CONTEXT",
+    "REVIEW_TABLE",
+    "VERIFY_VERSION",
+    "REQUEST_CLARIFICATION"
+  ]
+}

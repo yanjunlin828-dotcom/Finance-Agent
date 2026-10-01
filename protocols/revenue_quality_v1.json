@@ -1,0 +1,22 @@
+{
+  "protocol_id": "revenue_quality_v1",
+  "version": "1.0.0",
+  "status": "FROZEN_FOR_S4_IMPLEMENTATION",
+  "fiscal_years": [2023, 2024],
+  "metric_ids": ["revenue", "operating_cash_flow_net", "accounts_receivable"],
+  "fixed_evidence_queries": [
+    {"query_id": "business", "question": "公司主要业务是什么，主要产品有哪些？"},
+    {"query_id": "cash_explanation", "question": "公司在年报中如何解释2024年经营活动产生的现金流量净额变动？"},
+    {"query_id": "receivable_risk", "question": "应收账款的回款、账龄及客户信用风险如何披露？"}
+  ],
+  "default_retrieval_method": "bm25",
+  "ranking_config": "configs/s3/ranking_v2.json",
+  "maximum_hypotheses_per_company": 3,
+  "maximum_disclosed_quotes_per_company": 3,
+  "nodes": ["validate_context", "load_financials", "calculate", "detect_phenomena", "propose_hypotheses", "collect_fixed_evidence", "review_claims", "write_report", "validate_report"],
+  "model_failure_policy": "PARTIAL_WITH_EXPLICIT_GAPS_NO_AUTONOMOUS_RETRY",
+  "writer_policy": "MODEL_ORDERS_APPROVED_IDS_PROGRAM_RENDERS_APPROVED_FACTS",
+  "interpretation_rules": ["公司解释不是独立因果证明", "负基数不计算常规增长百分比", "应收/收入不是周转天数", "不作造假判断，不给买卖建议", "推断保留支持需求与削弱条件", "S4仅预定查询，不执行自主补查"],
+  "node_soft_timeout_seconds": 180,
+  "transport_timeout_seconds": 60
+}

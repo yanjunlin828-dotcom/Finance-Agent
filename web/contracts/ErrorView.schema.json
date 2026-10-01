@@ -1,0 +1,64 @@
+{
+  "$id": "urn:finresearch:web:ErrorView:1.0.0",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "code": {
+      "enum": [
+        "REQUEST_INVALID",
+        "SCOPE_NOT_SUPPORTED",
+        "IDEMPOTENCY_CONFLICT",
+        "TASK_NOT_FOUND",
+        "TASK_BUSY",
+        "UNSUPPORTED_CONTRACT_VERSION",
+        "SOURCE_INTEGRITY_FAILED",
+        "PUBLICATION_INCOMPLETE",
+        "OUTPUT_UNAVAILABLE",
+        "INPUT_LOCK_CHANGED",
+        "EXTERNAL_RESULT_UNKNOWN",
+        "INVALID_CLARIFICATION",
+        "NEW_RUN_REQUIRED",
+        "BUDGET_LIMIT",
+        "CONNECTION_LOST",
+        "DEPENDENCY_NOT_AVAILABLE"
+      ],
+      "title": "Code",
+      "type": "string"
+    },
+    "message": {
+      "title": "Message",
+      "type": "string"
+    },
+    "recovery": {
+      "enum": [
+        "REFRESH_READ",
+        "CORRECT_INPUT",
+        "NEW_TASK",
+        "MANUAL_REVIEW",
+        "NONE"
+      ],
+      "title": "Recovery",
+      "type": "string"
+    },
+    "request_id": {
+      "anyOf": [
+        {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,99}$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Request Id"
+    }
+  },
+  "required": [
+    "code",
+    "message",
+    "recovery"
+  ],
+  "title": "ErrorView",
+  "type": "object"
+}

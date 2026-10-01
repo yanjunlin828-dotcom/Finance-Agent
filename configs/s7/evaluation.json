@@ -1,0 +1,16 @@
+{
+  "version": "1.0.0",
+  "scope": {"company_ids": ["002371.SZ", "688072.SH", "688082.SH"], "fiscal_years": [2023, 2024], "as_of_date": "2025-04-30", "corpus_snapshot_id": "s3-semiconductor-equipment-ar-v1"},
+  "dataset_role": "DEVELOPMENT_REGRESSION_NO_INDEPENDENT_HOLDOUT",
+  "repetitions": 1,
+  "budget_usd": "0.20",
+  "allocations": {"B0": "0.05", "B1": "0.10", "B2_LIVE": "0.05"},
+  "maximum_calls": {"B0": 3, "B1": 7, "B2_LIVE": 4},
+  "calculation_absolute_tolerance": "0.000001",
+  "historical_b1": "runs/s4/s4-b1-live-20260930-05/final_state.json",
+  "historical_b2": "runs/s6/s6-b2-live-20261001-03/final_state.json",
+  "human_review_required": true,
+  "default_workflow_without_quality_evidence": "B1",
+  "failure_policy": "KEEP_ALL_CASES_NO_AUTONOMOUS_LIVE_RETRY",
+  "gold_origin": "EXPLICIT_AMOUNTS_FROM_PREVIOUSLY_SOURCE_AND_VISUALLY_REVIEWED_ROWS"
+}

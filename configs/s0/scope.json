@@ -1,0 +1,75 @@
+{
+  "schema_version": "0.1.0",
+  "status": "DRAFT_SINGLE_DOCUMENT_PILOT",
+  "purpose": "验证半导体设备公司收入质量专题的证据化研究闭环，不提供交易建议",
+  "allowed_topic_ids": [
+    "revenue_quality_v0"
+  ],
+  "pilot_scope": {
+    "company_ids": [
+      "002371.SZ"
+    ],
+    "reporting_years": [
+      2024
+    ]
+  },
+  "target_scope": {
+    "company_count": 3,
+    "reporting_years": [
+      2022,
+      2023,
+      2024
+    ],
+    "status": "NOT_YET_COVERED"
+  },
+  "company_registry": [
+    {
+      "company_id": "002371.SZ",
+      "legal_name": "北方华创科技集团股份有限公司",
+      "short_name": "北方华创",
+      "exchange": "深圳证券交易所"
+    }
+  ],
+  "source_whitelist": [
+    "交易所正式披露",
+    "巨潮资讯网正式披露",
+    "上市公司正式投资者关系网站"
+  ],
+  "supported_question_types": [
+    "报表数值事实",
+    "公司披露的业务事实",
+    "有明确证据边界的收入质量分析",
+    "资料缺口判断"
+  ],
+  "prohibited_outputs": [
+    "具体买卖信号",
+    "目标价或收益承诺",
+    "证据不足时的确定因果判断",
+    "使用截止日之后披露的信息"
+  ],
+  "cutoff_rule": {
+    "policy": "ASIA_SHANGHAI_END_OF_DAY",
+    "timezone": "Asia/Shanghai",
+    "date_precision_behavior": "披露日当天日终可用；盘前或盘中判断不在首版支持范围",
+    "unknown_published_on_behavior": "UNAVAILABLE"
+  },
+  "document_snapshot": {
+    "snapshot_id": "s0-naura-2024-v1",
+    "document_ids": [
+      "cninfo-002371-2024-ar-1223309278"
+    ]
+  },
+  "human_review_boundary": "AI只能标记SOURCE_CHECKED；指定复核者确认后才能标记HUMAN_VERIFIED",
+  "budget_profile": {
+    "profile_id": "s0-local-only",
+    "live_model_calls_allowed": false,
+    "currency_limit": null,
+    "reason": "尚未确认模型供应商、凭证与货币上限"
+  },
+  "open_decision_ids": [
+    "OD-S0-001-MODEL-PROVIDER",
+    "OD-S0-002-LIVE-BUDGET",
+    "OD-S0-003-TARGET-COMPANY-SET",
+    "OD-S0-004-DISTRIBUTION-RIGHTS"
+  ]
+}

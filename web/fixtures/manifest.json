@@ -1,0 +1,195 @@
+{
+  "fixtures": [
+    {
+      "path": "history-b1.json",
+      "scenario_id": "history-b1",
+      "sha256": "8c5683bc2121660e33ef254a777ec136b14b7532da1f17e8524eadb94899a827",
+      "synthetic_execution": false,
+      "title": "只读历史：B1"
+    },
+    {
+      "path": "history-b2.json",
+      "scenario_id": "history-b2",
+      "sha256": "809e12973cf0b6a86206d617e9c0b878f758e28e281b9436da605f43fccded44",
+      "synthetic_execution": false,
+      "title": "只读历史：B2"
+    },
+    {
+      "path": "b1-normal.json",
+      "scenario_id": "b1-normal",
+      "sha256": "1fa9ed0d4706c9c17b7119d48446b0e53e3edd9a6a36d2c47915f0caee10c555",
+      "synthetic_execution": true,
+      "title": "B1正常推进"
+    },
+    {
+      "path": "b1-model-partial.json",
+      "scenario_id": "b1-model-partial",
+      "sha256": "ac9b3be99b464dab3063802f0edd65c588943f44f18c68e8d26ae1300edc0366",
+      "synthetic_execution": true,
+      "title": "B1模型局部失败后带局限发布"
+    },
+    {
+      "path": "b2-rounds.json",
+      "scenario_id": "b2-rounds",
+      "sha256": "c90f256e37eb0b94eb307b5fcc4f2226b8d9ddfd538da464157322dd6b1645cc",
+      "synthetic_execution": true,
+      "title": "历史基线与独立补查轮次"
+    },
+    {
+      "path": "b2-wait-continue.json",
+      "scenario_id": "b2-wait-continue",
+      "sha256": "7996894f268d0151774475a0127aabace1642df55149ba43722474564572427e",
+      "synthetic_execution": true,
+      "title": "等待→记录保留局限决定→恢复"
+    },
+    {
+      "path": "b2-new-snapshot.json",
+      "scenario_id": "b2-new-snapshot",
+      "sha256": "8daecece77961a231f7de1a68e920dcd8f37f7e3085eb1d1c9dc3d88f1bb2d7e",
+      "synthetic_execution": true,
+      "title": "要求新快照后旧任务仍等待"
+    },
+    {
+      "path": "cancel-late-result.json",
+      "scenario_id": "cancel-late-result",
+      "sha256": "73e8bf5148d045dbda9742892e715c6a16b29e6dc679b613ba6d9511177594e9",
+      "synthetic_execution": true,
+      "title": "请求取消→晚返回→边界确认"
+    },
+    {
+      "path": "unknown-model.json",
+      "scenario_id": "unknown-model",
+      "sha256": "bfc825714b1cff8513bf5a9fe87031af33d63d2fc27588a8350ce8ba5dc10165",
+      "synthetic_execution": true,
+      "title": "模型结果未知，阻塞且保留预算"
+    },
+    {
+      "path": "hard-failure.json",
+      "scenario_id": "hard-failure",
+      "sha256": "f74cfb7319a20c65bc2810eec064f6d3874d83c0c1c5219bed4b769bfc5613bd",
+      "synthetic_execution": true,
+      "title": "不可信工具结果硬失败"
+    },
+    {
+      "path": "publication-incomplete.json",
+      "scenario_id": "publication-incomplete",
+      "sha256": "0accf26d6de9790f143c3c47ea9bed645129c4e105d3558874f39cd5c6f3f776",
+      "synthetic_execution": true,
+      "title": "文件出现不等于正式完成"
+    },
+    {
+      "path": "reconnect.json",
+      "scenario_id": "reconnect",
+      "sha256": "cbbb7ccde8be04371f2d40068c6359a7fe07a0cb3f07cb8340e5c47e7f9c510a",
+      "synthetic_execution": true,
+      "title": "断连与恢复保持同任务"
+    },
+    {
+      "path": "reading-ready.json",
+      "scenario_id": "reading-ready",
+      "sha256": "17107058bda2a4d3c8de7d9d7357aa73b2fbbf38d7ccc9898116ebcdbe33ffdc",
+      "synthetic_execution": true,
+      "title": "阅读原文时报告就绪不跳走"
+    },
+    {
+      "path": "rapid-completion.json",
+      "scenario_id": "rapid-completion",
+      "sha256": "d844011f6aaaaf2afad351699b74f90ee5eea6bc93f004e0603931521b2ca0f0",
+      "synthetic_execution": true,
+      "title": "快速完成只收敛至最新视图"
+    },
+    {
+      "path": "content-extremes.json",
+      "scenario_id": "content-extremes",
+      "sha256": "4680e5a403395344177851c9dca32b61f25f666bb08ade1feb4648e21262f80d",
+      "synthetic_execution": true,
+      "title": "长中文、完整原文、无效计算及缺引用"
+    },
+    {
+      "path": "followup-results.json",
+      "scenario_id": "followup-results",
+      "sha256": "74849e14b44063a3ed07dbf792c0e86caaa9614693a0661823d4cbebad412ad3",
+      "synthetic_execution": true,
+      "title": "四种追问结果独立于任务终态"
+    },
+    {
+      "path": "b2-stop-round-limit.json",
+      "scenario_id": "b2-stop-round-limit",
+      "sha256": "838cb9383836ee7f11989e26da581c1640db81770793042d7b6fc500e8c7aae2",
+      "synthetic_execution": true,
+      "title": "达到补查轮数上限"
+    },
+    {
+      "path": "b2-stop-action-budget.json",
+      "scenario_id": "b2-stop-action-budget",
+      "sha256": "34f8efcdbfcdefae216a5ce90e3b3e5c77a137b73ae8ca725d6d1957b5ea2d32",
+      "synthetic_execution": true,
+      "title": "达到工具动作上限"
+    },
+    {
+      "path": "b2-stop-no-progress.json",
+      "scenario_id": "b2-stop-no-progress",
+      "sha256": "9c1b83001e276767f45fa13480469f7cdde12da26cdf19f24e43190c006497fa",
+      "synthetic_execution": true,
+      "title": "连续补查没有新增进展"
+    },
+    {
+      "path": "b2-stop-no-actionable-gaps.json",
+      "scenario_id": "b2-stop-no-actionable-gaps",
+      "sha256": "b38eadff792f8398031448637c03a322b9c342d6fafd5006ff0499ce328be826",
+      "synthetic_execution": true,
+      "title": "当前没有合法可执行动作，仍有局限"
+    },
+    {
+      "path": "b2-stop-all-resolved.json",
+      "scenario_id": "b2-stop-all-resolved",
+      "sha256": "aab2ee1e21bc2ade4e7745cdd58f90660066b9e8f2a15848611b8eebaa489fa5",
+      "synthetic_execution": true,
+      "title": "当前记录判定缺口已关闭"
+    },
+    {
+      "path": "b2-stop-model-plan-rejected-or-budget.json",
+      "scenario_id": "b2-stop-model-plan-rejected-or-budget",
+      "sha256": "d2fcd930135b95fa01c3fed8dffdb7a841a51792899e9c953ce6776fcad9a8de",
+      "synthetic_execution": true,
+      "title": "动作计划、模型调用或预算受到限制"
+    },
+    {
+      "path": "b2-stop-tool-failure.json",
+      "scenario_id": "b2-stop-tool-failure",
+      "sha256": "6315900659e612bc00a878aa30bbdc5e4149756f664b429c21c61241b5bf7866",
+      "synthetic_execution": true,
+      "title": "工具执行失败，保留已有成果"
+    },
+    {
+      "path": "b2-stop-quote-review-failed.json",
+      "scenario_id": "b2-stop-quote-review-failed",
+      "sha256": "52bfb25affac8a0a0dda2b0242ba8dfa3b4cf7f6bc8bd5073e373a38b67840c9",
+      "synthetic_execution": true,
+      "title": "新增引用没有通过复核"
+    },
+    {
+      "path": "b2-stop-needs-input.json",
+      "scenario_id": "b2-stop-needs-input",
+      "sha256": "76253d781b8a437e862f25926bd96da4a6d749bb7c3062eb7751b33317867ca0",
+      "synthetic_execution": true,
+      "title": "需要明确决定或资料"
+    },
+    {
+      "path": "b2-stop-requires-new-snapshot.json",
+      "scenario_id": "b2-stop-requires-new-snapshot",
+      "sha256": "787e5358579dcccc43785522efe3f28822a9644a8df9c0d9986fe1a05aa48d41",
+      "synthetic_execution": true,
+      "title": "需要新资料快照"
+    },
+    {
+      "path": "tool-results.json",
+      "scenario_id": "tool-results",
+      "sha256": "06bb2272a9bc037cabc8532280412b7ee61096abc01c854900dcae60c2dd486d",
+      "synthetic_execution": true,
+      "title": "五种工具结果（合成合同边界）"
+    }
+  ],
+  "purpose": "W0 labelled display samples; no HTTP or research execution",
+  "schema_version": "1.0.0"
+}

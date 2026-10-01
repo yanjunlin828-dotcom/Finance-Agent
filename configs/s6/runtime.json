@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "maximum_context_utf8_bytes": 200000,
+  "read_only_maximum_attempts": 2,
+  "model_maximum_attempts": 1,
+  "concurrency": "ONE_EXECUTOR_PER_TASK_OS_LOCK",
+  "unknown_model_result": "BLOCK_NO_AUTOMATIC_REPLAY_KEEP_RESERVATION",
+  "cancellation": "COOPERATIVE_AT_NODE_AND_TOOL_BOUNDARIES",
+  "long_term_memory": "EXPLICIT_REVALIDATED_FINANCIAL_FACTS_ONLY",
+  "execution_mode": "REPLAY"
+}

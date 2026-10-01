@@ -1,0 +1,79 @@
+{
+  "protocol_id": "revenue_quality_v0",
+  "version": "0.1.0",
+  "status": "DRAFT_S0",
+  "purpose": "沿固定证据路径分析收入增长与现金回收是否同步，并识别需要补充的资料",
+  "steps": [
+    {
+      "step_id": "RQ-01",
+      "question": "营业收入怎样变化？",
+      "required_inputs": ["revenue:当前财年", "revenue:可比上年"],
+      "candidate_calculations": ["营业收入同比增长率"],
+      "evidence_types": ["合并利润表", "主要会计数据"],
+      "allowed_conclusions": ["金额与同比方向", "只在口径一致时进行期间比较"],
+      "possible_gaps": ["上年口径重述", "币种或单位不一致"],
+      "next_action_if_gap": "补取重述说明或原始财务报表"
+    },
+    {
+      "step_id": "RQ-02",
+      "question": "经营现金流是否同步变化？",
+      "required_inputs": ["operating_cash_flow_net:当前财年", "operating_cash_flow_net:可比上年"],
+      "candidate_calculations": ["经营现金流同比增长率", "经营现金流/营业收入"],
+      "evidence_types": ["合并现金流量表", "现金流说明"],
+      "allowed_conclusions": ["现金流变化是否与收入同向", "描述性比率及其局限"],
+      "possible_gaps": ["现金流项目重分类", "仅有摘要数字而无报表"],
+      "next_action_if_gap": "补取合并现金流量表和附注"
+    },
+    {
+      "step_id": "RQ-03",
+      "question": "应收账款和存货有哪些需要解释的变化？",
+      "required_inputs": ["accounts_receivable:期末与期初", "inventory:期末与期初"],
+      "candidate_calculations": ["余额增长率", "余额占收入的描述性比率"],
+      "evidence_types": ["合并资产负债表", "资产构成说明", "相关附注"],
+      "allowed_conclusions": ["余额及变化方向", "提出待解释问题"],
+      "possible_gaps": ["减值准备与账面余额口径", "合同资产分类变化"],
+      "next_action_if_gap": "补取应收账款、存货、合同资产及减值附注"
+    },
+    {
+      "step_id": "RQ-04",
+      "question": "公司披露了什么原因，披露对象和期间是否相符？",
+      "required_inputs": ["带页码的公司原文", "该原文对应的指标与期间"],
+      "candidate_calculations": [],
+      "evidence_types": ["管理层讨论与分析", "现金流变动说明"],
+      "allowed_conclusions": ["明确写成公司披露的解释", "保留对象、期间和限定词"],
+      "possible_gaps": ["披露只解释部分变化", "文字与目标指标不对应"],
+      "next_action_if_gap": "标记证据不足并补取对应附注或其他正式披露"
+    },
+    {
+      "step_id": "RQ-05",
+      "question": "是否存在替代解释、相反证据或可比性限制？",
+      "required_inputs": ["前述数值与披露事实", "口径决策状态"],
+      "candidate_calculations": [],
+      "evidence_types": ["口径字典", "证据冲突记录", "变更说明"],
+      "allowed_conclusions": ["列出可能解释和限制", "将事实、公司解释、分析推断分开"],
+      "possible_gaps": ["缺少客户结构", "缺少账龄、合同负债或存货结构"],
+      "next_action_if_gap": "生成具体补数任务，不进行确定因果归因"
+    },
+    {
+      "step_id": "RQ-06",
+      "question": "当前资料支持多强的判断，仍缺少什么？",
+      "required_inputs": ["所有已用证据ID", "未决问题列表"],
+      "candidate_calculations": [],
+      "evidence_types": ["证据矩阵", "缺口记录"],
+      "allowed_conclusions": ["SUPPORTED", "PARTIALLY_SUPPORTED", "INSUFFICIENT_EVIDENCE"],
+      "possible_gaps": ["来源日期未知", "口径未冻结", "文档未覆盖问题"],
+      "next_action_if_gap": "按缺口类型选择补文件、补字段、澄清请求或停止"
+    }
+  ],
+  "assertion_rules": {
+    "calculated_fact": "必须保存输入事实ID、公式、单位和期间",
+    "disclosed_fact": "必须引用原文证据ID，并明确是公司披露",
+    "analytical_inference": "必须标记为推断，写出依据、替代解释和局限"
+  },
+  "stop_conditions": [
+    "指定范围内没有支持问题的证据",
+    "关键指标口径未解决且会改变结论",
+    "披露日晚于研究截止日或日期未知",
+    "继续检索已达到已批准预算或工具边界"
+  ]
+}

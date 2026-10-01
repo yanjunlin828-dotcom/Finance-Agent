@@ -1,0 +1,4060 @@
+{
+  "covered_codes": [],
+  "description": "合成执行仅用于页面验收。",
+  "followups": [],
+  "frames": [
+    {
+      "events": [],
+      "expected": {
+        "auto_enter_report": false,
+        "enabled_operations": [
+          "VIEW_REPORT",
+          "VIEW_EVIDENCE",
+          "FOLLOWUP",
+          "NEW_TASK"
+        ],
+        "result_available": true,
+        "suggested_panel": "PROCESS"
+      },
+      "name": "report-ready-reader-held",
+      "snapshot": {
+        "budget": {
+          "baseline_historical_estimate": null,
+          "currency": "USD",
+          "estimate_kind": "USAGE_ESTIMATE_NOT_INVOICE",
+          "note": "未提供金额表示未知，不能显示为零；组合总预算尚未建立。",
+          "pending_reservation": null,
+          "settled_estimate": null,
+          "source": null,
+          "total_calls": null
+        },
+        "outputs": [],
+        "provenance": {
+          "kind": "SYNTHETIC",
+          "label": "合成页面场景，非真实研究执行",
+          "notes": [
+            "数据模型与状态规则用于W1验收；操作只在样本内生效。"
+          ],
+          "source_artifacts": [],
+          "source_revalidation": "NOT_CHECKED"
+        },
+        "publication": {
+          "business_validation": "UNKNOWN",
+          "files": [],
+          "publication_status": "COMPLETED",
+          "reasons": [],
+          "result_available": true,
+          "scope_matches": null,
+          "verification": "SIMULATED_VALID"
+        },
+        "research": {
+          "calculation_slots": {
+            "002371.SZ": {
+              "accounts_receivable_growth": "calc-period_growth_v1-4f2dca9fba05cf14",
+              "ar_revenue_ratio_2023": "calc-stock_to_flow_ratio_v1-36639653874a4a9d",
+              "ar_revenue_ratio_2024": "calc-stock_to_flow_ratio_v1-b0475a885089c078",
+              "ocf_revenue_ratio_2023": "calc-flow_to_flow_ratio_v1-0bfb301e96d6caec",
+              "ocf_revenue_ratio_2024": "calc-flow_to_flow_ratio_v1-3cb3e9da7dfe6d2f",
+              "operating_cash_flow_net_growth": "calc-period_growth_v1-9741db98382437e1",
+              "revenue_growth": "calc-period_growth_v1-fb8b325eb2a2ed85",
+              "revenue_ocf_growth_gap_pp": "calc-growth_gap_pp_v1-9615df8f79ad9ccf"
+            },
+            "688072.SH": {
+              "accounts_receivable_growth": "calc-period_growth_v1-638398e1c8cf17df",
+              "ar_revenue_ratio_2023": "calc-stock_to_flow_ratio_v1-bc006c415042cb07",
+              "ar_revenue_ratio_2024": "calc-stock_to_flow_ratio_v1-9b58244d589df136",
+              "ocf_revenue_ratio_2023": "calc-flow_to_flow_ratio_v1-f2d6c54c7efb55cf",
+              "ocf_revenue_ratio_2024": "calc-flow_to_flow_ratio_v1-cd21d18e175b7681",
+              "operating_cash_flow_net_growth": "calc-period_growth_v1-4372cd0d6dc65278",
+              "revenue_growth": "calc-period_growth_v1-6d45d74c406f5faf",
+              "revenue_ocf_growth_gap_pp": "calc-growth_gap_pp_v1-b9e1cacd62db3a44"
+            },
+            "688082.SH": {
+              "accounts_receivable_growth": "calc-period_growth_v1-c861bccae52384f9",
+              "ar_revenue_ratio_2023": "calc-stock_to_flow_ratio_v1-bac7b4ee2c424713",
+              "ar_revenue_ratio_2024": "calc-stock_to_flow_ratio_v1-81f19d098674f212",
+              "ocf_revenue_ratio_2023": "calc-flow_to_flow_ratio_v1-bb6cdd1c628086ed",
+              "ocf_revenue_ratio_2024": "calc-flow_to_flow_ratio_v1-3f25099f79145f04",
+              "operating_cash_flow_net_growth": "calc-period_growth_v1-e1a7fa06f53b26bd",
+              "revenue_growth": "calc-period_growth_v1-1d92c37217121f8b",
+              "revenue_ocf_growth_gap_pp": "calc-growth_gap_pp_v1-21341ea85f417009"
+            }
+          },
+          "calculations": [
+            {
+              "calculation_id": "calc-period_growth_v1-4f2dca9fba05cf14",
+              "company_id": "002371.SZ",
+              "comparability_checks": [
+                {
+                  "actual": "002371.SZ",
+                  "expected": "002371.SZ",
+                  "name": "same_company",
+                  "passed": true
+                },
+                {
+                  "actual": "accounts_receivable",
+                  "expected": "accounts_receivable",
+                  "name": "same_metric",
+                  "passed": true
+                },
+                {
+                  "actual": "STOCK",
+                  "expected": "STOCK",
+                  "name": "same_period_kind",
+                  "passed": true
+                },
+                {
+                  "actual": "CNY",
+                  "expected": "CNY",
+                  "name": "same_currency",
+                  "passed": true
+                },
+                {
+                  "actual": "CONSOLIDATED",
+                  "expected": "CONSOLIDATED",
+                  "name": "same_scope",
+                  "passed": true
+                },
+                {
+                  "actual": "BALANCE_SHEET_CARRYING_AMOUNT",
+                  "expected": "BALANCE_SHEET_CARRYING_AMOUNT",
+                  "name": "same_measurement_basis",
+                  "passed": true
+                },
+                {
+                  "actual": "2024",
+                  "expected": "2024",
+                  "name": "consecutive_year",
+                  "passed": true
+                },
+                {
+                  "actual": "True",
+                  "expected": "True",
+                  "name": "complete_current_year",
+                  "passed": true
+                },
+                {
+                  "actual": "True",
+                  "expected": "True",
+                  "name": "complete_previous_year",
+                  "passed": true
+                }
+              ],
+              "comparison_period": [
+                2023,
+                2024
+              ],
+              "currency": "CNY",
+              "errors": [],
+              "expression": "(current - previous) / abs(previous)",
+              "formula_id": "period_growth_v1",
+              "formula_version": "1.1.0",
+              "input_ids": [
+                "obs-002371.SZ-accounts_receivable-2024-12-31-v1-5dca9dc03dc4",
+                "obs-002371.SZ-accounts_receivable-2023-12-31-v1-3b43abb97048"
+              ],
+              "input_sha256": "858d124010b942e2b741e735fbf1b51041abe5cff0301e0fc3ad151d7c9702f0",
+              "output_unit": "RATIO",
+              "result_sha256": "4f2dca9fba05cf14d184686affc60c3dac0bd0f8dacc1c4fc93bb053970a1f50",
+              "statement_scope": "CONSOLIDATED",
+              "status": "VALID",
+              "value": "0.6045513633753382674595242670"
+            },
+            {
+              "calculation_id": "calc-stock_to_flow_ratio_v1-36639653874a4a9d",
+              "company_id": "002371.SZ",
+              "comparability_checks": [
+                {
+                  "actual": "STOCK",
+                  "expected": "STOCK",
+                  "name": "stock_kind",
+                  "passed": true
+                },
+                {
+                  "actual": "FLOW",
+                  "expected": "FLOW",
+                  "name": "flow_kind",
+                  "passed": true
+                },
+                {
+                  "actual": "002371.SZ",
+                  "expected": "002371.SZ",
+                  "name": "same_company",
+                  "passed": true
+                },
+                {
+                  "actual": "2023",
+                  "expected": "2023",
+                  "name": "same_fiscal_year",
+                  "passed": true
+                },
+                {
+                  "actual": "2023-12-31",
+                  "expected": "2023-12-31",
+                  "name": "stock_at_flow_end",
+                  "passed": true
+                },
+                {
+                  "actual": "CNY",
+                  "expected": "CNY",
+                  "name": "same_currency",
+                  "passed": true
+                },
+                {
+                  "actual": "CONSOLIDATED",
+                  "expected": "CONSOLIDATED",
+                  "name": "same_scope",
+                  "passed": true
+                },
+                {
+                  "actual": "True",
+                  "expected": "True",
+                  "name": "complete_years",
+                  "passed": true
+                }
+              ],
+              "comparison_period": [
+                2023,
+                2023
+              ],
+              "currency": "CNY",
+              "errors": [],
+              "expression": "ending_stock / period_flow",
+              "formula_id": "stock_to_flow_ratio_v1",
+              "formula_version": "1.1.0",
+              "input_ids": [
+                "obs-002371.SZ-accounts_receivable-2023-12-31-v1-3b43abb97048",
+                "obs-002371.SZ-revenue-2023-01-01_2023-12-31-v1-dc5ea4d5825b"
+              ],
+              "input_sha256": "ed7d268dac6a32bb9708e9562ba685e41b40dad707889124fb264ae992e2eb10",
+              "output_unit": "RATIO",
+              "result_sha256": "36639653874a4a9d6779a7864f4c0b7be125c75b6373ac9cf8ddb0c90291f80f",
+              "statement_scope": "CONSOLIDATED",
+              "status": "VALID",
+              "value": "0.1706282259641097515933218218"
+            },
+            {
+              "calculation_id": "calc-stock_to_flow_ratio_v1-b0475a885089c078",
+              "company_id": "002371.SZ",
+              "comparability_checks": [
+                {
+                  "actual": "STOCK",
+                  "expected": "STOCK",
+                  "name": "stock_kind",
+                  "passed": true
+                },
+                {
+                  "actual": "FLOW",
+                  "expected": "FLOW",
+                  "name": "flow_kind",
+                  "passed": true
+                },
+                {
+                  "actual": "002371.SZ",
+                  "expected": "002371.SZ",
+                  "name": "same_company",
+                  "passed": true
+                },
+                {
+                  "actual": "2024",
+                  "expected": "2024",
+                  "name": "same_fiscal_year",
+                  "passed": true
+                },
+                {
+                  "actual": "2024-12-31",
+                  "expected": "2024-12-31",
+                  "name": "stock_at_flow_end",
+                  "passed": true
+                },
+                {
+                  "actual": "CNY",
+                  "expected": "CNY",
+                  "name": "same_currency",
+                  "passed": true
+                },
+                {
+                  "actual": "CONSOLIDATED",
+                  "expected": "CONSOLIDATED",
+                  "name": "same_scope",
+                  "passed": true
+                },
+                {
+                  "actual": "True",
+                  "expected": "True",
+                  "name": "complete_years",
+                  "passed": true
+                }
+              ],
+              "comparison_period": [
+                2024,
+                2024
+              ],
+              "currency": "CNY",
+              "errors": [],
+              "expression": "ending_stock / period_flow",
+              "formula_id": "stock_to_flow_ratio_v1",
+              "formula_version": "1.1.0",
+              "input_ids": [
+                "obs-002371.SZ-accounts_receivable-2024-12-31-v1-5dca9dc03dc4",
+                "obs-002371.SZ-revenue-2024-01-01_2024-12-31-v1-0c2188f9b21d"
+              ],
+              "input_sha256": "5bde67e5089d3af0bf963adb4c7a71c5960c88d29b80234f19c92b32c46087f0",
+              "output_unit": "RATIO",
+              "result_sha256": "b0475a885089c078a3d7914515bf75bdcc0a82ea0b5a5842e2f093b06e22ddef",
+              "statement_scope": "CONSOLIDATED",
+              "status": "VALID",
+              "value": "0.2025919539276294841902416639"
+            },
+            {
+              "calculation_id": "calc-flow_to_flow_ratio_v1-0bfb301e96d6caec",
+              "company_id": "002371.SZ",
+              "comparability_checks": [
+                {
+                  "actual": "FLOW",
+                  "expected": "FLOW",
+                  "name": "numerator_is_flow",
+                  "passed": true
+                },
+                {
+                  "actual": "FLOW",
+                  "expected": "FLOW",
+                  "name": "denominator_is_flow",
+                  "passed": true
+                },
+                {
+                  "actual": "002371.SZ",
+                  "expected": "002371.SZ",
+                  "name": "same_company",
+                  "passed": true
+                },
+                {
+                  "actual": "2023-01-01/2023-12-31",
+                  "expected": "2023-01-01/2023-12-31",
+                  "name": "same_period",
+                  "passed": true
+                },
+                {
+                  "actual": "CNY",
+                  "expected": "CNY",
+                  "name": "same_currency",
+                  "passed": true
+                },
+                {
+                  "actual": "CONSOLIDATED",
+                  "expected": "CONSOLIDATED",
+                  "name": "same_scope",
+                  "passed": true
+                },
+                {
+                  "actual": "True",
+                  "expected": "True",
+                  "name": "complete_years",
+                  "passed": true
+                }
+              ],
+              "comparison_period": [
+                2023,
+                2023
+              ],
+              "currency": "CNY",
+              "errors": [],
+              "expression": "numerator / denominator",
+              "formula_id": "flow_to_flow_ratio_v1",
+              "formula_version": "1.1.0",
+              "input_ids": [
+                "obs-002371.SZ-operating_cash_flow_net-2023-01-01_2023-12-31-v1-53dcd9ad12f8",
+                "obs-002371.SZ-revenue-2023-01-01_2023-12-31-v1-dc5ea4d5825b"
+              ],
+              "input_sha256": "941c73275580498da55f800c9a5f018741e8ac2e2998570826174e440e5ad009",
+              "output_unit": "RATIO",
+              "result_sha256": "0bfb301e96d6caec7fdc21bb26e5342d3ab04086a0d63065613ad041a23e7d66",
+              "statement_scope": "CONSOLIDATED",
+              "status": "VALID",
+              "value": "0.1071134864200890827744218823"
+            },
+            {
+              "calculation_id": "calc-flow_to_flow_ratio_v1-3cb3e9da7dfe6d2f",
+              "company_id": "002371.SZ",
+              "comparability_checks": [
+                {
+                  "actual": "FLOW",
+                  "expected": "FLOW",
+                  "name": "numerator_is_flow",
+                  "passed": true
+                },
+                {
+                  "actual": "FLOW",
+                  "expected": "FLOW",
+                  "name": "denominator_is_flow",
+                  "passed": true
+                },
+                {
+                  "actual": "002371.SZ",
+                  "expected": "002371.SZ",
+                  "name": "same_company",
+                  "passed": true
+                },
+                {
+                  "actual": "2024-01-01/2024-12-31",
+                  "expected": "2024-01-01/2024-12-31",
+                  "name": "same_period",
+                  "passed": true
+                },
+                {
+                  "actual": "CNY",
+                  "expected": "CNY",
+                  "name": "same_currency",
+                  "passed": true
+                },
+                {
+                  "actual": "CONSOLIDATED",
+                  "expected": "CONSOLIDATED",
+                  "name": "same_scope",
+                  "passed": true
+                },
+                {
+                  "actual": "True",
+                  "expected": "True",
+                  "name": "complete_years",
+                  "passed": true
+                }
+              ],
+              "comparison_period": [
+                2024,
+                2024
+              ],
+              "currency": "CNY",
+              "errors": [],
+              "expression": "numerator / denominator",
+              "formula_id": "flow_to_flow_ratio_v1",
+              "formula_version": "1.1.0",
+              "input_ids": [
+                "obs-002371.SZ-operating_cash_flow_net-2024-01-01_2024-12-31-v1-4c82b46668d0",
+                "obs-002371.SZ-revenue-2024-01-01_2024-12-31-v1-0c2188f9b21d"
+              ],
+              "input_sha256": "e26cfd3b5e1d31b5b2da99a5adeed6e790df563fd5e7527bd8b0b270fe80be66",
+              "output_unit": "RATIO",
+              "result_sha256": "3cb3e9da7dfe6d2fa413d6e911e9aeafbe412a68061d49c8da88dc7ab2bea9cc",
+              "statement_scope": "CONSOLIDATED",
+              "status": "VALID",
+              "value": "0.05272342006163662470245112966"
+            },
+            {
+              "calculation_id": "calc-period_growth_v1-9741db98382437e1",
+              "company_id": "002371.SZ",
+              "comparability_checks": [
+                {
+                  "actual": "002371.SZ",
+                  "expected": "002371.SZ",
+                  "name": "same_company",
+                  "passed": true
+                },
+                {
+                  "actual": "operating_cash_flow_net",
+                  "expected": "operating_cash_flow_net",
+                  "name": "same_metric",
+                  "passed": true
+                },
+                {
+                  "actual": "FLOW",
+                  "expected": "FLOW",
+                  "name": "same_period_kind",
+                  "passed": true
+                },
+                {
+                  "actual": "CNY",
+                  "expected": "CNY",
+                  "name": "same_currency",
+                  "passed": true
+                },
+                {
+                  "actual": "CONSOLIDATED",
+                  "expected": "CONSOLIDATED",
+                  "name": "same_scope",
+                  "passed": true
+                },
+                {
+                  "actual": "CASH_FLOW_STATEMENT_REPORTED_AMOUNT",
+                  "expected": "CASH_FLOW_STATEMENT_REPORTED_AMOUNT",
+                  "name": "same_measurement_basis",
+                  "passed": true
+                },
+                {
+                  "actual": "2024",
+                  "expected": "2024",
+                  "name": "consecutive_year",
+                  "passed": true
+                },
+                {
+                  "actual": "True",
+                  "expected": "True",
+                  "name": "complete_current_year",
+                  "passed": true
+                },
+                {
+                  "actual": "True",
+                  "expected": "True",
+                  "name": "complete_previous_year",
+                  "passed": true
+                }
+              ],
+              "comparison_period": [
+                2023,
+                2024
+              ],
+              "currency": "CNY",
+              "errors": [],
+              "expression": "(current - previous) / abs(previous)",
+              "formula_id": "period_growth_v1",
+              "formula_version": "1.1.0",
+              "input_ids": [
+                "obs-002371.SZ-operating_cash_flow_net-2024-01-01_2024-12-31-v1-4c82b46668d0",
+                "obs-002371.SZ-operating_cash_flow_net-2023-01-01_2023-12-31-v1-53dcd9ad12f8"
+              ],
+              "input_sha256": "0ca33b694b205dfe7991a672079f063b6889bf851c20129bb35dc49295738bcc",
+              "output_unit": "RATIO",
+              "result_sha256": "9741db98382437e162ac1ed2d9b664146e1f3d00d0add12e9c82ec2e8e9320a3",
+              "statement_scope": "CONSOLIDATED",
+              "status": "VALID",
+              "value": "-0.3348161059710087623652799726"
+            },
+            {
+              "calculation_id": "calc-period_growth_v1-fb8b325eb2a2ed85",
+              "company_id": "002371.SZ",
+              "comparability_checks": [
+                {
+                  "actual": "002371.SZ",
+                  "expected": "002371.SZ",
+                  "name": "same_company",
+                  "passed": true
+                },
+                {
+                  "actual": "revenue",
+                  "expected": "revenue",
+                  "name": "same_metric",
+                  "passed": true
+                },
+                {
+                  "actual": "FLOW",
+                  "expected": "FLOW",
+                  "name": "same_period_kind",
+                  "passed": true
+                },
+                {
+                  "actual": "CNY",
+                  "expected": "CNY",
+                  "name": "same_currency",
+                  "passed": true
+                },
+                {
+                  "actual": "CONSOLIDATED",
+                  "expected": "CONSOLIDATED",
+                  "name": "same_scope",
+                  "passed": true
+                },
+                {
+                  "actual": "INCOME_STATEMENT_REPORTED_AMOUNT",
+                  "expected": "INCOME_STATEMENT_REPORTED_AMOUNT",
+                  "name": "same_measurement_basis",
+                  "passed": true
+                },
+                {
+                  "actual": "2024",
+                  "expected": "2024",
+                  "name": "consecutive_year",
+                  "passed": true
+                },
+                {
+                  "actual": "True",
+                  "expected": "True",
+                  "name": "complete_current_year",
+                  "passed": true
+                },
+                {
+                  "actual": "True",
+                  "expected": "True",
+                  "name": "complete_previous_year",
+                  "passed": true
+                }
+              ],
+              "comparison_period": [
+                2023,
+                2024
+              ],
+              "currency": "CNY",
+              "errors": [],
+              "expression": "(current - previous) / abs(previous)",
+              "formula_id": "period_growth_v1",
+              "formula_version": "1.1.0",
+              "input_ids": [
+                "obs-002371.SZ-revenue-2024-01-01_2024-12-31-v1-0c2188f9b21d",
+                "obs-002371.SZ-revenue-2023-01-01_2023-12-31-v1-dc5ea4d5825b"
+              ],
+              "input_sha256": "71ff94be00232375498d4f01e5171e15de332cc7f6a5a6e5bcf9491dcfa79232",
+              "output_unit": "RATIO",
+              "result_sha256": "fb8b325eb2a2ed85f920e3160effe27e6cc6982addb1cf1d87b044bf29aad127",
+              "statement_scope": "CONSOLIDATED",
+              "status": "VALID",
+              "value": "0.3513949951774923232017305002"
+            },
+            {
+              "calculation_id": "calc-growth_gap_pp_v1-9615df8f79ad9ccf",
+              "company_id": "002371.SZ",
+              "comparability_checks": [
+                {
+                  "actual": "VALID",
+                  "expected": "VALID",
+                  "name": "growth_a_valid",
+                  "passed": true
+                },
+                {
+                  "actual": "VALID",
+                  "expected": "VALID",
+                  "name": "growth_b_valid",
+                  "passed": true
+                },
+                {
+                  "actual": "RATIO",
+                  "expected": "RATIO",
+                  "name": "growth_a_ratio",
+                  "passed": true
+                },
+                {
+                  "actual": "RATIO",
+                  "expected": "RATIO",
+                  "name": "growth_b_ratio",
+                  "passed": true
+                },
+                {
+                  "actual": "period_growth_v1/period_growth_v1",
+                  "expected": "period_growth_v1",
+                  "name": "growth_formulas",
+                  "passed": true
+                },
+                {
+                  "actual": "002371.SZ",
+                  "expected": "002371.SZ",
+                  "name": "same_company",
+                  "passed": true
+                },
+                {
+                  "actual": "(2023, 2024)",
+                  "expected": "(2023, 2024)",
+                  "name": "same_comparison_period",
+                  "passed": true
+                },
+                {
+                  "actual": "CNY",
+                  "expected": "CNY",
+                  "name": "same_currency",
+                  "passed": true
+                },
+                {
+                  "actual": "CONSOLIDATED",
+                  "expected": "CONSOLIDATED",
+                  "name": "same_scope",
+                  "passed": true
+                }
+              ],
+              "comparison_period": [
+                2023,
+                2024
+              ],
+              "currency": "CNY",
+              "errors": [],
+              "expression": "(growth_a - growth_b) * 100",
+              "formula_id": "growth_gap_pp_v1",
+              "formula_version": "1.1.0",
+              "input_ids": [
+                "calc-period_growth_v1-fb8b325eb2a2ed85",
+                "calc-period_growth_v1-9741db98382437e1"
+              ],
+              "input_sha256": "5991072da0f50db13be7269d6fe1d0df2ae730cc2fc0ece62434ede35a319031",
+              "output_unit": "PERCENTAGE_POINT",
+              "result_sha256": "9615df8f79ad9ccf18e866fab8f03c2488324de85b74de564d84a02bf7a0a3e4",
+              "statement_scope": "CONSOLIDATED",
+              "status": "VALID",
+              "value": "68.62111011485010855670104728"
+            },
+            {
+              "calculation_id": "calc-period_growth_v1-638398e1c8cf17df",
+              "company_id": "688072.SH",
+              "comparability_checks": [
+                {
+                  "actual": "688072.SH",
+                  "expected": "688072.SH",
+                  "name": "same_company",
+                  "passed": true
+                },
+                {
+                  "actual": "accounts_receivable",
+                  "expected": "accounts_receivable",
+                  "name": "same_metric",
+                  "passed": true
+                },
+                {
+                  "actual": "STOCK",
+                  "expected": "STOCK",
+                  "name": "same_period_kind",
+                  "passed": true
+                },
+                {
+                  "actual": "CNY",
+                  "expected": "CNY",
+                  "name": "same_currency",
+                  "passed": true
+                },
+                {
+                  "actual": "CONSOLIDATED",
+                  "expected": "CONSOLIDATED",
+                  "name": "same_scope",
+                  "passed": true
+                },
+                {
+                  "actual": "BALANCE_SHEET_CARRYING_AMOUNT",
+                  "expected": "BALANCE_SHEET_CARRYING_AMOUNT",
+                  "name": "same_measurement_basis",
+                  "passed": true
+                },
+                {
+                  "actual": "2024",
+                  "expected": "2024",
+                  "name": "consecutive_year",
+                  "passed": true
+                },
+                {
+                  "actual": "True",
+                  "expected": "True",
+                  "name": "complete_current_year",
+                  "passed": true
+                },
+                {
+                  "actual": "True",
+                  "expected": "True",
+                  "name": "complete_previous_year",
+                  "passed": true
+                }
+              ],
+              "comparison_period": [
+                2023,
+                2024
+              ],
+              "currency": "CNY",
+              "errors": [],
+              "expression": "(current - previous) / abs(previous)",
+              "formula_id": "period_growth_v1",
+              "formula_version": "1.1.0",
+              "input_ids": [
+                "obs-688072.SH-accounts_receivable-2024-12-31-v1-cc69984c2cfb",
+                "obs-688072.SH-accounts_receivable-2023-12-31-v1-10423fd328dc"
+              ],
+              "input_sha256": "0c19c0be3f033b2f26e5746b8da3155d9ee0d843f9698af47455b9f972af9f45",
+              "output_unit": "RATIO",
+              "result_sha256": "638398e1c8cf17df101e9daa1f4773b0b18bf6f23f58760d10617ad5be3b690e",
+              "statement_scope": "CONSOLIDATED",
+              "status": "VALID",
+              "value": "1.781120822472488348661870377"
+            },
+            {
+              "calculation_id": "calc-stock_to_flow_ratio_v1-bc006c415042cb07",
+              "company_id": "688072.SH",
+              "comparability_checks": [
+                {
+                  "actual": "STOCK",
+                  "expected": "STOCK",
+                  "name": "stock_kind",
+                  "passed": true
+                },
+                {
+                  "actual": "FLOW",
+                  "expected": "FLOW",
+                  "name": "flow_kind",
+                  "passed": true
+                },
+                {
+                  "actual": "688072.SH",
+                  "expected": "688072.SH",
+                  "name": "same_company",
+                  "passed": true
+                },
+                {
+                  "actual": "2023",
+                  "expected": "2023",
+                  "name": "same_fiscal_year",
+                  "passed": true
+                },
+                {
+                  "actual": "2023-12-31",
+                  "expected": "2023-12-31",
+                  "name": "stock_at_flow_end",
+                  "passed": true
+                },
+                {
+                  "actual": "CNY",
+                  "expected": "CNY",
+                  "name": "same_currency",
+                  "passed": true
+                },
+                {
+                  "actual": "CONSOLIDATED",
+                  "expected": "CONSOLIDATED",
+                  "name": "same_scope",
+                  "passed": true
+                },
+                {
+                  "actual": "True",
+                  "expected": "True",
+                  "name": "complete_years",
+                  "passed": true
+                }
+              ],
+              "comparison_period": [
+                2023,
+                2023
+              ],
+              "currency": "CNY",
+              "errors": [],
+              "expression": "ending_stock / period_flow",
+              "formula_id": "stock_to_flow_ratio_v1",
+              "formula_version": "1.1.0",
+              "input_ids": [
+                "obs-688072.SH-accounts_receivable-2023-12-31-v1-10423fd328dc",
+                "obs-688072.SH-revenue-2023-01-01_2023-12-31-v1-6078afb123dd"
+              ],
+              "input_sha256": "c496e6cbe217b8862632e06c66856a8931316eecb8da402c147822d639f08837",
+              "output_unit": "RATIO",
+              "result_sha256": "bc006c415042cb073540ab4e88db867b8e881ec23543eabe196c6a846ca6e6d3",
+              "statement_scope": "CONSOLIDATED",
+              "status": "VALID",
+              "value": "0.1958278824166246077996161572"
+            },
+            {
+              "calculation_id": "calc-stock_to_flow_ratio_v1-9b58244d589df136",
+              "company_id": "688072.SH",
+              "comparability_checks": [
+                {
+                  "actual": "STOCK",
+                  "expected": "STOCK",
+                  "name": "stock_kind",
+                  "passed": true
+                },
+                {
+                  "actual": "FLOW",
+                  "expected": "FLOW",
+                  "name": "flow_kind",
+                  "passed": true
+                },
+                {
+                  "actual": "688072.SH",
+                  "expected": "688072.SH",
+                  "name": "same_company",
+                  "passed": true
+                },
+                {
+                  "actual": "2024",
+                  "expected": "2024",
+                  "name": "same_fiscal_year",
+                  "passed": true
+                },
+                {
+                  "actual": "2024-12-31",
+                  "expected": "2024-12-31",
+                  "name": "stock_at_flow_end",
+                  "passed": true
+                },
+                {
+                  "actual": "CNY",
+                  "expected": "CNY",
+                  "name": "same_currency",
+                  "passed": true
+                },
+                {
+                  "actual": "CONSOLIDATED",
+                  "expected": "CONSOLIDATED",
+                  "name": "same_scope",
+                  "passed": true
+                },
+                {
+                  "actual": "True",
+                  "expected": "True",
+                  "name": "complete_years",
+                  "passed": true
+                }
+              ],
+              "comparison_period": [
+                2024,
+                2024
+              ],
+              "currency": "CNY",
+              "errors": [],
+              "expression": "ending_stock / period_flow",
+              "formula_id": "stock_to_flow_ratio_v1",
+              "formula_version": "1.1.0",
+              "input_ids": [
+                "obs-688072.SH-accounts_receivable-2024-12-31-v1-cc69984c2cfb",
+                "obs-688072.SH-revenue-2024-01-01_2024-12-31-v1-3cb60b85d36c"
+              ],
+              "input_sha256": "cd42417ef431b47a531eb539bda6fffb127dbfd9d059bf3072dcb714b5e48ce2",
+              "output_unit": "RATIO",
+              "result_sha256": "9b58244d589df136292b001f6344269c0a59e09af2d3bc85155a9867443a6409",
+              "statement_scope": "CONSOLIDATED",
+              "status": "VALID",
+              "value": "0.3590111453954263416905727293"
+            },
+            {
+              "calculation_id": "calc-flow_to_flow_ratio_v1-f2d6c54c7efb55cf",
+              "company_id": "688072.SH",
+              "comparability_checks": [
+                {
+                  "actual": "FLOW",
+                  "expected": "FLOW",
+                  "name": "numerator_is_flow",
+                  "passed": true
+                },
+                {
+                  "actual": "FLOW",
+                  "expected": "FLOW",
+                  "name": "denominator_is_flow",
+                  "passed": true
+                },
+                {
+                  "actual": "688072.SH",
+                  "expected": "688072.SH",
+                  "name": "same_company",
+                  "passed": true
+                },
+                {
+                  "actual": "2023-01-01/2023-12-31",
+                  "expected": "2023-01-01/2023-12-31",
+                  "name": "same_period",
+                  "passed": true
+                },
+                {
+                  "actual": "CNY",
+                  "expected": "CNY",
+                  "name": "same_currency",
+                  "passed": true
+                },
+                {
+                  "actual": "CONSOLIDATED",
+                  "expected": "CONSOLIDATED",
+                  "name": "same_scope",
+                  "passed": true
+                },
+                {
+                  "actual": "True",
+                  "expected": "True",
+                  "name": "complete_years",
+                  "passed": true
+                }
+              ],
+              "comparison_period": [
+                2023,
+                2023
+              ],
+              "currency": "CNY",
+              "errors": [],
+              "expression": "numerator / denominator",
+              "formula_id": "flow_to_flow_ratio_v1",
+              "formula_version": "1.1.0",
+              "input_ids": [
+                "obs-688072.SH-operating_cash_flow_net-2023-01-01_2023-12-31-v1-343db4b78942",
+                "obs-688072.SH-revenue-2023-01-01_2023-12-31-v1-6078afb123dd"
+              ],
+              "input_sha256": "5748ae66de0c08d84a7f01d3a423b4032a577405fcd8bb49ee893f28af7bbb87",
+              "output_unit": "RATIO",
+              "result_sha256": "f2d6c54c7efb55cfd80ce27d02bd6c62560205b32c208b2f793f7436b5686a20",
+              "statement_scope": "CONSOLIDATED",
+              "status": "VALID",
+              "value": "-0.6127018710831740393693192922"
+            },
+            {
+              "calculation_id": "calc-flow_to_flow_ratio_v1-cd21d18e175b7681",
+              "company_id": "688072.SH",
+              "comparability_checks": [
+                {
+                  "actual": "FLOW",
+                  "expected": "FLOW",
+                  "name": "numerator_is_flow",
+                  "passed": true
+                },
+                {
+                  "actual": "FLOW",
+                  "expected": "FLOW",
+                  "name": "denominator_is_flow",
+                  "passed": true
+                },
+                {
+                  "actual": "688072.SH",
+                  "expected": "688072.SH",
+                  "name": "same_company",
+                  "passed": true
+                },
+                {
+                  "actual": "2024-01-01/2024-12-31",
+                  "expected": "2024-01-01/2024-12-31",
+                  "name": "same_period",
+                  "passed": true
+                },
+                {
+                  "actual": "CNY",
+                  "expected": "CNY",
+                  "name": "same_currency",
+                  "passed": true
+                },
+                {
+                  "actual": "CONSOLIDATED",
+                  "expected": "CONSOLIDATED",
+                  "name": "same_scope",
+                  "passed": true
+                },
+                {
+                  "actual": "True",
+                  "expected": "True",
+                  "name": "complete_years",
+                  "passed": true
+                }
+              ],
+              "comparison_period": [
+                2024,
+                2024
+              ],
+              "currency": "CNY",
+              "errors": [],
+              "expression": "numerator / denominator",
+              "formula_id": "flow_to_flow_ratio_v1",
+              "formula_version": "1.1.0",
+              "input_ids": [
+                "obs-688072.SH-operating_cash_flow_net-2024-01-01_2024-12-31-v1-62d58853e856",
+                "obs-688072.SH-revenue-2024-01-01_2024-12-31-v1-3cb60b85d36c"
+              ],
+              "input_sha256": "99b9851803238ad1f89a211e4e76940c957213948820b02dcfdc7f1eb8a250d4",
+              "output_unit": "RATIO",
+              "result_sha256": "cd21d18e175b7681ece16741212e0d0efaddb9d01b04d034add38726aac2b772",
+              "statement_scope": "CONSOLIDATED",
+              "status": "VALID",
+              "value": "-0.06885061734646275962103533580"
+            },
+            {
+              "calculation_id": "calc-period_growth_v1-4372cd0d6dc65278",
+              "company_id": "688072.SH",
+              "comparability_checks": [
+                {
+                  "actual": "688072.SH",
+                  "expected": "688072.SH",
+                  "name": "same_company",
+                  "passed": true
+                },
+                {
+                  "actual": "operating_cash_flow_net",
+                  "expected": "operating_cash_flow_net",
+                  "name": "same_metric",
+                  "passed": true
+                },
+                {
+                  "actual": "FLOW",
+                  "expected": "FLOW",
+                  "name": "same_period_kind",
+                  "passed": true
+                },
+                {
+                  "actual": "CNY",
+                  "expected": "CNY",
+                  "name": "same_currency",
+                  "passed": true
+                },
+                {
+                  "actual": "CONSOLIDATED",
+                  "expected": "CONSOLIDATED",
+                  "name": "same_scope",
+                  "passed": true
+                },
+                {
+                  "actual": "CASH_FLOW_STATEMENT_REPORTED_AMOUNT",
+                  "expected": "CASH_FLOW_STATEMENT_REPORTED_AMOUNT",
+                  "name": "same_measurement_basis",
+                  "passed": true
+                },
+                {
+                  "actual": "2024",
+                  "expected": "2024",
+                  "name": "consecutive_year",
+                  "passed": true
+                },
+                {
+                  "actual": "True",
+                  "expected": "True",
+                  "name": "complete_current_year",
+                  "passed": true
+                },
+                {
+                  "actual": "True",
+                  "expected": "True",
+                  "name": "complete_previous_year",
+                  "passed": true
+                }
+              ],
+              "comparison_period": [
+                2023,
+                2024
+              ],
+              "currency": "CNY",
+              "errors": [
+                "前期值为负，常规增长率不具备直观可比性"
+              ],
+              "expression": "(current - previous) / abs(previous)",
+              "formula_id": "period_growth_v1",
+              "formula_version": "1.1.0",
+              "input_ids": [
+                "obs-688072.SH-operating_cash_flow_net-2024-01-01_2024-12-31-v1-62d58853e856",
+                "obs-688072.SH-operating_cash_flow_net-2023-01-01_2023-12-31-v1-343db4b78942"
+              ],
+              "input_sha256": "621d59219fe68029501513aa4bbd8f2dac696891a93416ccfa92a29b54abfe52",
+              "output_unit": "RATIO",
+              "result_sha256": "4372cd0d6dc6527851aaade7e39b87fd3ccbef81cfbbae7f555c0e101c35d2ad",
+              "statement_scope": "CONSOLIDATED",
+              "status": "NEGATIVE_BASE",
+              "value": null
+            },
+            {
+              "calculation_id": "calc-period_growth_v1-6d45d74c406f5faf",
+              "company_id": "688072.SH",
+              "comparability_checks": [
+                {
+                  "actual": "688072.SH",
+                  "expected": "688072.SH",
+                  "name": "same_company",
+                  "passed": true
+                },
+                {
+                  "actual": "revenue",
+                  "expected": "revenue",
+                  "name": "same_metric",
+                  "passed": true
+                },
+                {
+                  "actual": "FLOW",
+                  "expected": "FLOW",
+                  "name": "same_period_kind",
+                  "passed": true
+                },
+                {
+                  "actual": "CNY",
+                  "expected": "CNY",
+                  "name": "same_currency",
+                  "passed": true
+                },
+                {
+                  "actual": "CONSOLIDATED",
+                  "expected": "CONSOLIDATED",
+                  "name": "same_scope",
+                  "passed": true
+                },
+                {
+                  "actual": "INCOME_STATEMENT_REPORTED_AMOUNT",
+                  "expected": "INCOME_STATEMENT_REPORTED_AMOUNT",
+                  "name": "same_measurement_basis",
+                  "passed": true
+                },
+                {
+                  "actual": "2024",
+                  "expected": "2024",
+                  "name": "consecutive_year",
+                  "passed": true
+                },
+                {
+                  "actual": "True",
+                  "expected": "True",
+                  "name": "complete_current_year",
+                  "passed": true
+                },
+                {
+                  "actual": "True",
+                  "expected": "True",
+                  "name": "complete_previous_year",
+                  "passed": true
+                }
+              ],
+              "comparison_period": [
+                2023,
+                2024
+              ],
+              "currency": "CNY",
+              "errors": [],
+              "expression": "(current - previous) / abs(previous)",
+              "formula_id": "period_growth_v1",
+              "formula_version": "1.1.0",
+              "input_ids": [
+                "obs-688072.SH-revenue-2024-01-01_2024-12-31-v1-3cb60b85d36c",
+                "obs-688072.SH-revenue-2023-01-01_2023-12-31-v1-6078afb123dd"
+              ],
+              "input_sha256": "1b73cbde4d769c85960aafd572968cc0bdb04918bf62c0c2bf038ce10bc5249c",
+              "output_unit": "RATIO",
+              "result_sha256": "6d45d74c406f5faf7c9103c9a0ff4bade2c956c7d4ced5d15db70c8071948216",
+              "statement_scope": "CONSOLIDATED",
+              "status": "VALID",
+              "value": "0.5170030468265986654926366569"
+            },
+            {
+              "calculation_id": "calc-growth_gap_pp_v1-b9e1cacd62db3a44",
+              "company_id": "688072.SH",
+              "comparability_checks": [
+                {
+                  "actual": "VALID",
+                  "expected": "VALID",
+                  "name": "growth_a_valid",
+                  "passed": true
+                },
+                {
+                  "actual": "NEGATIVE_BASE",
+                  "expected": "VALID",
+                  "name": "growth_b_valid",
+                  "passed": false
+                },
+                {
+                  "actual": "RATIO",
+                  "expected": "RATIO",
+                  "name": "growth_a_ratio",
+                  "passed": true
+                },
+                {
+                  "actual": "RATIO",
+                  "expected": "RATIO",
+                  "name": "growth_b_ratio",
+                  "passed": true
+                },
+                {
+                  "actual": "period_growth_v1/period_growth_v1",
+                  "expected": "period_growth_v1",
+                  "name": "growth_formulas",
+                  "passed": true
+                },
+                {
+                  "actual": "688072.SH",
+                  "expected": "688072.SH",
+                  "name": "same_company",
+                  "passed": true
+                },
+                {
+                  "actual": "(2023, 2024)",
+                  "expected": "(2023, 2024)",
+                  "name": "same_comparison_period",
+                  "passed": true
+                },
+                {
+                  "actual": "CNY",
+                  "expected": "CNY",
+                  "name": "same_currency",
+                  "passed": true
+                },
+                {
+                  "actual": "CONSOLIDATED",
+                  "expected": "CONSOLIDATED",
+                  "name": "same_scope",
+                  "passed": true
+                }
+              ],
+              "comparison_period": [
+                2023,
+                2024
+              ],
+              "currency": "CNY",
+              "errors": [
+                "两个增长结果必须均为同公司同期间的有效增长率"
+              ],
+              "expression": "(growth_a - growth_b) * 100",
+              "formula_id": "growth_gap_pp_v1",
+              "formula_version": "1.1.0",
+              "input_ids": [
+                "calc-period_growth_v1-6d45d74c406f5faf",
+                "calc-period_growth_v1-4372cd0d6dc65278"
+              ],
+              "input_sha256": "ff9f8d985d30dfeab1adb1712026dbbeac728d42df139350c67f43f9cc48741c",
+              "output_unit": "PERCENTAGE_POINT",
+              "result_sha256": "b9e1cacd62db3a448a73aeefeee2c348e3d7a26499215795151f8e92bb5f9f62",
+              "statement_scope": "CONSOLIDATED",
+              "status": "INCOMPARABLE",
+              "value": null
+            },
+            {
+              "calculation_id": "calc-period_growth_v1-c861bccae52384f9",
+              "company_id": "688082.SH",
+              "comparability_checks": [
+                {
+                  "actual": "688082.SH",
+                  "expected": "688082.SH",
+                  "name": "same_company",
+                  "passed": true
+                },
+                {
+                  "actual": "accounts_receivable",
+                  "expected": "accounts_receivable",
+                  "name": "same_metric",
+                  "passed": true
+                },
+                {
+                  "actual": "STOCK",
+                  "expected": "STOCK",
+                  "name": "same_period_kind",
+                  "passed": true
+                },
+                {
+                  "actual": "CNY",
+                  "expected": "CNY",
+                  "name": "same_currency",
+                  "passed": true
+                },
+                {
+                  "actual": "CONSOLIDATED",
+                  "expected": "CONSOLIDATED",
+                  "name": "same_scope",
+                  "passed": true
+                },
+                {
+                  "actual": "BALANCE_SHEET_CARRYING_AMOUNT",
+                  "expected": "BALANCE_SHEET_CARRYING_AMOUNT",
+                  "name": "same_measurement_basis",
+                  "passed": true
+                },
+                {
+                  "actual": "2024",
+                  "expected": "2024",
+                  "name": "consecutive_year",
+                  "passed": true
+                },
+                {
+                  "actual": "True",
+                  "expected": "True",
+                  "name": "complete_current_year",
+                  "passed": true
+                },
+                {
+                  "actual": "True",
+                  "expected": "True",
+                  "name": "complete_previous_year",
+                  "passed": true
+                }
+              ],
+              "comparison_period": [
+                2023,
+                2024
+              ],
+              "currency": "CNY",
+              "errors": [],
+              "expression": "(current - previous) / abs(previous)",
+              "formula_id": "period_growth_v1",
+              "formula_version": "1.1.0",
+              "input_ids": [
+                "obs-688082.SH-accounts_receivable-2024-12-31-v1-e36fad47d128",
+                "obs-688082.SH-accounts_receivable-2023-12-31-v1-289d3a0f7717"
+              ],
+              "input_sha256": "a9b792f16603f1618a4ca5fbba0b801e883344938136f06775c546b53650348c",
+              "output_unit": "RATIO",
+              "result_sha256": "c861bccae52384f9900a06d61f6e5ad48e021834473aa3da7f79708d819e9aec",
+              "statement_scope": "CONSOLIDATED",
+              "status": "VALID",
+              "value": "0.3410419117797530227134856118"
+            },
+            {
+              "calculation_id": "calc-stock_to_flow_ratio_v1-bac7b4ee2c424713",
+              "company_id": "688082.SH",
+              "comparability_checks": [
+                {
+                  "actual": "STOCK",
+                  "expected": "STOCK",
+                  "name": "stock_kind",
+                  "passed": true
+                },
+                {
+                  "actual": "FLOW",
+                  "expected": "FLOW",
+                  "name": "flow_kind",
+                  "passed": true
+                },
+                {
+                  "actual": "688082.SH",
+                  "expected": "688082.SH",
+                  "name": "same_company",
+                  "passed": true
+                },
+                {
+                  "actual": "2023",
+                  "expected": "2023",
+                  "name": "same_fiscal_year",
+                  "passed": true
+                },
+                {
+                  "actual": "2023-12-31",
+                  "expected": "2023-12-31",
+                  "name": "stock_at_flow_end",
+                  "passed": true
+                },
+                {
+                  "actual": "CNY",
+                  "expected": "CNY",
+                  "name": "same_currency",
+                  "passed": true
+                },
+                {
+                  "actual": "CONSOLIDATED",
+                  "expected": "CONSOLIDATED",
+                  "name": "same_scope",
+                  "passed": true
+                },
+                {
+                  "actual": "True",
+                  "expected": "True",
+                  "name": "complete_years",
+                  "passed": true
+                }
+              ],
+              "comparison_period": [
+                2023,
+                2023
+              ],
+              "currency": "CNY",
+              "errors": [],
+              "expression": "ending_stock / period_flow",
+              "formula_id": "stock_to_flow_ratio_v1",
+              "formula_version": "1.1.0",
+              "input_ids": [
+                "obs-688082.SH-accounts_receivable-2023-12-31-v1-289d3a0f7717",
+                "obs-688082.SH-revenue-2023-01-01_2023-12-31-v1-7852c59b77c2"
+              ],
+              "input_sha256": "7dd62e7219dcfb20f5becb81a09b320c9c4649057806faa5925e2335fd6dfcf7",
+              "output_unit": "RATIO",
+              "result_sha256": "bac7b4ee2c42471329da24f883a538b4fc2c3555da866c310cf834eae5211395",
+              "statement_scope": "CONSOLIDATED",
+              "status": "VALID",
+              "value": "0.4089180093809626670844933110"
+            },
+            {
+              "calculation_id": "calc-stock_to_flow_ratio_v1-81f19d098674f212",
+              "company_id": "688082.SH",
+              "comparability_checks": [
+                {
+                  "actual": "STOCK",
+                  "expected": "STOCK",
+                  "name": "stock_kind",
+                  "passed": true
+                },
+                {
+                  "actual": "FLOW",
+                  "expected": "FLOW",
+                  "name": "flow_kind",
+                  "passed": true
+                },
+                {
+                  "actual": "688082.SH",
+                  "expected": "688082.SH",
+                  "name": "same_company",
+                  "passed": true
+                },
+                {
+                  "actual": "2024",
+                  "expected": "2024",
+                  "name": "same_fiscal_year",
+                  "passed": true
+                },
+                {
+                  "actual": "2024-12-31",
+                  "expected": "2024-12-31",
+                  "name": "stock_at_flow_end",
+                  "passed": true
+                },
+                {
+                  "actual": "CNY",
+                  "expected": "CNY",
+                  "name": "same_currency",
+                  "passed": true
+                },
+                {
+                  "actual": "CONSOLIDATED",
+                  "expected": "CONSOLIDATED",
+                  "name": "same_scope",
+                  "passed": true
+                },
+                {
+                  "actual": "True",
+                  "expected": "True",
+                  "name": "complete_years",
+                  "passed": true
+                }
+              ],
+              "comparison_period": [
+                2024,
+                2024
+              ],
+              "currency": "CNY",
+              "errors": [],
+              "expression": "ending_stock / period_flow",
+              "formula_id": "stock_to_flow_ratio_v1",
+              "formula_version": "1.1.0",
+              "input_ids": [
+                "obs-688082.SH-accounts_receivable-2024-12-31-v1-e36fad47d128",
+                "obs-688082.SH-revenue-2024-01-01_2024-12-31-v1-673b5a26c775"
+              ],
+              "input_sha256": "21bd9c48bcdd1b392fccab844cf7cde015fbdc38184b27db491c5794ce3f7d13",
+              "output_unit": "RATIO",
+              "result_sha256": "81f19d098674f212a62ff33a0387a7e8e4d7553aa32bc10e9d56123781bd541a",
+              "statement_scope": "CONSOLIDATED",
+              "status": "VALID",
+              "value": "0.3795608967421335857213215969"
+            },
+            {
+              "calculation_id": "calc-flow_to_flow_ratio_v1-bb6cdd1c628086ed",
+              "company_id": "688082.SH",
+              "comparability_checks": [
+                {
+                  "actual": "FLOW",
+                  "expected": "FLOW",
+                  "name": "numerator_is_flow",
+                  "passed": true
+                },
+                {
+                  "actual": "FLOW",
+                  "expected": "FLOW",
+                  "name": "denominator_is_flow",
+                  "passed": true
+                },
+                {
+                  "actual": "688082.SH",
+                  "expected": "688082.SH",
+                  "name": "same_company",
+                  "passed": true
+                },
+                {
+                  "actual": "2023-01-01/2023-12-31",
+                  "expected": "2023-01-01/2023-12-31",
+                  "name": "same_period",
+                  "passed": true
+                },
+                {
+                  "actual": "CNY",
+                  "expected": "CNY",
+                  "name": "same_currency",
+                  "passed": true
+                },
+                {
+                  "actual": "CONSOLIDATED",
+                  "expected": "CONSOLIDATED",
+                  "name": "same_scope",
+                  "passed": true
+                },
+                {
+                  "actual": "True",
+                  "expected": "True",
+                  "name": "complete_years",
+                  "passed": true
+                }
+              ],
+              "comparison_period": [
+                2023,
+                2023
+              ],
+              "currency": "CNY",
+              "errors": [],
+              "expression": "numerator / denominator",
+              "formula_id": "flow_to_flow_ratio_v1",
+              "formula_version": "1.1.0",
+              "input_ids": [
+                "obs-688082.SH-operating_cash_flow_net-2023-01-01_2023-12-31-v1-1d989ddd892a",
+                "obs-688082.SH-revenue-2023-01-01_2023-12-31-v1-7852c59b77c2"
+              ],
+              "input_sha256": "55bfc0f0e73708fa2ac20996167b65673e0b823b9ae53ea378ff101a2d9fe75f",
+              "output_unit": "RATIO",
+              "result_sha256": "bb6cdd1c628086ed952aad17b7e35415d678a73ddacb1b7f4ce2aa4c963e87e3",
+              "statement_scope": "CONSOLIDATED",
+              "status": "VALID",
+              "value": "-0.1098060754451130368557783758"
+            },
+            {
+              "calculation_id": "calc-flow_to_flow_ratio_v1-3f25099f79145f04",
+              "company_id": "688082.SH",
+              "comparability_checks": [
+                {
+                  "actual": "FLOW",
+                  "expected": "FLOW",
+                  "name": "numerator_is_flow",
+                  "passed": true
+                },
+                {
+                  "actual": "FLOW",
+                  "expected": "FLOW",
+                  "name": "denominator_is_flow",
+                  "passed": true
+                },
+                {
+                  "actual": "688082.SH",
+                  "expected": "688082.SH",
+                  "name": "same_company",
+                  "passed": true
+                },
+                {
+                  "actual": "2024-01-01/2024-12-31",
+                  "expected": "2024-01-01/2024-12-31",
+                  "name": "same_period",
+                  "passed": true
+                },
+                {
+                  "actual": "CNY",
+                  "expected": "CNY",
+                  "name": "same_currency",
+                  "passed": true
+                },
+                {
+                  "actual": "CONSOLIDATED",
+                  "expected": "CONSOLIDATED",
+                  "name": "same_scope",
+                  "passed": true
+                },
+                {
+                  "actual": "True",
+                  "expected": "True",
+                  "name": "complete_years",
+                  "passed": true
+                }
+              ],
+              "comparison_period": [
+                2024,
+                2024
+              ],
+              "currency": "CNY",
+              "errors": [],
+              "expression": "numerator / denominator",
+              "formula_id": "flow_to_flow_ratio_v1",
+              "formula_version": "1.1.0",
+              "input_ids": [
+                "obs-688082.SH-operating_cash_flow_net-2024-01-01_2024-12-31-v1-2acb93f6ebc4",
+                "obs-688082.SH-revenue-2024-01-01_2024-12-31-v1-673b5a26c775"
+              ],
+              "input_sha256": "793995a92d1b4206d1696eb199158edba7ff7c98971b272f26bf9d23e2fbeb7f",
+              "output_unit": "RATIO",
+              "result_sha256": "3f25099f79145f0481d9d8b164ec08df5c5cec58d45b07dad785a3df6e970281",
+              "statement_scope": "CONSOLIDATED",
+              "status": "VALID",
+              "value": "0.2164825909380195395699302148"
+            },
+            {
+              "calculation_id": "calc-period_growth_v1-e1a7fa06f53b26bd",
+              "company_id": "688082.SH",
+              "comparability_checks": [
+                {
+                  "actual": "688082.SH",
+                  "expected": "688082.SH",
+                  "name": "same_company",
+                  "passed": true
+                },
+                {
+                  "actual": "operating_cash_flow_net",
+                  "expected": "operating_cash_flow_net",
+                  "name": "same_metric",
+                  "passed": true
+                },
+                {
+                  "actual": "FLOW",
+                  "expected": "FLOW",
+                  "name": "same_period_kind",
+                  "passed": true
+                },
+                {
+                  "actual": "CNY",
+                  "expected": "CNY",
+                  "name": "same_currency",
+                  "passed": true
+                },
+                {
+                  "actual": "CONSOLIDATED",
+                  "expected": "CONSOLIDATED",
+                  "name": "same_scope",
+                  "passed": true
+                },
+                {
+                  "actual": "CASH_FLOW_STATEMENT_REPORTED_AMOUNT",
+                  "expected": "CASH_FLOW_STATEMENT_REPORTED_AMOUNT",
+                  "name": "same_measurement_basis",
+                  "passed": true
+                },
+                {
+                  "actual": "2024",
+                  "expected": "2024",
+                  "name": "consecutive_year",
+                  "passed": true
+                },
+                {
+                  "actual": "True",
+                  "expected": "True",
+                  "name": "complete_current_year",
+                  "passed": true
+                },
+                {
+                  "actual": "True",
+                  "expected": "True",
+                  "name": "complete_previous_year",
+                  "passed": true
+                }
+              ],
+              "comparison_period": [
+                2023,
+                2024
+              ],
+              "currency": "CNY",
+              "errors": [
+                "前期值为负，常规增长率不具备直观可比性"
+              ],
+              "expression": "(current - previous) / abs(previous)",
+              "formula_id": "period_growth_v1",
+              "formula_version": "1.1.0",
+              "input_ids": [
+                "obs-688082.SH-operating_cash_flow_net-2024-01-01_2024-12-31-v1-2acb93f6ebc4",
+                "obs-688082.SH-operating_cash_flow_net-2023-01-01_2023-12-31-v1-1d989ddd892a"
+              ],
+              "input_sha256": "1d05e4bdb275c26fe55f5d8025cfc90951fc35b2059b996c614b8a32d7034f34",
+              "output_unit": "RATIO",
+              "result_sha256": "e1a7fa06f53b26bdb065aa63be886b7d18ef4b65ddfe2ebb8cf9f2487ff236b5",
+              "statement_scope": "CONSOLIDATED",
+              "status": "NEGATIVE_BASE",
+              "value": null
+            },
+            {
+              "calculation_id": "calc-period_growth_v1-1d92c37217121f8b",
+              "company_id": "688082.SH",
+              "comparability_checks": [
+                {
+                  "actual": "688082.SH",
+                  "expected": "688082.SH",
+                  "name": "same_company",
+                  "passed": true
+                },
+                {
+                  "actual": "revenue",
+                  "expected": "revenue",
+                  "name": "same_metric",
+                  "passed": true
+                },
+                {
+                  "actual": "FLOW",
+                  "expected": "FLOW",
+                  "name": "same_period_kind",
+                  "passed": true
+                },
+                {
+                  "actual": "CNY",
+                  "expected": "CNY",
+                  "name": "same_currency",
+                  "passed": true
+                },
+                {
+                  "actual": "CONSOLIDATED",
+                  "expected": "CONSOLIDATED",
+                  "name": "same_scope",
+                  "passed": true
+                },
+                {
+                  "actual": "INCOME_STATEMENT_REPORTED_AMOUNT",
+                  "expected": "INCOME_STATEMENT_REPORTED_AMOUNT",
+                  "name": "same_measurement_basis",
+                  "passed": true
+                },
+                {
+                  "actual": "2024",
+                  "expected": "2024",
+                  "name": "consecutive_year",
+                  "passed": true
+                },
+                {
+                  "actual": "True",
+                  "expected": "True",
+                  "name": "complete_current_year",
+                  "passed": true
+                },
+                {
+                  "actual": "True",
+                  "expected": "True",
+                  "name": "complete_previous_year",
+                  "passed": true
+                }
+              ],
+              "comparison_period": [
+                2023,
+                2024
+              ],
+              "currency": "CNY",
+              "errors": [],
+              "expression": "(current - previous) / abs(previous)",
+              "formula_id": "period_growth_v1",
+              "formula_version": "1.1.0",
+              "input_ids": [
+                "obs-688082.SH-revenue-2024-01-01_2024-12-31-v1-673b5a26c775",
+                "obs-688082.SH-revenue-2023-01-01_2023-12-31-v1-7852c59b77c2"
+              ],
+              "input_sha256": "806bc5c23b799aba9d93ae2a1a84f2441fce94fe9727087fd594cba16908559b",
+              "output_unit": "RATIO",
+              "result_sha256": "1d92c37217121f8bb037d13b582278d36a49d64dd05ee8423969606033f2d1ad",
+              "statement_scope": "CONSOLIDATED",
+              "status": "VALID",
+              "value": "0.4447647104015918986803968335"
+            },
+            {
+              "calculation_id": "calc-growth_gap_pp_v1-21341ea85f417009",
+              "company_id": "688082.SH",
+              "comparability_checks": [
+                {
+                  "actual": "VALID",
+                  "expected": "VALID",
+                  "name": "growth_a_valid",
+                  "passed": true
+                },
+                {
+                  "actual": "NEGATIVE_BASE",
+                  "expected": "VALID",
+                  "name": "growth_b_valid",
+                  "passed": false
+                },
+                {
+                  "actual": "RATIO",
+                  "expected": "RATIO",
+                  "name": "growth_a_ratio",
+                  "passed": true
+                },
+                {
+                  "actual": "RATIO",
+                  "expected": "RATIO",
+                  "name": "growth_b_ratio",
+                  "passed": true
+                },
+                {
+                  "actual": "period_growth_v1/period_growth_v1",
+                  "expected": "period_growth_v1",
+                  "name": "growth_formulas",
+                  "passed": true
+                },
+                {
+                  "actual": "688082.SH",
+                  "expected": "688082.SH",
+                  "name": "same_company",
+                  "passed": true
+                },
+                {
+                  "actual": "(2023, 2024)",
+                  "expected": "(2023, 2024)",
+                  "name": "same_comparison_period",
+                  "passed": true
+                },
+                {
+                  "actual": "CNY",
+                  "expected": "CNY",
+                  "name": "same_currency",
+                  "passed": true
+                },
+                {
+                  "actual": "CONSOLIDATED",
+                  "expected": "CONSOLIDATED",
+                  "name": "same_scope",
+                  "passed": true
+                }
+              ],
+              "comparison_period": [
+                2023,
+                2024
+              ],
+              "currency": "CNY",
+              "errors": [
+                "两个增长结果必须均为同公司同期间的有效增长率"
+              ],
+              "expression": "(growth_a - growth_b) * 100",
+              "formula_id": "growth_gap_pp_v1",
+              "formula_version": "1.1.0",
+              "input_ids": [
+                "calc-period_growth_v1-1d92c37217121f8b",
+                "calc-period_growth_v1-e1a7fa06f53b26bd"
+              ],
+              "input_sha256": "d7e0dc1963221ec1540de528512bbfb241de1f03f8245f5b42aae85b567ce3de",
+              "output_unit": "PERCENTAGE_POINT",
+              "result_sha256": "21341ea85f417009528434f68a20183f6c9035d13fbfab437c1a0a9c2d6de310",
+              "statement_scope": "CONSOLIDATED",
+              "status": "INCOMPARABLE",
+              "value": null
+            }
+          ],
+          "claims": [
+            {
+              "calculation_ids": [
+                "calc-period_growth_v1-fb8b325eb2a2ed85"
+              ],
+              "claim_id": "claim-calc-period_growth_v1-fb8b325eb2a2ed85",
+              "company_id": "002371.SZ",
+              "evidence_ids": [],
+              "hypothesis_category": null,
+              "kind": "COMPUTED",
+              "limitations": [
+                "比率不等于因果解释或风险评级"
+              ],
+              "observation_ids": [],
+              "status": "APPROVED",
+              "text": "营业收入增长率为35.14%。"
+            },
+            {
+              "calculation_ids": [
+                "calc-period_growth_v1-9741db98382437e1"
+              ],
+              "claim_id": "claim-calc-period_growth_v1-9741db98382437e1",
+              "company_id": "002371.SZ",
+              "evidence_ids": [],
+              "hypothesis_category": null,
+              "kind": "COMPUTED",
+              "limitations": [
+                "比率不等于因果解释或风险评级"
+              ],
+              "observation_ids": [],
+              "status": "APPROVED",
+              "text": "经营现金流净额增长率为-33.48%。"
+            },
+            {
+              "calculation_ids": [
+                "calc-period_growth_v1-4f2dca9fba05cf14"
+              ],
+              "claim_id": "claim-calc-period_growth_v1-4f2dca9fba05cf14",
+              "company_id": "002371.SZ",
+              "evidence_ids": [],
+              "hypothesis_category": null,
+              "kind": "COMPUTED",
+              "limitations": [
+                "比率不等于因果解释或风险评级"
+              ],
+              "observation_ids": [],
+              "status": "APPROVED",
+              "text": "应收账款账面价值增长率为60.46%。"
+            },
+            {
+              "calculation_ids": [
+                "calc-flow_to_flow_ratio_v1-0bfb301e96d6caec"
+              ],
+              "claim_id": "claim-calc-flow_to_flow_ratio_v1-0bfb301e96d6caec",
+              "company_id": "002371.SZ",
+              "evidence_ids": [],
+              "hypothesis_category": null,
+              "kind": "COMPUTED",
+              "limitations": [
+                "比率不等于因果解释或风险评级"
+              ],
+              "observation_ids": [],
+              "status": "APPROVED",
+              "text": "经营现金流净额/年度营业收入（2023年）为10.71%。"
+            },
+            {
+              "calculation_ids": [
+                "calc-stock_to_flow_ratio_v1-36639653874a4a9d"
+              ],
+              "claim_id": "claim-calc-stock_to_flow_ratio_v1-36639653874a4a9d",
+              "company_id": "002371.SZ",
+              "evidence_ids": [],
+              "hypothesis_category": null,
+              "kind": "COMPUTED",
+              "limitations": [
+                "比率不等于因果解释或风险评级",
+                "期末存量/期间流量，不是应收周转率或周转天数"
+              ],
+              "observation_ids": [],
+              "status": "APPROVED",
+              "text": "期末应收账款账面价值/年度营业收入（2023年）为17.06%。"
+            },
+            {
+              "calculation_ids": [
+                "calc-flow_to_flow_ratio_v1-3cb3e9da7dfe6d2f"
+              ],
+              "claim_id": "claim-calc-flow_to_flow_ratio_v1-3cb3e9da7dfe6d2f",
+              "company_id": "002371.SZ",
+              "evidence_ids": [],
+              "hypothesis_category": null,
+              "kind": "COMPUTED",
+              "limitations": [
+                "比率不等于因果解释或风险评级"
+              ],
+              "observation_ids": [],
+              "status": "APPROVED",
+              "text": "经营现金流净额/年度营业收入（2024年）为5.27%。"
+            },
+            {
+              "calculation_ids": [
+                "calc-stock_to_flow_ratio_v1-b0475a885089c078"
+              ],
+              "claim_id": "claim-calc-stock_to_flow_ratio_v1-b0475a885089c078",
+              "company_id": "002371.SZ",
+              "evidence_ids": [],
+              "hypothesis_category": null,
+              "kind": "COMPUTED",
+              "limitations": [
+                "比率不等于因果解释或风险评级",
+                "期末存量/期间流量，不是应收周转率或周转天数"
+              ],
+              "observation_ids": [],
+              "status": "APPROVED",
+              "text": "期末应收账款账面价值/年度营业收入（2024年）为20.26%。"
+            },
+            {
+              "calculation_ids": [
+                "calc-growth_gap_pp_v1-9615df8f79ad9ccf"
+              ],
+              "claim_id": "claim-calc-growth_gap_pp_v1-9615df8f79ad9ccf",
+              "company_id": "002371.SZ",
+              "evidence_ids": [],
+              "hypothesis_category": null,
+              "kind": "COMPUTED",
+              "limitations": [
+                "比率不等于因果解释或风险评级"
+              ],
+              "observation_ids": [],
+              "status": "APPROVED",
+              "text": "收入增长率与经营现金流增长率之差为68.62个百分点。"
+            },
+            {
+              "calculation_ids": [
+                "calc-period_growth_v1-6d45d74c406f5faf"
+              ],
+              "claim_id": "claim-calc-period_growth_v1-6d45d74c406f5faf",
+              "company_id": "688072.SH",
+              "evidence_ids": [],
+              "hypothesis_category": null,
+              "kind": "COMPUTED",
+              "limitations": [
+                "比率不等于因果解释或风险评级"
+              ],
+              "observation_ids": [],
+              "status": "APPROVED",
+              "text": "营业收入增长率为51.70%。"
+            },
+            {
+              "calculation_ids": [
+                "calc-period_growth_v1-638398e1c8cf17df"
+              ],
+              "claim_id": "claim-calc-period_growth_v1-638398e1c8cf17df",
+              "company_id": "688072.SH",
+              "evidence_ids": [],
+              "hypothesis_category": null,
+              "kind": "COMPUTED",
+              "limitations": [
+                "比率不等于因果解释或风险评级"
+              ],
+              "observation_ids": [],
+              "status": "APPROVED",
+              "text": "应收账款账面价值增长率为178.11%。"
+            },
+            {
+              "calculation_ids": [
+                "calc-flow_to_flow_ratio_v1-f2d6c54c7efb55cf"
+              ],
+              "claim_id": "claim-calc-flow_to_flow_ratio_v1-f2d6c54c7efb55cf",
+              "company_id": "688072.SH",
+              "evidence_ids": [],
+              "hypothesis_category": null,
+              "kind": "COMPUTED",
+              "limitations": [
+                "比率不等于因果解释或风险评级"
+              ],
+              "observation_ids": [],
+              "status": "APPROVED",
+              "text": "经营现金流净额/年度营业收入（2023年）为-61.27%。"
+            },
+            {
+              "calculation_ids": [
+                "calc-stock_to_flow_ratio_v1-bc006c415042cb07"
+              ],
+              "claim_id": "claim-calc-stock_to_flow_ratio_v1-bc006c415042cb07",
+              "company_id": "688072.SH",
+              "evidence_ids": [],
+              "hypothesis_category": null,
+              "kind": "COMPUTED",
+              "limitations": [
+                "比率不等于因果解释或风险评级",
+                "期末存量/期间流量，不是应收周转率或周转天数"
+              ],
+              "observation_ids": [],
+              "status": "APPROVED",
+              "text": "期末应收账款账面价值/年度营业收入（2023年）为19.58%。"
+            },
+            {
+              "calculation_ids": [
+                "calc-flow_to_flow_ratio_v1-cd21d18e175b7681"
+              ],
+              "claim_id": "claim-calc-flow_to_flow_ratio_v1-cd21d18e175b7681",
+              "company_id": "688072.SH",
+              "evidence_ids": [],
+              "hypothesis_category": null,
+              "kind": "COMPUTED",
+              "limitations": [
+                "比率不等于因果解释或风险评级"
+              ],
+              "observation_ids": [],
+              "status": "APPROVED",
+              "text": "经营现金流净额/年度营业收入（2024年）为-6.89%。"
+            },
+            {
+              "calculation_ids": [
+                "calc-stock_to_flow_ratio_v1-9b58244d589df136"
+              ],
+              "claim_id": "claim-calc-stock_to_flow_ratio_v1-9b58244d589df136",
+              "company_id": "688072.SH",
+              "evidence_ids": [],
+              "hypothesis_category": null,
+              "kind": "COMPUTED",
+              "limitations": [
+                "比率不等于因果解释或风险评级",
+                "期末存量/期间流量，不是应收周转率或周转天数"
+              ],
+              "observation_ids": [],
+              "status": "APPROVED",
+              "text": "期末应收账款账面价值/年度营业收入（2024年）为35.90%。"
+            },
+            {
+              "calculation_ids": [
+                "calc-period_growth_v1-1d92c37217121f8b"
+              ],
+              "claim_id": "claim-calc-period_growth_v1-1d92c37217121f8b",
+              "company_id": "688082.SH",
+              "evidence_ids": [],
+              "hypothesis_category": null,
+              "kind": "COMPUTED",
+              "limitations": [
+                "比率不等于因果解释或风险评级"
+              ],
+              "observation_ids": [],
+              "status": "APPROVED",
+              "text": "营业收入增长率为44.48%。"
+            },
+            {
+              "calculation_ids": [
+                "calc-period_growth_v1-c861bccae52384f9"
+              ],
+              "claim_id": "claim-calc-period_growth_v1-c861bccae52384f9",
+              "company_id": "688082.SH",
+              "evidence_ids": [],
+              "hypothesis_category": null,
+              "kind": "COMPUTED",
+              "limitations": [
+                "比率不等于因果解释或风险评级"
+              ],
+              "observation_ids": [],
+              "status": "APPROVED",
+              "text": "应收账款账面价值增长率为34.10%。"
+            },
+            {
+              "calculation_ids": [
+                "calc-flow_to_flow_ratio_v1-bb6cdd1c628086ed"
+              ],
+              "claim_id": "claim-calc-flow_to_flow_ratio_v1-bb6cdd1c628086ed",
+              "company_id": "688082.SH",
+              "evidence_ids": [],
+              "hypothesis_category": null,
+              "kind": "COMPUTED",
+              "limitations": [
+                "比率不等于因果解释或风险评级"
+              ],
+              "observation_ids": [],
+              "status": "APPROVED",
+              "text": "经营现金流净额/年度营业收入（2023年）为-10.98%。"
+            },
+            {
+              "calculation_ids": [
+                "calc-stock_to_flow_ratio_v1-bac7b4ee2c424713"
+              ],
+              "claim_id": "claim-calc-stock_to_flow_ratio_v1-bac7b4ee2c424713",
+              "company_id": "688082.SH",
+              "evidence_ids": [],
+              "hypothesis_category": null,
+              "kind": "COMPUTED",
+              "limitations": [
+                "比率不等于因果解释或风险评级",
+                "期末存量/期间流量，不是应收周转率或周转天数"
+              ],
+              "observation_ids": [],
+              "status": "APPROVED",
+              "text": "期末应收账款账面价值/年度营业收入（2023年）为40.89%。"
+            },
+            {
+              "calculation_ids": [
+                "calc-flow_to_flow_ratio_v1-3f25099f79145f04"
+              ],
+              "claim_id": "claim-calc-flow_to_flow_ratio_v1-3f25099f79145f04",
+              "company_id": "688082.SH",
+              "evidence_ids": [],
+              "hypothesis_category": null,
+              "kind": "COMPUTED",
+              "limitations": [
+                "比率不等于因果解释或风险评级"
+              ],
+              "observation_ids": [],
+              "status": "APPROVED",
+              "text": "经营现金流净额/年度营业收入（2024年）为21.65%。"
+            },
+            {
+              "calculation_ids": [
+                "calc-stock_to_flow_ratio_v1-81f19d098674f212"
+              ],
+              "claim_id": "claim-calc-stock_to_flow_ratio_v1-81f19d098674f212",
+              "company_id": "688082.SH",
+              "evidence_ids": [],
+              "hypothesis_category": null,
+              "kind": "COMPUTED",
+              "limitations": [
+                "比率不等于因果解释或风险评级",
+                "期末存量/期间流量，不是应收周转率或周转天数"
+              ],
+              "observation_ids": [],
+              "status": "APPROVED",
+              "text": "期末应收账款账面价值/年度营业收入（2024年）为37.96%。"
+            },
+            {
+              "calculation_ids": [
+                "calc-period_growth_v1-4f2dca9fba05cf14",
+                "calc-period_growth_v1-fb8b325eb2a2ed85",
+                "calc-stock_to_flow_ratio_v1-36639653874a4a9d",
+                "calc-stock_to_flow_ratio_v1-b0475a885089c078"
+              ],
+              "claim_id": "claim-hyp-002371.SZ-SCALE_EXPANSION",
+              "company_id": "002371.SZ",
+              "evidence_ids": [
+                "cninfo-002371-2024-ar-1223309278:p0010:l33-46:edba560bdc10b"
+              ],
+              "hypothesis_category": "SCALE_EXPANSION",
+              "kind": "INFERENCE",
+              "limitations": [
+                "候选解释，不是已验证因果",
+                "支持需求: ['SALES_COLLECTION_DETAIL', 'RECEIVABLE_AGING', 'CUSTOMER_MIX']",
+                "削弱条件需检查: ['TIMING_DETAIL', 'INDEPENDENT_CONFIRMATION']",
+                "模型标记相关披露(CONTEXT)，仅核验原句存在，语义关联待复核"
+              ],
+              "observation_ids": [],
+              "status": "APPROVED",
+              "text": "上述现象可能与经营规模扩张相容，但尚未独立证实，不能据此确认主要原因。"
+            },
+            {
+              "calculation_ids": [
+                "calc-flow_to_flow_ratio_v1-0bfb301e96d6caec",
+                "calc-flow_to_flow_ratio_v1-3cb3e9da7dfe6d2f",
+                "calc-period_growth_v1-9741db98382437e1",
+                "calc-period_growth_v1-fb8b325eb2a2ed85",
+                "calc-stock_to_flow_ratio_v1-36639653874a4a9d",
+                "calc-stock_to_flow_ratio_v1-b0475a885089c078"
+              ],
+              "claim_id": "claim-hyp-002371.SZ-SETTLEMENT_TIMING",
+              "company_id": "002371.SZ",
+              "evidence_ids": [
+                "cninfo-002371-2024-ar-1223309278:p0010:l33-46:edba560bdc10b",
+                "cninfo-002371-2024-ar-1223309278:p0118:l22-35:edee9ffa065ba"
+              ],
+              "hypothesis_category": "SETTLEMENT_TIMING",
+              "kind": "INFERENCE",
+              "limitations": [
+                "候选解释，不是已验证因果",
+                "支持需求: ['TIMING_DETAIL', 'SALES_COLLECTION_DETAIL', 'RECEIVABLE_AGING']",
+                "削弱条件需检查: ['CUSTOMER_MIX', 'INDEPENDENT_CONFIRMATION']",
+                "模型标记相关披露(CONTEXT)，仅核验原句存在，语义关联待复核"
+              ],
+              "observation_ids": [],
+              "status": "APPROVED",
+              "text": "上述现象可能与结算回款时点差异相容，但尚未独立证实，不能据此确认主要原因。"
+            },
+            {
+              "calculation_ids": [
+                "calc-flow_to_flow_ratio_v1-0bfb301e96d6caec",
+                "calc-flow_to_flow_ratio_v1-3cb3e9da7dfe6d2f",
+                "calc-period_growth_v1-4f2dca9fba05cf14",
+                "calc-period_growth_v1-fb8b325eb2a2ed85",
+                "calc-stock_to_flow_ratio_v1-36639653874a4a9d",
+                "calc-stock_to_flow_ratio_v1-b0475a885089c078"
+              ],
+              "claim_id": "claim-hyp-002371.SZ-CUSTOMER_MIX",
+              "company_id": "002371.SZ",
+              "evidence_ids": [],
+              "hypothesis_category": "CUSTOMER_MIX",
+              "kind": "INFERENCE",
+              "limitations": [
+                "候选解释，不是已验证因果",
+                "支持需求: ['CUSTOMER_MIX', 'RECEIVABLE_AGING', 'SALES_COLLECTION_DETAIL']",
+                "削弱条件需检查: ['TIMING_DETAIL', 'INDEPENDENT_CONFIRMATION']"
+              ],
+              "observation_ids": [],
+              "status": "APPROVED",
+              "text": "上述现象可能与客户结构变化相容，但尚未独立证实，不能据此确认主要原因。"
+            },
+            {
+              "calculation_ids": [
+                "calc-flow_to_flow_ratio_v1-cd21d18e175b7681",
+                "calc-period_growth_v1-638398e1c8cf17df",
+                "calc-period_growth_v1-6d45d74c406f5faf",
+                "calc-stock_to_flow_ratio_v1-9b58244d589df136",
+                "calc-stock_to_flow_ratio_v1-bc006c415042cb07"
+              ],
+              "claim_id": "claim-hyp-688072.SH-SCALE_EXPANSION",
+              "company_id": "688072.SH",
+              "evidence_ids": [
+                "cninfo-688072-2024-ar-1223286833:p0055:l19-34:ee19b45ecd233"
+              ],
+              "hypothesis_category": "SCALE_EXPANSION",
+              "kind": "INFERENCE",
+              "limitations": [
+                "候选解释，不是已验证因果",
+                "支持需求: ['SALES_COLLECTION_DETAIL', 'RECEIVABLE_AGING', 'CUSTOMER_MIX']",
+                "削弱条件需检查: ['PURCHASE_AND_PAYMENTS', 'TIMING_DETAIL']",
+                "模型标记相关披露(CONTEXT)，仅核验原句存在，语义关联待复核"
+              ],
+              "observation_ids": [],
+              "status": "APPROVED",
+              "text": "上述现象可能与经营规模扩张相容，但尚未独立证实，不能据此确认主要原因。"
+            },
+            {
+              "calculation_ids": [
+                "calc-flow_to_flow_ratio_v1-cd21d18e175b7681",
+                "calc-period_growth_v1-638398e1c8cf17df",
+                "calc-period_growth_v1-6d45d74c406f5faf",
+                "calc-stock_to_flow_ratio_v1-9b58244d589df136",
+                "calc-stock_to_flow_ratio_v1-bc006c415042cb07"
+              ],
+              "claim_id": "claim-hyp-688072.SH-SETTLEMENT_TIMING",
+              "company_id": "688072.SH",
+              "evidence_ids": [
+                "cninfo-688072-2024-ar-1223286833:p0055:l19-34:ee19b45ecd233"
+              ],
+              "hypothesis_category": "SETTLEMENT_TIMING",
+              "kind": "INFERENCE",
+              "limitations": [
+                "候选解释，不是已验证因果",
+                "支持需求: ['TIMING_DETAIL', 'SALES_COLLECTION_DETAIL', 'RECEIVABLE_AGING']",
+                "削弱条件需检查: ['CUSTOMER_MIX', 'INDEPENDENT_CONFIRMATION']",
+                "模型标记相关披露(CONTEXT)，仅核验原句存在，语义关联待复核"
+              ],
+              "observation_ids": [],
+              "status": "APPROVED",
+              "text": "上述现象可能与结算回款时点差异相容，但尚未独立证实，不能据此确认主要原因。"
+            },
+            {
+              "calculation_ids": [
+                "calc-flow_to_flow_ratio_v1-cd21d18e175b7681",
+                "calc-period_growth_v1-638398e1c8cf17df",
+                "calc-period_growth_v1-6d45d74c406f5faf",
+                "calc-stock_to_flow_ratio_v1-9b58244d589df136",
+                "calc-stock_to_flow_ratio_v1-bc006c415042cb07"
+              ],
+              "claim_id": "claim-hyp-688072.SH-CUSTOMER_MIX",
+              "company_id": "688072.SH",
+              "evidence_ids": [],
+              "hypothesis_category": "CUSTOMER_MIX",
+              "kind": "INFERENCE",
+              "limitations": [
+                "候选解释，不是已验证因果",
+                "支持需求: ['CUSTOMER_MIX', 'RECEIVABLE_AGING', 'SALES_COLLECTION_DETAIL']",
+                "削弱条件需检查: ['TIMING_DETAIL', 'INDEPENDENT_CONFIRMATION']"
+              ],
+              "observation_ids": [],
+              "status": "APPROVED",
+              "text": "上述现象可能与客户结构变化相容，但尚未独立证实，不能据此确认主要原因。"
+            },
+            {
+              "calculation_ids": [
+                "calc-period_growth_v1-1d92c37217121f8b"
+              ],
+              "claim_id": "claim-hyp-688082.SH-SCALE_EXPANSION",
+              "company_id": "688082.SH",
+              "evidence_ids": [
+                "cninfo-688082-2024-ar-1222651596:p0036:l16-34:e31cd7d79eb90"
+              ],
+              "hypothesis_category": "SCALE_EXPANSION",
+              "kind": "INFERENCE",
+              "limitations": [
+                "候选解释，不是已验证因果",
+                "支持需求: ['SALES_COLLECTION_DETAIL', 'CUSTOMER_MIX']",
+                "削弱条件需检查: ['RECEIVABLE_AGING', 'INDEPENDENT_CONFIRMATION']",
+                "模型标记相关披露(SUPPORTING_DISCLOSURE)，仅核验原句存在，语义关联待复核"
+              ],
+              "observation_ids": [],
+              "status": "APPROVED",
+              "text": "上述现象可能与经营规模扩张相容，但尚未独立证实，不能据此确认主要原因。"
+            },
+            {
+              "calculation_ids": [
+                "calc-period_growth_v1-1d92c37217121f8b"
+              ],
+              "claim_id": "claim-hyp-688082.SH-SETTLEMENT_TIMING",
+              "company_id": "688082.SH",
+              "evidence_ids": [
+                "cninfo-688082-2024-ar-1222651596:p0036:l16-34:e31cd7d79eb90",
+                "cninfo-688082-2024-ar-1222651596:p0160:l26-44:e33de2ba9f730"
+              ],
+              "hypothesis_category": "SETTLEMENT_TIMING",
+              "kind": "INFERENCE",
+              "limitations": [
+                "候选解释，不是已验证因果",
+                "支持需求: ['TIMING_DETAIL', 'SALES_COLLECTION_DETAIL']",
+                "削弱条件需检查: ['RECEIVABLE_AGING', 'PURCHASE_AND_PAYMENTS']",
+                "模型标记相关披露(CONTEXT, SUPPORTING_DISCLOSURE)，仅核验原句存在，语义关联待复核"
+              ],
+              "observation_ids": [],
+              "status": "APPROVED",
+              "text": "上述现象可能与结算回款时点差异相容，但尚未独立证实，不能据此确认主要原因。"
+            },
+            {
+              "calculation_ids": [
+                "calc-period_growth_v1-1d92c37217121f8b"
+              ],
+              "claim_id": "claim-hyp-688082.SH-CUSTOMER_MIX",
+              "company_id": "688082.SH",
+              "evidence_ids": [],
+              "hypothesis_category": "CUSTOMER_MIX",
+              "kind": "INFERENCE",
+              "limitations": [
+                "候选解释，不是已验证因果",
+                "支持需求: ['CUSTOMER_MIX', 'SALES_COLLECTION_DETAIL']",
+                "削弱条件需检查: ['RECEIVABLE_AGING', 'INDEPENDENT_CONFIRMATION']"
+              ],
+              "observation_ids": [],
+              "status": "APPROVED",
+              "text": "上述现象可能与客户结构变化相容，但尚未独立证实，不能据此确认主要原因。"
+            },
+            {
+              "calculation_ids": [],
+              "claim_id": "claim-disclosed-002371.SZ-0",
+              "company_id": "002371.SZ",
+              "evidence_ids": [],
+              "hypothesis_category": null,
+              "kind": "DISCLOSED",
+              "limitations": [
+                "公司原文的解释，不构成独立验证的因果结论"
+              ],
+              "observation_ids": [],
+              "status": "APPROVED",
+              "text": "公司披露：“(4)2024年经营活动产生的现金流量净额15.73亿元,同比减少33.48%,主要原因为:公司为了满足订单需求,采购\n商品支付的货款增加,使得经营活动产生的现金流量净额出现下降。”"
+            },
+            {
+              "calculation_ids": [],
+              "claim_id": "claim-disclosed-002371.SZ-1",
+              "company_id": "002371.SZ",
+              "evidence_ids": [],
+              "hypothesis_category": null,
+              "kind": "DISCLOSED",
+              "limitations": [
+                "公司原文的解释，不构成独立验证的因果结论"
+              ],
+              "observation_ids": [],
+              "status": "APPROVED",
+              "text": "公司披露：“(1)公司营业收入持续稳定增长,主要原因为:公司集成电路装备领域多款新产品取得突破,工艺覆盖度及市场占有率\n显著增长,产品销量同比大幅度增加。”"
+            },
+            {
+              "calculation_ids": [],
+              "claim_id": "claim-disclosed-002371.SZ-2",
+              "company_id": "002371.SZ",
+              "evidence_ids": [],
+              "hypothesis_category": null,
+              "kind": "DISCLOSED",
+              "limitations": [
+                "公司原文的解释，不构成独立验证的因果结论"
+              ],
+              "observation_ids": [],
+              "status": "APPROVED",
+              "text": "公司披露：“本公司将逾期天数超过30日,或者导致信用风险显著增加因素中一个或多个指标发生显著变化的应收款项确认为\n单项计提信用损失。”"
+            },
+            {
+              "calculation_ids": [],
+              "claim_id": "claim-disclosed-688072.SH-0",
+              "company_id": "688072.SH",
+              "evidence_ids": [],
+              "hypothesis_category": null,
+              "kind": "DISCLOSED",
+              "limitations": [
+                "公司原文的解释，不构成独立验证的因果结论"
+              ],
+              "observation_ids": [],
+              "status": "APPROVED",
+              "text": "公司披露：“经营活动产生的现金流量净额变动原因说明:经营活动产生的现金流量净额-28,252.53万元,较\n上年同期-165,734.27万元大幅度收窄。”"
+            },
+            {
+              "calculation_ids": [],
+              "claim_id": "claim-disclosed-688072.SH-1",
+              "company_id": "688072.SH",
+              "evidence_ids": [],
+              "hypothesis_category": null,
+              "kind": "DISCLOSED",
+              "limitations": [
+                "公司原文的解释，不构成独立验证的因果结论"
+              ],
+              "observation_ids": [],
+              "status": "APPROVED",
+              "text": "公司披露：“主要原因为报告期销售商品、提供劳务收到的现金达到\n541,581.11万元,较上年同期增加263,048.18万元,增长94.44%。”"
+            },
+            {
+              "calculation_ids": [],
+              "claim_id": "claim-disclosed-688072.SH-2",
+              "company_id": "688072.SH",
+              "evidence_ids": [],
+              "hypothesis_category": null,
+              "kind": "DISCLOSED",
+              "limitations": [
+                "公司原文的解释，不构成独立验证的因果结论"
+              ],
+              "observation_ids": [],
+              "status": "APPROVED",
+              "text": "公司披露：“公司持续拓展产品布局,一方面加快产品迭代,另一方面推出有市场竞争力的新产品,业务规模\n不断扩大,报告期公司营业收入达到410,345.39万元,再创历史新高。”"
+            },
+            {
+              "calculation_ids": [],
+              "claim_id": "claim-disclosed-688082.SH-0",
+              "company_id": "688082.SH",
+              "evidence_ids": [],
+              "hypothesis_category": null,
+              "kind": "DISCLOSED",
+              "limitations": [
+                "公司原文的解释，不构成独立验证的因果结论"
+              ],
+              "observation_ids": [],
+              "status": "APPROVED",
+              "text": "公司披露：“经营活动产生的现金流量净额变动原因说明:经营活动产生的现金流量净额较上期同比上升,主\n要是因为本期销售回款较上期增加,以及因销售订单增长引起的本期预收货款增加所致。”"
+            },
+            {
+              "calculation_ids": [],
+              "claim_id": "claim-disclosed-688082.SH-1",
+              "company_id": "688082.SH",
+              "evidence_ids": [],
+              "hypothesis_category": null,
+              "kind": "DISCLOSED",
+              "limitations": [
+                "公司原文的解释，不构成独立验证的因果结论"
+              ],
+              "observation_ids": [],
+              "status": "APPROVED",
+              "text": "公司披露：“(1)专用设备销售收入\n对不存在试运行要求的产品,由客户调试确认验收后,客户取得商品控制权,公司确认收入。”"
+            },
+            {
+              "calculation_ids": [],
+              "claim_id": "claim-disclosed-688082.SH-2",
+              "company_id": "688082.SH",
+              "evidence_ids": [],
+              "hypothesis_category": null,
+              "kind": "DISCLOSED",
+              "limitations": [
+                "公司原文的解释，不构成独立验证的因果结论"
+              ],
+              "observation_ids": [],
+              "status": "APPROVED",
+              "text": "公司披露：“对存在试运行要求的产品,本公司将专用设备产品按照协议合同规定运至约定交货地点,在产品\n安装调试并通过客户验收后,并且产品试运行期满时,客户取得商品控制权,公司确认收入。”"
+            },
+            {
+              "calculation_ids": [],
+              "claim_id": "claim-gap-688072.SH-operating_cash_flow_net_growth",
+              "company_id": "688072.SH",
+              "evidence_ids": [],
+              "hypothesis_category": null,
+              "kind": "UNRESOLVED",
+              "limitations": [
+                "保留该边界；负基数应使用原始金额与比率描述，不能强算常规增长率"
+              ],
+              "observation_ids": [],
+              "status": "APPROVED",
+              "text": "operating_cash_flow_net_growth: NEGATIVE_BASE，不输出常规数值"
+            },
+            {
+              "calculation_ids": [],
+              "claim_id": "claim-gap-688072.SH-revenue_ocf_growth_gap_pp",
+              "company_id": "688072.SH",
+              "evidence_ids": [],
+              "hypothesis_category": null,
+              "kind": "UNRESOLVED",
+              "limitations": [
+                "保留该边界；负基数应使用原始金额与比率描述，不能强算常规增长率"
+              ],
+              "observation_ids": [],
+              "status": "APPROVED",
+              "text": "revenue_ocf_growth_gap_pp: INCOMPARABLE，不输出常规数值"
+            },
+            {
+              "calculation_ids": [],
+              "claim_id": "claim-gap-688082.SH-operating_cash_flow_net_growth",
+              "company_id": "688082.SH",
+              "evidence_ids": [],
+              "hypothesis_category": null,
+              "kind": "UNRESOLVED",
+              "limitations": [
+                "保留该边界；负基数应使用原始金额与比率描述，不能强算常规增长率"
+              ],
+              "observation_ids": [],
+              "status": "APPROVED",
+              "text": "operating_cash_flow_net_growth: NEGATIVE_BASE，不输出常规数值"
+            },
+            {
+              "calculation_ids": [],
+              "claim_id": "claim-gap-688082.SH-revenue_ocf_growth_gap_pp",
+              "company_id": "688082.SH",
+              "evidence_ids": [],
+              "hypothesis_category": null,
+              "kind": "UNRESOLVED",
+              "limitations": [
+                "保留该边界；负基数应使用原始金额与比率描述，不能强算常规增长率"
+              ],
+              "observation_ids": [],
+              "status": "APPROVED",
+              "text": "revenue_ocf_growth_gap_pp: INCOMPARABLE，不输出常规数值"
+            },
+            {
+              "calculation_ids": [],
+              "claim_id": "claim-gap-claim-hyp-002371.SZ-SCALE_EXPANSION",
+              "company_id": "002371.SZ",
+              "evidence_ids": [],
+              "hypothesis_category": null,
+              "kind": "UNRESOLVED",
+              "limitations": [
+                "S5按缺口补证据；S4保留未决，不自动搜索"
+              ],
+              "observation_ids": [],
+              "status": "APPROVED",
+              "text": "候选解释的支持需求及削弱条件尚未完成独立核验"
+            },
+            {
+              "calculation_ids": [],
+              "claim_id": "claim-gap-claim-hyp-002371.SZ-SETTLEMENT_TIMING",
+              "company_id": "002371.SZ",
+              "evidence_ids": [],
+              "hypothesis_category": null,
+              "kind": "UNRESOLVED",
+              "limitations": [
+                "S5按缺口补证据；S4保留未决，不自动搜索"
+              ],
+              "observation_ids": [],
+              "status": "APPROVED",
+              "text": "候选解释的支持需求及削弱条件尚未完成独立核验"
+            },
+            {
+              "calculation_ids": [],
+              "claim_id": "claim-gap-claim-hyp-002371.SZ-CUSTOMER_MIX",
+              "company_id": "002371.SZ",
+              "evidence_ids": [],
+              "hypothesis_category": null,
+              "kind": "UNRESOLVED",
+              "limitations": [
+                "S5按缺口补证据；S4保留未决，不自动搜索"
+              ],
+              "observation_ids": [],
+              "status": "APPROVED",
+              "text": "候选解释的支持需求及削弱条件尚未完成独立核验"
+            },
+            {
+              "calculation_ids": [],
+              "claim_id": "claim-gap-claim-hyp-688072.SH-SCALE_EXPANSION",
+              "company_id": "688072.SH",
+              "evidence_ids": [],
+              "hypothesis_category": null,
+              "kind": "UNRESOLVED",
+              "limitations": [
+                "S5按缺口补证据；S4保留未决，不自动搜索"
+              ],
+              "observation_ids": [],
+              "status": "APPROVED",
+              "text": "候选解释的支持需求及削弱条件尚未完成独立核验"
+            },
+            {
+              "calculation_ids": [],
+              "claim_id": "claim-gap-claim-hyp-688072.SH-SETTLEMENT_TIMING",
+              "company_id": "688072.SH",
+              "evidence_ids": [],
+              "hypothesis_category": null,
+              "kind": "UNRESOLVED",
+              "limitations": [
+                "S5按缺口补证据；S4保留未决，不自动搜索"
+              ],
+              "observation_ids": [],
+              "status": "APPROVED",
+              "text": "候选解释的支持需求及削弱条件尚未完成独立核验"
+            },
+            {
+              "calculation_ids": [],
+              "claim_id": "claim-gap-claim-hyp-688072.SH-CUSTOMER_MIX",
+              "company_id": "688072.SH",
+              "evidence_ids": [],
+              "hypothesis_category": null,
+              "kind": "UNRESOLVED",
+              "limitations": [
+                "S5按缺口补证据；S4保留未决，不自动搜索"
+              ],
+              "observation_ids": [],
+              "status": "APPROVED",
+              "text": "候选解释的支持需求及削弱条件尚未完成独立核验"
+            },
+            {
+              "calculation_ids": [],
+              "claim_id": "claim-gap-claim-hyp-688082.SH-SCALE_EXPANSION",
+              "company_id": "688082.SH",
+              "evidence_ids": [],
+              "hypothesis_category": null,
+              "kind": "UNRESOLVED",
+              "limitations": [
+                "S5按缺口补证据；S4保留未决，不自动搜索"
+              ],
+              "observation_ids": [],
+              "status": "APPROVED",
+              "text": "候选解释的支持需求及削弱条件尚未完成独立核验"
+            },
+            {
+              "calculation_ids": [],
+              "claim_id": "claim-gap-claim-hyp-688082.SH-SETTLEMENT_TIMING",
+              "company_id": "688082.SH",
+              "evidence_ids": [],
+              "hypothesis_category": null,
+              "kind": "UNRESOLVED",
+              "limitations": [
+                "S5按缺口补证据；S4保留未决，不自动搜索"
+              ],
+              "observation_ids": [],
+              "status": "APPROVED",
+              "text": "候选解释的支持需求及削弱条件尚未完成独立核验"
+            },
+            {
+              "calculation_ids": [],
+              "claim_id": "claim-gap-claim-hyp-688082.SH-CUSTOMER_MIX",
+              "company_id": "688082.SH",
+              "evidence_ids": [],
+              "hypothesis_category": null,
+              "kind": "UNRESOLVED",
+              "limitations": [
+                "S5按缺口补证据；S4保留未决，不自动搜索"
+              ],
+              "observation_ids": [],
+              "status": "APPROVED",
+              "text": "候选解释的支持需求及削弱条件尚未完成独立核验"
+            }
+          ],
+          "dependency_issues": [
+            {
+              "owner_id": "claim-disclosed-002371.SZ-0",
+              "reason": "MISSING_DIRECT_REFERENCE",
+              "target_id": "direct-evidence-reference"
+            },
+            {
+              "owner_id": "claim-disclosed-002371.SZ-1",
+              "reason": "MISSING_DIRECT_REFERENCE",
+              "target_id": "direct-evidence-reference"
+            },
+            {
+              "owner_id": "claim-disclosed-002371.SZ-2",
+              "reason": "MISSING_DIRECT_REFERENCE",
+              "target_id": "direct-evidence-reference"
+            },
+            {
+              "owner_id": "claim-disclosed-688072.SH-0",
+              "reason": "MISSING_DIRECT_REFERENCE",
+              "target_id": "direct-evidence-reference"
+            },
+            {
+              "owner_id": "claim-disclosed-688072.SH-1",
+              "reason": "MISSING_DIRECT_REFERENCE",
+              "target_id": "direct-evidence-reference"
+            },
+            {
+              "owner_id": "claim-disclosed-688072.SH-2",
+              "reason": "MISSING_DIRECT_REFERENCE",
+              "target_id": "direct-evidence-reference"
+            },
+            {
+              "owner_id": "claim-disclosed-688082.SH-0",
+              "reason": "MISSING_DIRECT_REFERENCE",
+              "target_id": "direct-evidence-reference"
+            },
+            {
+              "owner_id": "claim-disclosed-688082.SH-1",
+              "reason": "MISSING_DIRECT_REFERENCE",
+              "target_id": "direct-evidence-reference"
+            },
+            {
+              "owner_id": "claim-disclosed-688082.SH-2",
+              "reason": "MISSING_DIRECT_REFERENCE",
+              "target_id": "direct-evidence-reference"
+            }
+          ],
+          "documents": [
+            {
+              "company_id": "002371.SZ",
+              "document_id": "cninfo-002371-2024-ar-1223309278",
+              "document_sha256": "70168364fd518323effa2d11ff337a172783e3597ed6f896353ca62ea3f75cfe",
+              "metadata_source": {
+                "path": "runs/s6/s6-live-20260930-02/final_state.json",
+                "pointer": "/observations",
+                "sha256": "712a58a4326ba3b4ec669c33edd38f1cdcf10b9f4b482d2601d0eba9eea43f61"
+              },
+              "page_count": null,
+              "pdf_access": "NOT_CONNECTED",
+              "published_on": "2025-04-25",
+              "title": null
+            },
+            {
+              "company_id": "688072.SH",
+              "document_id": "cninfo-688072-2024-ar-1223286833",
+              "document_sha256": "15c7ebbcbe4cefc422885f4ff30789700b8a51aed4e33274528f153e0bbb1bdb",
+              "metadata_source": {
+                "path": "runs/s6/s6-live-20260930-02/final_state.json",
+                "pointer": "/observations",
+                "sha256": "712a58a4326ba3b4ec669c33edd38f1cdcf10b9f4b482d2601d0eba9eea43f61"
+              },
+              "page_count": null,
+              "pdf_access": "NOT_CONNECTED",
+              "published_on": "2025-04-25",
+              "title": null
+            },
+            {
+              "company_id": "688082.SH",
+              "document_id": "cninfo-688082-2024-ar-1222651596",
+              "document_sha256": "6db89e438ac1c4affd979133df492e66262a74c6034c2b24be8355793823b2c4",
+              "metadata_source": {
+                "path": "runs/s6/s6-live-20260930-02/final_state.json",
+                "pointer": "/observations",
+                "sha256": "712a58a4326ba3b4ec669c33edd38f1cdcf10b9f4b482d2601d0eba9eea43f61"
+              },
+              "page_count": null,
+              "pdf_access": "NOT_CONNECTED",
+              "published_on": "2025-02-27",
+              "title": null
+            }
+          ],
+          "evidence": [
+            {
+              "printed_page": null,
+              "printed_page_source": null,
+              "record": {
+                "company_id": "002371.SZ",
+                "document_id": "cninfo-002371-2024-ar-1223309278",
+                "evidence_id": "cninfo-002371-2024-ar-1223309278:p0016:l1-12:e2dbdd498ddb4",
+                "evidence_sha256": "2dbdd498ddb433ca9916f874748ed72c1fc9cc9077fe5cd4e5704fbe496277fa",
+                "line_end": 12,
+                "line_start": 1,
+                "matched_terms": [],
+                "page_id": "cninfo-002371-2024-ar-1223309278:p0016:6498ace4a0a39264",
+                "pdf_page": 16,
+                "retrieval_rank": 1,
+                "retrieval_score": 0.0,
+                "text": "北方华创科技集团股份有限公司2024年年度报告全文\n二、报告期内公司从事的主要业务\n北方华创专注于半导体基础产品的研发、生产、销售和技术服务,主要产品为电子工艺装备和电子元器件,电子工\n艺装备包括半导体装备、真空及新能源装备。电子元器件包括电阻、电容、晶体器件、模块电源、微波组件等。北方华\n创始终坚持科技创新,不断推动产品迭代升级,积极拓展产品应用领域,以满足快速发展的市场需求。\n在半导体装备业务板块,北方华创的主要产品包括刻蚀、薄膜沉积、热处理、湿法、离子注入等核心工艺装备,广\n泛应用于集成电路、功率半导体、三维集成和先进封装、化合物半导体、新型显示等制造领域。北方华创借助产品技术\n领先、种类多样、工艺覆盖广泛等优势,以产品迭代升级和成套解决方案为客户创造更大价值。\n在真空及新能源装备业务板块,北方华创深耕高压、高温、高真空技术,主要产品包括晶体生长设备、真空热处理\n设备、气氛保护热处理设备、连续式热处理设备、等离子增强化学气相沉积设备、扩散氧化退火设备、磁控溅射镀膜设\n备、低压化学气相沉积设备、多弧离子镀膜设备、金属双极板镀膜设备等,广泛应用于材料热处理、真空电子、半导体\n材料、磁性材料、新能源等领域,为新材料、新工艺、新能源等绿色制造提供技术支持。"
+              }
+            },
+            {
+              "printed_page": null,
+              "printed_page_source": null,
+              "record": {
+                "company_id": "002371.SZ",
+                "document_id": "cninfo-002371-2024-ar-1223309278",
+                "evidence_id": "cninfo-002371-2024-ar-1223309278:p0030:l16-42:eb542983cb189",
+                "evidence_sha256": "b542983cb189e4960cbb55d04d34576e38a83bb6dddfd0abb156832a259e113f",
+                "line_end": 42,
+                "line_start": 16,
+                "matched_terms": [],
+                "page_id": "cninfo-002371-2024-ar-1223309278:p0030:d964c77e4d10e42c",
+                "pdf_page": 30,
+                "retrieval_rank": 2,
+                "retrieval_score": 0.0,
+                "text": "主要为本期职工薪酬\n管理费用 2,111,154,110.30 1,752,101,098.58 20.49%\n增加2.32亿元。\n主要为利息费用增\n财务费用 59,708,499.95 -18,133,193.65 429.28%\n加。\n主要为本期材料测试\n费增加6.93亿元,折\n研发费用 3,669,454,817.56 2,475,304,060.27 48.24% 旧摊销费增加2.61亿\n元,职工薪酬增加\n1.70亿元。\n4、研发投入\n适用□不适用\n预计对公司未来发展\n主要研发项目名称 项目目的 项目进展 拟达到的目标\n的影响\n加大集成电路先进制\n提高半导体装备的技 程装备研发力度,扩 有利于提高公司半导\n半导体装备研发项目 术水平,扩展产品 按计划实施中 展现有核心装备工艺 体装备业务的竞争能\n线。 覆盖率,探索新技术 力\n领域的产品开发。\n公司研发人员情况\n2024年 2023年 变动比例\n研发人员数量(人) 4,583 3,656 25.36%\n研发人员数量占比 28.02% 30.44% -2.42%\n研发人员学历结构\n本科 1,386 1,071 29.41%"
+              }
+            },
+            {
+              "printed_page": null,
+              "printed_page_source": null,
+              "record": {
+                "company_id": "002371.SZ",
+                "document_id": "cninfo-002371-2024-ar-1223309278",
+                "evidence_id": "cninfo-002371-2024-ar-1223309278:p0131:l24-41:e133d1c73a482",
+                "evidence_sha256": "133d1c73a4826f2626a0bbb360009504f63a4ee8a7bd86b0384683881cbba475",
+                "line_end": 41,
+                "line_start": 24,
+                "matched_terms": [],
+                "page_id": "cninfo-002371-2024-ar-1223309278:p0131:839a3f25e30e9b76",
+                "pdf_page": 131,
+                "retrieval_rank": 1,
+                "retrieval_score": 0.0,
+                "text": "单位:元\n会计政策变更的内容和原因 受重要影响的报表项目名称 影响金额\n2024年12月,财政部发布了《关于印发〈企业会计准则\n解释第18号〉的通知》,明确不属于单项履约义务的保\n证类质量保证金的会计处理,应当根据《企业会计准则\n第13号——或有事项》规定,在确认预计负债的同时,\n将相关金额计入营业成本,并根据流动性列示预计负 销售费用 -71,262,948.94\n债。本公司在首次执行日,对此项会计政策变更采用追\n溯调整法,调整了比较财务报表相关项目列示,分别调\n增2023年度合并利润表营业成本71,262,948.94元,调减\n销售费用71,262,948.94元。\n2024年12月,财政部发布了《关于印发〈企业会计准则\n解释第18号〉的通知》,明确不属于单项履约义务的保\n证类质量保证金的会计处理,应当根据《企业会计准则\n第13号——或有事项》规定,在确认预计负债的同时,\n将相关金额计入营业成本,并根据流动性列示预计负 营业成本 71,262,948.94\n债。本公司在首次执行日,对此项会计政策变更采用追\n溯调整法,调整了比较财务报表相关项目列示,分别调"
+              }
+            },
+            {
+              "printed_page": null,
+              "printed_page_source": null,
+              "record": {
+                "company_id": "002371.SZ",
+                "document_id": "cninfo-002371-2024-ar-1223309278",
+                "evidence_id": "cninfo-002371-2024-ar-1223309278:p0010:l33-46:edba560bdc10b",
+                "evidence_sha256": "dba560bdc10b637d5ec6ae5bbeb4ebd76095fac7632e73bc119ae8b015b19441",
+                "line_end": 46,
+                "line_start": 33,
+                "matched_terms": [],
+                "page_id": "cninfo-002371-2024-ar-1223309278:p0010:bd86150ac87c4859",
+                "pdf_page": 10,
+                "retrieval_rank": 2,
+                "retrieval_score": 0.0,
+                "text": "(1)公司营业收入持续稳定增长,主要原因为:公司集成电路装备领域多款新产品取得突破,工艺覆盖度及市场占有率\n显著增长,产品销量同比大幅度增加。\n(2)2024年归属于上市公司股东的净利润56.21亿元,同比增长44.17%,主要原因为:公司业务规模持续扩大,在收\n入增长的同时,持续推动降本增效工作,平台优势逐渐显现,经营效率显著提高,成本费用率有效降低。\n(3)2024年归属于上市公司股东的扣除非经常性损益的净利润55.70亿元,同比增长55.53%,主要原因为:公司归属\n于上市公司股东的净利润同比增加17.22亿元,使得归属于上市公司股东的扣除非经常性损益的净利润增加。\n(4)2024年经营活动产生的现金流量净额15.73亿元,同比减少33.48%,主要原因为:公司为了满足订单需求,采购\n商品支付的货款增加,使得经营活动产生的现金流量净额出现下降。\n公司最近三个会计年度扣除非经常性损益前后净利润孰低者均为负值,且最近一年审计报告显示公司持续经营能力存在\n不确定性\n□是否\n扣除非经常损益前后的净利润孰低者为负值\n□是否\n10"
+              }
+            },
+            {
+              "printed_page": null,
+              "printed_page_source": null,
+              "record": {
+                "company_id": "002371.SZ",
+                "document_id": "cninfo-002371-2024-ar-1223309278",
+                "evidence_id": "cninfo-002371-2024-ar-1223309278:p0118:l22-35:edee9ffa065ba",
+                "evidence_sha256": "dee9ffa065baed8d8bce22c213d53e8d6b3b5f9a0ce0fa111aa0fd17aa26aa81",
+                "line_end": 35,
+                "line_start": 22,
+                "matched_terms": [],
+                "page_id": "cninfo-002371-2024-ar-1223309278:p0118:95a0a0f3f4fb21a2",
+                "pdf_page": 118,
+                "retrieval_rank": 1,
+                "retrieval_score": 0.0,
+                "text": "本公司将逾期天数超过30日,或者导致信用风险显著增加因素中一个或多个指标发生显著变化的应收款项确认为\n单项计提信用损失。除非本公司无需付出过多成本或努力即可获得合理且有依据的信息,证明虽然超过合同约定的付款\n期限30天,但信用风险自初始确认以来并未显著增加。\n本公司对单项计提信用损失的应收款项单独进行信用减值测试,单独测试未发生信用损失的应收款项,包括在组合\n中进行信用减值测试。已单项确认信用损失的应收款项,不再包括在组合中进行信用减值测试,主要为应收关联方款项;\n与对方存在争议或涉及诉讼、仲裁的应收款项;已有明显迹象表明债务人很可能无法履行还款义务的应收款项等。\n应收账款按照信用风险特征组合:\n组合名称 组合内容\n应收客户款项 以账龄表为基础的减值准备矩阵\n14、应收款项融资\n本公司对于《企业会计准则第14号——收入》所规定的、不含重大融资成分(包括根据该准则不考虑不超过一年\n的合同中融资成分的情况)的应收款项融资,采用预期信用损失的简化模型,即始终按照整个存续期内预期信用损失的\n金额计量其损失准备,由此形成的损失准备的增加或转回金额,作为减值损失或利得计入当期损益。\n118"
+              }
+            },
+            {
+              "printed_page": null,
+              "printed_page_source": null,
+              "record": {
+                "company_id": "002371.SZ",
+                "document_id": "cninfo-002371-2024-ar-1223309278",
+                "evidence_id": "cninfo-002371-2024-ar-1223309278:p0185:l19-38:efc5f4d49dcc5",
+                "evidence_sha256": "fc5f4d49dcc5e9d552ba9f0a447f568f111dda1099568894689c02724f8d7b8c",
+                "line_end": 38,
+                "line_start": 19,
+                "matched_terms": [],
+                "page_id": "cninfo-002371-2024-ar-1223309278:p0185:1829642436e0642d",
+                "pdf_page": 185,
+                "retrieval_rank": 2,
+                "retrieval_score": 0.0,
+                "text": "单位:元\n本期变动金额\n类别 期初余额 期末余额\n计提 收回或转回 核销 其他\n账龄矩阵 1,000,000.00 1,000,000.00\n合计 1,000,000.00 1,000,000.00\n(4)本期实际核销的应收账款情况\n(5)按欠款方归集的期末余额前五名的应收账款和合同资产情况\n2、其他应收款\n单位:元\n项目 期末余额 期初余额\n应收股利 963,440,000.00 488,484,301.90\n其他应收款 1,193,644,544.78 1,146,735,976.95\n合计 2,157,084,544.78 1,635,220,278.85\n(1)应收利息\n1)应收利息分类\n2)重要逾期利息\n3)按坏账计提方法分类披露\n□适用不适用\n185"
+              }
+            },
+            {
+              "printed_page": null,
+              "printed_page_source": null,
+              "record": {
+                "company_id": "688072.SH",
+                "document_id": "cninfo-688072-2024-ar-1223286833",
+                "evidence_id": "cninfo-688072-2024-ar-1223286833:p0055:l19-34:ee19b45ecd233",
+                "evidence_sha256": "e19b45ecd233894ef28ccb4e61323e87b9997f09caa3fe0f2c68c60aa049f385",
+                "line_end": 34,
+                "line_start": 19,
+                "matched_terms": [],
+                "page_id": "cninfo-688072-2024-ar-1223286833:p0055:3c07db3b7bda9cae",
+                "pdf_page": 55,
+                "retrieval_rank": 1,
+                "retrieval_score": 0.0,
+                "text": "投资活动产生的现金流量净额 -892,164,488.49 -835,714,546.92 不适用\n筹资活动产生的现金流量净额 1,361,215,267.66 1,339,146,677.51 1.65\n营业收入变动原因说明:公司营业收入持续高速增长,2018年至2024年复合增长率达到96.79%。\n公司持续拓展产品布局,一方面加快产品迭代,另一方面推出有市场竞争力的新产品,业务规模\n不断扩大,报告期公司营业收入达到410,345.39万元,再创历史新高。\n营业成本变动原因说明:营业成本较上年同期增长67.26%[注],主要系随营业收入增长而增加。\n销售费用变动原因说明:销售费用较上年同期增长64.40%[注],主要系公司职工薪酬、股份支付\n费用、交通差旅费等增长。\n管理费用变动原因说明:管理费用较上年同期增长11.25%,主要系职工薪酬、资产折旧摊销等增\n加。\n财务费用变动原因说明:财务费用较上年同期增加,主要系利息支出增加。\n研发费用变动原因说明:研发费用较上年同期增长31.26%,主要系职工薪酬及专业机构服务费等\n增加。\n经营活动产生的现金流量净额变动原因说明:经营活动产生的现金流量净额-28,252.53万元,较\n上年同期-165,734.27万元大幅度收窄。主要原因为报告期销售商品、提供劳务收到的现金达到\n541,581.11万元,较上年同期增加263,048.18万元,增长94.44%。"
+              }
+            },
+            {
+              "printed_page": null,
+              "printed_page_source": null,
+              "record": {
+                "company_id": "688072.SH",
+                "document_id": "cninfo-688072-2024-ar-1223286833",
+                "evidence_id": "cninfo-688072-2024-ar-1223286833:p0031:l7-23:e4c7b811c29a8",
+                "evidence_sha256": "4c7b811c29a8596bf0d73017a1f5ff0113a677e6e2b4b849892a6638d2471716",
+                "line_end": 23,
+                "line_start": 7,
+                "matched_terms": [],
+                "page_id": "cninfo-688072-2024-ar-1223286833:p0031:fe6b65bd1527d838",
+                "pdf_page": 31,
+                "retrieval_rank": 2,
+                "retrieval_score": 0.0,
+                "text": "与沟通,促进公司与投资者之间建立长期、稳定的共赢关系,实现公司价值和投资者利益的最大\n化。报告期内,公司召开7次业绩说明会/投资者交流会,开展180余次投资者交流活动。\n公司高度重视内幕交易防范工作,做好内幕信息知情人登记管理和防范内幕交易工作。对公\n司董事、监事、高级管理人员及相关员工定期作出禁止内幕交易的警示及教育,敦促董事、监事、\n高级管理人员及相关知情人员严格履行保密义务并严格遵守股票减持及增持等相关规定。\n非企业会计准则业绩变动情况分析及展望\n□适用 √不适用\n二、报告期内公司所从事的主要业务、经营模式、行业情况及研发情况说明\n(一) 主要业务、主要产品或服务情况\n1、主要业务情况\n公司主要从事高端半导体专用设备的研发、生产、销售与技术服务。自成立以来,公司始终\n坚持自主研发、自主创新,目前已形成PECVD、ALD、SACVD、HDPCVD、FlowableCVD等薄\n膜设备产品,以及应用于三维集成领域的先进键合设备和配套的量检测设备产品,薄膜设备产品\n已广泛应用于国内集成电路逻辑芯片、存储芯片等制造产线,先进键合设备和配套的量检测设备\n产品已实现产业化应用。\n2、主要产品情况\n报告期内,公司不断拓展新工艺、新产品以及新型平台、新型反应腔的验证与产业化,持续"
+              }
+            },
+            {
+              "printed_page": null,
+              "printed_page_source": null,
+              "record": {
+                "company_id": "688072.SH",
+                "document_id": "cninfo-688072-2024-ar-1223286833",
+                "evidence_id": "cninfo-688072-2024-ar-1223286833:p0055:l28-43:e4c5294c339a0",
+                "evidence_sha256": "4c5294c339a04a5a2213af3a6353cb9a7b1a37032a8be3b62a88cb789f0c21d6",
+                "line_end": 43,
+                "line_start": 28,
+                "matched_terms": [],
+                "page_id": "cninfo-688072-2024-ar-1223286833:p0055:3c07db3b7bda9cae",
+                "pdf_page": 55,
+                "retrieval_rank": 1,
+                "retrieval_score": 0.0,
+                "text": "加。\n财务费用变动原因说明:财务费用较上年同期增加,主要系利息支出增加。\n研发费用变动原因说明:研发费用较上年同期增长31.26%,主要系职工薪酬及专业机构服务费等\n增加。\n经营活动产生的现金流量净额变动原因说明:经营活动产生的现金流量净额-28,252.53万元,较\n上年同期-165,734.27万元大幅度收窄。主要原因为报告期销售商品、提供劳务收到的现金达到\n541,581.11万元,较上年同期增加263,048.18万元,增长94.44%。\n投资活动产生的现金流量净额变动原因说明:投资活动产生的现金流量净额变动主要系报告期购\n买长期资产支出同比有所增加。\n筹资活动产生的现金流量净额变动原因说明:筹资活动产生的现金流量净额增长1.65%,主要系\n取得的银行借款净额增加。\n注:公司自2024年12月6日起执行财政部颁布的《企业会计准则解释第18号》“关于不属于单\n项履约义务的保证类质量保证的会计处理”规定,对上年同期数进行了调整,调增上年同期主营\n业务成本105,379,992.37元,调减上年同期销售费用105,379,992.37元。\n本期公司业务类型、利润构成或利润来源发生重大变动的详细说明\n□适用 √不适用"
+              }
+            },
+            {
+              "printed_page": null,
+              "printed_page_source": null,
+              "record": {
+                "company_id": "688072.SH",
+                "document_id": "cninfo-688072-2024-ar-1223286833",
+                "evidence_id": "cninfo-688072-2024-ar-1223286833:p0195:l17-43:eede8890e4379",
+                "evidence_sha256": "ede8890e4379221115b222e145278669c8837f852caf4df929ee0d523bb666a9",
+                "line_end": 43,
+                "line_start": 17,
+                "matched_terms": [],
+                "page_id": "cninfo-688072-2024-ar-1223286833:p0195:a8608e6566afef91",
+                "pdf_page": 195,
+                "retrieval_rank": 2,
+                "retrieval_score": 0.0,
+                "text": "额与实际回购所支付的金额之间的差额冲减资本公积,资本公积不足冲减的,冲减留存收益;如\n果将回购的股份奖励给本公司职工属于以权益结算的股份支付,于职工行权购买本公司股份收到\n价款时,转销交付职工的库存股成本和等待期内资本公积(其他资本公积)累计金额,同时,按\n照其差额调整资本公积(股本溢价)。\n40、重要会计政策和会计估计的变更\n(1).重要会计政策变更\n√适用 □不适用\n单位:元 币种:人民币\n受重要影响的报表项\n会计政策变更的内容和原因 影响金额\n目名称\n(1)本公司自2024年1月1日起执行财政部颁布的\n《企业会计准则解释第17号》“关于流动负债与非\n不适用 不适用\n流动负债的划分”规定,该项会计政策变更对公司\n财务报表无影响。\n(2)公司自2024年1月1日起执行财政部颁布的\n《企业会计准则解释第17号》“关于供应商融资安 不适用 不适用\n排的披露”规定。\n(3) 公司自2024年1月1日起执行财政部颁布的\n《企业会计准则解释第17号》“关于售后租回交易\n不适用 不适用\n的会计处理”规定,该项会计政策变更对公司财务\n报表无影响。\n(4) 公司自2024年12月6日起执行财政部颁布的\n2023年度利润表项目\n194/276"
+              }
+            },
+            {
+              "printed_page": null,
+              "printed_page_source": null,
+              "record": {
+                "company_id": "688072.SH",
+                "document_id": "cninfo-688072-2024-ar-1223286833",
+                "evidence_id": "cninfo-688072-2024-ar-1223286833:p0179:l1-26:e71948ef73a9b",
+                "evidence_sha256": "71948ef73a9bda511afad94d052ec67def93ce76fd29646f740b3ab3ea80bfe1",
+                "line_end": 26,
+                "line_start": 1,
+                "matched_terms": [],
+                "page_id": "cninfo-688072-2024-ar-1223286833:p0179:dda74a9e8067ca32",
+                "pdf_page": 179,
+                "retrieval_rank": 1,
+                "retrieval_score": 0.0,
+                "text": "拓荆科技股份有限公司2024年年度报告\n应收账款 其他应收款\n账 龄\n预期信用损失率(%) 预期信用损失率(%)\n7-12个月 5.00 5.00\n1-2年 15.00 15.00\n2-3年 20.00 20.00\n3-4年 30.00 30.00\n4-5年 50.00 50.00\n5年以上 100.00 100.00\n应收账款、其他应收款的账龄自初始确认日起算。\n(3) 按单项计提预期信用损失的应收款项和合同资产的认定标准\n对信用风险与组合信用风险显著不同的应收款项和合同资产,公司按单项计提预期信用损失。\n12、应收票据\n√适用 □不适用\n按照信用风险特征组合计提坏账准备的组合类别及确定依据\n√适用 □不适用\n详见第十节财务报告五、11。\n基于账龄确认信用风险特征组合的账龄计算方法\n□适用 √不适用\n按照单项计提坏账准备的单项计提判断标准\n□适用 √不适用\n13、应收账款\n√适用 □不适用\n按照信用风险特征组合计提坏账准备的组合类别及确定依据\n√适用 □不适用"
+              }
+            },
+            {
+              "printed_page": null,
+              "printed_page_source": null,
+              "record": {
+                "company_id": "688072.SH",
+                "document_id": "cninfo-688072-2024-ar-1223286833",
+                "evidence_id": "cninfo-688072-2024-ar-1223286833:p0178:l7-28:ed37b9bf5f896",
+                "evidence_sha256": "d37b9bf5f89672745540374128219cccfcc95fdea389a958bbf0c61b86a62424",
+                "line_end": 28,
+                "line_start": 7,
+                "matched_terms": [],
+                "page_id": "cninfo-688072-2024-ar-1223286833:p0178:0758a3252557dd44",
+                "pdf_page": 178,
+                "retrieval_rank": 2,
+                "retrieval_score": 0.0,
+                "text": "公司在其他综合收益中确认其损失准备,不抵减该金融资产的账面价值。\n6. 金融资产和金融负债的抵销\n金融资产和金融负债在资产负债表内分别列示,不相互抵销。但同时满足下列条件的,公司\n以相互抵销后的净额在资产负债表内列示:(1) 公司具有抵销已确认金额的法定权利,且该种法\n定权利是当前可执行的;(2) 公司计划以净额结算,或同时变现该金融资产和清偿该金融负债。\n不满足终止确认条件的金融资产转移,公司不对已转移的金融资产和相关负债进行抵销。\n7. 应收款项和合同资产预期信用损失的确认标准和计提方法\n(1) 按信用风险特征组合计提预期信用损失的应收款项和合同资产\n组合类别 确定组合的依据 计量预期信用损失的方法\n参考历史信用损失经验,结合\n应收银行承兑汇票\n当前状况以及对未来经济状\n票据类型 况的预测,通过违约风险敞口\n和整个存续期预期信用损失\n应收商业承兑汇票\n率,计算预期信用损失\n参考历史信用损失经验,结合\n当前状况以及对未来经济状\n应收账款——账龄组合 账龄 况的预测,编制应收账款账龄\n与预期信用损失率对照表,计\n算预期信用损失\n参考历史信用损失经验,结合"
+              }
+            },
+            {
+              "printed_page": null,
+              "printed_page_source": null,
+              "record": {
+                "company_id": "688082.SH",
+                "document_id": "cninfo-688082-2024-ar-1222651596",
+                "evidence_id": "cninfo-688082-2024-ar-1222651596:p0017:l1-15:e7da7be32da6b",
+                "evidence_sha256": "7da7be32da6b633cf2c5fa5833048e069eb81d3e33fda2091376898cceaad331",
+                "line_end": 15,
+                "line_start": 1,
+                "matched_terms": [],
+                "page_id": "cninfo-688082-2024-ar-1222651596:p0017:23b17ee1c739436d",
+                "pdf_page": 17,
+                "retrieval_rank": 1,
+                "retrieval_score": 0.0,
+                "text": "盛美半导体设备(上海)股份有限公司2024年年度报告\n二、报告期内公司所从事的主要业务、经营模式、行业情况及研发情况说明\n(一) 主要业务、主要产品或服务情况\n1、主要业务\n公司主要从事对集成电路制造行业至关重要的半导体清洗设备、半导体电镀设备、立式炉管\n系列设备、涂胶显影Track设备、等离子体增强化学气相沉积PECVD设备、无应力抛光设备、\n后道先进封装设备以及硅材料衬底制造工艺设备等的开发、制造和销售,并致力于为半导体制造\n商提供定制化、高性能、低消耗的工艺解决方案,有效提升客户多个步骤的生产效率、产品良\n率,并降低生产成本。\n2、主要产品\n公司经过多年持续的研发投入和技术积累,先后开发了前道半导体工艺设备,包括清洗设\n备、半导体电镀设备、立式炉管系列设备、涂胶显影Track设备、等离子体增强化学气相沉积\nPECVD设备、无应力抛光设备;后道先进封装工艺设备以及硅材料衬底制造工艺设备等。\n(1)前道半导体工艺设备\n1清洗设备"
+              }
+            },
+            {
+              "printed_page": null,
+              "printed_page_source": null,
+              "record": {
+                "company_id": "688082.SH",
+                "document_id": "cninfo-688082-2024-ar-1222651596",
+                "evidence_id": "cninfo-688082-2024-ar-1222651596:p0160:l26-44:e33de2ba9f730",
+                "evidence_sha256": "33de2ba9f730b150b1388162f7fd898871dd06ad6b0e4535db6c98bdc13b0924",
+                "line_end": 44,
+                "line_start": 26,
+                "matched_terms": [],
+                "page_id": "cninfo-688082-2024-ar-1222651596:p0160:33d5d4a66f235dfb",
+                "pdf_page": 160,
+                "retrieval_rank": 2,
+                "retrieval_score": 0.0,
+                "text": "本公司根据在向客户转让商品或服务前是否拥有对该商品或服务的控制权,来判断从事交易时本\n公司的身份是主要责任人还是代理人。本公司在向客户转让商品或服务前能够控制该商品或服务\n的,本公司为主要责任人,按照已收或应收对价总额确认收入;否则,本公司为代理人,按照预\n期有权收取的佣金或手续费的金额确认收入。\n(2).同类业务采用不同经营模式涉及不同收入确认方式及计量方法\n√适用 □不适用\n公司销售商品收入主要包括半导体专用设备销售收入和设备相关的备品备件销售收入。通常,销\n售商品的相关合同中仅有交付商品一项履约义务。\n(1)专用设备销售收入\n对不存在试运行要求的产品,由客户调试确认验收后,客户取得商品控制权,公司确认收入。\n对存在试运行要求的产品,本公司将专用设备产品按照协议合同规定运至约定交货地点,在产品\n安装调试并通过客户验收后,并且产品试运行期满时,客户取得商品控制权,公司确认收入。\n(2)备品备件销售收入\n本公司备品备件按照协议合同规定运至约定交货地点,客户取得商品控制权,公司确认收入。\n35、 合同成本\n√适用 □不适用\n合同成本包括合同履约成本与合同取得成本。\n本公司为履行合同而发生的成本,不属于存货、固定资产或无形资产等相关准则规范范围的,在\n满足下列条件时作为合同履约成本确认为一项资产:"
+              }
+            },
+            {
+              "printed_page": null,
+              "printed_page_source": null,
+              "record": {
+                "company_id": "688082.SH",
+                "document_id": "cninfo-688082-2024-ar-1222651596",
+                "evidence_id": "cninfo-688082-2024-ar-1222651596:p0017:l26-40:e5eea6e069a53",
+                "evidence_sha256": "5eea6e069a53f662e22c2be9af0008c569ba5c5ad795d91047c8ca71a8340212",
+                "line_end": 40,
+                "line_start": 26,
+                "matched_terms": [],
+                "page_id": "cninfo-688082-2024-ar-1222651596:p0017:23b17ee1c739436d",
+                "pdf_page": 17,
+                "retrieval_rank": 1,
+                "retrieval_score": 0.0,
+                "text": "公司自主研发的TEBO清洗设备,可适用于28nm及以下的图形晶圆清洗,通过一系列快速\n(频率达到每秒一百万次)的压力变化,使得气泡在受控的温度下保持尺寸和形状振荡,将气泡\n控制在稳定震荡状态,而不会内爆,从而保持晶圆微结构不被破坏,对晶圆表面图形结构进行无\n损伤清洗。公司TEBO清洗设备,在器件结构从2D转换为3D的技术转移中,可应用于更为精\n细的具有3D结构的FinFET、DRAM和新兴3D NAND等产品,以及未来新型纳米器件和量子\n器件等,在提高客户产品良率方面发挥越来越重要的作用。\n公司通过自主研发并具有全球知识产权保护的SAPS和TEBO兆声波清洗技术,解决了兆声\n波技术在集成电路单片清洗设备上应用时,兆声波能量如何在晶圆上均匀分布及如何实现图形结\n构无损伤的全球性难题。为实现产能最大化,公司单片清洗设备可根据客户需求配置多个工艺腔\n体,最高可单台配置18腔体,有效提升客户的生产效率。\nC.高温单片SPM设备\n随着技术节点推进,工艺温度要求在150摄氏度以上,甚至超过200摄氏度的SPM工艺步\n骤逐渐增加。高剂量离子注入后的光刻胶去除、无灰化步骤的纯湿法去胶工艺,以及特殊的金属\n膜层刻蚀或剥离,都对SPM的温度提出了更高的要求。公司的新型单片高温SPM设备使用独特\n的多级梯度加热系统来预热硫酸,然后将硫酸与过氧化氢混合以达到超高温。同时,公司的腔体"
+              }
+            },
+            {
+              "printed_page": null,
+              "printed_page_source": null,
+              "record": {
+                "company_id": "688082.SH",
+                "document_id": "cninfo-688082-2024-ar-1222651596",
+                "evidence_id": "cninfo-688082-2024-ar-1222651596:p0036:l16-34:e31cd7d79eb90",
+                "evidence_sha256": "31cd7d79eb90b1914834dfad254d21b7289d51938239c2ecf22052f469ee6adc",
+                "line_end": 34,
+                "line_start": 16,
+                "matched_terms": [],
+                "page_id": "cninfo-688082-2024-ar-1222651596:p0036:c95f17930b6130ed",
+                "pdf_page": 36,
+                "retrieval_rank": 2,
+                "retrieval_score": 0.0,
+                "text": "研发费用变动原因说明:研发费用较上期同比上升18.47%,主要是聘用的研发人员人数以及支\n付研发人员的薪酬增加,以及授予研发人员限制性股票确认的股份支付费用增加所致。\n经营活动产生的现金流量净额变动原因说明:经营活动产生的现金流量净额较上期同比上升,主\n要是因为本期销售回款较上期增加,以及因销售订单增长引起的本期预收货款增加所致。\n投资活动产生的现金流量净额变动原因说明:投资活动产生的现金流量净额较上期同比下降\n190.37%,主要是因为本期定期存款到期赎回较上期减少,以及本期购建长期资产较上期增加所\n致。\n筹资活动产生的现金流量净额变动原因说明:筹资活动产生的现金流量净额较上期同比上升,主\n要是本期银行借款增加以及本期员工行权款项增加所致。\n本期公司业务类型、利润构成或利润来源发生重大变动的详细说明\n□适用 √不适用\n2、 收入和成本分析\n√适用 □不适用\n2024年公司营业收入为56.18亿元,同比增长44.48%,主要原因是市场需求扩大,销售订单及\n产能均持续增长,营业收入进一步提升。\n(1). 主营业务分行业、分产品、分地区、分销售模式情况\n单位:元 币种:人民币\n主营业务分行业情况\n营业收 营业成"
+              }
+            },
+            {
+              "printed_page": null,
+              "printed_page_source": null,
+              "record": {
+                "company_id": "688082.SH",
+                "document_id": "cninfo-688082-2024-ar-1222651596",
+                "evidence_id": "cninfo-688082-2024-ar-1222651596:p0149:l21-39:ec9a19f229032",
+                "evidence_sha256": "c9a19f229032413255f94ce948b82083dab2f54235c1d13d2bab14ff5613fe33",
+                "line_end": 39,
+                "line_start": 21,
+                "matched_terms": [],
+                "page_id": "cninfo-688082-2024-ar-1222651596:p0149:fd561d7aa0962d87",
+                "pdf_page": 149,
+                "retrieval_rank": 1,
+                "retrieval_score": 0.0,
+                "text": "√适用 □不适用\n详见第十节财务报告五、11。\n基于账龄确认信用风险特征组合的账龄计算方法\n√适用 □不适用\n详见第十节财务报告五、11。\n按照单项计提坏账准备的单项计提判断标准\n√适用 □不适用\n详见第十节财务报告五、11。\n13、 应收账款\n√适用 □不适用\n按照信用风险特征组合计提坏账准备的组合类别及确定依据\n√适用 □不适用\n详见第十节财务报告五、11。\n基于账龄确认信用风险特征组合的账龄计算方法\n√适用 □不适用\n详见第十节财务报告五、11。\n按照单项计提坏账准备的认定单项计提判断标准\n√适用 □不适用\n149 / 252"
+              }
+            },
+            {
+              "printed_page": null,
+              "printed_page_source": null,
+              "record": {
+                "company_id": "688082.SH",
+                "document_id": "cninfo-688082-2024-ar-1222651596",
+                "evidence_id": "cninfo-688082-2024-ar-1222651596:p0242:l25-43:e9ded5a1a970d",
+                "evidence_sha256": "9ded5a1a970d90b9dd5eda269fa26dcd8477cf49581e3da314c5456c5fc99a8b",
+                "line_end": 43,
+                "line_start": 25,
+                "matched_terms": [],
+                "page_id": "cninfo-688082-2024-ar-1222651596:p0242:235c12047e7ca329",
+                "pdf_page": 242,
+                "retrieval_rank": 2,
+                "retrieval_score": 0.0,
+                "text": "(4). 本期实际核销的应收账款情况\n□适用 √不适用\n其中重要的应收账款核销情况\n□适用 √不适用\n(5). 按欠款方归集的期末余额前五名的应收账款和合同资产情况\n√适用 □不适用\n其他说明\n按欠款方归集的期末余额前五名应收账款和合同资产汇总金额为3,429,758,759.85元,占应\n收账款和合同资产期末余额合计数的比例为89.48%,相应计提的坏账准备期末余额汇总金额为\n117,299,476.13元。\n其他说明:\n□适用 √不适用\n2、 其他应收款\n项目列示\n√适用 □不适用\n单位:元 币种:人民币\n项目 期末余额 期初余额\n应收利息 2,650,827.48 28,015,095.83\n242 / 252"
+              }
+            }
+          ],
+          "gaps": [
+            {
+              "affected_ids": [
+                "calc-period_growth_v1-4372cd0d6dc65278"
+              ],
+              "company_id": "688072.SH",
+              "description": "operating_cash_flow_net_growth: NEGATIVE_BASE，不输出常规数值",
+              "gap_id": "gap-688072.SH-operating_cash_flow_net_growth",
+              "gap_type": "INCOMPARABLE_CALCULATION",
+              "status": "UNRESOLVED",
+              "suggested_next_step": "保留该边界；负基数应使用原始金额与比率描述，不能强算常规增长率"
+            },
+            {
+              "affected_ids": [
+                "calc-growth_gap_pp_v1-b9e1cacd62db3a44"
+              ],
+              "company_id": "688072.SH",
+              "description": "revenue_ocf_growth_gap_pp: INCOMPARABLE，不输出常规数值",
+              "gap_id": "gap-688072.SH-revenue_ocf_growth_gap_pp",
+              "gap_type": "INCOMPARABLE_CALCULATION",
+              "status": "UNRESOLVED",
+              "suggested_next_step": "保留该边界；负基数应使用原始金额与比率描述，不能强算常规增长率"
+            },
+            {
+              "affected_ids": [
+                "calc-period_growth_v1-e1a7fa06f53b26bd"
+              ],
+              "company_id": "688082.SH",
+              "description": "operating_cash_flow_net_growth: NEGATIVE_BASE，不输出常规数值",
+              "gap_id": "gap-688082.SH-operating_cash_flow_net_growth",
+              "gap_type": "INCOMPARABLE_CALCULATION",
+              "status": "UNRESOLVED",
+              "suggested_next_step": "保留该边界；负基数应使用原始金额与比率描述，不能强算常规增长率"
+            },
+            {
+              "affected_ids": [
+                "calc-growth_gap_pp_v1-21341ea85f417009"
+              ],
+              "company_id": "688082.SH",
+              "description": "revenue_ocf_growth_gap_pp: INCOMPARABLE，不输出常规数值",
+              "gap_id": "gap-688082.SH-revenue_ocf_growth_gap_pp",
+              "gap_type": "INCOMPARABLE_CALCULATION",
+              "status": "UNRESOLVED",
+              "suggested_next_step": "保留该边界；负基数应使用原始金额与比率描述，不能强算常规增长率"
+            },
+            {
+              "affected_ids": [
+                "claim-hyp-002371.SZ-SCALE_EXPANSION"
+              ],
+              "company_id": "002371.SZ",
+              "description": "候选解释的支持需求及削弱条件尚未完成独立核验",
+              "gap_id": "gap-claim-hyp-002371.SZ-SCALE_EXPANSION",
+              "gap_type": "MISSING_COUNTEREVIDENCE",
+              "status": "UNRESOLVED",
+              "suggested_next_step": "S5按缺口补证据；S4保留未决，不自动搜索"
+            },
+            {
+              "affected_ids": [
+                "claim-hyp-002371.SZ-SETTLEMENT_TIMING"
+              ],
+              "company_id": "002371.SZ",
+              "description": "候选解释的支持需求及削弱条件尚未完成独立核验",
+              "gap_id": "gap-claim-hyp-002371.SZ-SETTLEMENT_TIMING",
+              "gap_type": "MISSING_COUNTEREVIDENCE",
+              "status": "UNRESOLVED",
+              "suggested_next_step": "S5按缺口补证据；S4保留未决，不自动搜索"
+            },
+            {
+              "affected_ids": [
+                "claim-hyp-002371.SZ-CUSTOMER_MIX"
+              ],
+              "company_id": "002371.SZ",
+              "description": "候选解释的支持需求及削弱条件尚未完成独立核验",
+              "gap_id": "gap-claim-hyp-002371.SZ-CUSTOMER_MIX",
+              "gap_type": "MISSING_COUNTEREVIDENCE",
+              "status": "UNRESOLVED",
+              "suggested_next_step": "S5按缺口补证据；S4保留未决，不自动搜索"
+            },
+            {
+              "affected_ids": [
+                "claim-hyp-688072.SH-SCALE_EXPANSION"
+              ],
+              "company_id": "688072.SH",
+              "description": "候选解释的支持需求及削弱条件尚未完成独立核验",
+              "gap_id": "gap-claim-hyp-688072.SH-SCALE_EXPANSION",
+              "gap_type": "MISSING_COUNTEREVIDENCE",
+              "status": "UNRESOLVED",
+              "suggested_next_step": "S5按缺口补证据；S4保留未决，不自动搜索"
+            },
+            {
+              "affected_ids": [
+                "claim-hyp-688072.SH-SETTLEMENT_TIMING"
+              ],
+              "company_id": "688072.SH",
+              "description": "候选解释的支持需求及削弱条件尚未完成独立核验",
+              "gap_id": "gap-claim-hyp-688072.SH-SETTLEMENT_TIMING",
+              "gap_type": "MISSING_COUNTEREVIDENCE",
+              "status": "UNRESOLVED",
+              "suggested_next_step": "S5按缺口补证据；S4保留未决，不自动搜索"
+            },
+            {
+              "affected_ids": [
+                "claim-hyp-688072.SH-CUSTOMER_MIX"
+              ],
+              "company_id": "688072.SH",
+              "description": "候选解释的支持需求及削弱条件尚未完成独立核验",
+              "gap_id": "gap-claim-hyp-688072.SH-CUSTOMER_MIX",
+              "gap_type": "MISSING_COUNTEREVIDENCE",
+              "status": "UNRESOLVED",
+              "suggested_next_step": "S5按缺口补证据；S4保留未决，不自动搜索"
+            },
+            {
+              "affected_ids": [
+                "claim-hyp-688082.SH-SCALE_EXPANSION"
+              ],
+              "company_id": "688082.SH",
+              "description": "候选解释的支持需求及削弱条件尚未完成独立核验",
+              "gap_id": "gap-claim-hyp-688082.SH-SCALE_EXPANSION",
+              "gap_type": "MISSING_COUNTEREVIDENCE",
+              "status": "UNRESOLVED",
+              "suggested_next_step": "S5按缺口补证据；S4保留未决，不自动搜索"
+            },
+            {
+              "affected_ids": [
+                "claim-hyp-688082.SH-SETTLEMENT_TIMING"
+              ],
+              "company_id": "688082.SH",
+              "description": "候选解释的支持需求及削弱条件尚未完成独立核验",
+              "gap_id": "gap-claim-hyp-688082.SH-SETTLEMENT_TIMING",
+              "gap_type": "MISSING_COUNTEREVIDENCE",
+              "status": "UNRESOLVED",
+              "suggested_next_step": "S5按缺口补证据；S4保留未决，不自动搜索"
+            },
+            {
+              "affected_ids": [
+                "claim-hyp-688082.SH-CUSTOMER_MIX"
+              ],
+              "company_id": "688082.SH",
+              "description": "候选解释的支持需求及削弱条件尚未完成独立核验",
+              "gap_id": "gap-claim-hyp-688082.SH-CUSTOMER_MIX",
+              "gap_type": "MISSING_COUNTEREVIDENCE",
+              "status": "UNRESOLVED",
+              "suggested_next_step": "S5按缺口补证据；S4保留未决，不自动搜索"
+            }
+          ],
+          "observations": [
+            {
+              "company_id": "002371.SZ",
+              "content_sha256": "0c2188f9b21d92f7980f250cc692fae5e27f5e6b30ba3f507d2e87d719cbf8c9",
+              "currency": "CNY",
+              "document_id": "cninfo-002371-2024-ar-1223309278",
+              "document_published_on": "2025-04-25",
+              "document_sha256": "70168364fd518323effa2d11ff337a172783e3597ed6f896353ca62ea3f75cfe",
+              "evidence_refs": [
+                {
+                  "evidence_id": "cninfo-002371-2024-ar-1223309278:p0095:ed2d227d995d30a5a",
+                  "pdf_page": 95,
+                  "source_label": "revenue"
+                }
+              ],
+              "extraction_method": "TABLE_EXTRACTED",
+              "fiscal_year": 2024,
+              "measurement_basis": "INCOME_STATEMENT_REPORTED_AMOUNT",
+              "metric_id": "revenue",
+              "observation_id": "obs-002371.SZ-revenue-2024-01-01_2024-12-31-v1-0c2188f9b21d",
+              "observation_version": 1,
+              "observed_at": null,
+              "period_end": "2024-12-31",
+              "period_kind": "FLOW",
+              "period_start": "2024-01-01",
+              "raw_unit": "CNY_YUAN",
+              "raw_value": "29838069162.26",
+              "raw_value_text": "29,838,069,162.26",
+              "review_note": "Reviewed row mapping source-table-columns-v1; current/prior column 0; comparative figures available only on this disclosure date.",
+              "review_status": "SOURCE_CHECKED",
+              "standard_unit": "CNY_YUAN",
+              "standard_value": "29838069162.26",
+              "statement_scope": "CONSOLIDATED",
+              "supersedes_observation_id": null,
+              "value_status": "OBSERVED"
+            },
+            {
+              "company_id": "002371.SZ",
+              "content_sha256": "dc5ea4d5825b7959ff70acee9cc29b937799452c33c70713afe648192df04278",
+              "currency": "CNY",
+              "document_id": "cninfo-002371-2024-ar-1223309278",
+              "document_published_on": "2025-04-25",
+              "document_sha256": "70168364fd518323effa2d11ff337a172783e3597ed6f896353ca62ea3f75cfe",
+              "evidence_refs": [
+                {
+                  "evidence_id": "cninfo-002371-2024-ar-1223309278:p0095:ed2d227d995d30a5a",
+                  "pdf_page": 95,
+                  "source_label": "revenue"
+                }
+              ],
+              "extraction_method": "TABLE_EXTRACTED",
+              "fiscal_year": 2023,
+              "measurement_basis": "INCOME_STATEMENT_REPORTED_AMOUNT",
+              "metric_id": "revenue",
+              "observation_id": "obs-002371.SZ-revenue-2023-01-01_2023-12-31-v1-dc5ea4d5825b",
+              "observation_version": 1,
+              "observed_at": null,
+              "period_end": "2023-12-31",
+              "period_kind": "FLOW",
+              "period_start": "2023-01-01",
+              "raw_unit": "CNY_YUAN",
+              "raw_value": "22079458092.37",
+              "raw_value_text": "22,079,458,092.37",
+              "review_note": "Reviewed row mapping source-table-columns-v1; current/prior column 1; comparative figures available only on this disclosure date.",
+              "review_status": "SOURCE_CHECKED",
+              "standard_unit": "CNY_YUAN",
+              "standard_value": "22079458092.37",
+              "statement_scope": "CONSOLIDATED",
+              "supersedes_observation_id": null,
+              "value_status": "OBSERVED"
+            },
+            {
+              "company_id": "002371.SZ",
+              "content_sha256": "4c82b46668d00ff92fe10e0141fcdf3f703264cfd7ea74706a7521c686e5047d",
+              "currency": "CNY",
+              "document_id": "cninfo-002371-2024-ar-1223309278",
+              "document_published_on": "2025-04-25",
+              "document_sha256": "70168364fd518323effa2d11ff337a172783e3597ed6f896353ca62ea3f75cfe",
+              "evidence_refs": [
+                {
+                  "evidence_id": "cninfo-002371-2024-ar-1223309278:p0099:e205f032020f440fd",
+                  "pdf_page": 99,
+                  "source_label": "operating_cash_flow_net"
+                }
+              ],
+              "extraction_method": "TABLE_EXTRACTED",
+              "fiscal_year": 2024,
+              "measurement_basis": "CASH_FLOW_STATEMENT_REPORTED_AMOUNT",
+              "metric_id": "operating_cash_flow_net",
+              "observation_id": "obs-002371.SZ-operating_cash_flow_net-2024-01-01_2024-12-31-v1-4c82b46668d0",
+              "observation_version": 1,
+              "observed_at": null,
+              "period_end": "2024-12-31",
+              "period_kind": "FLOW",
+              "period_start": "2024-01-01",
+              "raw_unit": "CNY_YUAN",
+              "raw_value": "1573165054.27",
+              "raw_value_text": "1,573,165,054.27",
+              "review_note": "Reviewed row mapping source-table-columns-v1; current/prior column 0; comparative figures available only on this disclosure date.",
+              "review_status": "SOURCE_CHECKED",
+              "standard_unit": "CNY_YUAN",
+              "standard_value": "1573165054.27",
+              "statement_scope": "CONSOLIDATED",
+              "supersedes_observation_id": null,
+              "value_status": "OBSERVED"
+            },
+            {
+              "company_id": "002371.SZ",
+              "content_sha256": "53dcd9ad12f84420d53d2a57e70804a291d5d9609e278fd3f92a31da9fe86f36",
+              "currency": "CNY",
+              "document_id": "cninfo-002371-2024-ar-1223309278",
+              "document_published_on": "2025-04-25",
+              "document_sha256": "70168364fd518323effa2d11ff337a172783e3597ed6f896353ca62ea3f75cfe",
+              "evidence_refs": [
+                {
+                  "evidence_id": "cninfo-002371-2024-ar-1223309278:p0099:e205f032020f440fd",
+                  "pdf_page": 99,
+                  "source_label": "operating_cash_flow_net"
+                }
+              ],
+              "extraction_method": "TABLE_EXTRACTED",
+              "fiscal_year": 2023,
+              "measurement_basis": "CASH_FLOW_STATEMENT_REPORTED_AMOUNT",
+              "metric_id": "operating_cash_flow_net",
+              "observation_id": "obs-002371.SZ-operating_cash_flow_net-2023-01-01_2023-12-31-v1-53dcd9ad12f8",
+              "observation_version": 1,
+              "observed_at": null,
+              "period_end": "2023-12-31",
+              "period_kind": "FLOW",
+              "period_start": "2023-01-01",
+              "raw_unit": "CNY_YUAN",
+              "raw_value": "2365007734.54",
+              "raw_value_text": "2,365,007,734.54",
+              "review_note": "Reviewed row mapping source-table-columns-v1; current/prior column 1; comparative figures available only on this disclosure date.",
+              "review_status": "SOURCE_CHECKED",
+              "standard_unit": "CNY_YUAN",
+              "standard_value": "2365007734.54",
+              "statement_scope": "CONSOLIDATED",
+              "supersedes_observation_id": null,
+              "value_status": "OBSERVED"
+            },
+            {
+              "company_id": "002371.SZ",
+              "content_sha256": "5dca9dc03dc402fd16425191acce8f9c82daedced76bd29ac92783845092baed",
+              "currency": "CNY",
+              "document_id": "cninfo-002371-2024-ar-1223309278",
+              "document_published_on": "2025-04-25",
+              "document_sha256": "70168364fd518323effa2d11ff337a172783e3597ed6f896353ca62ea3f75cfe",
+              "evidence_refs": [
+                {
+                  "evidence_id": "cninfo-002371-2024-ar-1223309278:p0090:e2698133e9019306e",
+                  "pdf_page": 90,
+                  "source_label": "accounts_receivable"
+                },
+                {
+                  "evidence_id": "cninfo-002371-2024-ar-1223309278:p0091:e65093b3af9dc23b1",
+                  "pdf_page": 91,
+                  "source_label": "accounts_receivable"
+                }
+              ],
+              "extraction_method": "TABLE_EXTRACTED",
+              "fiscal_year": 2024,
+              "measurement_basis": "BALANCE_SHEET_CARRYING_AMOUNT",
+              "metric_id": "accounts_receivable",
+              "observation_id": "obs-002371.SZ-accounts_receivable-2024-12-31-v1-5dca9dc03dc4",
+              "observation_version": 1,
+              "observed_at": "2024-12-31",
+              "period_end": null,
+              "period_kind": "STOCK",
+              "period_start": null,
+              "raw_unit": "CNY_YUAN",
+              "raw_value": "6044952733.01",
+              "raw_value_text": "6,044,952,733.01",
+              "review_note": "Reviewed row mapping source-table-columns-v1; current/prior column 0; comparative figures available only on this disclosure date.",
+              "review_status": "SOURCE_CHECKED",
+              "standard_unit": "CNY_YUAN",
+              "standard_value": "6044952733.01",
+              "statement_scope": "CONSOLIDATED",
+              "supersedes_observation_id": null,
+              "value_status": "OBSERVED"
+            },
+            {
+              "company_id": "002371.SZ",
+              "content_sha256": "3b43abb9704821f32de23f2a4e28edd50327de8c4a9c697aac29fde07a83cee9",
+              "currency": "CNY",
+              "document_id": "cninfo-002371-2024-ar-1223309278",
+              "document_published_on": "2025-04-25",
+              "document_sha256": "70168364fd518323effa2d11ff337a172783e3597ed6f896353ca62ea3f75cfe",
+              "evidence_refs": [
+                {
+                  "evidence_id": "cninfo-002371-2024-ar-1223309278:p0090:e2698133e9019306e",
+                  "pdf_page": 90,
+                  "source_label": "accounts_receivable"
+                },
+                {
+                  "evidence_id": "cninfo-002371-2024-ar-1223309278:p0091:e65093b3af9dc23b1",
+                  "pdf_page": 91,
+                  "source_label": "accounts_receivable"
+                }
+              ],
+              "extraction_method": "TABLE_EXTRACTED",
+              "fiscal_year": 2023,
+              "measurement_basis": "BALANCE_SHEET_CARRYING_AMOUNT",
+              "metric_id": "accounts_receivable",
+              "observation_id": "obs-002371.SZ-accounts_receivable-2023-12-31-v1-3b43abb97048",
+              "observation_version": 1,
+              "observed_at": "2023-12-31",
+              "period_end": null,
+              "period_kind": "STOCK",
+              "period_start": null,
+              "raw_unit": "CNY_YUAN",
+              "raw_value": "3767378764.55",
+              "raw_value_text": "3,767,378,764.55",
+              "review_note": "Reviewed row mapping source-table-columns-v1; current/prior column 1; comparative figures available only on this disclosure date.",
+              "review_status": "SOURCE_CHECKED",
+              "standard_unit": "CNY_YUAN",
+              "standard_value": "3767378764.55",
+              "statement_scope": "CONSOLIDATED",
+              "supersedes_observation_id": null,
+              "value_status": "OBSERVED"
+            },
+            {
+              "company_id": "688072.SH",
+              "content_sha256": "3cb60b85d36c71ff86b115ea644fb51d06e0b974ba10c0092f2dffb4f7ec1cb3",
+              "currency": "CNY",
+              "document_id": "cninfo-688072-2024-ar-1223286833",
+              "document_published_on": "2025-04-25",
+              "document_sha256": "15c7ebbcbe4cefc422885f4ff30789700b8a51aed4e33274528f153e0bbb1bdb",
+              "evidence_refs": [
+                {
+                  "evidence_id": "cninfo-688072-2024-ar-1223286833:p0156:e78f34a1792d149ce",
+                  "pdf_page": 156,
+                  "source_label": "revenue"
+                }
+              ],
+              "extraction_method": "TABLE_EXTRACTED",
+              "fiscal_year": 2024,
+              "measurement_basis": "INCOME_STATEMENT_REPORTED_AMOUNT",
+              "metric_id": "revenue",
+              "observation_id": "obs-688072.SH-revenue-2024-01-01_2024-12-31-v1-3cb60b85d36c",
+              "observation_version": 1,
+              "observed_at": null,
+              "period_end": "2024-12-31",
+              "period_kind": "FLOW",
+              "period_start": "2024-01-01",
+              "raw_unit": "CNY_YUAN",
+              "raw_value": "4103453853.41",
+              "raw_value_text": "4,103,453,853.41",
+              "review_note": "Reviewed row mapping source-table-columns-v1; current/prior column 0; comparative figures available only on this disclosure date.",
+              "review_status": "SOURCE_CHECKED",
+              "standard_unit": "CNY_YUAN",
+              "standard_value": "4103453853.41",
+              "statement_scope": "CONSOLIDATED",
+              "supersedes_observation_id": null,
+              "value_status": "OBSERVED"
+            },
+            {
+              "company_id": "688072.SH",
+              "content_sha256": "6078afb123ddbb523a3d259f5ec7aa30282041a0ab8350c2b2c03bb6aa884936",
+              "currency": "CNY",
+              "document_id": "cninfo-688072-2024-ar-1223286833",
+              "document_published_on": "2025-04-25",
+              "document_sha256": "15c7ebbcbe4cefc422885f4ff30789700b8a51aed4e33274528f153e0bbb1bdb",
+              "evidence_refs": [
+                {
+                  "evidence_id": "cninfo-688072-2024-ar-1223286833:p0156:e78f34a1792d149ce",
+                  "pdf_page": 156,
+                  "source_label": "revenue"
+                }
+              ],
+              "extraction_method": "TABLE_EXTRACTED",
+              "fiscal_year": 2023,
+              "measurement_basis": "INCOME_STATEMENT_REPORTED_AMOUNT",
+              "metric_id": "revenue",
+              "observation_id": "obs-688072.SH-revenue-2023-01-01_2023-12-31-v1-6078afb123dd",
+              "observation_version": 1,
+              "observed_at": null,
+              "period_end": "2023-12-31",
+              "period_kind": "FLOW",
+              "period_start": "2023-01-01",
+              "raw_unit": "CNY_YUAN",
+              "raw_value": "2704974035.48",
+              "raw_value_text": "2,704,974,035.48",
+              "review_note": "Reviewed row mapping source-table-columns-v1; current/prior column 1; comparative figures available only on this disclosure date.",
+              "review_status": "SOURCE_CHECKED",
+              "standard_unit": "CNY_YUAN",
+              "standard_value": "2704974035.48",
+              "statement_scope": "CONSOLIDATED",
+              "supersedes_observation_id": null,
+              "value_status": "OBSERVED"
+            },
+            {
+              "company_id": "688072.SH",
+              "content_sha256": "62d58853e856054b1c463b833c3a0603846c1104bad8406abfd479b7e5e25fa2",
+              "currency": "CNY",
+              "document_id": "cninfo-688072-2024-ar-1223286833",
+              "document_published_on": "2025-04-25",
+              "document_sha256": "15c7ebbcbe4cefc422885f4ff30789700b8a51aed4e33274528f153e0bbb1bdb",
+              "evidence_refs": [
+                {
+                  "evidence_id": "cninfo-688072-2024-ar-1223286833:p0159:ec21b21ba2cce0432",
+                  "pdf_page": 159,
+                  "source_label": "operating_cash_flow_net"
+                },
+                {
+                  "evidence_id": "cninfo-688072-2024-ar-1223286833:p0160:ef075e82466c109e4",
+                  "pdf_page": 160,
+                  "source_label": "operating_cash_flow_net"
+                }
+              ],
+              "extraction_method": "TABLE_EXTRACTED",
+              "fiscal_year": 2024,
+              "measurement_basis": "CASH_FLOW_STATEMENT_REPORTED_AMOUNT",
+              "metric_id": "operating_cash_flow_net",
+              "observation_id": "obs-688072.SH-operating_cash_flow_net-2024-01-01_2024-12-31-v1-62d58853e856",
+              "observation_version": 1,
+              "observed_at": null,
+              "period_end": "2024-12-31",
+              "period_kind": "FLOW",
+              "period_start": "2024-01-01",
+              "raw_unit": "CNY_YUAN",
+              "raw_value": "-282525331.06",
+              "raw_value_text": "-282,525,331.06",
+              "review_note": "Reviewed row mapping source-table-columns-v1; current/prior column 0; comparative figures available only on this disclosure date.",
+              "review_status": "SOURCE_CHECKED",
+              "standard_unit": "CNY_YUAN",
+              "standard_value": "-282525331.06",
+              "statement_scope": "CONSOLIDATED",
+              "supersedes_observation_id": null,
+              "value_status": "OBSERVED"
+            },
+            {
+              "company_id": "688072.SH",
+              "content_sha256": "343db4b78942ecd6b453a0957dab082967448bb8f0df220c19c77fe85ca59236",
+              "currency": "CNY",
+              "document_id": "cninfo-688072-2024-ar-1223286833",
+              "document_published_on": "2025-04-25",
+              "document_sha256": "15c7ebbcbe4cefc422885f4ff30789700b8a51aed4e33274528f153e0bbb1bdb",
+              "evidence_refs": [
+                {
+                  "evidence_id": "cninfo-688072-2024-ar-1223286833:p0159:ec21b21ba2cce0432",
+                  "pdf_page": 159,
+                  "source_label": "operating_cash_flow_net"
+                },
+                {
+                  "evidence_id": "cninfo-688072-2024-ar-1223286833:p0160:ef075e82466c109e4",
+                  "pdf_page": 160,
+                  "source_label": "operating_cash_flow_net"
+                }
+              ],
+              "extraction_method": "TABLE_EXTRACTED",
+              "fiscal_year": 2023,
+              "measurement_basis": "CASH_FLOW_STATEMENT_REPORTED_AMOUNT",
+              "metric_id": "operating_cash_flow_net",
+              "observation_id": "obs-688072.SH-operating_cash_flow_net-2023-01-01_2023-12-31-v1-343db4b78942",
+              "observation_version": 1,
+              "observed_at": null,
+              "period_end": "2023-12-31",
+              "period_kind": "FLOW",
+              "period_start": "2023-01-01",
+              "raw_unit": "CNY_YUAN",
+              "raw_value": "-1657342652.77",
+              "raw_value_text": "-1,657,342,652.77",
+              "review_note": "Reviewed row mapping source-table-columns-v1; current/prior column 1; comparative figures available only on this disclosure date.",
+              "review_status": "SOURCE_CHECKED",
+              "standard_unit": "CNY_YUAN",
+              "standard_value": "-1657342652.77",
+              "statement_scope": "CONSOLIDATED",
+              "supersedes_observation_id": null,
+              "value_status": "OBSERVED"
+            },
+            {
+              "company_id": "688072.SH",
+              "content_sha256": "cc69984c2cfb707ee409128e93787408321a97b440bfdf9b29e2b8517ae9acc9",
+              "currency": "CNY",
+              "document_id": "cninfo-688072-2024-ar-1223286833",
+              "document_published_on": "2025-04-25",
+              "document_sha256": "15c7ebbcbe4cefc422885f4ff30789700b8a51aed4e33274528f153e0bbb1bdb",
+              "evidence_refs": [
+                {
+                  "evidence_id": "cninfo-688072-2024-ar-1223286833:p0152:ef084b7ec9bb30c01",
+                  "pdf_page": 152,
+                  "source_label": "accounts_receivable"
+                }
+              ],
+              "extraction_method": "TABLE_EXTRACTED",
+              "fiscal_year": 2024,
+              "measurement_basis": "BALANCE_SHEET_CARRYING_AMOUNT",
+              "metric_id": "accounts_receivable",
+              "observation_id": "obs-688072.SH-accounts_receivable-2024-12-31-v1-cc69984c2cfb",
+              "observation_version": 1,
+              "observed_at": "2024-12-31",
+              "period_end": null,
+              "period_kind": "STOCK",
+              "period_start": null,
+              "raw_unit": "CNY_YUAN",
+              "raw_value": "1473185667.99",
+              "raw_value_text": "1,473,185,667.99",
+              "review_note": "Reviewed row mapping source-table-columns-v1; current/prior column 0; comparative figures available only on this disclosure date.",
+              "review_status": "SOURCE_CHECKED",
+              "standard_unit": "CNY_YUAN",
+              "standard_value": "1473185667.99",
+              "statement_scope": "CONSOLIDATED",
+              "supersedes_observation_id": null,
+              "value_status": "OBSERVED"
+            },
+            {
+              "company_id": "688072.SH",
+              "content_sha256": "10423fd328dcc4ac915de19568c1c0b68051c435b7cb80d7ed46579083d7816e",
+              "currency": "CNY",
+              "document_id": "cninfo-688072-2024-ar-1223286833",
+              "document_published_on": "2025-04-25",
+              "document_sha256": "15c7ebbcbe4cefc422885f4ff30789700b8a51aed4e33274528f153e0bbb1bdb",
+              "evidence_refs": [
+                {
+                  "evidence_id": "cninfo-688072-2024-ar-1223286833:p0152:ef084b7ec9bb30c01",
+                  "pdf_page": 152,
+                  "source_label": "accounts_receivable"
+                }
+              ],
+              "extraction_method": "TABLE_EXTRACTED",
+              "fiscal_year": 2023,
+              "measurement_basis": "BALANCE_SHEET_CARRYING_AMOUNT",
+              "metric_id": "accounts_receivable",
+              "observation_id": "obs-688072.SH-accounts_receivable-2023-12-31-v1-10423fd328dc",
+              "observation_version": 1,
+              "observed_at": "2023-12-31",
+              "period_end": null,
+              "period_kind": "STOCK",
+              "period_start": null,
+              "raw_unit": "CNY_YUAN",
+              "raw_value": "529709337.36",
+              "raw_value_text": "529,709,337.36",
+              "review_note": "Reviewed row mapping source-table-columns-v1; current/prior column 1; comparative figures available only on this disclosure date.",
+              "review_status": "SOURCE_CHECKED",
+              "standard_unit": "CNY_YUAN",
+              "standard_value": "529709337.36",
+              "statement_scope": "CONSOLIDATED",
+              "supersedes_observation_id": null,
+              "value_status": "OBSERVED"
+            },
+            {
+              "company_id": "688082.SH",
+              "content_sha256": "673b5a26c7757d4a3486f53ccad005e3a704d170d6fc944f9d28fd3854938fc2",
+              "currency": "CNY",
+              "document_id": "cninfo-688082-2024-ar-1222651596",
+              "document_published_on": "2025-02-27",
+              "document_sha256": "6db89e438ac1c4affd979133df492e66262a74c6034c2b24be8355793823b2c4",
+              "evidence_refs": [
+                {
+                  "evidence_id": "cninfo-688082-2024-ar-1222651596:p0130:e431537e4b0455453",
+                  "pdf_page": 130,
+                  "source_label": "revenue"
+                }
+              ],
+              "extraction_method": "TABLE_EXTRACTED",
+              "fiscal_year": 2024,
+              "measurement_basis": "INCOME_STATEMENT_REPORTED_AMOUNT",
+              "metric_id": "revenue",
+              "observation_id": "obs-688082.SH-revenue-2024-01-01_2024-12-31-v1-673b5a26c775",
+              "observation_version": 1,
+              "observed_at": null,
+              "period_end": "2024-12-31",
+              "period_kind": "FLOW",
+              "period_start": "2024-01-01",
+              "raw_unit": "CNY_YUAN",
+              "raw_value": "5617740375.66",
+              "raw_value_text": "5,617,740,375.66",
+              "review_note": "Reviewed row mapping source-table-columns-v1; current/prior column 0; comparative figures available only on this disclosure date.",
+              "review_status": "SOURCE_CHECKED",
+              "standard_unit": "CNY_YUAN",
+              "standard_value": "5617740375.66",
+              "statement_scope": "CONSOLIDATED",
+              "supersedes_observation_id": null,
+              "value_status": "OBSERVED"
+            },
+            {
+              "company_id": "688082.SH",
+              "content_sha256": "7852c59b77c22bdef0d9cd43fe6ff707bf4eccb3ba339e7e58757f8f235a7f25",
+              "currency": "CNY",
+              "document_id": "cninfo-688082-2024-ar-1222651596",
+              "document_published_on": "2025-02-27",
+              "document_sha256": "6db89e438ac1c4affd979133df492e66262a74c6034c2b24be8355793823b2c4",
+              "evidence_refs": [
+                {
+                  "evidence_id": "cninfo-688082-2024-ar-1222651596:p0130:e431537e4b0455453",
+                  "pdf_page": 130,
+                  "source_label": "revenue"
+                }
+              ],
+              "extraction_method": "TABLE_EXTRACTED",
+              "fiscal_year": 2023,
+              "measurement_basis": "INCOME_STATEMENT_REPORTED_AMOUNT",
+              "metric_id": "revenue",
+              "observation_id": "obs-688082.SH-revenue-2023-01-01_2023-12-31-v1-7852c59b77c2",
+              "observation_version": 1,
+              "observed_at": null,
+              "period_end": "2023-12-31",
+              "period_kind": "FLOW",
+              "period_start": "2023-01-01",
+              "raw_unit": "CNY_YUAN",
+              "raw_value": "3888342742.05",
+              "raw_value_text": "3,888,342,742.05",
+              "review_note": "Reviewed row mapping source-table-columns-v1; current/prior column 1; comparative figures available only on this disclosure date.",
+              "review_status": "SOURCE_CHECKED",
+              "standard_unit": "CNY_YUAN",
+              "standard_value": "3888342742.05",
+              "statement_scope": "CONSOLIDATED",
+              "supersedes_observation_id": null,
+              "value_status": "OBSERVED"
+            },
+            {
+              "company_id": "688082.SH",
+              "content_sha256": "2acb93f6ebc428ac73f124e3c90628f17e8980c1f993cc881584ef88244e1443",
+              "currency": "CNY",
+              "document_id": "cninfo-688082-2024-ar-1222651596",
+              "document_published_on": "2025-02-27",
+              "document_sha256": "6db89e438ac1c4affd979133df492e66262a74c6034c2b24be8355793823b2c4",
+              "evidence_refs": [
+                {
+                  "evidence_id": "cninfo-688082-2024-ar-1222651596:p0134:e6d525d9e31ea7593",
+                  "pdf_page": 134,
+                  "source_label": "operating_cash_flow_net"
+                }
+              ],
+              "extraction_method": "TABLE_EXTRACTED",
+              "fiscal_year": 2024,
+              "measurement_basis": "CASH_FLOW_STATEMENT_REPORTED_AMOUNT",
+              "metric_id": "operating_cash_flow_net",
+              "observation_id": "obs-688082.SH-operating_cash_flow_net-2024-01-01_2024-12-31-v1-2acb93f6ebc4",
+              "observation_version": 1,
+              "observed_at": null,
+              "period_end": "2024-12-31",
+              "period_kind": "FLOW",
+              "period_start": "2024-01-01",
+              "raw_unit": "CNY_YUAN",
+              "raw_value": "1216142991.74",
+              "raw_value_text": "1,216,142,991.74",
+              "review_note": "Reviewed row mapping source-table-columns-v1; current/prior column 0; comparative figures available only on this disclosure date.",
+              "review_status": "SOURCE_CHECKED",
+              "standard_unit": "CNY_YUAN",
+              "standard_value": "1216142991.74",
+              "statement_scope": "CONSOLIDATED",
+              "supersedes_observation_id": null,
+              "value_status": "OBSERVED"
+            },
+            {
+              "company_id": "688082.SH",
+              "content_sha256": "1d989ddd892a49fe4ec32f64b6b526b023408ff79e2c1b0476a07a5fe9c24670",
+              "currency": "CNY",
+              "document_id": "cninfo-688082-2024-ar-1222651596",
+              "document_published_on": "2025-02-27",
+              "document_sha256": "6db89e438ac1c4affd979133df492e66262a74c6034c2b24be8355793823b2c4",
+              "evidence_refs": [
+                {
+                  "evidence_id": "cninfo-688082-2024-ar-1222651596:p0134:e6d525d9e31ea7593",
+                  "pdf_page": 134,
+                  "source_label": "operating_cash_flow_net"
+                }
+              ],
+              "extraction_method": "TABLE_EXTRACTED",
+              "fiscal_year": 2023,
+              "measurement_basis": "CASH_FLOW_STATEMENT_REPORTED_AMOUNT",
+              "metric_id": "operating_cash_flow_net",
+              "observation_id": "obs-688082.SH-operating_cash_flow_net-2023-01-01_2023-12-31-v1-1d989ddd892a",
+              "observation_version": 1,
+              "observed_at": null,
+              "period_end": "2023-12-31",
+              "period_kind": "FLOW",
+              "period_start": "2023-01-01",
+              "raw_unit": "CNY_YUAN",
+              "raw_value": "-426963656.49",
+              "raw_value_text": "-426,963,656.49",
+              "review_note": "Reviewed row mapping source-table-columns-v1; current/prior column 1; comparative figures available only on this disclosure date.",
+              "review_status": "SOURCE_CHECKED",
+              "standard_unit": "CNY_YUAN",
+              "standard_value": "-426963656.49",
+              "statement_scope": "CONSOLIDATED",
+              "supersedes_observation_id": null,
+              "value_status": "OBSERVED"
+            },
+            {
+              "company_id": "688082.SH",
+              "content_sha256": "e36fad47d128854602a3ebfba2b0ad1c8949e4963bda2ea62beccd56b0db4ba4",
+              "currency": "CNY",
+              "document_id": "cninfo-688082-2024-ar-1222651596",
+              "document_published_on": "2025-02-27",
+              "document_sha256": "6db89e438ac1c4affd979133df492e66262a74c6034c2b24be8355793823b2c4",
+              "evidence_refs": [
+                {
+                  "evidence_id": "cninfo-688082-2024-ar-1222651596:p0126:efcab7faf5df68cc4",
+                  "pdf_page": 126,
+                  "source_label": "accounts_receivable"
+                }
+              ],
+              "extraction_method": "TABLE_EXTRACTED",
+              "fiscal_year": 2024,
+              "measurement_basis": "BALANCE_SHEET_CARRYING_AMOUNT",
+              "metric_id": "accounts_receivable",
+              "observation_id": "obs-688082.SH-accounts_receivable-2024-12-31-v1-e36fad47d128",
+              "observation_version": 1,
+              "observed_at": "2024-12-31",
+              "period_end": null,
+              "period_kind": "STOCK",
+              "period_start": null,
+              "raw_unit": "CNY_YUAN",
+              "raw_value": "2132274574.65",
+              "raw_value_text": "2,132,274,574.65",
+              "review_note": "Reviewed row mapping source-table-columns-v1; current/prior column 0; comparative figures available only on this disclosure date.",
+              "review_status": "SOURCE_CHECKED",
+              "standard_unit": "CNY_YUAN",
+              "standard_value": "2132274574.65",
+              "statement_scope": "CONSOLIDATED",
+              "supersedes_observation_id": null,
+              "value_status": "OBSERVED"
+            },
+            {
+              "company_id": "688082.SH",
+              "content_sha256": "289d3a0f77171df570c4256ee0e22e68661aca441a4f0245b7dc92d715943b31",
+              "currency": "CNY",
+              "document_id": "cninfo-688082-2024-ar-1222651596",
+              "document_published_on": "2025-02-27",
+              "document_sha256": "6db89e438ac1c4affd979133df492e66262a74c6034c2b24be8355793823b2c4",
+              "evidence_refs": [
+                {
+                  "evidence_id": "cninfo-688082-2024-ar-1222651596:p0126:efcab7faf5df68cc4",
+                  "pdf_page": 126,
+                  "source_label": "accounts_receivable"
+                }
+              ],
+              "extraction_method": "TABLE_EXTRACTED",
+              "fiscal_year": 2023,
+              "measurement_basis": "BALANCE_SHEET_CARRYING_AMOUNT",
+              "metric_id": "accounts_receivable",
+              "observation_id": "obs-688082.SH-accounts_receivable-2023-12-31-v1-289d3a0f7717",
+              "observation_version": 1,
+              "observed_at": "2023-12-31",
+              "period_end": null,
+              "period_kind": "STOCK",
+              "period_start": null,
+              "raw_unit": "CNY_YUAN",
+              "raw_value": "1590013373.87",
+              "raw_value_text": "1,590,013,373.87",
+              "review_note": "Reviewed row mapping source-table-columns-v1; current/prior column 1; comparative figures available only on this disclosure date.",
+              "review_status": "SOURCE_CHECKED",
+              "standard_unit": "CNY_YUAN",
+              "standard_value": "1590013373.87",
+              "statement_scope": "CONSOLIDATED",
+              "supersedes_observation_id": null,
+              "value_status": "OBSERVED"
+            }
+          ],
+          "report_markdown": "# 半导体设备公司收入增长质量研究\n\n研究截止日：2025-04-30；比较财年：2023、2024。\n资料快照：s3-semiconductor-equipment-ar-v1；协议：revenue_quality_v1/1.0.0；执行状态：COMPLETED。\n\n范围为三项合并财务指标和公开年报披露。比较列按本次年报披露日可用，不回填到历史。\n\n## 财务比较表\n\n金额单位为人民币元，合并口径。未作综合风险排名。\n\n| 公司 | 财年 | 指标 | 金额/状态 | 观察ID |\n|---|---|---|---:|---|\n| 002371.SZ | 2023 | 期末应收账款账面价值 | 3,767,378,764.55 | obs-002371.SZ-accounts_receivable-2023-12-31-v1-3b43abb97048 |\n| 002371.SZ | 2023 | 经营现金流净额 | 2,365,007,734.54 | obs-002371.SZ-operating_cash_flow_net-2023-01-01_2023-12-31-v1-53dcd9ad12f8 |\n| 002371.SZ | 2023 | 营业收入 | 22,079,458,092.37 | obs-002371.SZ-revenue-2023-01-01_2023-12-31-v1-dc5ea4d5825b |\n| 002371.SZ | 2024 | 期末应收账款账面价值 | 6,044,952,733.01 | obs-002371.SZ-accounts_receivable-2024-12-31-v1-5dca9dc03dc4 |\n| 002371.SZ | 2024 | 经营现金流净额 | 1,573,165,054.27 | obs-002371.SZ-operating_cash_flow_net-2024-01-01_2024-12-31-v1-4c82b46668d0 |\n| 002371.SZ | 2024 | 营业收入 | 29,838,069,162.26 | obs-002371.SZ-revenue-2024-01-01_2024-12-31-v1-0c2188f9b21d |\n| 688072.SH | 2023 | 期末应收账款账面价值 | 529,709,337.36 | obs-688072.SH-accounts_receivable-2023-12-31-v1-10423fd328dc |\n| 688072.SH | 2023 | 经营现金流净额 | -1,657,342,652.77 | obs-688072.SH-operating_cash_flow_net-2023-01-01_2023-12-31-v1-343db4b78942 |\n| 688072.SH | 2023 | 营业收入 | 2,704,974,035.48 | obs-688072.SH-revenue-2023-01-01_2023-12-31-v1-6078afb123dd |\n| 688072.SH | 2024 | 期末应收账款账面价值 | 1,473,185,667.99 | obs-688072.SH-accounts_receivable-2024-12-31-v1-cc69984c2cfb |\n| 688072.SH | 2024 | 经营现金流净额 | -282,525,331.06 | obs-688072.SH-operating_cash_flow_net-2024-01-01_2024-12-31-v1-62d58853e856 |\n| 688072.SH | 2024 | 营业收入 | 4,103,453,853.41 | obs-688072.SH-revenue-2024-01-01_2024-12-31-v1-3cb60b85d36c |\n| 688082.SH | 2023 | 期末应收账款账面价值 | 1,590,013,373.87 | obs-688082.SH-accounts_receivable-2023-12-31-v1-289d3a0f7717 |\n| 688082.SH | 2023 | 经营现金流净额 | -426,963,656.49 | obs-688082.SH-operating_cash_flow_net-2023-01-01_2023-12-31-v1-1d989ddd892a |\n| 688082.SH | 2023 | 营业收入 | 3,888,342,742.05 | obs-688082.SH-revenue-2023-01-01_2023-12-31-v1-7852c59b77c2 |\n| 688082.SH | 2024 | 期末应收账款账面价值 | 2,132,274,574.65 | obs-688082.SH-accounts_receivable-2024-12-31-v1-e36fad47d128 |\n| 688082.SH | 2024 | 经营现金流净额 | 1,216,142,991.74 | obs-688082.SH-operating_cash_flow_net-2024-01-01_2024-12-31-v1-2acb93f6ebc4 |\n| 688082.SH | 2024 | 营业收入 | 5,617,740,375.66 | obs-688082.SH-revenue-2024-01-01_2024-12-31-v1-673b5a26c775 |\n\n## 002371.SZ\n\n- [DISCLOSED] 公司披露：“(4)2024年经营活动产生的现金流量净额15.73亿元,同比减少33.48%,主要原因为:公司为了满足订单需求,采购\n商品支付的货款增加,使得经营活动产生的现金流量净额出现下降。” 来源ID：受限候选解释。\n\n  限定：公司原文的解释，不构成独立验证的因果结论\n\n- [DISCLOSED] 公司披露：“(1)公司营业收入持续稳定增长,主要原因为:公司集成电路装备领域多款新产品取得突破,工艺覆盖度及市场占有率\n显著增长,产品销量同比大幅度增加。” 来源ID：受限候选解释。\n\n  限定：公司原文的解释，不构成独立验证的因果结论\n\n- [DISCLOSED] 公司披露：“本公司将逾期天数超过30日,或者导致信用风险显著增加因素中一个或多个指标发生显著变化的应收款项确认为\n单项计提信用损失。” 来源ID：受限候选解释。\n\n  限定：公司原文的解释，不构成独立验证的因果结论\n\n- [COMPUTED] 营业收入增长率为35.14%。 来源ID：calc-period_growth_v1-fb8b325eb2a2ed85。\n\n  限定：比率不等于因果解释或风险评级\n\n- [COMPUTED] 经营现金流净额增长率为-33.48%。 来源ID：calc-period_growth_v1-9741db98382437e1。\n\n  限定：比率不等于因果解释或风险评级\n\n- [COMPUTED] 应收账款账面价值增长率为60.46%。 来源ID：calc-period_growth_v1-4f2dca9fba05cf14。\n\n  限定：比率不等于因果解释或风险评级\n\n- [COMPUTED] 经营现金流净额/年度营业收入（2023年）为10.71%。 来源ID：calc-flow_to_flow_ratio_v1-0bfb301e96d6caec。\n\n  限定：比率不等于因果解释或风险评级\n\n- [COMPUTED] 期末应收账款账面价值/年度营业收入（2023年）为17.06%。 来源ID：calc-stock_to_flow_ratio_v1-36639653874a4a9d。\n\n  限定：比率不等于因果解释或风险评级；期末存量/期间流量，不是应收周转率或周转天数\n\n- [COMPUTED] 经营现金流净额/年度营业收入（2024年）为5.27%。 来源ID：calc-flow_to_flow_ratio_v1-3cb3e9da7dfe6d2f。\n\n  限定：比率不等于因果解释或风险评级\n\n- [COMPUTED] 期末应收账款账面价值/年度营业收入（2024年）为20.26%。 来源ID：calc-stock_to_flow_ratio_v1-b0475a885089c078。\n\n  限定：比率不等于因果解释或风险评级；期末存量/期间流量，不是应收周转率或周转天数\n\n- [COMPUTED] 收入增长率与经营现金流增长率之差为68.62个百分点。 来源ID：calc-growth_gap_pp_v1-9615df8f79ad9ccf。\n\n  限定：比率不等于因果解释或风险评级\n\n- [INFERENCE] 上述现象可能与经营规模扩张相容，但尚未独立证实，不能据此确认主要原因。 来源ID：calc-period_growth_v1-4f2dca9fba05cf14, calc-period_growth_v1-fb8b325eb2a2ed85, calc-stock_to_flow_ratio_v1-36639653874a4a9d, calc-stock_to_flow_ratio_v1-b0475a885089c078, cninfo-002371-2024-ar-1223309278:p0010:l33-46:edba560bdc10b。\n\n  限定：候选解释，不是已验证因果；支持需求: ['SALES_COLLECTION_DETAIL', 'RECEIVABLE_AGING', 'CUSTOMER_MIX']；削弱条件需检查: ['TIMING_DETAIL', 'INDEPENDENT_CONFIRMATION']；模型标记相关披露(CONTEXT)，仅核验原句存在，语义关联待复核\n\n- [INFERENCE] 上述现象可能与结算回款时点差异相容，但尚未独立证实，不能据此确认主要原因。 来源ID：calc-flow_to_flow_ratio_v1-0bfb301e96d6caec, calc-flow_to_flow_ratio_v1-3cb3e9da7dfe6d2f, calc-period_growth_v1-9741db98382437e1, calc-period_growth_v1-fb8b325eb2a2ed85, calc-stock_to_flow_ratio_v1-36639653874a4a9d, calc-stock_to_flow_ratio_v1-b0475a885089c078, cninfo-002371-2024-ar-1223309278:p0010:l33-46:edba560bdc10b, cninfo-002371-2024-ar-1223309278:p0118:l22-35:edee9ffa065ba。\n\n  限定：候选解释，不是已验证因果；支持需求: ['TIMING_DETAIL', 'SALES_COLLECTION_DETAIL', 'RECEIVABLE_AGING']；削弱条件需检查: ['CUSTOMER_MIX', 'INDEPENDENT_CONFIRMATION']；模型标记相关披露(CONTEXT)，仅核验原句存在，语义关联待复核\n\n- [INFERENCE] 上述现象可能与客户结构变化相容，但尚未独立证实，不能据此确认主要原因。 来源ID：calc-flow_to_flow_ratio_v1-0bfb301e96d6caec, calc-flow_to_flow_ratio_v1-3cb3e9da7dfe6d2f, calc-period_growth_v1-4f2dca9fba05cf14, calc-period_growth_v1-fb8b325eb2a2ed85, calc-stock_to_flow_ratio_v1-36639653874a4a9d, calc-stock_to_flow_ratio_v1-b0475a885089c078。\n\n  限定：候选解释，不是已验证因果；支持需求: ['CUSTOMER_MIX', 'RECEIVABLE_AGING', 'SALES_COLLECTION_DETAIL']；削弱条件需检查: ['TIMING_DETAIL', 'INDEPENDENT_CONFIRMATION']\n\n- [UNRESOLVED] 候选解释的支持需求及削弱条件尚未完成独立核验 来源ID：受限候选解释。\n\n  限定：S5按缺口补证据；S4保留未决，不自动搜索\n\n- [UNRESOLVED] 候选解释的支持需求及削弱条件尚未完成独立核验 来源ID：受限候选解释。\n\n  限定：S5按缺口补证据；S4保留未决，不自动搜索\n\n- [UNRESOLVED] 候选解释的支持需求及削弱条件尚未完成独立核验 来源ID：受限候选解释。\n\n  限定：S5按缺口补证据；S4保留未决，不自动搜索\n\n## 688072.SH\n\n- [DISCLOSED] 公司披露：“经营活动产生的现金流量净额变动原因说明:经营活动产生的现金流量净额-28,252.53万元,较\n上年同期-165,734.27万元大幅度收窄。” 来源ID：受限候选解释。\n\n  限定：公司原文的解释，不构成独立验证的因果结论\n\n- [DISCLOSED] 公司披露：“主要原因为报告期销售商品、提供劳务收到的现金达到\n541,581.11万元,较上年同期增加263,048.18万元,增长94.44%。” 来源ID：受限候选解释。\n\n  限定：公司原文的解释，不构成独立验证的因果结论\n\n- [DISCLOSED] 公司披露：“公司持续拓展产品布局,一方面加快产品迭代,另一方面推出有市场竞争力的新产品,业务规模\n不断扩大,报告期公司营业收入达到410,345.39万元,再创历史新高。” 来源ID：受限候选解释。\n\n  限定：公司原文的解释，不构成独立验证的因果结论\n\n- [COMPUTED] 营业收入增长率为51.70%。 来源ID：calc-period_growth_v1-6d45d74c406f5faf。\n\n  限定：比率不等于因果解释或风险评级\n\n- [COMPUTED] 应收账款账面价值增长率为178.11%。 来源ID：calc-period_growth_v1-638398e1c8cf17df。\n\n  限定：比率不等于因果解释或风险评级\n\n- [COMPUTED] 经营现金流净额/年度营业收入（2023年）为-61.27%。 来源ID：calc-flow_to_flow_ratio_v1-f2d6c54c7efb55cf。\n\n  限定：比率不等于因果解释或风险评级\n\n- [COMPUTED] 期末应收账款账面价值/年度营业收入（2023年）为19.58%。 来源ID：calc-stock_to_flow_ratio_v1-bc006c415042cb07。\n\n  限定：比率不等于因果解释或风险评级；期末存量/期间流量，不是应收周转率或周转天数\n\n- [COMPUTED] 经营现金流净额/年度营业收入（2024年）为-6.89%。 来源ID：calc-flow_to_flow_ratio_v1-cd21d18e175b7681。\n\n  限定：比率不等于因果解释或风险评级\n\n- [COMPUTED] 期末应收账款账面价值/年度营业收入（2024年）为35.90%。 来源ID：calc-stock_to_flow_ratio_v1-9b58244d589df136。\n\n  限定：比率不等于因果解释或风险评级；期末存量/期间流量，不是应收周转率或周转天数\n\n- [INFERENCE] 上述现象可能与经营规模扩张相容，但尚未独立证实，不能据此确认主要原因。 来源ID：calc-flow_to_flow_ratio_v1-cd21d18e175b7681, calc-period_growth_v1-638398e1c8cf17df, calc-period_growth_v1-6d45d74c406f5faf, calc-stock_to_flow_ratio_v1-9b58244d589df136, calc-stock_to_flow_ratio_v1-bc006c415042cb07, cninfo-688072-2024-ar-1223286833:p0055:l19-34:ee19b45ecd233。\n\n  限定：候选解释，不是已验证因果；支持需求: ['SALES_COLLECTION_DETAIL', 'RECEIVABLE_AGING', 'CUSTOMER_MIX']；削弱条件需检查: ['PURCHASE_AND_PAYMENTS', 'TIMING_DETAIL']；模型标记相关披露(CONTEXT)，仅核验原句存在，语义关联待复核\n\n- [INFERENCE] 上述现象可能与结算回款时点差异相容，但尚未独立证实，不能据此确认主要原因。 来源ID：calc-flow_to_flow_ratio_v1-cd21d18e175b7681, calc-period_growth_v1-638398e1c8cf17df, calc-period_growth_v1-6d45d74c406f5faf, calc-stock_to_flow_ratio_v1-9b58244d589df136, calc-stock_to_flow_ratio_v1-bc006c415042cb07, cninfo-688072-2024-ar-1223286833:p0055:l19-34:ee19b45ecd233。\n\n  限定：候选解释，不是已验证因果；支持需求: ['TIMING_DETAIL', 'SALES_COLLECTION_DETAIL', 'RECEIVABLE_AGING']；削弱条件需检查: ['CUSTOMER_MIX', 'INDEPENDENT_CONFIRMATION']；模型标记相关披露(CONTEXT)，仅核验原句存在，语义关联待复核\n\n- [INFERENCE] 上述现象可能与客户结构变化相容，但尚未独立证实，不能据此确认主要原因。 来源ID：calc-flow_to_flow_ratio_v1-cd21d18e175b7681, calc-period_growth_v1-638398e1c8cf17df, calc-period_growth_v1-6d45d74c406f5faf, calc-stock_to_flow_ratio_v1-9b58244d589df136, calc-stock_to_flow_ratio_v1-bc006c415042cb07。\n\n  限定：候选解释，不是已验证因果；支持需求: ['CUSTOMER_MIX', 'RECEIVABLE_AGING', 'SALES_COLLECTION_DETAIL']；削弱条件需检查: ['TIMING_DETAIL', 'INDEPENDENT_CONFIRMATION']\n\n- [UNRESOLVED] operating_cash_flow_net_growth: NEGATIVE_BASE，不输出常规数值 来源ID：受限候选解释。\n\n  限定：保留该边界；负基数应使用原始金额与比率描述，不能强算常规增长率\n\n- [UNRESOLVED] revenue_ocf_growth_gap_pp: INCOMPARABLE，不输出常规数值 来源ID：受限候选解释。\n\n  限定：保留该边界；负基数应使用原始金额与比率描述，不能强算常规增长率\n\n- [UNRESOLVED] 候选解释的支持需求及削弱条件尚未完成独立核验 来源ID：受限候选解释。\n\n  限定：S5按缺口补证据；S4保留未决，不自动搜索\n\n- [UNRESOLVED] 候选解释的支持需求及削弱条件尚未完成独立核验 来源ID：受限候选解释。\n\n  限定：S5按缺口补证据；S4保留未决，不自动搜索\n\n- [UNRESOLVED] 候选解释的支持需求及削弱条件尚未完成独立核验 来源ID：受限候选解释。\n\n  限定：S5按缺口补证据；S4保留未决，不自动搜索\n\n## 688082.SH\n\n- [DISCLOSED] 公司披露：“经营活动产生的现金流量净额变动原因说明:经营活动产生的现金流量净额较上期同比上升,主\n要是因为本期销售回款较上期增加,以及因销售订单增长引起的本期预收货款增加所致。” 来源ID：受限候选解释。\n\n  限定：公司原文的解释，不构成独立验证的因果结论\n\n- [DISCLOSED] 公司披露：“(1)专用设备销售收入\n对不存在试运行要求的产品,由客户调试确认验收后,客户取得商品控制权,公司确认收入。” 来源ID：受限候选解释。\n\n  限定：公司原文的解释，不构成独立验证的因果结论\n\n- [DISCLOSED] 公司披露：“对存在试运行要求的产品,本公司将专用设备产品按照协议合同规定运至约定交货地点,在产品\n安装调试并通过客户验收后,并且产品试运行期满时,客户取得商品控制权,公司确认收入。” 来源ID：受限候选解释。\n\n  限定：公司原文的解释，不构成独立验证的因果结论\n\n- [COMPUTED] 营业收入增长率为44.48%。 来源ID：calc-period_growth_v1-1d92c37217121f8b。\n\n  限定：比率不等于因果解释或风险评级\n\n- [COMPUTED] 应收账款账面价值增长率为34.10%。 来源ID：calc-period_growth_v1-c861bccae52384f9。\n\n  限定：比率不等于因果解释或风险评级\n\n- [COMPUTED] 经营现金流净额/年度营业收入（2023年）为-10.98%。 来源ID：calc-flow_to_flow_ratio_v1-bb6cdd1c628086ed。\n\n  限定：比率不等于因果解释或风险评级\n\n- [COMPUTED] 期末应收账款账面价值/年度营业收入（2023年）为40.89%。 来源ID：calc-stock_to_flow_ratio_v1-bac7b4ee2c424713。\n\n  限定：比率不等于因果解释或风险评级；期末存量/期间流量，不是应收周转率或周转天数\n\n- [COMPUTED] 经营现金流净额/年度营业收入（2024年）为21.65%。 来源ID：calc-flow_to_flow_ratio_v1-3f25099f79145f04。\n\n  限定：比率不等于因果解释或风险评级\n\n- [COMPUTED] 期末应收账款账面价值/年度营业收入（2024年）为37.96%。 来源ID：calc-stock_to_flow_ratio_v1-81f19d098674f212。\n\n  限定：比率不等于因果解释或风险评级；期末存量/期间流量，不是应收周转率或周转天数\n\n- [INFERENCE] 上述现象可能与经营规模扩张相容，但尚未独立证实，不能据此确认主要原因。 来源ID：calc-period_growth_v1-1d92c37217121f8b, cninfo-688082-2024-ar-1222651596:p0036:l16-34:e31cd7d79eb90。\n\n  限定：候选解释，不是已验证因果；支持需求: ['SALES_COLLECTION_DETAIL', 'CUSTOMER_MIX']；削弱条件需检查: ['RECEIVABLE_AGING', 'INDEPENDENT_CONFIRMATION']；模型标记相关披露(SUPPORTING_DISCLOSURE)，仅核验原句存在，语义关联待复核\n\n- [INFERENCE] 上述现象可能与结算回款时点差异相容，但尚未独立证实，不能据此确认主要原因。 来源ID：calc-period_growth_v1-1d92c37217121f8b, cninfo-688082-2024-ar-1222651596:p0036:l16-34:e31cd7d79eb90, cninfo-688082-2024-ar-1222651596:p0160:l26-44:e33de2ba9f730。\n\n  限定：候选解释，不是已验证因果；支持需求: ['TIMING_DETAIL', 'SALES_COLLECTION_DETAIL']；削弱条件需检查: ['RECEIVABLE_AGING', 'PURCHASE_AND_PAYMENTS']；模型标记相关披露(CONTEXT, SUPPORTING_DISCLOSURE)，仅核验原句存在，语义关联待复核\n\n- [INFERENCE] 上述现象可能与客户结构变化相容，但尚未独立证实，不能据此确认主要原因。 来源ID：calc-period_growth_v1-1d92c37217121f8b。\n\n  限定：候选解释，不是已验证因果；支持需求: ['CUSTOMER_MIX', 'SALES_COLLECTION_DETAIL']；削弱条件需检查: ['RECEIVABLE_AGING', 'INDEPENDENT_CONFIRMATION']\n\n- [UNRESOLVED] operating_cash_flow_net_growth: NEGATIVE_BASE，不输出常规数值 来源ID：受限候选解释。\n\n  限定：保留该边界；负基数应使用原始金额与比率描述，不能强算常规增长率\n\n- [UNRESOLVED] revenue_ocf_growth_gap_pp: INCOMPARABLE，不输出常规数值 来源ID：受限候选解释。\n\n  限定：保留该边界；负基数应使用原始金额与比率描述，不能强算常规增长率\n\n- [UNRESOLVED] 候选解释的支持需求及削弱条件尚未完成独立核验 来源ID：受限候选解释。\n\n  限定：S5按缺口补证据；S4保留未决，不自动搜索\n\n- [UNRESOLVED] 候选解释的支持需求及削弱条件尚未完成独立核验 来源ID：受限候选解释。\n\n  限定：S5按缺口补证据；S4保留未决，不自动搜索\n\n- [UNRESOLVED] 候选解释的支持需求及削弱条件尚未完成独立核验 来源ID：受限候选解释。\n\n  限定：S5按缺口补证据；S4保留未决，不自动搜索\n\n## 未决问题与资料限制\n\n- 688072.SH／INCOMPARABLE_CALCULATION：operating_cash_flow_net_growth: NEGATIVE_BASE，不输出常规数值。下一步：保留该边界；负基数应使用原始金额与比率描述，不能强算常规增长率。\n\n- 688072.SH／INCOMPARABLE_CALCULATION：revenue_ocf_growth_gap_pp: INCOMPARABLE，不输出常规数值。下一步：保留该边界；负基数应使用原始金额与比率描述，不能强算常规增长率。\n\n- 688082.SH／INCOMPARABLE_CALCULATION：operating_cash_flow_net_growth: NEGATIVE_BASE，不输出常规数值。下一步：保留该边界；负基数应使用原始金额与比率描述，不能强算常规增长率。\n\n- 688082.SH／INCOMPARABLE_CALCULATION：revenue_ocf_growth_gap_pp: INCOMPARABLE，不输出常规数值。下一步：保留该边界；负基数应使用原始金额与比率描述，不能强算常规增长率。\n\n- 002371.SZ／MISSING_COUNTEREVIDENCE：候选解释的支持需求及削弱条件尚未完成独立核验。下一步：S5按缺口补证据；S4保留未决，不自动搜索。\n\n- 002371.SZ／MISSING_COUNTEREVIDENCE：候选解释的支持需求及削弱条件尚未完成独立核验。下一步：S5按缺口补证据；S4保留未决，不自动搜索。\n\n- 002371.SZ／MISSING_COUNTEREVIDENCE：候选解释的支持需求及削弱条件尚未完成独立核验。下一步：S5按缺口补证据；S4保留未决，不自动搜索。\n\n- 688072.SH／MISSING_COUNTEREVIDENCE：候选解释的支持需求及削弱条件尚未完成独立核验。下一步：S5按缺口补证据；S4保留未决，不自动搜索。\n\n- 688072.SH／MISSING_COUNTEREVIDENCE：候选解释的支持需求及削弱条件尚未完成独立核验。下一步：S5按缺口补证据；S4保留未决，不自动搜索。\n\n- 688072.SH／MISSING_COUNTEREVIDENCE：候选解释的支持需求及削弱条件尚未完成独立核验。下一步：S5按缺口补证据；S4保留未决，不自动搜索。\n\n- 688082.SH／MISSING_COUNTEREVIDENCE：候选解释的支持需求及削弱条件尚未完成独立核验。下一步：S5按缺口补证据；S4保留未决，不自动搜索。\n\n- 688082.SH／MISSING_COUNTEREVIDENCE：候选解释的支持需求及削弱条件尚未完成独立核验。下一步：S5按缺口补证据；S4保留未决，不自动搜索。\n\n- 688082.SH／MISSING_COUNTEREVIDENCE：候选解释的支持需求及削弱条件尚未完成独立核验。下一步：S5按缺口补证据；S4保留未决，不自动搜索。\n\n## 计算与来源追踪\n\n| 公司 | 计算名称 | 状态 | 计算ID | 输入ID |\n|---|---|---|---|---|\n| 002371.SZ | revenue_growth | VALID | calc-period_growth_v1-fb8b325eb2a2ed85 | obs-002371.SZ-revenue-2024-01-01_2024-12-31-v1-0c2188f9b21d, obs-002371.SZ-revenue-2023-01-01_2023-12-31-v1-dc5ea4d5825b |\n| 002371.SZ | operating_cash_flow_net_growth | VALID | calc-period_growth_v1-9741db98382437e1 | obs-002371.SZ-operating_cash_flow_net-2024-01-01_2024-12-31-v1-4c82b46668d0, obs-002371.SZ-operating_cash_flow_net-2023-01-01_2023-12-31-v1-53dcd9ad12f8 |\n| 002371.SZ | accounts_receivable_growth | VALID | calc-period_growth_v1-4f2dca9fba05cf14 | obs-002371.SZ-accounts_receivable-2024-12-31-v1-5dca9dc03dc4, obs-002371.SZ-accounts_receivable-2023-12-31-v1-3b43abb97048 |\n| 002371.SZ | ocf_revenue_ratio_2023 | VALID | calc-flow_to_flow_ratio_v1-0bfb301e96d6caec | obs-002371.SZ-operating_cash_flow_net-2023-01-01_2023-12-31-v1-53dcd9ad12f8, obs-002371.SZ-revenue-2023-01-01_2023-12-31-v1-dc5ea4d5825b |\n| 002371.SZ | ar_revenue_ratio_2023 | VALID | calc-stock_to_flow_ratio_v1-36639653874a4a9d | obs-002371.SZ-accounts_receivable-2023-12-31-v1-3b43abb97048, obs-002371.SZ-revenue-2023-01-01_2023-12-31-v1-dc5ea4d5825b |\n| 002371.SZ | ocf_revenue_ratio_2024 | VALID | calc-flow_to_flow_ratio_v1-3cb3e9da7dfe6d2f | obs-002371.SZ-operating_cash_flow_net-2024-01-01_2024-12-31-v1-4c82b46668d0, obs-002371.SZ-revenue-2024-01-01_2024-12-31-v1-0c2188f9b21d |\n| 002371.SZ | ar_revenue_ratio_2024 | VALID | calc-stock_to_flow_ratio_v1-b0475a885089c078 | obs-002371.SZ-accounts_receivable-2024-12-31-v1-5dca9dc03dc4, obs-002371.SZ-revenue-2024-01-01_2024-12-31-v1-0c2188f9b21d |\n| 002371.SZ | revenue_ocf_growth_gap_pp | VALID | calc-growth_gap_pp_v1-9615df8f79ad9ccf | calc-period_growth_v1-fb8b325eb2a2ed85, calc-period_growth_v1-9741db98382437e1 |\n| 688072.SH | revenue_growth | VALID | calc-period_growth_v1-6d45d74c406f5faf | obs-688072.SH-revenue-2024-01-01_2024-12-31-v1-3cb60b85d36c, obs-688072.SH-revenue-2023-01-01_2023-12-31-v1-6078afb123dd |\n| 688072.SH | operating_cash_flow_net_growth | NEGATIVE_BASE | calc-period_growth_v1-4372cd0d6dc65278 | obs-688072.SH-operating_cash_flow_net-2024-01-01_2024-12-31-v1-62d58853e856, obs-688072.SH-operating_cash_flow_net-2023-01-01_2023-12-31-v1-343db4b78942 |\n| 688072.SH | accounts_receivable_growth | VALID | calc-period_growth_v1-638398e1c8cf17df | obs-688072.SH-accounts_receivable-2024-12-31-v1-cc69984c2cfb, obs-688072.SH-accounts_receivable-2023-12-31-v1-10423fd328dc |\n| 688072.SH | ocf_revenue_ratio_2023 | VALID | calc-flow_to_flow_ratio_v1-f2d6c54c7efb55cf | obs-688072.SH-operating_cash_flow_net-2023-01-01_2023-12-31-v1-343db4b78942, obs-688072.SH-revenue-2023-01-01_2023-12-31-v1-6078afb123dd |\n| 688072.SH | ar_revenue_ratio_2023 | VALID | calc-stock_to_flow_ratio_v1-bc006c415042cb07 | obs-688072.SH-accounts_receivable-2023-12-31-v1-10423fd328dc, obs-688072.SH-revenue-2023-01-01_2023-12-31-v1-6078afb123dd |\n| 688072.SH | ocf_revenue_ratio_2024 | VALID | calc-flow_to_flow_ratio_v1-cd21d18e175b7681 | obs-688072.SH-operating_cash_flow_net-2024-01-01_2024-12-31-v1-62d58853e856, obs-688072.SH-revenue-2024-01-01_2024-12-31-v1-3cb60b85d36c |\n| 688072.SH | ar_revenue_ratio_2024 | VALID | calc-stock_to_flow_ratio_v1-9b58244d589df136 | obs-688072.SH-accounts_receivable-2024-12-31-v1-cc69984c2cfb, obs-688072.SH-revenue-2024-01-01_2024-12-31-v1-3cb60b85d36c |\n| 688072.SH | revenue_ocf_growth_gap_pp | INCOMPARABLE | calc-growth_gap_pp_v1-b9e1cacd62db3a44 | calc-period_growth_v1-6d45d74c406f5faf, calc-period_growth_v1-4372cd0d6dc65278 |\n| 688082.SH | revenue_growth | VALID | calc-period_growth_v1-1d92c37217121f8b | obs-688082.SH-revenue-2024-01-01_2024-12-31-v1-673b5a26c775, obs-688082.SH-revenue-2023-01-01_2023-12-31-v1-7852c59b77c2 |\n| 688082.SH | operating_cash_flow_net_growth | NEGATIVE_BASE | calc-period_growth_v1-e1a7fa06f53b26bd | obs-688082.SH-operating_cash_flow_net-2024-01-01_2024-12-31-v1-2acb93f6ebc4, obs-688082.SH-operating_cash_flow_net-2023-01-01_2023-12-31-v1-1d989ddd892a |\n| 688082.SH | accounts_receivable_growth | VALID | calc-period_growth_v1-c861bccae52384f9 | obs-688082.SH-accounts_receivable-2024-12-31-v1-e36fad47d128, obs-688082.SH-accounts_receivable-2023-12-31-v1-289d3a0f7717 |\n| 688082.SH | ocf_revenue_ratio_2023 | VALID | calc-flow_to_flow_ratio_v1-bb6cdd1c628086ed | obs-688082.SH-operating_cash_flow_net-2023-01-01_2023-12-31-v1-1d989ddd892a, obs-688082.SH-revenue-2023-01-01_2023-12-31-v1-7852c59b77c2 |\n| 688082.SH | ar_revenue_ratio_2023 | VALID | calc-stock_to_flow_ratio_v1-bac7b4ee2c424713 | obs-688082.SH-accounts_receivable-2023-12-31-v1-289d3a0f7717, obs-688082.SH-revenue-2023-01-01_2023-12-31-v1-7852c59b77c2 |\n| 688082.SH | ocf_revenue_ratio_2024 | VALID | calc-flow_to_flow_ratio_v1-3f25099f79145f04 | obs-688082.SH-operating_cash_flow_net-2024-01-01_2024-12-31-v1-2acb93f6ebc4, obs-688082.SH-revenue-2024-01-01_2024-12-31-v1-673b5a26c775 |\n| 688082.SH | ar_revenue_ratio_2024 | VALID | calc-stock_to_flow_ratio_v1-81f19d098674f212 | obs-688082.SH-accounts_receivable-2024-12-31-v1-e36fad47d128, obs-688082.SH-revenue-2024-01-01_2024-12-31-v1-673b5a26c775 |\n| 688082.SH | revenue_ocf_growth_gap_pp | INCOMPARABLE | calc-growth_gap_pp_v1-21341ea85f417009 | calc-period_growth_v1-1d92c37217121f8b, calc-period_growth_v1-e1a7fa06f53b26bd |\n\n## 原文定位\n\n完整原文、金额观察及公式分别保存在 evidence.json、observations.json、calculations.json 中。\n\n- cninfo-002371-2024-ar-1223309278:p0010:l33-46:edba560bdc10b：002371.SZ／[PDF第10页，行33—46](https://static.cninfo.com.cn/finalpage/2025-04-26/1223309278.PDF#page=10)。\n\n- cninfo-002371-2024-ar-1223309278:p0016:l1-12:e2dbdd498ddb4：002371.SZ／[PDF第16页，行1—12](https://static.cninfo.com.cn/finalpage/2025-04-26/1223309278.PDF#page=16)。\n\n- cninfo-002371-2024-ar-1223309278:p0030:l16-42:eb542983cb189：002371.SZ／[PDF第30页，行16—42](https://static.cninfo.com.cn/finalpage/2025-04-26/1223309278.PDF#page=30)。\n\n- cninfo-002371-2024-ar-1223309278:p0090:e2698133e9019306e：002371.SZ／[PDF第90页，行1—26](https://static.cninfo.com.cn/finalpage/2025-04-26/1223309278.PDF#page=90)。\n\n- cninfo-002371-2024-ar-1223309278:p0091:e65093b3af9dc23b1：002371.SZ／[PDF第91页，行1—44](https://static.cninfo.com.cn/finalpage/2025-04-26/1223309278.PDF#page=91)。\n\n- cninfo-002371-2024-ar-1223309278:p0095:ed2d227d995d30a5a：002371.SZ／[PDF第95页，行1—43](https://static.cninfo.com.cn/finalpage/2025-04-26/1223309278.PDF#page=95)。\n\n- cninfo-002371-2024-ar-1223309278:p0099:e205f032020f440fd：002371.SZ／[PDF第99页，行1—50](https://static.cninfo.com.cn/finalpage/2025-04-26/1223309278.PDF#page=99)。\n\n- cninfo-002371-2024-ar-1223309278:p0118:l22-35:edee9ffa065ba：002371.SZ／[PDF第118页，行22—35](https://static.cninfo.com.cn/finalpage/2025-04-26/1223309278.PDF#page=118)。\n\n- cninfo-002371-2024-ar-1223309278:p0131:l24-41:e133d1c73a482：002371.SZ／[PDF第131页，行24—41](https://static.cninfo.com.cn/finalpage/2025-04-26/1223309278.PDF#page=131)。\n\n- cninfo-002371-2024-ar-1223309278:p0185:l19-38:efc5f4d49dcc5：002371.SZ／[PDF第185页，行19—38](https://static.cninfo.com.cn/finalpage/2025-04-26/1223309278.PDF#page=185)。\n\n- cninfo-688072-2024-ar-1223286833:p0031:l7-23:e4c7b811c29a8：688072.SH／[PDF第31页，行7—23](https://static.cninfo.com.cn/finalpage/2025-04-25/1223286833.PDF#page=31)。\n\n- cninfo-688072-2024-ar-1223286833:p0055:l19-34:ee19b45ecd233：688072.SH／[PDF第55页，行19—34](https://static.cninfo.com.cn/finalpage/2025-04-25/1223286833.PDF#page=55)。\n\n- cninfo-688072-2024-ar-1223286833:p0055:l28-43:e4c5294c339a0：688072.SH／[PDF第55页，行28—43](https://static.cninfo.com.cn/finalpage/2025-04-25/1223286833.PDF#page=55)。\n\n- cninfo-688072-2024-ar-1223286833:p0152:ef084b7ec9bb30c01：688072.SH／[PDF第152页，行1—49](https://static.cninfo.com.cn/finalpage/2025-04-25/1223286833.PDF#page=152)。\n\n- cninfo-688072-2024-ar-1223286833:p0156:e78f34a1792d149ce：688072.SH／[PDF第156页，行1—52](https://static.cninfo.com.cn/finalpage/2025-04-25/1223286833.PDF#page=156)。\n\n- cninfo-688072-2024-ar-1223286833:p0159:ec21b21ba2cce0432：688072.SH／[PDF第159页，行1—54](https://static.cninfo.com.cn/finalpage/2025-04-25/1223286833.PDF#page=159)。\n\n- cninfo-688072-2024-ar-1223286833:p0160:ef075e82466c109e4：688072.SH／[PDF第160页，行1—59](https://static.cninfo.com.cn/finalpage/2025-04-25/1223286833.PDF#page=160)。\n\n- cninfo-688072-2024-ar-1223286833:p0178:l7-28:ed37b9bf5f896：688072.SH／[PDF第178页，行7—28](https://static.cninfo.com.cn/finalpage/2025-04-25/1223286833.PDF#page=178)。\n\n- cninfo-688072-2024-ar-1223286833:p0179:l1-26:e71948ef73a9b：688072.SH／[PDF第179页，行1—26](https://static.cninfo.com.cn/finalpage/2025-04-25/1223286833.PDF#page=179)。\n\n- cninfo-688072-2024-ar-1223286833:p0195:l17-43:eede8890e4379：688072.SH／[PDF第195页，行17—43](https://static.cninfo.com.cn/finalpage/2025-04-25/1223286833.PDF#page=195)。\n\n- cninfo-688082-2024-ar-1222651596:p0017:l1-15:e7da7be32da6b：688082.SH／[PDF第17页，行1—15](https://static.cninfo.com.cn/finalpage/2025-02-27/1222651596.PDF#page=17)。\n\n- cninfo-688082-2024-ar-1222651596:p0017:l26-40:e5eea6e069a53：688082.SH／[PDF第17页，行26—40](https://static.cninfo.com.cn/finalpage/2025-02-27/1222651596.PDF#page=17)。\n\n- cninfo-688082-2024-ar-1222651596:p0036:l16-34:e31cd7d79eb90：688082.SH／[PDF第36页，行16—34](https://static.cninfo.com.cn/finalpage/2025-02-27/1222651596.PDF#page=36)。\n\n- cninfo-688082-2024-ar-1222651596:p0126:efcab7faf5df68cc4：688082.SH／[PDF第126页，行1—49](https://static.cninfo.com.cn/finalpage/2025-02-27/1222651596.PDF#page=126)。\n\n- cninfo-688082-2024-ar-1222651596:p0130:e431537e4b0455453：688082.SH／[PDF第130页，行1—48](https://static.cninfo.com.cn/finalpage/2025-02-27/1222651596.PDF#page=130)。\n\n- cninfo-688082-2024-ar-1222651596:p0134:e6d525d9e31ea7593：688082.SH／[PDF第134页，行1—49](https://static.cninfo.com.cn/finalpage/2025-02-27/1222651596.PDF#page=134)。\n\n- cninfo-688082-2024-ar-1222651596:p0149:l21-39:ec9a19f229032：688082.SH／[PDF第149页，行21—39](https://static.cninfo.com.cn/finalpage/2025-02-27/1222651596.PDF#page=149)。\n\n- cninfo-688082-2024-ar-1222651596:p0160:l26-44:e33de2ba9f730：688082.SH／[PDF第160页，行26—44](https://static.cninfo.com.cn/finalpage/2025-02-27/1222651596.PDF#page=160)。\n\n- cninfo-688082-2024-ar-1222651596:p0242:l25-43:e9ded5a1a970d：688082.SH／[PDF第242页，行25—43](https://static.cninfo.com.cn/finalpage/2025-02-27/1222651596.PDF#page=242)。\n\n资料仅来自锁定的公司年报，未完成完整更正公告搜索或外部独立验证。检索效果来自开发集，不代表盲测表现。\n",
+          "supplement": null
+        },
+        "runtime": {
+          "cancel_requested": false,
+          "checkpoint_sha256": null,
+          "clarification_status": "NONE",
+          "connection_state": "CONNECTED",
+          "current_step_id": null,
+          "event_cursor": 0,
+          "event_stream_id": "fixture:reading-ready:v1",
+          "queue_state": "UNKNOWN",
+          "resume_readiness": "UNKNOWN",
+          "waiting_gap_ids": [],
+          "worker_state": "UNKNOWN"
+        },
+        "schema_version": "1.0.0",
+        "steps": [],
+        "task": {
+          "access_mode": "MOCK",
+          "available_actions": [
+            {
+              "authority": "READ_ONLY",
+              "enabled": true,
+              "operation": "VIEW_REPORT",
+              "reason": null
+            },
+            {
+              "authority": "READ_ONLY",
+              "enabled": false,
+              "operation": "VIEW_STEPS",
+              "reason": "当前记录没有可用的独立步骤或补查历史。"
+            },
+            {
+              "authority": "READ_ONLY",
+              "enabled": true,
+              "operation": "VIEW_EVIDENCE",
+              "reason": null
+            },
+            {
+              "authority": "SIMULATED",
+              "enabled": true,
+              "operation": "FOLLOWUP",
+              "reason": null
+            },
+            {
+              "authority": "SIMULATED",
+              "enabled": false,
+              "operation": "CANCEL",
+              "reason": "当前终态或已受理取消不需要重复请求。"
+            },
+            {
+              "authority": "SIMULATED",
+              "enabled": false,
+              "operation": "CLARIFY",
+              "reason": "仅当前等待检查点可接收新的澄清决定。"
+            },
+            {
+              "authority": "SIMULATED",
+              "enabled": false,
+              "operation": "RESUME",
+              "reason": "恢复需要协调层明确核验安全；等待任务还需要已记录决定。"
+            },
+            {
+              "authority": "SIMULATED",
+              "enabled": true,
+              "operation": "NEW_TASK",
+              "reason": null
+            }
+          ],
+          "baseline": null,
+          "company_labels": {
+            "002371.SZ": "北方华创",
+            "688072.SH": "拓荆科技",
+            "688082.SH": "盛美上海"
+          },
+          "context": {
+            "as_of_date": "2025-04-30",
+            "company_ids": [
+              "002371.SZ",
+              "688072.SH",
+              "688082.SH"
+            ],
+            "corpus_snapshot_id": "s3-semiconductor-equipment-ar-v1",
+            "fiscal_years": [
+              2023,
+              2024
+            ],
+            "protocol_config_sha256": "0a9a877083f262f29407bfcfa0c7d3bea39c31bfc83e83e1db5c7be68c6ed52a",
+            "protocol_id": "revenue_quality_v1",
+            "protocol_version": "1.0.0",
+            "run_id": "fixture-reading-ready"
+          },
+          "created_at": null,
+          "execution_mode": "REPLAY",
+          "origin": "WEB_FIXTURE",
+          "question": "【页面样本】比较收入、经营现金流和应收账款，核查披露与局限。",
+          "task_id": "fixture-reading-ready",
+          "task_status": "COMPLETED",
+          "workflow": "B1"
+        },
+        "ui": {
+          "anchor": null,
+          "editing_followup": false,
+          "follow_progress": true,
+          "manual_browsing": false,
+          "panel": "PROCESS",
+          "reader_open": true,
+          "reduced_motion": false,
+          "scroll_y": 0,
+          "selected_evidence_id": "cninfo-002371-2024-ar-1223309278:p0016:l1-12:e2dbdd498ddb4",
+          "selected_round": null,
+          "selected_step_id": null,
+          "text_selection_active": false
+        }
+      }
+    }
+  ],
+  "scenario_id": "reading-ready",
+  "schema_version": "1.0.0",
+  "synthetic_execution": true,
+  "title": "阅读原文时报告就绪不跳走"
+}

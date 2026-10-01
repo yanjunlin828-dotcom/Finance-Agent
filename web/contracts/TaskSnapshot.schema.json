@@ -1,0 +1,2447 @@
+{
+  "$defs": {
+    "ActionCapability": {
+      "additionalProperties": false,
+      "properties": {
+        "authority": {
+          "enum": [
+            "READ_ONLY",
+            "SIMULATED",
+            "SERVER"
+          ],
+          "title": "Authority",
+          "type": "string"
+        },
+        "enabled": {
+          "title": "Enabled",
+          "type": "boolean"
+        },
+        "operation": {
+          "enum": [
+            "VIEW_REPORT",
+            "VIEW_STEPS",
+            "VIEW_EVIDENCE",
+            "FOLLOWUP",
+            "CANCEL",
+            "CLARIFY",
+            "RESUME",
+            "NEW_TASK"
+          ],
+          "title": "Operation",
+          "type": "string"
+        },
+        "reason": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reason"
+        }
+      },
+      "required": [
+        "operation",
+        "enabled",
+        "authority"
+      ],
+      "title": "ActionCapability",
+      "type": "object"
+    },
+    "ArtifactRef": {
+      "additionalProperties": false,
+      "description": "Trusted export locator relative to APP_ROOT, never a client filesystem path.",
+      "properties": {
+        "path": {
+          "title": "Path",
+          "type": "string"
+        },
+        "pointer": {
+          "default": "",
+          "title": "Pointer",
+          "type": "string"
+        },
+        "sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Sha256",
+          "type": "string"
+        }
+      },
+      "required": [
+        "path",
+        "sha256"
+      ],
+      "title": "ArtifactRef",
+      "type": "object"
+    },
+    "BaselineView": {
+      "additionalProperties": false,
+      "properties": {
+        "final_state_sha256": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Final State Sha256"
+        },
+        "label": {
+          "title": "Label",
+          "type": "string"
+        },
+        "origin": {
+          "const": "RESULT_REUSE",
+          "default": "RESULT_REUSE",
+          "title": "Origin",
+          "type": "string"
+        },
+        "task_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,99}$",
+          "title": "Task Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "task_id",
+        "label"
+      ],
+      "title": "BaselineView",
+      "type": "object"
+    },
+    "BudgetView": {
+      "additionalProperties": false,
+      "properties": {
+        "baseline_historical_estimate": {
+          "anyOf": [
+            {
+              "pattern": "^-?\\d+(?:\\.\\d+)?$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Baseline Historical Estimate"
+        },
+        "currency": {
+          "const": "USD",
+          "default": "USD",
+          "title": "Currency",
+          "type": "string"
+        },
+        "estimate_kind": {
+          "const": "USAGE_ESTIMATE_NOT_INVOICE",
+          "default": "USAGE_ESTIMATE_NOT_INVOICE",
+          "title": "Estimate Kind",
+          "type": "string"
+        },
+        "note": {
+          "default": "未提供金额表示未知，不能显示为零；组合总预算尚未建立。",
+          "title": "Note",
+          "type": "string"
+        },
+        "pending_reservation": {
+          "anyOf": [
+            {
+              "pattern": "^-?\\d+(?:\\.\\d+)?$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Pending Reservation"
+        },
+        "settled_estimate": {
+          "anyOf": [
+            {
+              "pattern": "^-?\\d+(?:\\.\\d+)?$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Settled Estimate"
+        },
+        "source": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ArtifactRef"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "total_calls": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Total Calls"
+        }
+      },
+      "title": "BudgetView",
+      "type": "object"
+    },
+    "CalculationResult": {
+      "additionalProperties": false,
+      "description": "确定性公式输出；无效状态不得携带数值。",
+      "properties": {
+        "calculation_id": {
+          "title": "Calculation Id",
+          "type": "string"
+        },
+        "company_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Company Id"
+        },
+        "comparability_checks": {
+          "items": {
+            "$ref": "#/$defs/ComparabilityCheck"
+          },
+          "title": "Comparability Checks",
+          "type": "array"
+        },
+        "comparison_period": {
+          "anyOf": [
+            {
+              "maxItems": 2,
+              "minItems": 2,
+              "prefixItems": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "integer"
+                }
+              ],
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Comparison Period"
+        },
+        "currency": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Currency"
+        },
+        "errors": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Errors",
+          "type": "array"
+        },
+        "expression": {
+          "title": "Expression",
+          "type": "string"
+        },
+        "formula_id": {
+          "enum": [
+            "period_growth_v1",
+            "flow_to_flow_ratio_v1",
+            "stock_to_flow_ratio_v1",
+            "growth_gap_pp_v1"
+          ],
+          "title": "Formula Id",
+          "type": "string"
+        },
+        "formula_version": {
+          "enum": [
+            "1.0.0",
+            "1.1.0"
+          ],
+          "title": "Formula Version",
+          "type": "string"
+        },
+        "input_ids": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Input Ids",
+          "type": "array"
+        },
+        "input_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Input Sha256",
+          "type": "string"
+        },
+        "output_unit": {
+          "enum": [
+            "RATIO",
+            "PERCENTAGE_POINT"
+          ],
+          "title": "Output Unit",
+          "type": "string"
+        },
+        "result_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Result Sha256",
+          "type": "string"
+        },
+        "statement_scope": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Statement Scope"
+        },
+        "status": {
+          "enum": [
+            "VALID",
+            "MISSING_INPUT",
+            "ZERO_DENOMINATOR",
+            "NEGATIVE_BASE",
+            "INCOMPARABLE"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Value"
+        }
+      },
+      "required": [
+        "calculation_id",
+        "formula_id",
+        "formula_version",
+        "expression",
+        "input_ids",
+        "status",
+        "value",
+        "output_unit",
+        "comparability_checks",
+        "errors",
+        "input_sha256",
+        "result_sha256"
+      ],
+      "title": "CalculationResult",
+      "type": "object"
+    },
+    "ComparabilityCheck": {
+      "additionalProperties": false,
+      "properties": {
+        "actual": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Actual"
+        },
+        "expected": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Expected"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "passed": {
+          "title": "Passed",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "name",
+        "passed"
+      ],
+      "title": "ComparabilityCheck",
+      "type": "object"
+    },
+    "DependencyIssue": {
+      "additionalProperties": false,
+      "properties": {
+        "owner_id": {
+          "title": "Owner Id",
+          "type": "string"
+        },
+        "reason": {
+          "enum": [
+            "MISSING_RECORD",
+            "MISSING_DIRECT_REFERENCE",
+            "AMBIGUOUS_REFERENCE"
+          ],
+          "title": "Reason",
+          "type": "string"
+        },
+        "target_id": {
+          "title": "Target Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "owner_id",
+        "target_id",
+        "reason"
+      ],
+      "title": "DependencyIssue",
+      "type": "object"
+    },
+    "DocumentView": {
+      "additionalProperties": false,
+      "description": "Registered identity and optional metadata; never a native path or guessed page.",
+      "properties": {
+        "company_id": {
+          "pattern": "^\\d{6}\\.(SZ|SH|BJ)$",
+          "title": "Company Id",
+          "type": "string"
+        },
+        "document_id": {
+          "title": "Document Id",
+          "type": "string"
+        },
+        "document_sha256": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Document Sha256"
+        },
+        "metadata_source": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ArtifactRef"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "page_count": {
+          "anyOf": [
+            {
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Page Count"
+        },
+        "pdf_access": {
+          "default": "NOT_CONNECTED",
+          "enum": [
+            "NOT_CONNECTED",
+            "AVAILABLE",
+            "UNAVAILABLE"
+          ],
+          "title": "Pdf Access",
+          "type": "string"
+        },
+        "published_on": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Published On"
+        },
+        "title": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Title"
+        }
+      },
+      "required": [
+        "document_id",
+        "company_id"
+      ],
+      "title": "DocumentView",
+      "type": "object"
+    },
+    "EvidenceCandidate": {
+      "additionalProperties": false,
+      "description": "可由稳定ID回到具体页面和行区间的证据窗口。",
+      "properties": {
+        "company_id": {
+          "pattern": "^\\d{6}\\.(SZ|SH|BJ)$",
+          "title": "Company Id",
+          "type": "string"
+        },
+        "document_id": {
+          "title": "Document Id",
+          "type": "string"
+        },
+        "evidence_id": {
+          "maxLength": 240,
+          "minLength": 12,
+          "title": "Evidence Id",
+          "type": "string"
+        },
+        "evidence_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Evidence Sha256",
+          "type": "string"
+        },
+        "line_end": {
+          "exclusiveMinimum": 0,
+          "title": "Line End",
+          "type": "integer"
+        },
+        "line_start": {
+          "exclusiveMinimum": 0,
+          "title": "Line Start",
+          "type": "integer"
+        },
+        "matched_terms": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Matched Terms",
+          "type": "array"
+        },
+        "page_id": {
+          "title": "Page Id",
+          "type": "string"
+        },
+        "pdf_page": {
+          "exclusiveMinimum": 0,
+          "title": "Pdf Page",
+          "type": "integer"
+        },
+        "retrieval_rank": {
+          "exclusiveMinimum": 0,
+          "title": "Retrieval Rank",
+          "type": "integer"
+        },
+        "retrieval_score": {
+          "title": "Retrieval Score",
+          "type": "number"
+        },
+        "text": {
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "evidence_id",
+        "document_id",
+        "page_id",
+        "company_id",
+        "pdf_page",
+        "line_start",
+        "line_end",
+        "text",
+        "matched_terms",
+        "retrieval_score",
+        "retrieval_rank",
+        "evidence_sha256"
+      ],
+      "title": "EvidenceCandidate",
+      "type": "object"
+    },
+    "EvidenceView": {
+      "additionalProperties": false,
+      "properties": {
+        "printed_page": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Printed Page"
+        },
+        "printed_page_source": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ArtifactRef"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "record": {
+          "$ref": "#/$defs/EvidenceCandidate"
+        }
+      },
+      "required": [
+        "record"
+      ],
+      "title": "EvidenceView",
+      "type": "object"
+    },
+    "MetricEvidenceRef": {
+      "additionalProperties": false,
+      "properties": {
+        "evidence_id": {
+          "minLength": 12,
+          "title": "Evidence Id",
+          "type": "string"
+        },
+        "pdf_page": {
+          "exclusiveMinimum": 0,
+          "title": "Pdf Page",
+          "type": "integer"
+        },
+        "source_label": {
+          "minLength": 2,
+          "title": "Source Label",
+          "type": "string"
+        }
+      },
+      "required": [
+        "evidence_id",
+        "pdf_page",
+        "source_label"
+      ],
+      "title": "MetricEvidenceRef",
+      "type": "object"
+    },
+    "MetricObservation": {
+      "additionalProperties": false,
+      "description": "完成单位标准化、可不可变存储的财务观察。",
+      "properties": {
+        "company_id": {
+          "pattern": "^\\d{6}\\.(SZ|SH|BJ)$",
+          "title": "Company Id",
+          "type": "string"
+        },
+        "content_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Content Sha256",
+          "type": "string"
+        },
+        "currency": {
+          "enum": [
+            "CNY",
+            "USD",
+            "HKD"
+          ],
+          "title": "Currency",
+          "type": "string"
+        },
+        "document_id": {
+          "title": "Document Id",
+          "type": "string"
+        },
+        "document_published_on": {
+          "format": "date",
+          "title": "Document Published On",
+          "type": "string"
+        },
+        "document_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Document Sha256",
+          "type": "string"
+        },
+        "evidence_refs": {
+          "items": {
+            "$ref": "#/$defs/MetricEvidenceRef"
+          },
+          "title": "Evidence Refs",
+          "type": "array"
+        },
+        "extraction_method": {
+          "enum": [
+            "MANUAL_CURATED_FROM_S1_EVIDENCE",
+            "TABLE_EXTRACTED"
+          ],
+          "title": "Extraction Method",
+          "type": "string"
+        },
+        "fiscal_year": {
+          "maximum": 2100,
+          "minimum": 2000,
+          "title": "Fiscal Year",
+          "type": "integer"
+        },
+        "measurement_basis": {
+          "title": "Measurement Basis",
+          "type": "string"
+        },
+        "metric_id": {
+          "title": "Metric Id",
+          "type": "string"
+        },
+        "observation_id": {
+          "maxLength": 220,
+          "minLength": 16,
+          "title": "Observation Id",
+          "type": "string"
+        },
+        "observation_version": {
+          "exclusiveMinimum": 0,
+          "title": "Observation Version",
+          "type": "integer"
+        },
+        "observed_at": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Observed At"
+        },
+        "period_end": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Period End"
+        },
+        "period_kind": {
+          "enum": [
+            "FLOW",
+            "STOCK"
+          ],
+          "title": "Period Kind",
+          "type": "string"
+        },
+        "period_start": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Period Start"
+        },
+        "raw_unit": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Raw Unit"
+        },
+        "raw_value": {
+          "anyOf": [
+            {
+              "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Raw Value"
+        },
+        "raw_value_text": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Raw Value Text"
+        },
+        "review_note": {
+          "title": "Review Note",
+          "type": "string"
+        },
+        "review_status": {
+          "enum": [
+            "HUMAN_VERIFIED",
+            "SOURCE_CHECKED",
+            "DRAFT"
+          ],
+          "title": "Review Status",
+          "type": "string"
+        },
+        "standard_unit": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Standard Unit"
+        },
+        "standard_value": {
+          "anyOf": [
+            {
+              "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Standard Value"
+        },
+        "statement_scope": {
+          "enum": [
+            "CONSOLIDATED",
+            "PARENT_COMPANY"
+          ],
+          "title": "Statement Scope",
+          "type": "string"
+        },
+        "supersedes_observation_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Supersedes Observation Id"
+        },
+        "value_status": {
+          "enum": [
+            "OBSERVED",
+            "MISSING",
+            "NOT_APPLICABLE",
+            "REVIEW_REQUIRED"
+          ],
+          "title": "Value Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "metric_id",
+        "company_id",
+        "fiscal_year",
+        "period_kind",
+        "period_start",
+        "period_end",
+        "observed_at",
+        "raw_value_text",
+        "raw_value",
+        "raw_unit",
+        "currency",
+        "statement_scope",
+        "measurement_basis",
+        "value_status",
+        "document_id",
+        "document_sha256",
+        "document_published_on",
+        "evidence_refs",
+        "extraction_method",
+        "review_status",
+        "review_note",
+        "observation_version",
+        "supersedes_observation_id",
+        "observation_id",
+        "standard_value",
+        "standard_unit",
+        "content_sha256"
+      ],
+      "title": "MetricObservation",
+      "type": "object"
+    },
+    "OutputView": {
+      "additionalProperties": false,
+      "properties": {
+        "availability": {
+          "enum": [
+            "AVAILABLE",
+            "NOT_SAVED",
+            "PENDING_VERIFICATION",
+            "INVALID"
+          ],
+          "title": "Availability",
+          "type": "string"
+        },
+        "depends_on": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Depends On",
+          "type": "array"
+        },
+        "instance_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Instance Id"
+        },
+        "kind": {
+          "enum": [
+            "FACTS",
+            "CALCULATIONS",
+            "CLAIMS",
+            "EVIDENCE",
+            "GAPS",
+            "REPORT"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "note": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Note"
+        },
+        "origin": {
+          "enum": [
+            "CURRENT_EXECUTION",
+            "HISTORICAL_VIEW",
+            "RESULT_REUSE",
+            "MODEL_REPLAY",
+            "FAULT_DEMO",
+            "WEB_FIXTURE"
+          ],
+          "title": "Origin",
+          "type": "string"
+        },
+        "output_id": {
+          "title": "Output Id",
+          "type": "string"
+        },
+        "produced_at": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Produced At"
+        },
+        "round": {
+          "anyOf": [
+            {
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Round"
+        },
+        "source": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ArtifactRef"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "output_id",
+        "kind",
+        "origin",
+        "availability"
+      ],
+      "title": "OutputView",
+      "type": "object"
+    },
+    "ProvenanceView": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "enum": [
+            "SYNTHETIC",
+            "DERIVED_HISTORICAL",
+            "LIVE_PROJECTION"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "label": {
+          "minLength": 1,
+          "title": "Label",
+          "type": "string"
+        },
+        "notes": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Notes",
+          "type": "array"
+        },
+        "source_artifacts": {
+          "items": {
+            "$ref": "#/$defs/ArtifactRef"
+          },
+          "title": "Source Artifacts",
+          "type": "array"
+        },
+        "source_revalidation": {
+          "default": "NOT_CHECKED",
+          "enum": [
+            "NOT_CHECKED",
+            "VERIFIED",
+            "UNAVAILABLE",
+            "FAILED"
+          ],
+          "title": "Source Revalidation",
+          "type": "string"
+        }
+      },
+      "required": [
+        "kind",
+        "label"
+      ],
+      "title": "ProvenanceView",
+      "type": "object"
+    },
+    "PublicationView": {
+      "additionalProperties": false,
+      "properties": {
+        "business_validation": {
+          "default": "UNKNOWN",
+          "enum": [
+            "PASS",
+            "FAIL",
+            "UNKNOWN"
+          ],
+          "title": "Business Validation",
+          "type": "string"
+        },
+        "files": {
+          "items": {
+            "$ref": "#/$defs/PublishedFile"
+          },
+          "title": "Files",
+          "type": "array"
+        },
+        "publication_status": {
+          "anyOf": [
+            {
+              "enum": [
+                "COMPLETED",
+                "PARTIAL"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Publication Status"
+        },
+        "reasons": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Reasons",
+          "type": "array"
+        },
+        "result_available": {
+          "default": false,
+          "title": "Result Available",
+          "type": "boolean"
+        },
+        "scope_matches": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Scope Matches"
+        },
+        "verification": {
+          "enum": [
+            "NOT_PUBLISHED",
+            "PENDING",
+            "VERIFIED",
+            "SIMULATED_VALID",
+            "INVALID",
+            "UNSUPPORTED"
+          ],
+          "title": "Verification",
+          "type": "string"
+        }
+      },
+      "required": [
+        "verification"
+      ],
+      "title": "PublicationView",
+      "type": "object"
+    },
+    "PublishedFile": {
+      "additionalProperties": false,
+      "properties": {
+        "digest_matches": {
+          "title": "Digest Matches",
+          "type": "boolean"
+        },
+        "name": {
+          "enum": [
+            "report.md",
+            "final_state.json",
+            "context_capsule.json"
+          ],
+          "title": "Name",
+          "type": "string"
+        },
+        "sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Sha256",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "sha256",
+        "digest_matches"
+      ],
+      "title": "PublishedFile",
+      "type": "object"
+    },
+    "ResearchClaim": {
+      "additionalProperties": false,
+      "properties": {
+        "calculation_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Calculation Ids",
+          "type": "array"
+        },
+        "claim_id": {
+          "title": "Claim Id",
+          "type": "string"
+        },
+        "company_id": {
+          "pattern": "^\\d{6}\\.(SZ|SH|BJ)$",
+          "title": "Company Id",
+          "type": "string"
+        },
+        "evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        },
+        "hypothesis_category": {
+          "anyOf": [
+            {
+              "enum": [
+                "SCALE_EXPANSION",
+                "SETTLEMENT_TIMING",
+                "CUSTOMER_MIX",
+                "UNRESOLVED_CAUSE"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Hypothesis Category"
+        },
+        "kind": {
+          "enum": [
+            "COMPUTED",
+            "DISCLOSED",
+            "INFERENCE",
+            "UNRESOLVED"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Limitations",
+          "type": "array"
+        },
+        "observation_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Observation Ids",
+          "type": "array"
+        },
+        "status": {
+          "enum": [
+            "APPROVED",
+            "REJECTED",
+            "REVIEW_REQUIRED"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "text": {
+          "title": "Text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "claim_id",
+        "company_id",
+        "kind",
+        "text",
+        "status"
+      ],
+      "title": "ResearchClaim",
+      "type": "object"
+    },
+    "ResearchContext": {
+      "additionalProperties": false,
+      "properties": {
+        "as_of_date": {
+          "format": "date",
+          "title": "As Of Date",
+          "type": "string"
+        },
+        "company_ids": {
+          "items": {
+            "pattern": "^\\d{6}\\.(SZ|SH|BJ)$",
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Company Ids",
+          "type": "array"
+        },
+        "corpus_snapshot_id": {
+          "title": "Corpus Snapshot Id",
+          "type": "string"
+        },
+        "fiscal_years": {
+          "maxItems": 2,
+          "minItems": 2,
+          "prefixItems": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "integer"
+            }
+          ],
+          "title": "Fiscal Years",
+          "type": "array"
+        },
+        "protocol_config_sha256": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Protocol Config Sha256"
+        },
+        "protocol_id": {
+          "const": "revenue_quality_v1",
+          "title": "Protocol Id",
+          "type": "string"
+        },
+        "protocol_version": {
+          "const": "1.0.0",
+          "title": "Protocol Version",
+          "type": "string"
+        },
+        "run_id": {
+          "pattern": "^[a-zA-Z0-9_-]+$",
+          "title": "Run Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "run_id",
+        "company_ids",
+        "fiscal_years",
+        "as_of_date",
+        "corpus_snapshot_id",
+        "protocol_id",
+        "protocol_version"
+      ],
+      "title": "ResearchContext",
+      "type": "object"
+    },
+    "ResearchGap": {
+      "additionalProperties": false,
+      "properties": {
+        "affected_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Affected Ids",
+          "type": "array"
+        },
+        "company_id": {
+          "pattern": "^\\d{6}\\.(SZ|SH|BJ)$",
+          "title": "Company Id",
+          "type": "string"
+        },
+        "description": {
+          "title": "Description",
+          "type": "string"
+        },
+        "gap_id": {
+          "title": "Gap Id",
+          "type": "string"
+        },
+        "gap_type": {
+          "enum": [
+            "MISSING_METRIC",
+            "INCOMPARABLE_CALCULATION",
+            "MISSING_EXPLANATION",
+            "MISSING_COUNTEREVIDENCE",
+            "CLAIM_REJECTED",
+            "MODEL_FAILURE"
+          ],
+          "title": "Gap Type",
+          "type": "string"
+        },
+        "status": {
+          "const": "UNRESOLVED",
+          "default": "UNRESOLVED",
+          "title": "Status",
+          "type": "string"
+        },
+        "suggested_next_step": {
+          "title": "Suggested Next Step",
+          "type": "string"
+        }
+      },
+      "required": [
+        "gap_id",
+        "company_id",
+        "gap_type",
+        "description",
+        "suggested_next_step"
+      ],
+      "title": "ResearchGap",
+      "type": "object"
+    },
+    "ResearchView": {
+      "additionalProperties": false,
+      "properties": {
+        "calculation_slots": {
+          "additionalProperties": {
+            "additionalProperties": {
+              "type": "string"
+            },
+            "type": "object"
+          },
+          "title": "Calculation Slots",
+          "type": "object"
+        },
+        "calculations": {
+          "items": {
+            "$ref": "#/$defs/CalculationResult"
+          },
+          "title": "Calculations",
+          "type": "array"
+        },
+        "claims": {
+          "items": {
+            "$ref": "#/$defs/ResearchClaim"
+          },
+          "title": "Claims",
+          "type": "array"
+        },
+        "dependency_issues": {
+          "items": {
+            "$ref": "#/$defs/DependencyIssue"
+          },
+          "title": "Dependency Issues",
+          "type": "array"
+        },
+        "documents": {
+          "items": {
+            "$ref": "#/$defs/DocumentView"
+          },
+          "title": "Documents",
+          "type": "array"
+        },
+        "evidence": {
+          "items": {
+            "$ref": "#/$defs/EvidenceView"
+          },
+          "title": "Evidence",
+          "type": "array"
+        },
+        "gaps": {
+          "items": {
+            "$ref": "#/$defs/ResearchGap"
+          },
+          "title": "Gaps",
+          "type": "array"
+        },
+        "observations": {
+          "items": {
+            "$ref": "#/$defs/MetricObservation"
+          },
+          "title": "Observations",
+          "type": "array"
+        },
+        "report_markdown": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Report Markdown"
+        },
+        "supplement": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/SupplementView"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "title": "ResearchView",
+      "type": "object"
+    },
+    "RuntimeView": {
+      "additionalProperties": false,
+      "properties": {
+        "cancel_requested": {
+          "default": false,
+          "title": "Cancel Requested",
+          "type": "boolean"
+        },
+        "checkpoint_sha256": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Checkpoint Sha256"
+        },
+        "clarification_status": {
+          "default": "NONE",
+          "enum": [
+            "NONE",
+            "READY_TO_RESUME",
+            "NEW_RUN_REQUIRED"
+          ],
+          "title": "Clarification Status",
+          "type": "string"
+        },
+        "connection_state": {
+          "enum": [
+            "CONNECTED",
+            "RECONNECTING",
+            "DISCONNECTED",
+            "NOT_APPLICABLE"
+          ],
+          "title": "Connection State",
+          "type": "string"
+        },
+        "current_step_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Current Step Id"
+        },
+        "event_cursor": {
+          "default": 0,
+          "minimum": 0,
+          "title": "Event Cursor",
+          "type": "integer"
+        },
+        "event_stream_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Event Stream Id"
+        },
+        "queue_state": {
+          "default": "UNKNOWN",
+          "enum": [
+            "NOT_APPLICABLE",
+            "QUEUED",
+            "DISPATCHED",
+            "UNKNOWN"
+          ],
+          "title": "Queue State",
+          "type": "string"
+        },
+        "resume_readiness": {
+          "default": "UNKNOWN",
+          "enum": [
+            "UNKNOWN",
+            "CONFIRMED_SAFE",
+            "UNSAFE"
+          ],
+          "title": "Resume Readiness",
+          "type": "string"
+        },
+        "waiting_gap_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Waiting Gap Ids",
+          "type": "array"
+        },
+        "worker_state": {
+          "default": "UNKNOWN",
+          "enum": [
+            "ACTIVE",
+            "STOPPED",
+            "UNKNOWN"
+          ],
+          "title": "Worker State",
+          "type": "string"
+        }
+      },
+      "required": [
+        "connection_state"
+      ],
+      "title": "RuntimeView",
+      "type": "object"
+    },
+    "StepView": {
+      "additionalProperties": false,
+      "properties": {
+        "acceptance": {
+          "default": "UNKNOWN",
+          "enum": [
+            "UNKNOWN",
+            "CHECKPOINT_CONFIRMED",
+            "PUBLISHED"
+          ],
+          "title": "Acceptance",
+          "type": "string"
+        },
+        "attempt": {
+          "anyOf": [
+            {
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Attempt"
+        },
+        "identity_kind": {
+          "enum": [
+            "EXECUTION",
+            "SOURCE_RECORD",
+            "SYNTHETIC"
+          ],
+          "title": "Identity Kind",
+          "type": "string"
+        },
+        "instance_id": {
+          "title": "Instance Id",
+          "type": "string"
+        },
+        "lifecycle": {
+          "enum": [
+            "NOT_STARTED",
+            "RUNNING",
+            "FUNCTION_RETURNED",
+            "FAILED",
+            "REUSED",
+            "UNKNOWN"
+          ],
+          "title": "Lifecycle",
+          "type": "string"
+        },
+        "node_id": {
+          "title": "Node Id",
+          "type": "string"
+        },
+        "occurred_at": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Occurred At"
+        },
+        "origin": {
+          "enum": [
+            "CURRENT_EXECUTION",
+            "HISTORICAL_VIEW",
+            "RESULT_REUSE",
+            "MODEL_REPLAY",
+            "FAULT_DEMO",
+            "WEB_FIXTURE"
+          ],
+          "title": "Origin",
+          "type": "string"
+        },
+        "output_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Output Ids",
+          "type": "array"
+        },
+        "round": {
+          "anyOf": [
+            {
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Round"
+        },
+        "source": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ArtifactRef"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "step_id": {
+          "title": "Step Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "step_id",
+        "node_id",
+        "instance_id",
+        "identity_kind",
+        "origin",
+        "lifecycle"
+      ],
+      "title": "StepView",
+      "type": "object"
+    },
+    "SupplementAction": {
+      "additionalProperties": false,
+      "properties": {
+        "action_id": {
+          "title": "Action Id",
+          "type": "string"
+        },
+        "arguments": {
+          "additionalProperties": true,
+          "title": "Arguments",
+          "type": "object"
+        },
+        "as_of_date": {
+          "format": "date",
+          "title": "As Of Date",
+          "type": "string"
+        },
+        "company_id": {
+          "pattern": "^\\d{6}\\.(SZ|SH|BJ)$",
+          "title": "Company Id",
+          "type": "string"
+        },
+        "corpus_snapshot_id": {
+          "title": "Corpus Snapshot Id",
+          "type": "string"
+        },
+        "gap_id": {
+          "title": "Gap Id",
+          "type": "string"
+        },
+        "reason": {
+          "title": "Reason",
+          "type": "string"
+        },
+        "tool": {
+          "enum": [
+            "QUERY_METRIC",
+            "SEARCH_DISCLOSURE",
+            "READ_CONTEXT",
+            "REVIEW_TABLE",
+            "VERIFY_VERSION",
+            "REQUEST_CLARIFICATION"
+          ],
+          "title": "Tool",
+          "type": "string"
+        }
+      },
+      "required": [
+        "action_id",
+        "gap_id",
+        "tool",
+        "company_id",
+        "as_of_date",
+        "corpus_snapshot_id",
+        "arguments",
+        "reason"
+      ],
+      "title": "SupplementAction",
+      "type": "object"
+    },
+    "SupplementGap": {
+      "additionalProperties": false,
+      "properties": {
+        "affected_claim_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Affected Claim Ids",
+          "type": "array"
+        },
+        "attempted_action_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Attempted Action Ids",
+          "type": "array"
+        },
+        "closing_condition": {
+          "enum": [
+            "VERIFIED_METRIC",
+            "VERIFIED_SOURCE_WINDOW",
+            "ATTRIBUTED_EXPLANATION",
+            "INDEPENDENT_REVIEW",
+            "NEW_SNAPSHOT_OR_USER_INPUT",
+            "NOT_REPAIRABLE_BY_SEARCH"
+          ],
+          "title": "Closing Condition",
+          "type": "string"
+        },
+        "company_id": {
+          "pattern": "^\\d{6}\\.(SZ|SH|BJ)$",
+          "title": "Company Id",
+          "type": "string"
+        },
+        "description": {
+          "title": "Description",
+          "type": "string"
+        },
+        "evidence_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Evidence Id"
+        },
+        "fiscal_year": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Fiscal Year"
+        },
+        "gap_id": {
+          "minLength": 3,
+          "title": "Gap Id",
+          "type": "string"
+        },
+        "gap_type": {
+          "enum": [
+            "MISSING_METRIC",
+            "DISCLOSURE_CONTEXT",
+            "CONTEXT_REVIEW",
+            "MISSING_EXPLANATION",
+            "INDEPENDENT_CONFIRMATION",
+            "INVALID_CALCULATION",
+            "TABLE_REVIEW",
+            "SOURCE_VERSION",
+            "MODEL_FAILURE",
+            "SOURCE_REQUEST"
+          ],
+          "title": "Gap Type",
+          "type": "string"
+        },
+        "metric_id": {
+          "anyOf": [
+            {
+              "enum": [
+                "revenue",
+                "operating_cash_flow_net",
+                "accounts_receivable"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Metric Id"
+        },
+        "need": {
+          "anyOf": [
+            {
+              "enum": [
+                "SALES_COLLECTION_DETAIL",
+                "PURCHASE_AND_PAYMENTS",
+                "RECEIVABLE_AGING",
+                "CUSTOMER_MIX",
+                "TIMING_DETAIL",
+                "INDEPENDENT_CONFIRMATION"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Need"
+        },
+        "resolution_note": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Resolution Note"
+        },
+        "severity": {
+          "enum": [
+            "CRITICAL",
+            "MATERIAL",
+            "CONTEXT"
+          ],
+          "title": "Severity",
+          "type": "string"
+        },
+        "status": {
+          "default": "OPEN",
+          "enum": [
+            "OPEN",
+            "RESOLVED",
+            "LIMITED",
+            "WAITING_INPUT",
+            "FAILED"
+          ],
+          "title": "Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "gap_id",
+        "company_id",
+        "gap_type",
+        "severity",
+        "description",
+        "closing_condition"
+      ],
+      "title": "SupplementGap",
+      "type": "object"
+    },
+    "SupplementHistoryView": {
+      "additionalProperties": false,
+      "properties": {
+        "action": {
+          "$ref": "#/$defs/SupplementAction"
+        },
+        "changed_gap_status": {
+          "anyOf": [
+            {
+              "enum": [
+                "OPEN",
+                "RESOLVED",
+                "LIMITED",
+                "WAITING_INPUT",
+                "FAILED"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Changed Gap Status"
+        },
+        "failure_type": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Failure Type"
+        },
+        "result": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ToolResult"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "action"
+      ],
+      "title": "SupplementHistoryView",
+      "type": "object"
+    },
+    "SupplementView": {
+      "additionalProperties": false,
+      "properties": {
+        "action_count": {
+          "minimum": 0,
+          "title": "Action Count",
+          "type": "integer"
+        },
+        "gaps": {
+          "items": {
+            "$ref": "#/$defs/SupplementGap"
+          },
+          "title": "Gaps",
+          "type": "array"
+        },
+        "history": {
+          "items": {
+            "$ref": "#/$defs/SupplementHistoryView"
+          },
+          "title": "History",
+          "type": "array"
+        },
+        "no_progress_rounds": {
+          "minimum": 0,
+          "title": "No Progress Rounds",
+          "type": "integer"
+        },
+        "rounds": {
+          "minimum": 0,
+          "title": "Rounds",
+          "type": "integer"
+        },
+        "stop_reason": {
+          "anyOf": [
+            {
+              "enum": [
+                "ROUND_LIMIT",
+                "ACTION_BUDGET",
+                "NO_PROGRESS",
+                "NO_ACTIONABLE_GAPS",
+                "ALL_RESOLVED",
+                "MODEL_PLAN_REJECTED_OR_BUDGET",
+                "TOOL_FAILURE",
+                "QUOTE_REVIEW_FAILED",
+                "NEEDS_INPUT",
+                "REQUIRES_NEW_SNAPSHOT"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Stop Reason"
+        }
+      },
+      "required": [
+        "rounds",
+        "action_count",
+        "no_progress_rounds"
+      ],
+      "title": "SupplementView",
+      "type": "object"
+    },
+    "TaskView": {
+      "additionalProperties": false,
+      "properties": {
+        "access_mode": {
+          "enum": [
+            "MOCK",
+            "HISTORY_READ_ONLY",
+            "LIVE_CONTROL"
+          ],
+          "title": "Access Mode",
+          "type": "string"
+        },
+        "available_actions": {
+          "items": {
+            "$ref": "#/$defs/ActionCapability"
+          },
+          "title": "Available Actions",
+          "type": "array"
+        },
+        "baseline": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BaselineView"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "company_labels": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "title": "Company Labels",
+          "type": "object"
+        },
+        "context": {
+          "$ref": "#/$defs/ResearchContext"
+        },
+        "created_at": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Created At"
+        },
+        "execution_mode": {
+          "enum": [
+            "LIVE",
+            "REPLAY",
+            "RULES"
+          ],
+          "title": "Execution Mode",
+          "type": "string"
+        },
+        "origin": {
+          "enum": [
+            "CURRENT_EXECUTION",
+            "HISTORICAL_VIEW",
+            "RESULT_REUSE",
+            "MODEL_REPLAY",
+            "FAULT_DEMO",
+            "WEB_FIXTURE"
+          ],
+          "title": "Origin",
+          "type": "string"
+        },
+        "question": {
+          "maxLength": 2000,
+          "minLength": 1,
+          "title": "Question",
+          "type": "string"
+        },
+        "task_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,99}$",
+          "title": "Task Id",
+          "type": "string"
+        },
+        "task_status": {
+          "enum": [
+            "CREATED",
+            "RUNNING",
+            "COMPLETED",
+            "PARTIAL",
+            "WAITING_INPUT",
+            "CANCELLED",
+            "FAILED",
+            "BLOCKED"
+          ],
+          "title": "Task Status",
+          "type": "string"
+        },
+        "workflow": {
+          "enum": [
+            "B1",
+            "B2"
+          ],
+          "title": "Workflow",
+          "type": "string"
+        }
+      },
+      "required": [
+        "task_id",
+        "question",
+        "context",
+        "workflow",
+        "execution_mode",
+        "origin",
+        "task_status",
+        "access_mode"
+      ],
+      "title": "TaskView",
+      "type": "object"
+    },
+    "ToolResult": {
+      "additionalProperties": false,
+      "properties": {
+        "action_id": {
+          "title": "Action Id",
+          "type": "string"
+        },
+        "evidence": {
+          "items": {
+            "additionalProperties": true,
+            "type": "object"
+          },
+          "maxItems": 4,
+          "title": "Evidence",
+          "type": "array"
+        },
+        "note": {
+          "title": "Note",
+          "type": "string"
+        },
+        "observations": {
+          "items": {
+            "additionalProperties": true,
+            "type": "object"
+          },
+          "maxItems": 1,
+          "title": "Observations",
+          "type": "array"
+        },
+        "status": {
+          "enum": [
+            "FOUND",
+            "NO_EVIDENCE",
+            "REVIEW_REQUIRED",
+            "REQUIRES_NEW_SNAPSHOT",
+            "NEEDS_INPUT"
+          ],
+          "title": "Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "action_id",
+        "status",
+        "note"
+      ],
+      "title": "ToolResult",
+      "type": "object"
+    },
+    "UIState": {
+      "additionalProperties": false,
+      "properties": {
+        "anchor": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Anchor"
+        },
+        "editing_followup": {
+          "default": false,
+          "title": "Editing Followup",
+          "type": "boolean"
+        },
+        "follow_progress": {
+          "default": true,
+          "title": "Follow Progress",
+          "type": "boolean"
+        },
+        "manual_browsing": {
+          "default": false,
+          "title": "Manual Browsing",
+          "type": "boolean"
+        },
+        "panel": {
+          "enum": [
+            "QUESTION",
+            "PROCESS",
+            "REPORT"
+          ],
+          "title": "Panel",
+          "type": "string"
+        },
+        "reader_open": {
+          "default": false,
+          "title": "Reader Open",
+          "type": "boolean"
+        },
+        "reduced_motion": {
+          "default": false,
+          "title": "Reduced Motion",
+          "type": "boolean"
+        },
+        "scroll_y": {
+          "default": 0,
+          "minimum": 0,
+          "title": "Scroll Y",
+          "type": "integer"
+        },
+        "selected_evidence_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Selected Evidence Id"
+        },
+        "selected_round": {
+          "anyOf": [
+            {
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Selected Round"
+        },
+        "selected_step_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Selected Step Id"
+        },
+        "text_selection_active": {
+          "default": false,
+          "title": "Text Selection Active",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "panel"
+      ],
+      "title": "UIState",
+      "type": "object"
+    }
+  },
+  "$id": "urn:finresearch:web:TaskSnapshot:1.0.0",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "budget": {
+      "$ref": "#/$defs/BudgetView"
+    },
+    "outputs": {
+      "items": {
+        "$ref": "#/$defs/OutputView"
+      },
+      "title": "Outputs",
+      "type": "array"
+    },
+    "provenance": {
+      "$ref": "#/$defs/ProvenanceView"
+    },
+    "publication": {
+      "$ref": "#/$defs/PublicationView"
+    },
+    "research": {
+      "$ref": "#/$defs/ResearchView"
+    },
+    "runtime": {
+      "$ref": "#/$defs/RuntimeView"
+    },
+    "schema_version": {
+      "const": "1.0.0",
+      "default": "1.0.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "steps": {
+      "items": {
+        "$ref": "#/$defs/StepView"
+      },
+      "title": "Steps",
+      "type": "array"
+    },
+    "task": {
+      "$ref": "#/$defs/TaskView"
+    },
+    "ui": {
+      "$ref": "#/$defs/UIState"
+    }
+  },
+  "required": [
+    "task",
+    "runtime",
+    "publication",
+    "provenance",
+    "ui"
+  ],
+  "title": "TaskSnapshot",
+  "type": "object"
+}

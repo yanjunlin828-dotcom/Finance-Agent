@@ -1,0 +1,1198 @@
+{
+  "covered_codes": [
+    "FOUND",
+    "NO_EVIDENCE",
+    "REVIEW_REQUIRED",
+    "NEEDS_INPUT",
+    "REQUIRES_NEW_SNAPSHOT"
+  ],
+  "description": "合成执行仅用于页面验收。",
+  "followups": [],
+  "frames": [
+    {
+      "events": [],
+      "expected": {
+        "auto_enter_report": false,
+        "enabled_operations": [
+          "VIEW_STEPS",
+          "CANCEL",
+          "NEW_TASK"
+        ],
+        "result_available": false,
+        "suggested_panel": "PROCESS"
+      },
+      "name": "found",
+      "snapshot": {
+        "budget": {
+          "baseline_historical_estimate": null,
+          "currency": "USD",
+          "estimate_kind": "USAGE_ESTIMATE_NOT_INVOICE",
+          "note": "未提供金额表示未知，不能显示为零；组合总预算尚未建立。",
+          "pending_reservation": null,
+          "settled_estimate": null,
+          "source": null,
+          "total_calls": null
+        },
+        "outputs": [],
+        "provenance": {
+          "kind": "SYNTHETIC",
+          "label": "合成页面场景，非真实研究执行",
+          "notes": [
+            "数据模型与状态规则用于W1验收；操作只在样本内生效。"
+          ],
+          "source_artifacts": [
+            {
+              "path": "runs/s6/s6-live-20260930-02/publication.json",
+              "pointer": "",
+              "sha256": "e48d1c11d679d572cdb4f1375da44bc6294bcb4aa37d1b04f912d3485d20eafc"
+            },
+            {
+              "path": "runs/s6/s6-live-20260930-02/report.md",
+              "pointer": "",
+              "sha256": "ad8f048db3186f7756cb958c270c49c8801b44838af864873e6664600f2587ae"
+            },
+            {
+              "path": "runs/s6/s6-live-20260930-02/final_state.json",
+              "pointer": "",
+              "sha256": "712a58a4326ba3b4ec669c33edd38f1cdcf10b9f4b482d2601d0eba9eea43f61"
+            },
+            {
+              "path": "runs/s6/s6-live-20260930-02/context_capsule.json",
+              "pointer": "",
+              "sha256": "34479a080981c5899498b72b24ccf614449a231e434c07c15748f3d1aad0c351"
+            },
+            {
+              "path": "storage/s6/tasks/s6-live-20260930-02/session.sqlite",
+              "pointer": "",
+              "sha256": "0a8f85a6b97aed75a70dd8b84649cb2cf3aa223be2fb2685c4716fde4f074403"
+            }
+          ],
+          "source_revalidation": "NOT_CHECKED"
+        },
+        "publication": {
+          "business_validation": "UNKNOWN",
+          "files": [],
+          "publication_status": null,
+          "reasons": [],
+          "result_available": false,
+          "scope_matches": null,
+          "verification": "NOT_PUBLISHED"
+        },
+        "research": {
+          "calculation_slots": {},
+          "calculations": [],
+          "claims": [],
+          "dependency_issues": [],
+          "documents": [],
+          "evidence": [],
+          "gaps": [],
+          "observations": [],
+          "report_markdown": null,
+          "supplement": {
+            "action_count": 1,
+            "gaps": [
+              {
+                "affected_claim_ids": [],
+                "attempted_action_ids": [],
+                "closing_condition": "VERIFIED_METRIC",
+                "company_id": "002371.SZ",
+                "description": "【合成等待场景】当前资料不足，需要明确保留局限或另建新快照。",
+                "evidence_id": null,
+                "fiscal_year": 2023,
+                "gap_id": "fixture-source-gap",
+                "gap_type": "MISSING_METRIC",
+                "metric_id": "revenue",
+                "need": null,
+                "resolution_note": null,
+                "severity": "MATERIAL",
+                "status": "RESOLVED"
+              }
+            ],
+            "history": [
+              {
+                "action": {
+                  "action_id": "fixture-action-FOUND",
+                  "arguments": {
+                    "fiscal_year": 2023,
+                    "metric_id": "revenue"
+                  },
+                  "as_of_date": "2025-04-30",
+                  "company_id": "002371.SZ",
+                  "corpus_snapshot_id": "s3-semiconductor-equipment-ar-v1",
+                  "gap_id": "fixture-source-gap",
+                  "reason": "合成工具结果显示测试，不是真实调用。",
+                  "tool": "QUERY_METRIC"
+                },
+                "changed_gap_status": "RESOLVED",
+                "failure_type": null,
+                "result": {
+                  "action_id": "fixture-action-FOUND",
+                  "evidence": [],
+                  "note": "找到候选资料，接受状态另行核验",
+                  "observations": [
+                    {
+                      "company_id": "002371.SZ",
+                      "content_sha256": "dc5ea4d5825b7959ff70acee9cc29b937799452c33c70713afe648192df04278",
+                      "currency": "CNY",
+                      "document_id": "cninfo-002371-2024-ar-1223309278",
+                      "document_published_on": "2025-04-25",
+                      "document_sha256": "70168364fd518323effa2d11ff337a172783e3597ed6f896353ca62ea3f75cfe",
+                      "evidence_refs": [
+                        {
+                          "evidence_id": "cninfo-002371-2024-ar-1223309278:p0095:ed2d227d995d30a5a",
+                          "pdf_page": 95,
+                          "source_label": "revenue"
+                        }
+                      ],
+                      "extraction_method": "TABLE_EXTRACTED",
+                      "fiscal_year": 2023,
+                      "measurement_basis": "INCOME_STATEMENT_REPORTED_AMOUNT",
+                      "metric_id": "revenue",
+                      "observation_id": "obs-002371.SZ-revenue-2023-01-01_2023-12-31-v1-dc5ea4d5825b",
+                      "observation_version": 1,
+                      "observed_at": null,
+                      "period_end": "2023-12-31",
+                      "period_kind": "FLOW",
+                      "period_start": "2023-01-01",
+                      "raw_unit": "CNY_YUAN",
+                      "raw_value": "22079458092.37",
+                      "raw_value_text": "22,079,458,092.37",
+                      "review_note": "Reviewed row mapping source-table-columns-v1; current/prior column 1; comparative figures available only on this disclosure date.",
+                      "review_status": "SOURCE_CHECKED",
+                      "standard_unit": "CNY_YUAN",
+                      "standard_value": "22079458092.37",
+                      "statement_scope": "CONSOLIDATED",
+                      "supersedes_observation_id": null,
+                      "value_status": "OBSERVED"
+                    }
+                  ],
+                  "status": "FOUND"
+                }
+              }
+            ],
+            "no_progress_rounds": 0,
+            "rounds": 1,
+            "stop_reason": null
+          }
+        },
+        "runtime": {
+          "cancel_requested": false,
+          "checkpoint_sha256": null,
+          "clarification_status": "NONE",
+          "connection_state": "CONNECTED",
+          "current_step_id": null,
+          "event_cursor": 0,
+          "event_stream_id": "fixture:tool-results:v1",
+          "queue_state": "UNKNOWN",
+          "resume_readiness": "UNKNOWN",
+          "waiting_gap_ids": [],
+          "worker_state": "UNKNOWN"
+        },
+        "schema_version": "1.0.0",
+        "steps": [],
+        "task": {
+          "access_mode": "MOCK",
+          "available_actions": [
+            {
+              "authority": "READ_ONLY",
+              "enabled": false,
+              "operation": "VIEW_REPORT",
+              "reason": "正式报告尚未通过发布核验。"
+            },
+            {
+              "authority": "READ_ONLY",
+              "enabled": true,
+              "operation": "VIEW_STEPS",
+              "reason": null
+            },
+            {
+              "authority": "READ_ONLY",
+              "enabled": false,
+              "operation": "VIEW_EVIDENCE",
+              "reason": "当前记录没有可读取的原文。"
+            },
+            {
+              "authority": "SIMULATED",
+              "enabled": false,
+              "operation": "FOLLOWUP",
+              "reason": "追问需要已发布结果和可写入的当前会话。"
+            },
+            {
+              "authority": "SIMULATED",
+              "enabled": true,
+              "operation": "CANCEL",
+              "reason": null
+            },
+            {
+              "authority": "SIMULATED",
+              "enabled": false,
+              "operation": "CLARIFY",
+              "reason": "仅当前等待检查点可接收新的澄清决定。"
+            },
+            {
+              "authority": "SIMULATED",
+              "enabled": false,
+              "operation": "RESUME",
+              "reason": "恢复需要协调层明确核验安全；等待任务还需要已记录决定。"
+            },
+            {
+              "authority": "SIMULATED",
+              "enabled": true,
+              "operation": "NEW_TASK",
+              "reason": null
+            }
+          ],
+          "baseline": {
+            "final_state_sha256": null,
+            "label": "【合成过程】复用已有基线，不重播B1",
+            "origin": "RESULT_REUSE",
+            "task_id": "fixture-baseline"
+          },
+          "company_labels": {
+            "002371.SZ": "北方华创",
+            "688072.SH": "拓荆科技",
+            "688082.SH": "盛美上海"
+          },
+          "context": {
+            "as_of_date": "2025-04-30",
+            "company_ids": [
+              "002371.SZ",
+              "688072.SH",
+              "688082.SH"
+            ],
+            "corpus_snapshot_id": "s3-semiconductor-equipment-ar-v1",
+            "fiscal_years": [
+              2023,
+              2024
+            ],
+            "protocol_config_sha256": "0a9a877083f262f29407bfcfa0c7d3bea39c31bfc83e83e1db5c7be68c6ed52a",
+            "protocol_id": "revenue_quality_v1",
+            "protocol_version": "1.0.0",
+            "run_id": "fixture-tool-results"
+          },
+          "created_at": null,
+          "execution_mode": "RULES",
+          "origin": "WEB_FIXTURE",
+          "question": "【页面样本】比较收入、经营现金流和应收账款，核查披露与局限。",
+          "task_id": "fixture-tool-results",
+          "task_status": "RUNNING",
+          "workflow": "B2"
+        },
+        "ui": {
+          "anchor": null,
+          "editing_followup": false,
+          "follow_progress": true,
+          "manual_browsing": false,
+          "panel": "PROCESS",
+          "reader_open": false,
+          "reduced_motion": false,
+          "scroll_y": 0,
+          "selected_evidence_id": null,
+          "selected_round": null,
+          "selected_step_id": null,
+          "text_selection_active": false
+        }
+      }
+    },
+    {
+      "events": [],
+      "expected": {
+        "auto_enter_report": false,
+        "enabled_operations": [
+          "VIEW_STEPS",
+          "CANCEL",
+          "NEW_TASK"
+        ],
+        "result_available": false,
+        "suggested_panel": "PROCESS"
+      },
+      "name": "no_evidence",
+      "snapshot": {
+        "budget": {
+          "baseline_historical_estimate": null,
+          "currency": "USD",
+          "estimate_kind": "USAGE_ESTIMATE_NOT_INVOICE",
+          "note": "未提供金额表示未知，不能显示为零；组合总预算尚未建立。",
+          "pending_reservation": null,
+          "settled_estimate": null,
+          "source": null,
+          "total_calls": null
+        },
+        "outputs": [],
+        "provenance": {
+          "kind": "SYNTHETIC",
+          "label": "合成页面场景，非真实研究执行",
+          "notes": [
+            "数据模型与状态规则用于W1验收；操作只在样本内生效。"
+          ],
+          "source_artifacts": [],
+          "source_revalidation": "NOT_CHECKED"
+        },
+        "publication": {
+          "business_validation": "UNKNOWN",
+          "files": [],
+          "publication_status": null,
+          "reasons": [],
+          "result_available": false,
+          "scope_matches": null,
+          "verification": "NOT_PUBLISHED"
+        },
+        "research": {
+          "calculation_slots": {},
+          "calculations": [],
+          "claims": [],
+          "dependency_issues": [],
+          "documents": [],
+          "evidence": [],
+          "gaps": [],
+          "observations": [],
+          "report_markdown": null,
+          "supplement": {
+            "action_count": 1,
+            "gaps": [
+              {
+                "affected_claim_ids": [],
+                "attempted_action_ids": [],
+                "closing_condition": "VERIFIED_SOURCE_WINDOW",
+                "company_id": "002371.SZ",
+                "description": "【合成等待场景】当前资料不足，需要明确保留局限或另建新快照。",
+                "evidence_id": null,
+                "fiscal_year": null,
+                "gap_id": "fixture-source-gap",
+                "gap_type": "DISCLOSURE_CONTEXT",
+                "metric_id": null,
+                "need": "TIMING_DETAIL",
+                "resolution_note": null,
+                "severity": "MATERIAL",
+                "status": "LIMITED"
+              }
+            ],
+            "history": [
+              {
+                "action": {
+                  "action_id": "fixture-action-NO_EVIDENCE",
+                  "arguments": {
+                    "need": "TIMING_DETAIL",
+                    "question": "现金流变动说明",
+                    "reporting_year": 2024
+                  },
+                  "as_of_date": "2025-04-30",
+                  "company_id": "002371.SZ",
+                  "corpus_snapshot_id": "s3-semiconductor-equipment-ar-v1",
+                  "gap_id": "fixture-source-gap",
+                  "reason": "合成工具结果显示测试，不是真实调用。",
+                  "tool": "SEARCH_DISCLOSURE"
+                },
+                "changed_gap_status": "LIMITED",
+                "failure_type": null,
+                "result": {
+                  "action_id": "fixture-action-NO_EVIDENCE",
+                  "evidence": [],
+                  "note": "本轮未召回适用资料，不代表未披露",
+                  "observations": [],
+                  "status": "NO_EVIDENCE"
+                }
+              }
+            ],
+            "no_progress_rounds": 0,
+            "rounds": 1,
+            "stop_reason": null
+          }
+        },
+        "runtime": {
+          "cancel_requested": false,
+          "checkpoint_sha256": null,
+          "clarification_status": "NONE",
+          "connection_state": "CONNECTED",
+          "current_step_id": null,
+          "event_cursor": 0,
+          "event_stream_id": "fixture:tool-results:v1",
+          "queue_state": "UNKNOWN",
+          "resume_readiness": "UNKNOWN",
+          "waiting_gap_ids": [],
+          "worker_state": "UNKNOWN"
+        },
+        "schema_version": "1.0.0",
+        "steps": [],
+        "task": {
+          "access_mode": "MOCK",
+          "available_actions": [
+            {
+              "authority": "READ_ONLY",
+              "enabled": false,
+              "operation": "VIEW_REPORT",
+              "reason": "正式报告尚未通过发布核验。"
+            },
+            {
+              "authority": "READ_ONLY",
+              "enabled": true,
+              "operation": "VIEW_STEPS",
+              "reason": null
+            },
+            {
+              "authority": "READ_ONLY",
+              "enabled": false,
+              "operation": "VIEW_EVIDENCE",
+              "reason": "当前记录没有可读取的原文。"
+            },
+            {
+              "authority": "SIMULATED",
+              "enabled": false,
+              "operation": "FOLLOWUP",
+              "reason": "追问需要已发布结果和可写入的当前会话。"
+            },
+            {
+              "authority": "SIMULATED",
+              "enabled": true,
+              "operation": "CANCEL",
+              "reason": null
+            },
+            {
+              "authority": "SIMULATED",
+              "enabled": false,
+              "operation": "CLARIFY",
+              "reason": "仅当前等待检查点可接收新的澄清决定。"
+            },
+            {
+              "authority": "SIMULATED",
+              "enabled": false,
+              "operation": "RESUME",
+              "reason": "恢复需要协调层明确核验安全；等待任务还需要已记录决定。"
+            },
+            {
+              "authority": "SIMULATED",
+              "enabled": true,
+              "operation": "NEW_TASK",
+              "reason": null
+            }
+          ],
+          "baseline": {
+            "final_state_sha256": null,
+            "label": "【合成过程】复用已有基线，不重播B1",
+            "origin": "RESULT_REUSE",
+            "task_id": "fixture-baseline"
+          },
+          "company_labels": {
+            "002371.SZ": "北方华创",
+            "688072.SH": "拓荆科技",
+            "688082.SH": "盛美上海"
+          },
+          "context": {
+            "as_of_date": "2025-04-30",
+            "company_ids": [
+              "002371.SZ",
+              "688072.SH",
+              "688082.SH"
+            ],
+            "corpus_snapshot_id": "s3-semiconductor-equipment-ar-v1",
+            "fiscal_years": [
+              2023,
+              2024
+            ],
+            "protocol_config_sha256": "0a9a877083f262f29407bfcfa0c7d3bea39c31bfc83e83e1db5c7be68c6ed52a",
+            "protocol_id": "revenue_quality_v1",
+            "protocol_version": "1.0.0",
+            "run_id": "fixture-tool-results"
+          },
+          "created_at": null,
+          "execution_mode": "RULES",
+          "origin": "WEB_FIXTURE",
+          "question": "【页面样本】比较收入、经营现金流和应收账款，核查披露与局限。",
+          "task_id": "fixture-tool-results",
+          "task_status": "RUNNING",
+          "workflow": "B2"
+        },
+        "ui": {
+          "anchor": null,
+          "editing_followup": false,
+          "follow_progress": true,
+          "manual_browsing": false,
+          "panel": "PROCESS",
+          "reader_open": false,
+          "reduced_motion": false,
+          "scroll_y": 0,
+          "selected_evidence_id": null,
+          "selected_round": null,
+          "selected_step_id": null,
+          "text_selection_active": false
+        }
+      }
+    },
+    {
+      "events": [],
+      "expected": {
+        "auto_enter_report": false,
+        "enabled_operations": [
+          "VIEW_STEPS",
+          "CANCEL",
+          "NEW_TASK"
+        ],
+        "result_available": false,
+        "suggested_panel": "PROCESS"
+      },
+      "name": "review_required",
+      "snapshot": {
+        "budget": {
+          "baseline_historical_estimate": null,
+          "currency": "USD",
+          "estimate_kind": "USAGE_ESTIMATE_NOT_INVOICE",
+          "note": "未提供金额表示未知，不能显示为零；组合总预算尚未建立。",
+          "pending_reservation": null,
+          "settled_estimate": null,
+          "source": null,
+          "total_calls": null
+        },
+        "outputs": [],
+        "provenance": {
+          "kind": "SYNTHETIC",
+          "label": "合成页面场景，非真实研究执行",
+          "notes": [
+            "数据模型与状态规则用于W1验收；操作只在样本内生效。"
+          ],
+          "source_artifacts": [],
+          "source_revalidation": "NOT_CHECKED"
+        },
+        "publication": {
+          "business_validation": "UNKNOWN",
+          "files": [],
+          "publication_status": null,
+          "reasons": [],
+          "result_available": false,
+          "scope_matches": null,
+          "verification": "NOT_PUBLISHED"
+        },
+        "research": {
+          "calculation_slots": {},
+          "calculations": [],
+          "claims": [],
+          "dependency_issues": [],
+          "documents": [],
+          "evidence": [],
+          "gaps": [],
+          "observations": [],
+          "report_markdown": null,
+          "supplement": {
+            "action_count": 1,
+            "gaps": [
+              {
+                "affected_claim_ids": [],
+                "attempted_action_ids": [],
+                "closing_condition": "NEW_SNAPSHOT_OR_USER_INPUT",
+                "company_id": "002371.SZ",
+                "description": "【合成等待场景】当前资料不足，需要明确保留局限或另建新快照。",
+                "evidence_id": null,
+                "fiscal_year": null,
+                "gap_id": "fixture-source-gap",
+                "gap_type": "TABLE_REVIEW",
+                "metric_id": null,
+                "need": null,
+                "resolution_note": null,
+                "severity": "MATERIAL",
+                "status": "LIMITED"
+              }
+            ],
+            "history": [
+              {
+                "action": {
+                  "action_id": "fixture-action-REVIEW_REQUIRED",
+                  "arguments": {
+                    "gap_type": "TABLE_REVIEW"
+                  },
+                  "as_of_date": "2025-04-30",
+                  "company_id": "002371.SZ",
+                  "corpus_snapshot_id": "s3-semiconductor-equipment-ar-v1",
+                  "gap_id": "fixture-source-gap",
+                  "reason": "合成工具结果显示测试，不是真实调用。",
+                  "tool": "REVIEW_TABLE"
+                },
+                "changed_gap_status": "LIMITED",
+                "failure_type": null,
+                "result": {
+                  "action_id": "fixture-action-REVIEW_REQUIRED",
+                  "evidence": [],
+                  "note": "合成合同边界：REVIEW_REQUIRED已定义，当前本地工具不承诺直接产出此结果。",
+                  "observations": [],
+                  "status": "REVIEW_REQUIRED"
+                }
+              }
+            ],
+            "no_progress_rounds": 0,
+            "rounds": 1,
+            "stop_reason": null
+          }
+        },
+        "runtime": {
+          "cancel_requested": false,
+          "checkpoint_sha256": null,
+          "clarification_status": "NONE",
+          "connection_state": "CONNECTED",
+          "current_step_id": null,
+          "event_cursor": 0,
+          "event_stream_id": "fixture:tool-results:v1",
+          "queue_state": "UNKNOWN",
+          "resume_readiness": "UNKNOWN",
+          "waiting_gap_ids": [],
+          "worker_state": "UNKNOWN"
+        },
+        "schema_version": "1.0.0",
+        "steps": [],
+        "task": {
+          "access_mode": "MOCK",
+          "available_actions": [
+            {
+              "authority": "READ_ONLY",
+              "enabled": false,
+              "operation": "VIEW_REPORT",
+              "reason": "正式报告尚未通过发布核验。"
+            },
+            {
+              "authority": "READ_ONLY",
+              "enabled": true,
+              "operation": "VIEW_STEPS",
+              "reason": null
+            },
+            {
+              "authority": "READ_ONLY",
+              "enabled": false,
+              "operation": "VIEW_EVIDENCE",
+              "reason": "当前记录没有可读取的原文。"
+            },
+            {
+              "authority": "SIMULATED",
+              "enabled": false,
+              "operation": "FOLLOWUP",
+              "reason": "追问需要已发布结果和可写入的当前会话。"
+            },
+            {
+              "authority": "SIMULATED",
+              "enabled": true,
+              "operation": "CANCEL",
+              "reason": null
+            },
+            {
+              "authority": "SIMULATED",
+              "enabled": false,
+              "operation": "CLARIFY",
+              "reason": "仅当前等待检查点可接收新的澄清决定。"
+            },
+            {
+              "authority": "SIMULATED",
+              "enabled": false,
+              "operation": "RESUME",
+              "reason": "恢复需要协调层明确核验安全；等待任务还需要已记录决定。"
+            },
+            {
+              "authority": "SIMULATED",
+              "enabled": true,
+              "operation": "NEW_TASK",
+              "reason": null
+            }
+          ],
+          "baseline": {
+            "final_state_sha256": null,
+            "label": "【合成过程】复用已有基线，不重播B1",
+            "origin": "RESULT_REUSE",
+            "task_id": "fixture-baseline"
+          },
+          "company_labels": {
+            "002371.SZ": "北方华创",
+            "688072.SH": "拓荆科技",
+            "688082.SH": "盛美上海"
+          },
+          "context": {
+            "as_of_date": "2025-04-30",
+            "company_ids": [
+              "002371.SZ",
+              "688072.SH",
+              "688082.SH"
+            ],
+            "corpus_snapshot_id": "s3-semiconductor-equipment-ar-v1",
+            "fiscal_years": [
+              2023,
+              2024
+            ],
+            "protocol_config_sha256": "0a9a877083f262f29407bfcfa0c7d3bea39c31bfc83e83e1db5c7be68c6ed52a",
+            "protocol_id": "revenue_quality_v1",
+            "protocol_version": "1.0.0",
+            "run_id": "fixture-tool-results"
+          },
+          "created_at": null,
+          "execution_mode": "RULES",
+          "origin": "WEB_FIXTURE",
+          "question": "【页面样本】比较收入、经营现金流和应收账款，核查披露与局限。",
+          "task_id": "fixture-tool-results",
+          "task_status": "RUNNING",
+          "workflow": "B2"
+        },
+        "ui": {
+          "anchor": null,
+          "editing_followup": false,
+          "follow_progress": true,
+          "manual_browsing": false,
+          "panel": "PROCESS",
+          "reader_open": false,
+          "reduced_motion": false,
+          "scroll_y": 0,
+          "selected_evidence_id": null,
+          "selected_round": null,
+          "selected_step_id": null,
+          "text_selection_active": false
+        }
+      }
+    },
+    {
+      "events": [],
+      "expected": {
+        "auto_enter_report": false,
+        "enabled_operations": [
+          "VIEW_STEPS",
+          "CANCEL",
+          "CLARIFY",
+          "NEW_TASK"
+        ],
+        "result_available": false,
+        "suggested_panel": "PROCESS"
+      },
+      "name": "requires_new_snapshot",
+      "snapshot": {
+        "budget": {
+          "baseline_historical_estimate": null,
+          "currency": "USD",
+          "estimate_kind": "USAGE_ESTIMATE_NOT_INVOICE",
+          "note": "未提供金额表示未知，不能显示为零；组合总预算尚未建立。",
+          "pending_reservation": null,
+          "settled_estimate": null,
+          "source": null,
+          "total_calls": null
+        },
+        "outputs": [],
+        "provenance": {
+          "kind": "SYNTHETIC",
+          "label": "合成页面场景，非真实研究执行",
+          "notes": [
+            "数据模型与状态规则用于W1验收；操作只在样本内生效。"
+          ],
+          "source_artifacts": [],
+          "source_revalidation": "NOT_CHECKED"
+        },
+        "publication": {
+          "business_validation": "UNKNOWN",
+          "files": [],
+          "publication_status": null,
+          "reasons": [],
+          "result_available": false,
+          "scope_matches": null,
+          "verification": "NOT_PUBLISHED"
+        },
+        "research": {
+          "calculation_slots": {},
+          "calculations": [],
+          "claims": [],
+          "dependency_issues": [],
+          "documents": [],
+          "evidence": [],
+          "gaps": [],
+          "observations": [],
+          "report_markdown": null,
+          "supplement": {
+            "action_count": 1,
+            "gaps": [
+              {
+                "affected_claim_ids": [],
+                "attempted_action_ids": [],
+                "closing_condition": "NEW_SNAPSHOT_OR_USER_INPUT",
+                "company_id": "002371.SZ",
+                "description": "【合成等待场景】当前资料不足，需要明确保留局限或另建新快照。",
+                "evidence_id": null,
+                "fiscal_year": null,
+                "gap_id": "fixture-source-gap",
+                "gap_type": "TABLE_REVIEW",
+                "metric_id": null,
+                "need": null,
+                "resolution_note": null,
+                "severity": "MATERIAL",
+                "status": "WAITING_INPUT"
+              }
+            ],
+            "history": [
+              {
+                "action": {
+                  "action_id": "fixture-action-REQUIRES_NEW_SNAPSHOT",
+                  "arguments": {
+                    "gap_type": "TABLE_REVIEW"
+                  },
+                  "as_of_date": "2025-04-30",
+                  "company_id": "002371.SZ",
+                  "corpus_snapshot_id": "s3-semiconductor-equipment-ar-v1",
+                  "gap_id": "fixture-source-gap",
+                  "reason": "合成工具结果显示测试，不是真实调用。",
+                  "tool": "REVIEW_TABLE"
+                },
+                "changed_gap_status": "WAITING_INPUT",
+                "failure_type": null,
+                "result": {
+                  "action_id": "fixture-action-REQUIRES_NEW_SNAPSHOT",
+                  "evidence": [],
+                  "note": "需要新资料快照",
+                  "observations": [],
+                  "status": "REQUIRES_NEW_SNAPSHOT"
+                }
+              }
+            ],
+            "no_progress_rounds": 0,
+            "rounds": 1,
+            "stop_reason": "REQUIRES_NEW_SNAPSHOT"
+          }
+        },
+        "runtime": {
+          "cancel_requested": false,
+          "checkpoint_sha256": "ca66cfe95b6ea073d88f65c3e56a36b975314d30886668ef56af4d6d3988ae62",
+          "clarification_status": "NONE",
+          "connection_state": "CONNECTED",
+          "current_step_id": null,
+          "event_cursor": 0,
+          "event_stream_id": "fixture:tool-results:v1",
+          "queue_state": "UNKNOWN",
+          "resume_readiness": "UNKNOWN",
+          "waiting_gap_ids": [
+            "fixture-source-gap"
+          ],
+          "worker_state": "UNKNOWN"
+        },
+        "schema_version": "1.0.0",
+        "steps": [],
+        "task": {
+          "access_mode": "MOCK",
+          "available_actions": [
+            {
+              "authority": "READ_ONLY",
+              "enabled": false,
+              "operation": "VIEW_REPORT",
+              "reason": "正式报告尚未通过发布核验。"
+            },
+            {
+              "authority": "READ_ONLY",
+              "enabled": true,
+              "operation": "VIEW_STEPS",
+              "reason": null
+            },
+            {
+              "authority": "READ_ONLY",
+              "enabled": false,
+              "operation": "VIEW_EVIDENCE",
+              "reason": "当前记录没有可读取的原文。"
+            },
+            {
+              "authority": "SIMULATED",
+              "enabled": false,
+              "operation": "FOLLOWUP",
+              "reason": "追问需要已发布结果和可写入的当前会话。"
+            },
+            {
+              "authority": "SIMULATED",
+              "enabled": true,
+              "operation": "CANCEL",
+              "reason": null
+            },
+            {
+              "authority": "SIMULATED",
+              "enabled": true,
+              "operation": "CLARIFY",
+              "reason": null
+            },
+            {
+              "authority": "SIMULATED",
+              "enabled": false,
+              "operation": "RESUME",
+              "reason": "恢复需要协调层明确核验安全；等待任务还需要已记录决定。"
+            },
+            {
+              "authority": "SIMULATED",
+              "enabled": true,
+              "operation": "NEW_TASK",
+              "reason": null
+            }
+          ],
+          "baseline": {
+            "final_state_sha256": null,
+            "label": "【合成过程】复用已有基线，不重播B1",
+            "origin": "RESULT_REUSE",
+            "task_id": "fixture-baseline"
+          },
+          "company_labels": {
+            "002371.SZ": "北方华创",
+            "688072.SH": "拓荆科技",
+            "688082.SH": "盛美上海"
+          },
+          "context": {
+            "as_of_date": "2025-04-30",
+            "company_ids": [
+              "002371.SZ",
+              "688072.SH",
+              "688082.SH"
+            ],
+            "corpus_snapshot_id": "s3-semiconductor-equipment-ar-v1",
+            "fiscal_years": [
+              2023,
+              2024
+            ],
+            "protocol_config_sha256": "0a9a877083f262f29407bfcfa0c7d3bea39c31bfc83e83e1db5c7be68c6ed52a",
+            "protocol_id": "revenue_quality_v1",
+            "protocol_version": "1.0.0",
+            "run_id": "fixture-tool-results"
+          },
+          "created_at": null,
+          "execution_mode": "RULES",
+          "origin": "WEB_FIXTURE",
+          "question": "【页面样本】比较收入、经营现金流和应收账款，核查披露与局限。",
+          "task_id": "fixture-tool-results",
+          "task_status": "WAITING_INPUT",
+          "workflow": "B2"
+        },
+        "ui": {
+          "anchor": null,
+          "editing_followup": false,
+          "follow_progress": true,
+          "manual_browsing": false,
+          "panel": "PROCESS",
+          "reader_open": false,
+          "reduced_motion": false,
+          "scroll_y": 0,
+          "selected_evidence_id": null,
+          "selected_round": null,
+          "selected_step_id": null,
+          "text_selection_active": false
+        }
+      }
+    },
+    {
+      "events": [],
+      "expected": {
+        "auto_enter_report": false,
+        "enabled_operations": [
+          "VIEW_STEPS",
+          "CANCEL",
+          "CLARIFY",
+          "NEW_TASK"
+        ],
+        "result_available": false,
+        "suggested_panel": "PROCESS"
+      },
+      "name": "needs_input",
+      "snapshot": {
+        "budget": {
+          "baseline_historical_estimate": null,
+          "currency": "USD",
+          "estimate_kind": "USAGE_ESTIMATE_NOT_INVOICE",
+          "note": "未提供金额表示未知，不能显示为零；组合总预算尚未建立。",
+          "pending_reservation": null,
+          "settled_estimate": null,
+          "source": null,
+          "total_calls": null
+        },
+        "outputs": [],
+        "provenance": {
+          "kind": "SYNTHETIC",
+          "label": "合成页面场景，非真实研究执行",
+          "notes": [
+            "数据模型与状态规则用于W1验收；操作只在样本内生效。"
+          ],
+          "source_artifacts": [],
+          "source_revalidation": "NOT_CHECKED"
+        },
+        "publication": {
+          "business_validation": "UNKNOWN",
+          "files": [],
+          "publication_status": null,
+          "reasons": [],
+          "result_available": false,
+          "scope_matches": null,
+          "verification": "NOT_PUBLISHED"
+        },
+        "research": {
+          "calculation_slots": {},
+          "calculations": [],
+          "claims": [],
+          "dependency_issues": [],
+          "documents": [],
+          "evidence": [],
+          "gaps": [],
+          "observations": [],
+          "report_markdown": null,
+          "supplement": {
+            "action_count": 1,
+            "gaps": [
+              {
+                "affected_claim_ids": [],
+                "attempted_action_ids": [],
+                "closing_condition": "NEW_SNAPSHOT_OR_USER_INPUT",
+                "company_id": "002371.SZ",
+                "description": "【合成等待场景】当前资料不足，需要明确保留局限或另建新快照。",
+                "evidence_id": null,
+                "fiscal_year": null,
+                "gap_id": "fixture-source-gap",
+                "gap_type": "SOURCE_REQUEST",
+                "metric_id": null,
+                "need": null,
+                "resolution_note": null,
+                "severity": "MATERIAL",
+                "status": "WAITING_INPUT"
+              }
+            ],
+            "history": [
+              {
+                "action": {
+                  "action_id": "fixture-action-NEEDS_INPUT",
+                  "arguments": {
+                    "gap_type": "SOURCE_REQUEST"
+                  },
+                  "as_of_date": "2025-04-30",
+                  "company_id": "002371.SZ",
+                  "corpus_snapshot_id": "s3-semiconductor-equipment-ar-v1",
+                  "gap_id": "fixture-source-gap",
+                  "reason": "合成工具结果显示测试，不是真实调用。",
+                  "tool": "REQUEST_CLARIFICATION"
+                },
+                "changed_gap_status": "WAITING_INPUT",
+                "failure_type": null,
+                "result": {
+                  "action_id": "fixture-action-NEEDS_INPUT",
+                  "evidence": [],
+                  "note": "需要你的决定",
+                  "observations": [],
+                  "status": "NEEDS_INPUT"
+                }
+              }
+            ],
+            "no_progress_rounds": 0,
+            "rounds": 1,
+            "stop_reason": "NEEDS_INPUT"
+          }
+        },
+        "runtime": {
+          "cancel_requested": false,
+          "checkpoint_sha256": "2a64e643c6ab046f6c5b2fd3487c025361c02e458fb475cab00b369651befaf8",
+          "clarification_status": "NONE",
+          "connection_state": "CONNECTED",
+          "current_step_id": null,
+          "event_cursor": 0,
+          "event_stream_id": "fixture:tool-results:v1",
+          "queue_state": "UNKNOWN",
+          "resume_readiness": "UNKNOWN",
+          "waiting_gap_ids": [
+            "fixture-source-gap"
+          ],
+          "worker_state": "UNKNOWN"
+        },
+        "schema_version": "1.0.0",
+        "steps": [],
+        "task": {
+          "access_mode": "MOCK",
+          "available_actions": [
+            {
+              "authority": "READ_ONLY",
+              "enabled": false,
+              "operation": "VIEW_REPORT",
+              "reason": "正式报告尚未通过发布核验。"
+            },
+            {
+              "authority": "READ_ONLY",
+              "enabled": true,
+              "operation": "VIEW_STEPS",
+              "reason": null
+            },
+            {
+              "authority": "READ_ONLY",
+              "enabled": false,
+              "operation": "VIEW_EVIDENCE",
+              "reason": "当前记录没有可读取的原文。"
+            },
+            {
+              "authority": "SIMULATED",
+              "enabled": false,
+              "operation": "FOLLOWUP",
+              "reason": "追问需要已发布结果和可写入的当前会话。"
+            },
+            {
+              "authority": "SIMULATED",
+              "enabled": true,
+              "operation": "CANCEL",
+              "reason": null
+            },
+            {
+              "authority": "SIMULATED",
+              "enabled": true,
+              "operation": "CLARIFY",
+              "reason": null
+            },
+            {
+              "authority": "SIMULATED",
+              "enabled": false,
+              "operation": "RESUME",
+              "reason": "恢复需要协调层明确核验安全；等待任务还需要已记录决定。"
+            },
+            {
+              "authority": "SIMULATED",
+              "enabled": true,
+              "operation": "NEW_TASK",
+              "reason": null
+            }
+          ],
+          "baseline": {
+            "final_state_sha256": null,
+            "label": "【合成过程】复用已有基线，不重播B1",
+            "origin": "RESULT_REUSE",
+            "task_id": "fixture-baseline"
+          },
+          "company_labels": {
+            "002371.SZ": "北方华创",
+            "688072.SH": "拓荆科技",
+            "688082.SH": "盛美上海"
+          },
+          "context": {
+            "as_of_date": "2025-04-30",
+            "company_ids": [
+              "002371.SZ",
+              "688072.SH",
+              "688082.SH"
+            ],
+            "corpus_snapshot_id": "s3-semiconductor-equipment-ar-v1",
+            "fiscal_years": [
+              2023,
+              2024
+            ],
+            "protocol_config_sha256": "0a9a877083f262f29407bfcfa0c7d3bea39c31bfc83e83e1db5c7be68c6ed52a",
+            "protocol_id": "revenue_quality_v1",
+            "protocol_version": "1.0.0",
+            "run_id": "fixture-tool-results"
+          },
+          "created_at": null,
+          "execution_mode": "RULES",
+          "origin": "WEB_FIXTURE",
+          "question": "【页面样本】比较收入、经营现金流和应收账款，核查披露与局限。",
+          "task_id": "fixture-tool-results",
+          "task_status": "WAITING_INPUT",
+          "workflow": "B2"
+        },
+        "ui": {
+          "anchor": null,
+          "editing_followup": false,
+          "follow_progress": true,
+          "manual_browsing": false,
+          "panel": "PROCESS",
+          "reader_open": false,
+          "reduced_motion": false,
+          "scroll_y": 0,
+          "selected_evidence_id": null,
+          "selected_round": null,
+          "selected_step_id": null,
+          "text_selection_active": false
+        }
+      }
+    }
+  ],
+  "scenario_id": "tool-results",
+  "schema_version": "1.0.0",
+  "synthetic_execution": true,
+  "title": "五种工具结果（合成合同边界）"
+}

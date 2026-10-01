@@ -1,0 +1,1697 @@
+{
+  "covered_codes": [],
+  "description": "合成执行仅用于页面验收。",
+  "followups": [],
+  "frames": [
+    {
+      "events": [
+        {
+          "action_id": null,
+          "attempt": null,
+          "event_stream_id": "fixture:b2-rounds:v1",
+          "instance_id": null,
+          "journal_key": null,
+          "occurred_at": null,
+          "origin": "WEB_FIXTURE",
+          "output_ids": [],
+          "round": null,
+          "seq": 1,
+          "source": null,
+          "source_event_ids": [],
+          "step_id": null,
+          "task_id": "fixture-b2-rounds",
+          "type": "CHECKPOINT_ACCEPTED"
+        }
+      ],
+      "expected": {
+        "auto_enter_report": false,
+        "enabled_operations": [
+          "VIEW_STEPS",
+          "CANCEL",
+          "NEW_TASK"
+        ],
+        "result_available": false,
+        "suggested_panel": "PROCESS"
+      },
+      "name": "round-1",
+      "snapshot": {
+        "budget": {
+          "baseline_historical_estimate": null,
+          "currency": "USD",
+          "estimate_kind": "USAGE_ESTIMATE_NOT_INVOICE",
+          "note": "未提供金额表示未知，不能显示为零；组合总预算尚未建立。",
+          "pending_reservation": null,
+          "settled_estimate": null,
+          "source": null,
+          "total_calls": null
+        },
+        "outputs": [],
+        "provenance": {
+          "kind": "SYNTHETIC",
+          "label": "合成页面场景，非真实研究执行",
+          "notes": [
+            "数据模型与状态规则用于W1验收；操作只在样本内生效。",
+            "动作内容取自历史，本场景的轮次编排为合成，不重建历史节点事件。"
+          ],
+          "source_artifacts": [
+            {
+              "path": "runs/s6/s6-b2-live-20261001-03/publication.json",
+              "pointer": "",
+              "sha256": "05d077d177209574c80399d1deb618e7f314de0d27bb9ba5952c3847b6d6c1c1"
+            },
+            {
+              "path": "runs/s6/s6-b2-live-20261001-03/report.md",
+              "pointer": "",
+              "sha256": "76a9421170bca5071c1e32e6fe2263a7977bb0cfc9f8ed913f3e2ad0c51d4ccd"
+            },
+            {
+              "path": "runs/s6/s6-b2-live-20261001-03/final_state.json",
+              "pointer": "",
+              "sha256": "44f47973689c86c9fef9137cb1b0f23184360e1ba8a208c8000fb43c8601ff31"
+            },
+            {
+              "path": "runs/s6/s6-b2-live-20261001-03/context_capsule.json",
+              "pointer": "",
+              "sha256": "e1bc0c8203801cb19e3a151563be799bcff350ac27cafd6e6cba65f49f7b3745"
+            },
+            {
+              "path": "storage/s6/tasks/s6-b2-live-20261001-03/session.sqlite",
+              "pointer": "",
+              "sha256": "930918543416593b59a223af22ce0d8ed4289793162b40d3c3162c19b102ab47"
+            },
+            {
+              "path": "storage/s6/tasks/s6-b2-live-20261001-03/baseline.json",
+              "pointer": "",
+              "sha256": "f93760c24a0cafaba4b8c84aa10ab2be7e03c0ec35eb88eb552a96e8e3dd54b3"
+            },
+            {
+              "path": "storage/s6/tasks/s6-b2-live-20261001-03/policy.json",
+              "pointer": "",
+              "sha256": "9aed722be677d02b8e8fa0ef4e6928634a7ece338e500bd329147424b49256c5"
+            }
+          ],
+          "source_revalidation": "NOT_CHECKED"
+        },
+        "publication": {
+          "business_validation": "UNKNOWN",
+          "files": [],
+          "publication_status": null,
+          "reasons": [],
+          "result_available": false,
+          "scope_matches": null,
+          "verification": "NOT_PUBLISHED"
+        },
+        "research": {
+          "calculation_slots": {},
+          "calculations": [],
+          "claims": [],
+          "dependency_issues": [],
+          "documents": [],
+          "evidence": [],
+          "gaps": [],
+          "observations": [],
+          "report_markdown": null,
+          "supplement": {
+            "action_count": 2,
+            "gaps": [
+              {
+                "affected_claim_ids": [],
+                "attempted_action_ids": [],
+                "closing_condition": "NEW_SNAPSHOT_OR_USER_INPUT",
+                "company_id": "002371.SZ",
+                "description": "【合成等待场景】当前资料不足，需要明确保留局限或另建新快照。",
+                "evidence_id": null,
+                "fiscal_year": null,
+                "gap_id": "fixture-source-gap",
+                "gap_type": "SOURCE_REQUEST",
+                "metric_id": null,
+                "need": null,
+                "resolution_note": null,
+                "severity": "MATERIAL",
+                "status": "OPEN"
+              }
+            ],
+            "history": [
+              {
+                "action": {
+                  "action_id": "action-5dd6fc582edc37dc572773909c3f2f689998a2106e4fe61be3613735217615ac",
+                  "arguments": {
+                    "fiscal_year": 2023,
+                    "metric_id": "revenue"
+                  },
+                  "as_of_date": "2025-04-30",
+                  "company_id": "002371.SZ",
+                  "corpus_snapshot_id": "s3-semiconductor-equipment-ar-v1",
+                  "gap_id": "s5-missing-002371.SZ-2023-revenue",
+                  "reason": "缺少可用的来源核验财务观察",
+                  "tool": "QUERY_METRIC"
+                },
+                "changed_gap_status": "RESOLVED",
+                "failure_type": null,
+                "result": {
+                  "action_id": "action-5dd6fc582edc37dc572773909c3f2f689998a2106e4fe61be3613735217615ac",
+                  "evidence": [
+                    {
+                      "company_id": "002371.SZ",
+                      "document_id": "cninfo-002371-2024-ar-1223309278",
+                      "evidence_id": "cninfo-002371-2024-ar-1223309278:p0095:ed2d227d995d30a5a",
+                      "evidence_sha256": "d2d227d995d30a5a6602ae323a1ee86e08ee34bf3e9f4094d3b44f6878bfa6a8",
+                      "line_end": 43,
+                      "line_start": 1,
+                      "matched_terms": [],
+                      "page_id": "cninfo-002371-2024-ar-1223309278:p0095:62f6d4497fadf500",
+                      "pdf_page": 95,
+                      "retrieval_rank": 1,
+                      "retrieval_score": 0.0,
+                      "text": "北方华创科技集团股份有限公司2024年年度报告全文\n非流动负债:\n长期借款 3,888,567,797.01 4,004,147,243.06\n应付债券\n其中:优先股\n永续债\n租赁负债 8,174,555.93 8,256,078.36\n长期应付款\n长期应付职工薪酬\n预计负债\n递延收益 31,230,000.00 31,230,000.00\n递延所得税负债\n其他非流动负债\n非流动负债合计 3,927,972,352.94 4,043,633,321.42\n负债合计 4,291,452,315.47 4,587,205,432.60\n所有者权益:\n股本 533,617,510.00 530,208,716.00\n其他权益工具\n其中:优先股\n永续债\n资本公积 16,026,256,981.44 14,881,984,132.60\n减:库存股 44,712,349.50\n其他综合收益 -4,517,892.61 -2,789,456.14\n专项储备\n盈余公积 207,562,621.45 119,206,582.97\n未分配利润 806,241,965.37 425,232,957.01\n所有者权益合计 17,569,161,185.65 15,909,130,582.94\n负债和所有者权益总计 21,860,613,501.12 20,496,336,015.54\n3、合并利润表\n单位:元\n项目 2024年度 2023年度\n一、营业总收入 29,838,069,162.26 22,079,458,092.37\n其中:营业收入 29,838,069,162.26 22,079,458,092.37\n利息收入\n已赚保费\n手续费及佣金收入\n二、营业总成本 24,154,315,813.06 18,465,531,116.08\n其中:营业成本 17,051,176,726.88 13,076,026,815.87\n利息支出\n手续费及佣金支出\n退保金\n赔付支出净额\n95"
+                    }
+                  ],
+                  "note": "读取当前快照的已复核指标；不回填新资料",
+                  "observations": [
+                    {
+                      "company_id": "002371.SZ",
+                      "content_sha256": "dc5ea4d5825b7959ff70acee9cc29b937799452c33c70713afe648192df04278",
+                      "currency": "CNY",
+                      "document_id": "cninfo-002371-2024-ar-1223309278",
+                      "document_published_on": "2025-04-25",
+                      "document_sha256": "70168364fd518323effa2d11ff337a172783e3597ed6f896353ca62ea3f75cfe",
+                      "evidence_refs": [
+                        {
+                          "evidence_id": "cninfo-002371-2024-ar-1223309278:p0095:ed2d227d995d30a5a",
+                          "pdf_page": 95,
+                          "source_label": "revenue"
+                        }
+                      ],
+                      "extraction_method": "TABLE_EXTRACTED",
+                      "fiscal_year": 2023,
+                      "measurement_basis": "INCOME_STATEMENT_REPORTED_AMOUNT",
+                      "metric_id": "revenue",
+                      "observation_id": "obs-002371.SZ-revenue-2023-01-01_2023-12-31-v1-dc5ea4d5825b",
+                      "observation_version": 1,
+                      "observed_at": null,
+                      "period_end": "2023-12-31",
+                      "period_kind": "FLOW",
+                      "period_start": "2023-01-01",
+                      "raw_unit": "CNY_YUAN",
+                      "raw_value": "22079458092.37",
+                      "raw_value_text": "22,079,458,092.37",
+                      "review_note": "Reviewed row mapping source-table-columns-v1; current/prior column 1; comparative figures available only on this disclosure date.",
+                      "review_status": "SOURCE_CHECKED",
+                      "standard_unit": "CNY_YUAN",
+                      "standard_value": "22079458092.37",
+                      "statement_scope": "CONSOLIDATED",
+                      "supersedes_observation_id": null,
+                      "value_status": "OBSERVED"
+                    }
+                  ],
+                  "status": "FOUND"
+                }
+              },
+              {
+                "action": {
+                  "action_id": "action-30b579a7acaf9d13808719b88ab031928f177dd2da1633dbf5a0fef96181bc89",
+                  "arguments": {
+                    "need": "CUSTOMER_MIX",
+                    "question": "主要客户 客户集中度 收入结构",
+                    "reporting_year": 2024
+                  },
+                  "as_of_date": "2025-04-30",
+                  "company_id": "002371.SZ",
+                  "corpus_snapshot_id": "s3-semiconductor-equipment-ar-v1",
+                  "gap_id": "s5-context-002371.SZ-CUSTOMER_MIX",
+                  "reason": "定位CUSTOMER_MIX相关原文；不自动认证语义支持",
+                  "tool": "SEARCH_DISCLOSURE"
+                },
+                "changed_gap_status": "RESOLVED",
+                "failure_type": null,
+                "result": {
+                  "action_id": "action-30b579a7acaf9d13808719b88ab031928f177dd2da1633dbf5a0fef96181bc89",
+                  "evidence": [
+                    {
+                      "company_id": "002371.SZ",
+                      "document_id": "cninfo-002371-2024-ar-1223309278",
+                      "evidence_id": "cninfo-002371-2024-ar-1223309278:p0126:l7-20:e2fa90db386d5",
+                      "evidence_sha256": "2fa90db386d5371468cc9428905cb6902e2c9c842ec6e07496e953301244a322",
+                      "line_end": 20,
+                      "line_start": 7,
+                      "matched_terms": [],
+                      "page_id": "cninfo-002371-2024-ar-1223309278:p0126:182ca9d91e44f95d",
+                      "pdf_page": 126,
+                      "retrieval_rank": 1,
+                      "retrieval_score": 0.0,
+                      "text": "本公司向客户转让可明确区分商品的承诺。交易价格是指本公司因向客户转让商品而预期有权收取的对价金额,不包括\n代第三方收取的款项以及本公司预期将退还给客户的款项。\n履约义务是在某一时段内履行、还是在某一时点履行,取决于合同条款及相关法律规定。如果履约义务是在某一时\n段内履行的,则本公司按照履约进度确认收入。否则,本公司于客户取得相关资产控制权的某一时点确认收入。\n本公司根据在向客户转让商品或服务前是否拥有对该商品或服务的控制权,来判断本公司从事交易时的身份是主要\n责任人还是代理人。在向客户转让商品或服务前能够控制该商品或服务的,本公司为主要责任人,按照已收或应收对价\n总额确认收入;否则,本公司为代理人,按照预期有权收取的佣金或手续费的金额确认收入,该金额按照已收或应收对\n价总额扣除应支付给其他相关方的价款后的净额,或者按照既定的佣金金额或比例等确定。\n本公司按照业务类型确定的收入确认具体原则和计量方法:\n(1)商品销售收入\n本公司销售商品的业务通常仅包括转让商品的履约义务,根据不同的产品类型及合同安排,于控制权转移至客户,\n风险报酬转移时,视不同的产品类型及合同安排根据签收单或验收单等资料确认收入。\n(2)提供劳务收入\n本公司向客户提供技术服务,如果本公司履约的同时客户即取得并消耗本公司履约所带来的经济利益,或者客户能"
+                    },
+                    {
+                      "company_id": "002371.SZ",
+                      "document_id": "cninfo-002371-2024-ar-1223309278",
+                      "evidence_id": "cninfo-002371-2024-ar-1223309278:p0029:l22-41:eccd12ef88b96",
+                      "evidence_sha256": "ccd12ef88b96a962accb71f6b69ee86729e0a78d197aa9478da137b5dcd901a2",
+                      "line_end": 41,
+                      "line_start": 22,
+                      "matched_terms": [],
+                      "page_id": "cninfo-002371-2024-ar-1223309278:p0029:e692a495af6e2083",
+                      "pdf_page": 29,
+                      "retrieval_rank": 2,
+                      "retrieval_score": 0.0,
+                      "text": "前五名客户合计销售金额(元) 8,319,522,272.84\n前五名客户合计销售金额占年度销售总额比例 27.88%\n前五名客户销售额中关联方销售额占年度销售总额比例 0.00%\n公司前5大客户资料\n序号 客户名称 销售额(元) 占年度销售总额比例\n1 客户一 3,057,583,991.69 10.25%\n2 客户二 1,356,030,459.06 4.54%\n3 客户三 1,334,159,398.00 4.47%\n4 客户四 1,288,181,590.68 4.32%\n5 客户五 1,283,566,833.41 4.30%\n合计 -- 8,319,522,272.84 27.88%\n主要客户其他情况说明\n□适用不适用\n公司主要供应商情况\n前五名供应商合计采购金额(元) 4,460,706,902.57\n前五名供应商合计采购金额占年度采购总额比例 16.32%\n前五名供应商采购额中关联方采购额占年度采购总额比例 0.00%\n公司前5名供应商资料\n序号 供应商名称 采购额(元) 占年度采购总额比例\n29"
+                    },
+                    {
+                      "company_id": "002371.SZ",
+                      "document_id": "cninfo-002371-2024-ar-1223309278",
+                      "evidence_id": "cninfo-002371-2024-ar-1223309278:p0032:l29-45:e7e60a1cf6f71",
+                      "evidence_sha256": "7e60a1cf6f71af30d718b0c906a373317fa1e244fb16094347c4a3000e243d32",
+                      "line_end": 45,
+                      "line_start": 29,
+                      "matched_terms": [],
+                      "page_id": "cninfo-002371-2024-ar-1223309278:p0032:2df344bb90b450a5",
+                      "pdf_page": 32,
+                      "retrieval_rank": 3,
+                      "retrieval_score": 0.0,
+                      "text": "存货 23,478,601,767.22 35.73% 16,992,011,957.89 31.69% 4.04%\n投资性房地产 53,391,283.64 0.08% 55,382,078.56 0.10% -0.02%\n长期股权投资 66,300,616.41 0.10% 3,392,399.00 0.01% 0.09%\n固定资产 6,204,790,149.34 9.44% 3,352,493,888.90 6.25% 3.19%\n在建工程 192,338,301.51 0.29% 2,027,315,399.33 3.78% -3.49%\n使用权资产 224,113,700.76 0.34% 214,570,013.47 0.40% -0.06%\n短期借款 3,000,000.00 0.00% 23,066,475.91 0.04% -0.04%\n新签订单继续\n保持良好趋\n势,客户结\n合同负债 6,214,163,863.25 9.46% 8,316,892,377.88 15.51% -6.05% 构、订单结构\n的变化,客户\n预付款比例有\n所下降。\n长期借款 3,946,105,390.91 6.01% 5,835,243,587.06 10.88% -4.87%\n租赁负债 162,592,146.48 0.25% 142,297,196.26 0.27% -0.02%\n32"
+                    }
+                  ],
+                  "note": "已定位候选原文窗口，语义支持仍需独立审核",
+                  "observations": [],
+                  "status": "FOUND"
+                }
+              }
+            ],
+            "no_progress_rounds": 0,
+            "rounds": 1,
+            "stop_reason": null
+          }
+        },
+        "runtime": {
+          "cancel_requested": false,
+          "checkpoint_sha256": null,
+          "clarification_status": "NONE",
+          "connection_state": "CONNECTED",
+          "current_step_id": null,
+          "event_cursor": 1,
+          "event_stream_id": "fixture:b2-rounds:v1",
+          "queue_state": "UNKNOWN",
+          "resume_readiness": "UNKNOWN",
+          "waiting_gap_ids": [],
+          "worker_state": "UNKNOWN"
+        },
+        "schema_version": "1.0.0",
+        "steps": [
+          {
+            "acceptance": "UNKNOWN",
+            "attempt": null,
+            "identity_kind": "SYNTHETIC",
+            "instance_id": "fixture-baseline:reuse",
+            "lifecycle": "REUSED",
+            "node_id": "baseline",
+            "occurred_at": null,
+            "origin": "RESULT_REUSE",
+            "output_ids": [],
+            "round": null,
+            "source": null,
+            "step_id": "baseline"
+          },
+          {
+            "acceptance": "CHECKPOINT_CONFIRMED",
+            "attempt": 1,
+            "identity_kind": "SYNTHETIC",
+            "instance_id": "fixture-b2-rounds:round-1",
+            "lifecycle": "FUNCTION_RETURNED",
+            "node_id": "execute_actions",
+            "occurred_at": null,
+            "origin": "WEB_FIXTURE",
+            "output_ids": [],
+            "round": 1,
+            "source": null,
+            "step_id": "round-1"
+          }
+        ],
+        "task": {
+          "access_mode": "MOCK",
+          "available_actions": [
+            {
+              "authority": "READ_ONLY",
+              "enabled": false,
+              "operation": "VIEW_REPORT",
+              "reason": "正式报告尚未通过发布核验。"
+            },
+            {
+              "authority": "READ_ONLY",
+              "enabled": true,
+              "operation": "VIEW_STEPS",
+              "reason": null
+            },
+            {
+              "authority": "READ_ONLY",
+              "enabled": false,
+              "operation": "VIEW_EVIDENCE",
+              "reason": "当前记录没有可读取的原文。"
+            },
+            {
+              "authority": "SIMULATED",
+              "enabled": false,
+              "operation": "FOLLOWUP",
+              "reason": "追问需要已发布结果和可写入的当前会话。"
+            },
+            {
+              "authority": "SIMULATED",
+              "enabled": true,
+              "operation": "CANCEL",
+              "reason": null
+            },
+            {
+              "authority": "SIMULATED",
+              "enabled": false,
+              "operation": "CLARIFY",
+              "reason": "仅当前等待检查点可接收新的澄清决定。"
+            },
+            {
+              "authority": "SIMULATED",
+              "enabled": false,
+              "operation": "RESUME",
+              "reason": "恢复需要协调层明确核验安全；等待任务还需要已记录决定。"
+            },
+            {
+              "authority": "SIMULATED",
+              "enabled": true,
+              "operation": "NEW_TASK",
+              "reason": null
+            }
+          ],
+          "baseline": {
+            "final_state_sha256": null,
+            "label": "【合成过程】复用已有基线，不重播B1",
+            "origin": "RESULT_REUSE",
+            "task_id": "fixture-baseline"
+          },
+          "company_labels": {
+            "002371.SZ": "北方华创",
+            "688072.SH": "拓荆科技",
+            "688082.SH": "盛美上海"
+          },
+          "context": {
+            "as_of_date": "2025-04-30",
+            "company_ids": [
+              "002371.SZ",
+              "688072.SH",
+              "688082.SH"
+            ],
+            "corpus_snapshot_id": "s3-semiconductor-equipment-ar-v1",
+            "fiscal_years": [
+              2023,
+              2024
+            ],
+            "protocol_config_sha256": "0a9a877083f262f29407bfcfa0c7d3bea39c31bfc83e83e1db5c7be68c6ed52a",
+            "protocol_id": "revenue_quality_v1",
+            "protocol_version": "1.0.0",
+            "run_id": "fixture-b2-rounds"
+          },
+          "created_at": null,
+          "execution_mode": "RULES",
+          "origin": "WEB_FIXTURE",
+          "question": "【页面样本】比较收入、经营现金流和应收账款，核查披露与局限。",
+          "task_id": "fixture-b2-rounds",
+          "task_status": "RUNNING",
+          "workflow": "B2"
+        },
+        "ui": {
+          "anchor": null,
+          "editing_followup": false,
+          "follow_progress": true,
+          "manual_browsing": false,
+          "panel": "PROCESS",
+          "reader_open": false,
+          "reduced_motion": false,
+          "scroll_y": 0,
+          "selected_evidence_id": null,
+          "selected_round": null,
+          "selected_step_id": null,
+          "text_selection_active": false
+        }
+      }
+    },
+    {
+      "events": [
+        {
+          "action_id": null,
+          "attempt": null,
+          "event_stream_id": "fixture:b2-rounds:v1",
+          "instance_id": null,
+          "journal_key": null,
+          "occurred_at": null,
+          "origin": "WEB_FIXTURE",
+          "output_ids": [],
+          "round": null,
+          "seq": 1,
+          "source": null,
+          "source_event_ids": [],
+          "step_id": null,
+          "task_id": "fixture-b2-rounds",
+          "type": "CHECKPOINT_ACCEPTED"
+        }
+      ],
+      "expected": {
+        "auto_enter_report": false,
+        "enabled_operations": [
+          "VIEW_STEPS",
+          "CANCEL",
+          "NEW_TASK"
+        ],
+        "result_available": false,
+        "suggested_panel": "PROCESS"
+      },
+      "name": "round-2",
+      "snapshot": {
+        "budget": {
+          "baseline_historical_estimate": null,
+          "currency": "USD",
+          "estimate_kind": "USAGE_ESTIMATE_NOT_INVOICE",
+          "note": "未提供金额表示未知，不能显示为零；组合总预算尚未建立。",
+          "pending_reservation": null,
+          "settled_estimate": null,
+          "source": null,
+          "total_calls": null
+        },
+        "outputs": [],
+        "provenance": {
+          "kind": "SYNTHETIC",
+          "label": "合成页面场景，非真实研究执行",
+          "notes": [
+            "数据模型与状态规则用于W1验收；操作只在样本内生效。",
+            "动作内容取自历史，本场景的轮次编排为合成，不重建历史节点事件。"
+          ],
+          "source_artifacts": [
+            {
+              "path": "runs/s6/s6-b2-live-20261001-03/publication.json",
+              "pointer": "",
+              "sha256": "05d077d177209574c80399d1deb618e7f314de0d27bb9ba5952c3847b6d6c1c1"
+            },
+            {
+              "path": "runs/s6/s6-b2-live-20261001-03/report.md",
+              "pointer": "",
+              "sha256": "76a9421170bca5071c1e32e6fe2263a7977bb0cfc9f8ed913f3e2ad0c51d4ccd"
+            },
+            {
+              "path": "runs/s6/s6-b2-live-20261001-03/final_state.json",
+              "pointer": "",
+              "sha256": "44f47973689c86c9fef9137cb1b0f23184360e1ba8a208c8000fb43c8601ff31"
+            },
+            {
+              "path": "runs/s6/s6-b2-live-20261001-03/context_capsule.json",
+              "pointer": "",
+              "sha256": "e1bc0c8203801cb19e3a151563be799bcff350ac27cafd6e6cba65f49f7b3745"
+            },
+            {
+              "path": "storage/s6/tasks/s6-b2-live-20261001-03/session.sqlite",
+              "pointer": "",
+              "sha256": "930918543416593b59a223af22ce0d8ed4289793162b40d3c3162c19b102ab47"
+            },
+            {
+              "path": "storage/s6/tasks/s6-b2-live-20261001-03/baseline.json",
+              "pointer": "",
+              "sha256": "f93760c24a0cafaba4b8c84aa10ab2be7e03c0ec35eb88eb552a96e8e3dd54b3"
+            },
+            {
+              "path": "storage/s6/tasks/s6-b2-live-20261001-03/policy.json",
+              "pointer": "",
+              "sha256": "9aed722be677d02b8e8fa0ef4e6928634a7ece338e500bd329147424b49256c5"
+            }
+          ],
+          "source_revalidation": "NOT_CHECKED"
+        },
+        "publication": {
+          "business_validation": "UNKNOWN",
+          "files": [],
+          "publication_status": null,
+          "reasons": [],
+          "result_available": false,
+          "scope_matches": null,
+          "verification": "NOT_PUBLISHED"
+        },
+        "research": {
+          "calculation_slots": {},
+          "calculations": [],
+          "claims": [],
+          "dependency_issues": [],
+          "documents": [],
+          "evidence": [],
+          "gaps": [],
+          "observations": [],
+          "report_markdown": null,
+          "supplement": {
+            "action_count": 4,
+            "gaps": [
+              {
+                "affected_claim_ids": [],
+                "attempted_action_ids": [],
+                "closing_condition": "NEW_SNAPSHOT_OR_USER_INPUT",
+                "company_id": "002371.SZ",
+                "description": "【合成等待场景】当前资料不足，需要明确保留局限或另建新快照。",
+                "evidence_id": null,
+                "fiscal_year": null,
+                "gap_id": "fixture-source-gap",
+                "gap_type": "SOURCE_REQUEST",
+                "metric_id": null,
+                "need": null,
+                "resolution_note": null,
+                "severity": "MATERIAL",
+                "status": "OPEN"
+              }
+            ],
+            "history": [
+              {
+                "action": {
+                  "action_id": "action-5dd6fc582edc37dc572773909c3f2f689998a2106e4fe61be3613735217615ac",
+                  "arguments": {
+                    "fiscal_year": 2023,
+                    "metric_id": "revenue"
+                  },
+                  "as_of_date": "2025-04-30",
+                  "company_id": "002371.SZ",
+                  "corpus_snapshot_id": "s3-semiconductor-equipment-ar-v1",
+                  "gap_id": "s5-missing-002371.SZ-2023-revenue",
+                  "reason": "缺少可用的来源核验财务观察",
+                  "tool": "QUERY_METRIC"
+                },
+                "changed_gap_status": "RESOLVED",
+                "failure_type": null,
+                "result": {
+                  "action_id": "action-5dd6fc582edc37dc572773909c3f2f689998a2106e4fe61be3613735217615ac",
+                  "evidence": [
+                    {
+                      "company_id": "002371.SZ",
+                      "document_id": "cninfo-002371-2024-ar-1223309278",
+                      "evidence_id": "cninfo-002371-2024-ar-1223309278:p0095:ed2d227d995d30a5a",
+                      "evidence_sha256": "d2d227d995d30a5a6602ae323a1ee86e08ee34bf3e9f4094d3b44f6878bfa6a8",
+                      "line_end": 43,
+                      "line_start": 1,
+                      "matched_terms": [],
+                      "page_id": "cninfo-002371-2024-ar-1223309278:p0095:62f6d4497fadf500",
+                      "pdf_page": 95,
+                      "retrieval_rank": 1,
+                      "retrieval_score": 0.0,
+                      "text": "北方华创科技集团股份有限公司2024年年度报告全文\n非流动负债:\n长期借款 3,888,567,797.01 4,004,147,243.06\n应付债券\n其中:优先股\n永续债\n租赁负债 8,174,555.93 8,256,078.36\n长期应付款\n长期应付职工薪酬\n预计负债\n递延收益 31,230,000.00 31,230,000.00\n递延所得税负债\n其他非流动负债\n非流动负债合计 3,927,972,352.94 4,043,633,321.42\n负债合计 4,291,452,315.47 4,587,205,432.60\n所有者权益:\n股本 533,617,510.00 530,208,716.00\n其他权益工具\n其中:优先股\n永续债\n资本公积 16,026,256,981.44 14,881,984,132.60\n减:库存股 44,712,349.50\n其他综合收益 -4,517,892.61 -2,789,456.14\n专项储备\n盈余公积 207,562,621.45 119,206,582.97\n未分配利润 806,241,965.37 425,232,957.01\n所有者权益合计 17,569,161,185.65 15,909,130,582.94\n负债和所有者权益总计 21,860,613,501.12 20,496,336,015.54\n3、合并利润表\n单位:元\n项目 2024年度 2023年度\n一、营业总收入 29,838,069,162.26 22,079,458,092.37\n其中:营业收入 29,838,069,162.26 22,079,458,092.37\n利息收入\n已赚保费\n手续费及佣金收入\n二、营业总成本 24,154,315,813.06 18,465,531,116.08\n其中:营业成本 17,051,176,726.88 13,076,026,815.87\n利息支出\n手续费及佣金支出\n退保金\n赔付支出净额\n95"
+                    }
+                  ],
+                  "note": "读取当前快照的已复核指标；不回填新资料",
+                  "observations": [
+                    {
+                      "company_id": "002371.SZ",
+                      "content_sha256": "dc5ea4d5825b7959ff70acee9cc29b937799452c33c70713afe648192df04278",
+                      "currency": "CNY",
+                      "document_id": "cninfo-002371-2024-ar-1223309278",
+                      "document_published_on": "2025-04-25",
+                      "document_sha256": "70168364fd518323effa2d11ff337a172783e3597ed6f896353ca62ea3f75cfe",
+                      "evidence_refs": [
+                        {
+                          "evidence_id": "cninfo-002371-2024-ar-1223309278:p0095:ed2d227d995d30a5a",
+                          "pdf_page": 95,
+                          "source_label": "revenue"
+                        }
+                      ],
+                      "extraction_method": "TABLE_EXTRACTED",
+                      "fiscal_year": 2023,
+                      "measurement_basis": "INCOME_STATEMENT_REPORTED_AMOUNT",
+                      "metric_id": "revenue",
+                      "observation_id": "obs-002371.SZ-revenue-2023-01-01_2023-12-31-v1-dc5ea4d5825b",
+                      "observation_version": 1,
+                      "observed_at": null,
+                      "period_end": "2023-12-31",
+                      "period_kind": "FLOW",
+                      "period_start": "2023-01-01",
+                      "raw_unit": "CNY_YUAN",
+                      "raw_value": "22079458092.37",
+                      "raw_value_text": "22,079,458,092.37",
+                      "review_note": "Reviewed row mapping source-table-columns-v1; current/prior column 1; comparative figures available only on this disclosure date.",
+                      "review_status": "SOURCE_CHECKED",
+                      "standard_unit": "CNY_YUAN",
+                      "standard_value": "22079458092.37",
+                      "statement_scope": "CONSOLIDATED",
+                      "supersedes_observation_id": null,
+                      "value_status": "OBSERVED"
+                    }
+                  ],
+                  "status": "FOUND"
+                }
+              },
+              {
+                "action": {
+                  "action_id": "action-30b579a7acaf9d13808719b88ab031928f177dd2da1633dbf5a0fef96181bc89",
+                  "arguments": {
+                    "need": "CUSTOMER_MIX",
+                    "question": "主要客户 客户集中度 收入结构",
+                    "reporting_year": 2024
+                  },
+                  "as_of_date": "2025-04-30",
+                  "company_id": "002371.SZ",
+                  "corpus_snapshot_id": "s3-semiconductor-equipment-ar-v1",
+                  "gap_id": "s5-context-002371.SZ-CUSTOMER_MIX",
+                  "reason": "定位CUSTOMER_MIX相关原文；不自动认证语义支持",
+                  "tool": "SEARCH_DISCLOSURE"
+                },
+                "changed_gap_status": "RESOLVED",
+                "failure_type": null,
+                "result": {
+                  "action_id": "action-30b579a7acaf9d13808719b88ab031928f177dd2da1633dbf5a0fef96181bc89",
+                  "evidence": [
+                    {
+                      "company_id": "002371.SZ",
+                      "document_id": "cninfo-002371-2024-ar-1223309278",
+                      "evidence_id": "cninfo-002371-2024-ar-1223309278:p0126:l7-20:e2fa90db386d5",
+                      "evidence_sha256": "2fa90db386d5371468cc9428905cb6902e2c9c842ec6e07496e953301244a322",
+                      "line_end": 20,
+                      "line_start": 7,
+                      "matched_terms": [],
+                      "page_id": "cninfo-002371-2024-ar-1223309278:p0126:182ca9d91e44f95d",
+                      "pdf_page": 126,
+                      "retrieval_rank": 1,
+                      "retrieval_score": 0.0,
+                      "text": "本公司向客户转让可明确区分商品的承诺。交易价格是指本公司因向客户转让商品而预期有权收取的对价金额,不包括\n代第三方收取的款项以及本公司预期将退还给客户的款项。\n履约义务是在某一时段内履行、还是在某一时点履行,取决于合同条款及相关法律规定。如果履约义务是在某一时\n段内履行的,则本公司按照履约进度确认收入。否则,本公司于客户取得相关资产控制权的某一时点确认收入。\n本公司根据在向客户转让商品或服务前是否拥有对该商品或服务的控制权,来判断本公司从事交易时的身份是主要\n责任人还是代理人。在向客户转让商品或服务前能够控制该商品或服务的,本公司为主要责任人,按照已收或应收对价\n总额确认收入;否则,本公司为代理人,按照预期有权收取的佣金或手续费的金额确认收入,该金额按照已收或应收对\n价总额扣除应支付给其他相关方的价款后的净额,或者按照既定的佣金金额或比例等确定。\n本公司按照业务类型确定的收入确认具体原则和计量方法:\n(1)商品销售收入\n本公司销售商品的业务通常仅包括转让商品的履约义务,根据不同的产品类型及合同安排,于控制权转移至客户,\n风险报酬转移时,视不同的产品类型及合同安排根据签收单或验收单等资料确认收入。\n(2)提供劳务收入\n本公司向客户提供技术服务,如果本公司履约的同时客户即取得并消耗本公司履约所带来的经济利益,或者客户能"
+                    },
+                    {
+                      "company_id": "002371.SZ",
+                      "document_id": "cninfo-002371-2024-ar-1223309278",
+                      "evidence_id": "cninfo-002371-2024-ar-1223309278:p0029:l22-41:eccd12ef88b96",
+                      "evidence_sha256": "ccd12ef88b96a962accb71f6b69ee86729e0a78d197aa9478da137b5dcd901a2",
+                      "line_end": 41,
+                      "line_start": 22,
+                      "matched_terms": [],
+                      "page_id": "cninfo-002371-2024-ar-1223309278:p0029:e692a495af6e2083",
+                      "pdf_page": 29,
+                      "retrieval_rank": 2,
+                      "retrieval_score": 0.0,
+                      "text": "前五名客户合计销售金额(元) 8,319,522,272.84\n前五名客户合计销售金额占年度销售总额比例 27.88%\n前五名客户销售额中关联方销售额占年度销售总额比例 0.00%\n公司前5大客户资料\n序号 客户名称 销售额(元) 占年度销售总额比例\n1 客户一 3,057,583,991.69 10.25%\n2 客户二 1,356,030,459.06 4.54%\n3 客户三 1,334,159,398.00 4.47%\n4 客户四 1,288,181,590.68 4.32%\n5 客户五 1,283,566,833.41 4.30%\n合计 -- 8,319,522,272.84 27.88%\n主要客户其他情况说明\n□适用不适用\n公司主要供应商情况\n前五名供应商合计采购金额(元) 4,460,706,902.57\n前五名供应商合计采购金额占年度采购总额比例 16.32%\n前五名供应商采购额中关联方采购额占年度采购总额比例 0.00%\n公司前5名供应商资料\n序号 供应商名称 采购额(元) 占年度采购总额比例\n29"
+                    },
+                    {
+                      "company_id": "002371.SZ",
+                      "document_id": "cninfo-002371-2024-ar-1223309278",
+                      "evidence_id": "cninfo-002371-2024-ar-1223309278:p0032:l29-45:e7e60a1cf6f71",
+                      "evidence_sha256": "7e60a1cf6f71af30d718b0c906a373317fa1e244fb16094347c4a3000e243d32",
+                      "line_end": 45,
+                      "line_start": 29,
+                      "matched_terms": [],
+                      "page_id": "cninfo-002371-2024-ar-1223309278:p0032:2df344bb90b450a5",
+                      "pdf_page": 32,
+                      "retrieval_rank": 3,
+                      "retrieval_score": 0.0,
+                      "text": "存货 23,478,601,767.22 35.73% 16,992,011,957.89 31.69% 4.04%\n投资性房地产 53,391,283.64 0.08% 55,382,078.56 0.10% -0.02%\n长期股权投资 66,300,616.41 0.10% 3,392,399.00 0.01% 0.09%\n固定资产 6,204,790,149.34 9.44% 3,352,493,888.90 6.25% 3.19%\n在建工程 192,338,301.51 0.29% 2,027,315,399.33 3.78% -3.49%\n使用权资产 224,113,700.76 0.34% 214,570,013.47 0.40% -0.06%\n短期借款 3,000,000.00 0.00% 23,066,475.91 0.04% -0.04%\n新签订单继续\n保持良好趋\n势,客户结\n合同负债 6,214,163,863.25 9.46% 8,316,892,377.88 15.51% -6.05% 构、订单结构\n的变化,客户\n预付款比例有\n所下降。\n长期借款 3,946,105,390.91 6.01% 5,835,243,587.06 10.88% -4.87%\n租赁负债 162,592,146.48 0.25% 142,297,196.26 0.27% -0.02%\n32"
+                    }
+                  ],
+                  "note": "已定位候选原文窗口，语义支持仍需独立审核",
+                  "observations": [],
+                  "status": "FOUND"
+                }
+              },
+              {
+                "action": {
+                  "action_id": "action-3583499b076ad3edc4cda0bb22518b1642dd1b1d4ceb0d5a427e75250599525f",
+                  "arguments": {
+                    "need": "RECEIVABLE_AGING",
+                    "question": "应收账款 账龄 坏账准备 信用风险",
+                    "reporting_year": 2024
+                  },
+                  "as_of_date": "2025-04-30",
+                  "company_id": "002371.SZ",
+                  "corpus_snapshot_id": "s3-semiconductor-equipment-ar-v1",
+                  "gap_id": "s5-context-002371.SZ-RECEIVABLE_AGING",
+                  "reason": "定位RECEIVABLE_AGING相关原文；不自动认证语义支持",
+                  "tool": "SEARCH_DISCLOSURE"
+                },
+                "changed_gap_status": "RESOLVED",
+                "failure_type": null,
+                "result": {
+                  "action_id": "action-3583499b076ad3edc4cda0bb22518b1642dd1b1d4ceb0d5a427e75250599525f",
+                  "evidence": [
+                    {
+                      "company_id": "002371.SZ",
+                      "document_id": "cninfo-002371-2024-ar-1223309278",
+                      "evidence_id": "cninfo-002371-2024-ar-1223309278:p0118:l22-35:edee9ffa065ba",
+                      "evidence_sha256": "dee9ffa065baed8d8bce22c213d53e8d6b3b5f9a0ce0fa111aa0fd17aa26aa81",
+                      "line_end": 35,
+                      "line_start": 22,
+                      "matched_terms": [],
+                      "page_id": "cninfo-002371-2024-ar-1223309278:p0118:95a0a0f3f4fb21a2",
+                      "pdf_page": 118,
+                      "retrieval_rank": 1,
+                      "retrieval_score": 0.0,
+                      "text": "本公司将逾期天数超过30日,或者导致信用风险显著增加因素中一个或多个指标发生显著变化的应收款项确认为\n单项计提信用损失。除非本公司无需付出过多成本或努力即可获得合理且有依据的信息,证明虽然超过合同约定的付款\n期限30天,但信用风险自初始确认以来并未显著增加。\n本公司对单项计提信用损失的应收款项单独进行信用减值测试,单独测试未发生信用损失的应收款项,包括在组合\n中进行信用减值测试。已单项确认信用损失的应收款项,不再包括在组合中进行信用减值测试,主要为应收关联方款项;\n与对方存在争议或涉及诉讼、仲裁的应收款项;已有明显迹象表明债务人很可能无法履行还款义务的应收款项等。\n应收账款按照信用风险特征组合:\n组合名称 组合内容\n应收客户款项 以账龄表为基础的减值准备矩阵\n14、应收款项融资\n本公司对于《企业会计准则第14号——收入》所规定的、不含重大融资成分(包括根据该准则不考虑不超过一年\n的合同中融资成分的情况)的应收款项融资,采用预期信用损失的简化模型,即始终按照整个存续期内预期信用损失的\n金额计量其损失准备,由此形成的损失准备的增加或转回金额,作为减值损失或利得计入当期损益。\n118"
+                    },
+                    {
+                      "company_id": "002371.SZ",
+                      "document_id": "cninfo-002371-2024-ar-1223309278",
+                      "evidence_id": "cninfo-002371-2024-ar-1223309278:p0136:l15-33:e8f6c1e3b35d9",
+                      "evidence_sha256": "8f6c1e3b35d9e77864ae779efff5a82f19c4db4582d5ce1f2c4b448954e2711b",
+                      "line_end": 33,
+                      "line_start": 15,
+                      "matched_terms": [],
+                      "page_id": "cninfo-002371-2024-ar-1223309278:p0136:9de6d3e25a393c2e",
+                      "pdf_page": 136,
+                      "retrieval_rank": 2,
+                      "retrieval_score": 0.0,
+                      "text": "类别 期初余额 期末余额\n计提 收回或转回 核销 其他\n单项计提 3,675,000.00 3,675,000.00\n账龄矩阵 304,706,823.84 169,476,660.50 10,317,782.40 463,865,701.94\n合计 304,706,823.84 173,151,660.50 10,317,782.40 467,540,701.94\n(4)本期实际核销的应收账款情况\n单位:元\n项目 核销金额\n实际核销的应收账款 10,317,782.40\n(5)按欠款方归集的期末余额前五名的应收账款和合同资产情况\n单位:元\n占应收账款和合 应收账款坏账准\n应收账款期末余 合同资产期末余 应收账款和合同\n单位名称 同资产期末余额 备和合同资产减\n额 额 资产期末余额\n合计数的比例 值准备期末余额\n客户一 444,811,001.22 62,107,800.00 506,918,801.22 7.22% 33,753,140.06\n客户二 256,112,582.04 256,112,582.04 3.65% 12,805,629.10\n客户三 220,298,688.00 220,298,688.00 3.14% 13,317,112.70"
+                    },
+                    {
+                      "company_id": "002371.SZ",
+                      "document_id": "cninfo-002371-2024-ar-1223309278",
+                      "evidence_id": "cninfo-002371-2024-ar-1223309278:p0137:l31-47:e88e6597507cc",
+                      "evidence_sha256": "88e6597507cc1c594976828e9d7ca5f805716c67fc9d800ae2e835e88a405c9d",
+                      "line_end": 47,
+                      "line_start": 31,
+                      "matched_terms": [],
+                      "page_id": "cninfo-002371-2024-ar-1223309278:p0137:a50f79278dbb6e24",
+                      "pdf_page": 137,
+                      "retrieval_rank": 3,
+                      "retrieval_score": 0.0,
+                      "text": "账面余额 坏账准备 计提比例\n账龄矩阵 504,320,848.15 25,216,042.41 5.00%\n合计 504,320,848.15 25,216,042.41\n确定该组合依据的说明:\n按预期信用损失一般模型计提坏账准备\n□适用不适用\n(4)本期计提、收回或转回的坏账准备情况\n单位:元\n项目 本期计提 本期收回或转回 本期转销/核销 原因\n账龄矩阵 10,154,317.98\n合计 10,154,317.98 ——\n(5)本期实际核销的合同资产情况\n7、应收款项融资\n(1)应收款项融资分类列示\n单位:元\n项目 期末余额 期初余额\n137"
+                    }
+                  ],
+                  "note": "已定位候选原文窗口，语义支持仍需独立审核",
+                  "observations": [],
+                  "status": "FOUND"
+                }
+              },
+              {
+                "action": {
+                  "action_id": "action-7ba34f460af755bd3b98162ade2cad9a1c7f2f51d3867016bce4bdb61d75e253",
+                  "arguments": {
+                    "need": "PURCHASE_AND_PAYMENTS",
+                    "question": "购买商品接受劳务支付的现金 采购付款 经营现金流",
+                    "reporting_year": 2024
+                  },
+                  "as_of_date": "2025-04-30",
+                  "company_id": "002371.SZ",
+                  "corpus_snapshot_id": "s3-semiconductor-equipment-ar-v1",
+                  "gap_id": "s5-context-002371.SZ-PURCHASE_AND_PAYMENTS",
+                  "reason": "定位PURCHASE_AND_PAYMENTS相关原文；不自动认证语义支持",
+                  "tool": "SEARCH_DISCLOSURE"
+                },
+                "changed_gap_status": "RESOLVED",
+                "failure_type": null,
+                "result": {
+                  "action_id": "action-7ba34f460af755bd3b98162ade2cad9a1c7f2f51d3867016bce4bdb61d75e253",
+                  "evidence": [
+                    {
+                      "company_id": "002371.SZ",
+                      "document_id": "cninfo-002371-2024-ar-1223309278",
+                      "evidence_id": "cninfo-002371-2024-ar-1223309278:p0100:l33-47:e48a51352c488",
+                      "evidence_sha256": "48a51352c488a52d572575aa370ca226f13e500c9a912cb285a0faa091d199a2",
+                      "line_end": 47,
+                      "line_start": 33,
+                      "matched_terms": [],
+                      "page_id": "cninfo-002371-2024-ar-1223309278:p0100:8da0204c6eaecc53",
+                      "pdf_page": 100,
+                      "retrieval_rank": 1,
+                      "retrieval_score": 0.0,
+                      "text": "销售商品、提供劳务收到的现金 42,973,143.00 506,004,223.49\n收到的税费返还\n收到其他与经营活动有关的现金 328,613,009.44 244,148,942.54\n经营活动现金流入小计 371,586,152.44 750,153,166.03\n购买商品、接受劳务支付的现金 416,915,341.80 2,364,532.35\n支付给职工以及为职工支付的现金 57,847,146.32 56,145,336.75\n支付的各项税费 2,311,018.29 8,140,571.37\n支付其他与经营活动有关的现金 310,386,016.68 188,267,355.51\n经营活动现金流出小计 787,459,523.09 254,917,795.98\n经营活动产生的现金流量净额 -415,873,370.65 495,235,370.05\n二、投资活动产生的现金流量:\n收回投资收到的现金 2,549,346.03\n取得投资收益收到的现金 489,319,129.92 58,090,297.12\n处置固定资产、无形资产和其他长\n57,000.00 21,600.00"
+                    },
+                    {
+                      "company_id": "002371.SZ",
+                      "document_id": "cninfo-002371-2024-ar-1223309278",
+                      "evidence_id": "cninfo-002371-2024-ar-1223309278:p0099:l16-32:ed8cbc7e5f9e4",
+                      "evidence_sha256": "d8cbc7e5f9e4831669ab0c3902b0dad99c4cc9968fc7f9bef77da514adf784fd",
+                      "line_end": 32,
+                      "line_start": 16,
+                      "matched_terms": [],
+                      "page_id": "cninfo-002371-2024-ar-1223309278:p0099:af6b13b4657e8fdd",
+                      "pdf_page": 99,
+                      "retrieval_rank": 2,
+                      "retrieval_score": 0.0,
+                      "text": "代理买卖证券收到的现金净额\n收到的税费返还 715,439,085.83 587,664,826.85\n收到其他与经营活动有关的现金 3,241,462,088.58 1,993,429,623.40\n经营活动现金流入小计 30,035,457,702.26 23,843,814,426.46\n购买商品、接受劳务支付的现金 19,934,653,320.77 15,193,333,549.88\n客户贷款及垫款净增加额\n存放中央银行和同业款项净增加额\n支付原保险合同赔付款项的现金\n拆出资金净增加额\n支付利息、手续费及佣金的现金\n支付保单红利的现金\n支付给职工以及为职工支付的现金 5,026,108,297.27 3,875,370,885.80\n支付的各项税费 1,969,593,701.07 1,671,196,199.94\n支付其他与经营活动有关的现金 1,531,937,328.88 738,906,056.30\n经营活动现金流出小计 28,462,292,647.99 21,478,806,691.92\n经营活动产生的现金流量净额 1,573,165,054.27 2,365,007,734.54\n二、投资活动产生的现金流量:"
+                    },
+                    {
+                      "company_id": "002371.SZ",
+                      "document_id": "cninfo-002371-2024-ar-1223309278",
+                      "evidence_id": "cninfo-002371-2024-ar-1223309278:p0031:l38-49:edd1400e05662",
+                      "evidence_sha256": "dd1400e0566206fae176993eaae92516e462c853ab190c30ea050f5d47bb2f07",
+                      "line_end": 49,
+                      "line_start": 38,
+                      "matched_terms": [],
+                      "page_id": "cninfo-002371-2024-ar-1223309278:p0031:e514d9c8a36c5579",
+                      "pdf_page": 31,
+                      "retrieval_rank": 3,
+                      "retrieval_score": 0.0,
+                      "text": "适用□不适用\n1、2024年经营活动现金流入小计为30,035,457,702.26元,比上年同期增加25.97%,其主要原因是:2024年销售订单继\n续保持良好趋势,收到的货款增加。\n2、2024年经营活动现金流出小计为28,462,292,647.99元,比上年同期增加32.51%,其主要原因是:公司为了满足订单\n需求,生产规模较上期增加,材料采购及人工成本支付的现金增加。\n3、2024年经营活动产生的现金流量净额为1,573,165,054.27元,比上年同期减少33.48%,其主要原因是:公司为了满足\n订单需求,采购商品支付的货款增加。\n4、2024年投资活动现金流入小计为7,502,223.44元,比上年同期增加165.26%,其主要原因是:处置长期资产收回的现\n金净额增加。\n5、2024年筹资活动现金流入小计为1,989,199,903.07元,比上年同期减少32.14%,其主要原因是:取得借款收到的现金\n减少。\n31"
+                    }
+                  ],
+                  "note": "已定位候选原文窗口，语义支持仍需独立审核",
+                  "observations": [],
+                  "status": "FOUND"
+                }
+              }
+            ],
+            "no_progress_rounds": 0,
+            "rounds": 2,
+            "stop_reason": null
+          }
+        },
+        "runtime": {
+          "cancel_requested": false,
+          "checkpoint_sha256": null,
+          "clarification_status": "NONE",
+          "connection_state": "CONNECTED",
+          "current_step_id": null,
+          "event_cursor": 1,
+          "event_stream_id": "fixture:b2-rounds:v1",
+          "queue_state": "UNKNOWN",
+          "resume_readiness": "UNKNOWN",
+          "waiting_gap_ids": [],
+          "worker_state": "UNKNOWN"
+        },
+        "schema_version": "1.0.0",
+        "steps": [
+          {
+            "acceptance": "UNKNOWN",
+            "attempt": null,
+            "identity_kind": "SYNTHETIC",
+            "instance_id": "fixture-baseline:reuse",
+            "lifecycle": "REUSED",
+            "node_id": "baseline",
+            "occurred_at": null,
+            "origin": "RESULT_REUSE",
+            "output_ids": [],
+            "round": null,
+            "source": null,
+            "step_id": "baseline"
+          },
+          {
+            "acceptance": "CHECKPOINT_CONFIRMED",
+            "attempt": 1,
+            "identity_kind": "SYNTHETIC",
+            "instance_id": "fixture-b2-rounds:round-2",
+            "lifecycle": "FUNCTION_RETURNED",
+            "node_id": "execute_actions",
+            "occurred_at": null,
+            "origin": "WEB_FIXTURE",
+            "output_ids": [],
+            "round": 2,
+            "source": null,
+            "step_id": "round-2"
+          }
+        ],
+        "task": {
+          "access_mode": "MOCK",
+          "available_actions": [
+            {
+              "authority": "READ_ONLY",
+              "enabled": false,
+              "operation": "VIEW_REPORT",
+              "reason": "正式报告尚未通过发布核验。"
+            },
+            {
+              "authority": "READ_ONLY",
+              "enabled": true,
+              "operation": "VIEW_STEPS",
+              "reason": null
+            },
+            {
+              "authority": "READ_ONLY",
+              "enabled": false,
+              "operation": "VIEW_EVIDENCE",
+              "reason": "当前记录没有可读取的原文。"
+            },
+            {
+              "authority": "SIMULATED",
+              "enabled": false,
+              "operation": "FOLLOWUP",
+              "reason": "追问需要已发布结果和可写入的当前会话。"
+            },
+            {
+              "authority": "SIMULATED",
+              "enabled": true,
+              "operation": "CANCEL",
+              "reason": null
+            },
+            {
+              "authority": "SIMULATED",
+              "enabled": false,
+              "operation": "CLARIFY",
+              "reason": "仅当前等待检查点可接收新的澄清决定。"
+            },
+            {
+              "authority": "SIMULATED",
+              "enabled": false,
+              "operation": "RESUME",
+              "reason": "恢复需要协调层明确核验安全；等待任务还需要已记录决定。"
+            },
+            {
+              "authority": "SIMULATED",
+              "enabled": true,
+              "operation": "NEW_TASK",
+              "reason": null
+            }
+          ],
+          "baseline": {
+            "final_state_sha256": null,
+            "label": "【合成过程】复用已有基线，不重播B1",
+            "origin": "RESULT_REUSE",
+            "task_id": "fixture-baseline"
+          },
+          "company_labels": {
+            "002371.SZ": "北方华创",
+            "688072.SH": "拓荆科技",
+            "688082.SH": "盛美上海"
+          },
+          "context": {
+            "as_of_date": "2025-04-30",
+            "company_ids": [
+              "002371.SZ",
+              "688072.SH",
+              "688082.SH"
+            ],
+            "corpus_snapshot_id": "s3-semiconductor-equipment-ar-v1",
+            "fiscal_years": [
+              2023,
+              2024
+            ],
+            "protocol_config_sha256": "0a9a877083f262f29407bfcfa0c7d3bea39c31bfc83e83e1db5c7be68c6ed52a",
+            "protocol_id": "revenue_quality_v1",
+            "protocol_version": "1.0.0",
+            "run_id": "fixture-b2-rounds"
+          },
+          "created_at": null,
+          "execution_mode": "RULES",
+          "origin": "WEB_FIXTURE",
+          "question": "【页面样本】比较收入、经营现金流和应收账款，核查披露与局限。",
+          "task_id": "fixture-b2-rounds",
+          "task_status": "RUNNING",
+          "workflow": "B2"
+        },
+        "ui": {
+          "anchor": null,
+          "editing_followup": false,
+          "follow_progress": true,
+          "manual_browsing": false,
+          "panel": "PROCESS",
+          "reader_open": false,
+          "reduced_motion": false,
+          "scroll_y": 0,
+          "selected_evidence_id": null,
+          "selected_round": null,
+          "selected_step_id": null,
+          "text_selection_active": false
+        }
+      }
+    },
+    {
+      "events": [
+        {
+          "action_id": null,
+          "attempt": null,
+          "event_stream_id": "fixture:b2-rounds:v1",
+          "instance_id": null,
+          "journal_key": null,
+          "occurred_at": null,
+          "origin": "WEB_FIXTURE",
+          "output_ids": [],
+          "round": null,
+          "seq": 1,
+          "source": null,
+          "source_event_ids": [],
+          "step_id": null,
+          "task_id": "fixture-b2-rounds",
+          "type": "CHECKPOINT_ACCEPTED"
+        }
+      ],
+      "expected": {
+        "auto_enter_report": false,
+        "enabled_operations": [
+          "VIEW_STEPS",
+          "CANCEL",
+          "NEW_TASK"
+        ],
+        "result_available": false,
+        "suggested_panel": "PROCESS"
+      },
+      "name": "round-3",
+      "snapshot": {
+        "budget": {
+          "baseline_historical_estimate": null,
+          "currency": "USD",
+          "estimate_kind": "USAGE_ESTIMATE_NOT_INVOICE",
+          "note": "未提供金额表示未知，不能显示为零；组合总预算尚未建立。",
+          "pending_reservation": null,
+          "settled_estimate": null,
+          "source": null,
+          "total_calls": null
+        },
+        "outputs": [],
+        "provenance": {
+          "kind": "SYNTHETIC",
+          "label": "合成页面场景，非真实研究执行",
+          "notes": [
+            "数据模型与状态规则用于W1验收；操作只在样本内生效。",
+            "动作内容取自历史，本场景的轮次编排为合成，不重建历史节点事件。"
+          ],
+          "source_artifacts": [
+            {
+              "path": "runs/s6/s6-b2-live-20261001-03/publication.json",
+              "pointer": "",
+              "sha256": "05d077d177209574c80399d1deb618e7f314de0d27bb9ba5952c3847b6d6c1c1"
+            },
+            {
+              "path": "runs/s6/s6-b2-live-20261001-03/report.md",
+              "pointer": "",
+              "sha256": "76a9421170bca5071c1e32e6fe2263a7977bb0cfc9f8ed913f3e2ad0c51d4ccd"
+            },
+            {
+              "path": "runs/s6/s6-b2-live-20261001-03/final_state.json",
+              "pointer": "",
+              "sha256": "44f47973689c86c9fef9137cb1b0f23184360e1ba8a208c8000fb43c8601ff31"
+            },
+            {
+              "path": "runs/s6/s6-b2-live-20261001-03/context_capsule.json",
+              "pointer": "",
+              "sha256": "e1bc0c8203801cb19e3a151563be799bcff350ac27cafd6e6cba65f49f7b3745"
+            },
+            {
+              "path": "storage/s6/tasks/s6-b2-live-20261001-03/session.sqlite",
+              "pointer": "",
+              "sha256": "930918543416593b59a223af22ce0d8ed4289793162b40d3c3162c19b102ab47"
+            },
+            {
+              "path": "storage/s6/tasks/s6-b2-live-20261001-03/baseline.json",
+              "pointer": "",
+              "sha256": "f93760c24a0cafaba4b8c84aa10ab2be7e03c0ec35eb88eb552a96e8e3dd54b3"
+            },
+            {
+              "path": "storage/s6/tasks/s6-b2-live-20261001-03/policy.json",
+              "pointer": "",
+              "sha256": "9aed722be677d02b8e8fa0ef4e6928634a7ece338e500bd329147424b49256c5"
+            }
+          ],
+          "source_revalidation": "NOT_CHECKED"
+        },
+        "publication": {
+          "business_validation": "UNKNOWN",
+          "files": [],
+          "publication_status": null,
+          "reasons": [],
+          "result_available": false,
+          "scope_matches": null,
+          "verification": "NOT_PUBLISHED"
+        },
+        "research": {
+          "calculation_slots": {},
+          "calculations": [],
+          "claims": [],
+          "dependency_issues": [],
+          "documents": [],
+          "evidence": [],
+          "gaps": [],
+          "observations": [],
+          "report_markdown": null,
+          "supplement": {
+            "action_count": 6,
+            "gaps": [
+              {
+                "affected_claim_ids": [],
+                "attempted_action_ids": [],
+                "closing_condition": "NEW_SNAPSHOT_OR_USER_INPUT",
+                "company_id": "002371.SZ",
+                "description": "【合成等待场景】当前资料不足，需要明确保留局限或另建新快照。",
+                "evidence_id": null,
+                "fiscal_year": null,
+                "gap_id": "fixture-source-gap",
+                "gap_type": "SOURCE_REQUEST",
+                "metric_id": null,
+                "need": null,
+                "resolution_note": null,
+                "severity": "MATERIAL",
+                "status": "OPEN"
+              }
+            ],
+            "history": [
+              {
+                "action": {
+                  "action_id": "action-5dd6fc582edc37dc572773909c3f2f689998a2106e4fe61be3613735217615ac",
+                  "arguments": {
+                    "fiscal_year": 2023,
+                    "metric_id": "revenue"
+                  },
+                  "as_of_date": "2025-04-30",
+                  "company_id": "002371.SZ",
+                  "corpus_snapshot_id": "s3-semiconductor-equipment-ar-v1",
+                  "gap_id": "s5-missing-002371.SZ-2023-revenue",
+                  "reason": "缺少可用的来源核验财务观察",
+                  "tool": "QUERY_METRIC"
+                },
+                "changed_gap_status": "RESOLVED",
+                "failure_type": null,
+                "result": {
+                  "action_id": "action-5dd6fc582edc37dc572773909c3f2f689998a2106e4fe61be3613735217615ac",
+                  "evidence": [
+                    {
+                      "company_id": "002371.SZ",
+                      "document_id": "cninfo-002371-2024-ar-1223309278",
+                      "evidence_id": "cninfo-002371-2024-ar-1223309278:p0095:ed2d227d995d30a5a",
+                      "evidence_sha256": "d2d227d995d30a5a6602ae323a1ee86e08ee34bf3e9f4094d3b44f6878bfa6a8",
+                      "line_end": 43,
+                      "line_start": 1,
+                      "matched_terms": [],
+                      "page_id": "cninfo-002371-2024-ar-1223309278:p0095:62f6d4497fadf500",
+                      "pdf_page": 95,
+                      "retrieval_rank": 1,
+                      "retrieval_score": 0.0,
+                      "text": "北方华创科技集团股份有限公司2024年年度报告全文\n非流动负债:\n长期借款 3,888,567,797.01 4,004,147,243.06\n应付债券\n其中:优先股\n永续债\n租赁负债 8,174,555.93 8,256,078.36\n长期应付款\n长期应付职工薪酬\n预计负债\n递延收益 31,230,000.00 31,230,000.00\n递延所得税负债\n其他非流动负债\n非流动负债合计 3,927,972,352.94 4,043,633,321.42\n负债合计 4,291,452,315.47 4,587,205,432.60\n所有者权益:\n股本 533,617,510.00 530,208,716.00\n其他权益工具\n其中:优先股\n永续债\n资本公积 16,026,256,981.44 14,881,984,132.60\n减:库存股 44,712,349.50\n其他综合收益 -4,517,892.61 -2,789,456.14\n专项储备\n盈余公积 207,562,621.45 119,206,582.97\n未分配利润 806,241,965.37 425,232,957.01\n所有者权益合计 17,569,161,185.65 15,909,130,582.94\n负债和所有者权益总计 21,860,613,501.12 20,496,336,015.54\n3、合并利润表\n单位:元\n项目 2024年度 2023年度\n一、营业总收入 29,838,069,162.26 22,079,458,092.37\n其中:营业收入 29,838,069,162.26 22,079,458,092.37\n利息收入\n已赚保费\n手续费及佣金收入\n二、营业总成本 24,154,315,813.06 18,465,531,116.08\n其中:营业成本 17,051,176,726.88 13,076,026,815.87\n利息支出\n手续费及佣金支出\n退保金\n赔付支出净额\n95"
+                    }
+                  ],
+                  "note": "读取当前快照的已复核指标；不回填新资料",
+                  "observations": [
+                    {
+                      "company_id": "002371.SZ",
+                      "content_sha256": "dc5ea4d5825b7959ff70acee9cc29b937799452c33c70713afe648192df04278",
+                      "currency": "CNY",
+                      "document_id": "cninfo-002371-2024-ar-1223309278",
+                      "document_published_on": "2025-04-25",
+                      "document_sha256": "70168364fd518323effa2d11ff337a172783e3597ed6f896353ca62ea3f75cfe",
+                      "evidence_refs": [
+                        {
+                          "evidence_id": "cninfo-002371-2024-ar-1223309278:p0095:ed2d227d995d30a5a",
+                          "pdf_page": 95,
+                          "source_label": "revenue"
+                        }
+                      ],
+                      "extraction_method": "TABLE_EXTRACTED",
+                      "fiscal_year": 2023,
+                      "measurement_basis": "INCOME_STATEMENT_REPORTED_AMOUNT",
+                      "metric_id": "revenue",
+                      "observation_id": "obs-002371.SZ-revenue-2023-01-01_2023-12-31-v1-dc5ea4d5825b",
+                      "observation_version": 1,
+                      "observed_at": null,
+                      "period_end": "2023-12-31",
+                      "period_kind": "FLOW",
+                      "period_start": "2023-01-01",
+                      "raw_unit": "CNY_YUAN",
+                      "raw_value": "22079458092.37",
+                      "raw_value_text": "22,079,458,092.37",
+                      "review_note": "Reviewed row mapping source-table-columns-v1; current/prior column 1; comparative figures available only on this disclosure date.",
+                      "review_status": "SOURCE_CHECKED",
+                      "standard_unit": "CNY_YUAN",
+                      "standard_value": "22079458092.37",
+                      "statement_scope": "CONSOLIDATED",
+                      "supersedes_observation_id": null,
+                      "value_status": "OBSERVED"
+                    }
+                  ],
+                  "status": "FOUND"
+                }
+              },
+              {
+                "action": {
+                  "action_id": "action-30b579a7acaf9d13808719b88ab031928f177dd2da1633dbf5a0fef96181bc89",
+                  "arguments": {
+                    "need": "CUSTOMER_MIX",
+                    "question": "主要客户 客户集中度 收入结构",
+                    "reporting_year": 2024
+                  },
+                  "as_of_date": "2025-04-30",
+                  "company_id": "002371.SZ",
+                  "corpus_snapshot_id": "s3-semiconductor-equipment-ar-v1",
+                  "gap_id": "s5-context-002371.SZ-CUSTOMER_MIX",
+                  "reason": "定位CUSTOMER_MIX相关原文；不自动认证语义支持",
+                  "tool": "SEARCH_DISCLOSURE"
+                },
+                "changed_gap_status": "RESOLVED",
+                "failure_type": null,
+                "result": {
+                  "action_id": "action-30b579a7acaf9d13808719b88ab031928f177dd2da1633dbf5a0fef96181bc89",
+                  "evidence": [
+                    {
+                      "company_id": "002371.SZ",
+                      "document_id": "cninfo-002371-2024-ar-1223309278",
+                      "evidence_id": "cninfo-002371-2024-ar-1223309278:p0126:l7-20:e2fa90db386d5",
+                      "evidence_sha256": "2fa90db386d5371468cc9428905cb6902e2c9c842ec6e07496e953301244a322",
+                      "line_end": 20,
+                      "line_start": 7,
+                      "matched_terms": [],
+                      "page_id": "cninfo-002371-2024-ar-1223309278:p0126:182ca9d91e44f95d",
+                      "pdf_page": 126,
+                      "retrieval_rank": 1,
+                      "retrieval_score": 0.0,
+                      "text": "本公司向客户转让可明确区分商品的承诺。交易价格是指本公司因向客户转让商品而预期有权收取的对价金额,不包括\n代第三方收取的款项以及本公司预期将退还给客户的款项。\n履约义务是在某一时段内履行、还是在某一时点履行,取决于合同条款及相关法律规定。如果履约义务是在某一时\n段内履行的,则本公司按照履约进度确认收入。否则,本公司于客户取得相关资产控制权的某一时点确认收入。\n本公司根据在向客户转让商品或服务前是否拥有对该商品或服务的控制权,来判断本公司从事交易时的身份是主要\n责任人还是代理人。在向客户转让商品或服务前能够控制该商品或服务的,本公司为主要责任人,按照已收或应收对价\n总额确认收入;否则,本公司为代理人,按照预期有权收取的佣金或手续费的金额确认收入,该金额按照已收或应收对\n价总额扣除应支付给其他相关方的价款后的净额,或者按照既定的佣金金额或比例等确定。\n本公司按照业务类型确定的收入确认具体原则和计量方法:\n(1)商品销售收入\n本公司销售商品的业务通常仅包括转让商品的履约义务,根据不同的产品类型及合同安排,于控制权转移至客户,\n风险报酬转移时,视不同的产品类型及合同安排根据签收单或验收单等资料确认收入。\n(2)提供劳务收入\n本公司向客户提供技术服务,如果本公司履约的同时客户即取得并消耗本公司履约所带来的经济利益,或者客户能"
+                    },
+                    {
+                      "company_id": "002371.SZ",
+                      "document_id": "cninfo-002371-2024-ar-1223309278",
+                      "evidence_id": "cninfo-002371-2024-ar-1223309278:p0029:l22-41:eccd12ef88b96",
+                      "evidence_sha256": "ccd12ef88b96a962accb71f6b69ee86729e0a78d197aa9478da137b5dcd901a2",
+                      "line_end": 41,
+                      "line_start": 22,
+                      "matched_terms": [],
+                      "page_id": "cninfo-002371-2024-ar-1223309278:p0029:e692a495af6e2083",
+                      "pdf_page": 29,
+                      "retrieval_rank": 2,
+                      "retrieval_score": 0.0,
+                      "text": "前五名客户合计销售金额(元) 8,319,522,272.84\n前五名客户合计销售金额占年度销售总额比例 27.88%\n前五名客户销售额中关联方销售额占年度销售总额比例 0.00%\n公司前5大客户资料\n序号 客户名称 销售额(元) 占年度销售总额比例\n1 客户一 3,057,583,991.69 10.25%\n2 客户二 1,356,030,459.06 4.54%\n3 客户三 1,334,159,398.00 4.47%\n4 客户四 1,288,181,590.68 4.32%\n5 客户五 1,283,566,833.41 4.30%\n合计 -- 8,319,522,272.84 27.88%\n主要客户其他情况说明\n□适用不适用\n公司主要供应商情况\n前五名供应商合计采购金额(元) 4,460,706,902.57\n前五名供应商合计采购金额占年度采购总额比例 16.32%\n前五名供应商采购额中关联方采购额占年度采购总额比例 0.00%\n公司前5名供应商资料\n序号 供应商名称 采购额(元) 占年度采购总额比例\n29"
+                    },
+                    {
+                      "company_id": "002371.SZ",
+                      "document_id": "cninfo-002371-2024-ar-1223309278",
+                      "evidence_id": "cninfo-002371-2024-ar-1223309278:p0032:l29-45:e7e60a1cf6f71",
+                      "evidence_sha256": "7e60a1cf6f71af30d718b0c906a373317fa1e244fb16094347c4a3000e243d32",
+                      "line_end": 45,
+                      "line_start": 29,
+                      "matched_terms": [],
+                      "page_id": "cninfo-002371-2024-ar-1223309278:p0032:2df344bb90b450a5",
+                      "pdf_page": 32,
+                      "retrieval_rank": 3,
+                      "retrieval_score": 0.0,
+                      "text": "存货 23,478,601,767.22 35.73% 16,992,011,957.89 31.69% 4.04%\n投资性房地产 53,391,283.64 0.08% 55,382,078.56 0.10% -0.02%\n长期股权投资 66,300,616.41 0.10% 3,392,399.00 0.01% 0.09%\n固定资产 6,204,790,149.34 9.44% 3,352,493,888.90 6.25% 3.19%\n在建工程 192,338,301.51 0.29% 2,027,315,399.33 3.78% -3.49%\n使用权资产 224,113,700.76 0.34% 214,570,013.47 0.40% -0.06%\n短期借款 3,000,000.00 0.00% 23,066,475.91 0.04% -0.04%\n新签订单继续\n保持良好趋\n势,客户结\n合同负债 6,214,163,863.25 9.46% 8,316,892,377.88 15.51% -6.05% 构、订单结构\n的变化,客户\n预付款比例有\n所下降。\n长期借款 3,946,105,390.91 6.01% 5,835,243,587.06 10.88% -4.87%\n租赁负债 162,592,146.48 0.25% 142,297,196.26 0.27% -0.02%\n32"
+                    }
+                  ],
+                  "note": "已定位候选原文窗口，语义支持仍需独立审核",
+                  "observations": [],
+                  "status": "FOUND"
+                }
+              },
+              {
+                "action": {
+                  "action_id": "action-3583499b076ad3edc4cda0bb22518b1642dd1b1d4ceb0d5a427e75250599525f",
+                  "arguments": {
+                    "need": "RECEIVABLE_AGING",
+                    "question": "应收账款 账龄 坏账准备 信用风险",
+                    "reporting_year": 2024
+                  },
+                  "as_of_date": "2025-04-30",
+                  "company_id": "002371.SZ",
+                  "corpus_snapshot_id": "s3-semiconductor-equipment-ar-v1",
+                  "gap_id": "s5-context-002371.SZ-RECEIVABLE_AGING",
+                  "reason": "定位RECEIVABLE_AGING相关原文；不自动认证语义支持",
+                  "tool": "SEARCH_DISCLOSURE"
+                },
+                "changed_gap_status": "RESOLVED",
+                "failure_type": null,
+                "result": {
+                  "action_id": "action-3583499b076ad3edc4cda0bb22518b1642dd1b1d4ceb0d5a427e75250599525f",
+                  "evidence": [
+                    {
+                      "company_id": "002371.SZ",
+                      "document_id": "cninfo-002371-2024-ar-1223309278",
+                      "evidence_id": "cninfo-002371-2024-ar-1223309278:p0118:l22-35:edee9ffa065ba",
+                      "evidence_sha256": "dee9ffa065baed8d8bce22c213d53e8d6b3b5f9a0ce0fa111aa0fd17aa26aa81",
+                      "line_end": 35,
+                      "line_start": 22,
+                      "matched_terms": [],
+                      "page_id": "cninfo-002371-2024-ar-1223309278:p0118:95a0a0f3f4fb21a2",
+                      "pdf_page": 118,
+                      "retrieval_rank": 1,
+                      "retrieval_score": 0.0,
+                      "text": "本公司将逾期天数超过30日,或者导致信用风险显著增加因素中一个或多个指标发生显著变化的应收款项确认为\n单项计提信用损失。除非本公司无需付出过多成本或努力即可获得合理且有依据的信息,证明虽然超过合同约定的付款\n期限30天,但信用风险自初始确认以来并未显著增加。\n本公司对单项计提信用损失的应收款项单独进行信用减值测试,单独测试未发生信用损失的应收款项,包括在组合\n中进行信用减值测试。已单项确认信用损失的应收款项,不再包括在组合中进行信用减值测试,主要为应收关联方款项;\n与对方存在争议或涉及诉讼、仲裁的应收款项;已有明显迹象表明债务人很可能无法履行还款义务的应收款项等。\n应收账款按照信用风险特征组合:\n组合名称 组合内容\n应收客户款项 以账龄表为基础的减值准备矩阵\n14、应收款项融资\n本公司对于《企业会计准则第14号——收入》所规定的、不含重大融资成分(包括根据该准则不考虑不超过一年\n的合同中融资成分的情况)的应收款项融资,采用预期信用损失的简化模型,即始终按照整个存续期内预期信用损失的\n金额计量其损失准备,由此形成的损失准备的增加或转回金额,作为减值损失或利得计入当期损益。\n118"
+                    },
+                    {
+                      "company_id": "002371.SZ",
+                      "document_id": "cninfo-002371-2024-ar-1223309278",
+                      "evidence_id": "cninfo-002371-2024-ar-1223309278:p0136:l15-33:e8f6c1e3b35d9",
+                      "evidence_sha256": "8f6c1e3b35d9e77864ae779efff5a82f19c4db4582d5ce1f2c4b448954e2711b",
+                      "line_end": 33,
+                      "line_start": 15,
+                      "matched_terms": [],
+                      "page_id": "cninfo-002371-2024-ar-1223309278:p0136:9de6d3e25a393c2e",
+                      "pdf_page": 136,
+                      "retrieval_rank": 2,
+                      "retrieval_score": 0.0,
+                      "text": "类别 期初余额 期末余额\n计提 收回或转回 核销 其他\n单项计提 3,675,000.00 3,675,000.00\n账龄矩阵 304,706,823.84 169,476,660.50 10,317,782.40 463,865,701.94\n合计 304,706,823.84 173,151,660.50 10,317,782.40 467,540,701.94\n(4)本期实际核销的应收账款情况\n单位:元\n项目 核销金额\n实际核销的应收账款 10,317,782.40\n(5)按欠款方归集的期末余额前五名的应收账款和合同资产情况\n单位:元\n占应收账款和合 应收账款坏账准\n应收账款期末余 合同资产期末余 应收账款和合同\n单位名称 同资产期末余额 备和合同资产减\n额 额 资产期末余额\n合计数的比例 值准备期末余额\n客户一 444,811,001.22 62,107,800.00 506,918,801.22 7.22% 33,753,140.06\n客户二 256,112,582.04 256,112,582.04 3.65% 12,805,629.10\n客户三 220,298,688.00 220,298,688.00 3.14% 13,317,112.70"
+                    },
+                    {
+                      "company_id": "002371.SZ",
+                      "document_id": "cninfo-002371-2024-ar-1223309278",
+                      "evidence_id": "cninfo-002371-2024-ar-1223309278:p0137:l31-47:e88e6597507cc",
+                      "evidence_sha256": "88e6597507cc1c594976828e9d7ca5f805716c67fc9d800ae2e835e88a405c9d",
+                      "line_end": 47,
+                      "line_start": 31,
+                      "matched_terms": [],
+                      "page_id": "cninfo-002371-2024-ar-1223309278:p0137:a50f79278dbb6e24",
+                      "pdf_page": 137,
+                      "retrieval_rank": 3,
+                      "retrieval_score": 0.0,
+                      "text": "账面余额 坏账准备 计提比例\n账龄矩阵 504,320,848.15 25,216,042.41 5.00%\n合计 504,320,848.15 25,216,042.41\n确定该组合依据的说明:\n按预期信用损失一般模型计提坏账准备\n□适用不适用\n(4)本期计提、收回或转回的坏账准备情况\n单位:元\n项目 本期计提 本期收回或转回 本期转销/核销 原因\n账龄矩阵 10,154,317.98\n合计 10,154,317.98 ——\n(5)本期实际核销的合同资产情况\n7、应收款项融资\n(1)应收款项融资分类列示\n单位:元\n项目 期末余额 期初余额\n137"
+                    }
+                  ],
+                  "note": "已定位候选原文窗口，语义支持仍需独立审核",
+                  "observations": [],
+                  "status": "FOUND"
+                }
+              },
+              {
+                "action": {
+                  "action_id": "action-7ba34f460af755bd3b98162ade2cad9a1c7f2f51d3867016bce4bdb61d75e253",
+                  "arguments": {
+                    "need": "PURCHASE_AND_PAYMENTS",
+                    "question": "购买商品接受劳务支付的现金 采购付款 经营现金流",
+                    "reporting_year": 2024
+                  },
+                  "as_of_date": "2025-04-30",
+                  "company_id": "002371.SZ",
+                  "corpus_snapshot_id": "s3-semiconductor-equipment-ar-v1",
+                  "gap_id": "s5-context-002371.SZ-PURCHASE_AND_PAYMENTS",
+                  "reason": "定位PURCHASE_AND_PAYMENTS相关原文；不自动认证语义支持",
+                  "tool": "SEARCH_DISCLOSURE"
+                },
+                "changed_gap_status": "RESOLVED",
+                "failure_type": null,
+                "result": {
+                  "action_id": "action-7ba34f460af755bd3b98162ade2cad9a1c7f2f51d3867016bce4bdb61d75e253",
+                  "evidence": [
+                    {
+                      "company_id": "002371.SZ",
+                      "document_id": "cninfo-002371-2024-ar-1223309278",
+                      "evidence_id": "cninfo-002371-2024-ar-1223309278:p0100:l33-47:e48a51352c488",
+                      "evidence_sha256": "48a51352c488a52d572575aa370ca226f13e500c9a912cb285a0faa091d199a2",
+                      "line_end": 47,
+                      "line_start": 33,
+                      "matched_terms": [],
+                      "page_id": "cninfo-002371-2024-ar-1223309278:p0100:8da0204c6eaecc53",
+                      "pdf_page": 100,
+                      "retrieval_rank": 1,
+                      "retrieval_score": 0.0,
+                      "text": "销售商品、提供劳务收到的现金 42,973,143.00 506,004,223.49\n收到的税费返还\n收到其他与经营活动有关的现金 328,613,009.44 244,148,942.54\n经营活动现金流入小计 371,586,152.44 750,153,166.03\n购买商品、接受劳务支付的现金 416,915,341.80 2,364,532.35\n支付给职工以及为职工支付的现金 57,847,146.32 56,145,336.75\n支付的各项税费 2,311,018.29 8,140,571.37\n支付其他与经营活动有关的现金 310,386,016.68 188,267,355.51\n经营活动现金流出小计 787,459,523.09 254,917,795.98\n经营活动产生的现金流量净额 -415,873,370.65 495,235,370.05\n二、投资活动产生的现金流量:\n收回投资收到的现金 2,549,346.03\n取得投资收益收到的现金 489,319,129.92 58,090,297.12\n处置固定资产、无形资产和其他长\n57,000.00 21,600.00"
+                    },
+                    {
+                      "company_id": "002371.SZ",
+                      "document_id": "cninfo-002371-2024-ar-1223309278",
+                      "evidence_id": "cninfo-002371-2024-ar-1223309278:p0099:l16-32:ed8cbc7e5f9e4",
+                      "evidence_sha256": "d8cbc7e5f9e4831669ab0c3902b0dad99c4cc9968fc7f9bef77da514adf784fd",
+                      "line_end": 32,
+                      "line_start": 16,
+                      "matched_terms": [],
+                      "page_id": "cninfo-002371-2024-ar-1223309278:p0099:af6b13b4657e8fdd",
+                      "pdf_page": 99,
+                      "retrieval_rank": 2,
+                      "retrieval_score": 0.0,
+                      "text": "代理买卖证券收到的现金净额\n收到的税费返还 715,439,085.83 587,664,826.85\n收到其他与经营活动有关的现金 3,241,462,088.58 1,993,429,623.40\n经营活动现金流入小计 30,035,457,702.26 23,843,814,426.46\n购买商品、接受劳务支付的现金 19,934,653,320.77 15,193,333,549.88\n客户贷款及垫款净增加额\n存放中央银行和同业款项净增加额\n支付原保险合同赔付款项的现金\n拆出资金净增加额\n支付利息、手续费及佣金的现金\n支付保单红利的现金\n支付给职工以及为职工支付的现金 5,026,108,297.27 3,875,370,885.80\n支付的各项税费 1,969,593,701.07 1,671,196,199.94\n支付其他与经营活动有关的现金 1,531,937,328.88 738,906,056.30\n经营活动现金流出小计 28,462,292,647.99 21,478,806,691.92\n经营活动产生的现金流量净额 1,573,165,054.27 2,365,007,734.54\n二、投资活动产生的现金流量:"
+                    },
+                    {
+                      "company_id": "002371.SZ",
+                      "document_id": "cninfo-002371-2024-ar-1223309278",
+                      "evidence_id": "cninfo-002371-2024-ar-1223309278:p0031:l38-49:edd1400e05662",
+                      "evidence_sha256": "dd1400e0566206fae176993eaae92516e462c853ab190c30ea050f5d47bb2f07",
+                      "line_end": 49,
+                      "line_start": 38,
+                      "matched_terms": [],
+                      "page_id": "cninfo-002371-2024-ar-1223309278:p0031:e514d9c8a36c5579",
+                      "pdf_page": 31,
+                      "retrieval_rank": 3,
+                      "retrieval_score": 0.0,
+                      "text": "适用□不适用\n1、2024年经营活动现金流入小计为30,035,457,702.26元,比上年同期增加25.97%,其主要原因是:2024年销售订单继\n续保持良好趋势,收到的货款增加。\n2、2024年经营活动现金流出小计为28,462,292,647.99元,比上年同期增加32.51%,其主要原因是:公司为了满足订单\n需求,生产规模较上期增加,材料采购及人工成本支付的现金增加。\n3、2024年经营活动产生的现金流量净额为1,573,165,054.27元,比上年同期减少33.48%,其主要原因是:公司为了满足\n订单需求,采购商品支付的货款增加。\n4、2024年投资活动现金流入小计为7,502,223.44元,比上年同期增加165.26%,其主要原因是:处置长期资产收回的现\n金净额增加。\n5、2024年筹资活动现金流入小计为1,989,199,903.07元,比上年同期减少32.14%,其主要原因是:取得借款收到的现金\n减少。\n31"
+                    }
+                  ],
+                  "note": "已定位候选原文窗口，语义支持仍需独立审核",
+                  "observations": [],
+                  "status": "FOUND"
+                }
+              },
+              {
+                "action": {
+                  "action_id": "action-3dc6cddab7b11f68d4be14d399221cda9128b705590c6a6fe287adfda0087625",
+                  "arguments": {
+                    "need": "SALES_COLLECTION_DETAIL",
+                    "question": "销售商品提供劳务收到的现金 回款 应收账款",
+                    "reporting_year": 2024
+                  },
+                  "as_of_date": "2025-04-30",
+                  "company_id": "002371.SZ",
+                  "corpus_snapshot_id": "s3-semiconductor-equipment-ar-v1",
+                  "gap_id": "s5-context-002371.SZ-SALES_COLLECTION_DETAIL",
+                  "reason": "定位SALES_COLLECTION_DETAIL相关原文；不自动认证语义支持",
+                  "tool": "SEARCH_DISCLOSURE"
+                },
+                "changed_gap_status": "RESOLVED",
+                "failure_type": null,
+                "result": {
+                  "action_id": "action-3dc6cddab7b11f68d4be14d399221cda9128b705590c6a6fe287adfda0087625",
+                  "evidence": [
+                    {
+                      "company_id": "002371.SZ",
+                      "document_id": "cninfo-002371-2024-ar-1223309278",
+                      "evidence_id": "cninfo-002371-2024-ar-1223309278:p0100:l22-39:eeee53ef44575",
+                      "evidence_sha256": "eee53ef445759f6249fb206341c8770365ccc0f28aef97e81da803ac9fbe4b97",
+                      "line_end": 39,
+                      "line_start": 22,
+                      "matched_terms": [],
+                      "page_id": "cninfo-002371-2024-ar-1223309278:p0100:8da0204c6eaecc53",
+                      "pdf_page": 100,
+                      "retrieval_rank": 1,
+                      "retrieval_score": 0.0,
+                      "text": "筹资活动产生的现金流量净额 740,310,181.13 1,647,201,985.21\n四、汇率变动对现金及现金等价物的\n5,152,267.11 13,902,319.48\n影响\n五、现金及现金等价物净增加额 106,901,086.40 1,967,624,537.42\n加:期初现金及现金等价物余额 12,229,065,100.31 10,261,440,562.89\n六、期末现金及现金等价物余额 12,335,966,186.71 12,229,065,100.31\n6、母公司现金流量表\n单位:元\n项目 2024年度 2023年度\n一、经营活动产生的现金流量:\n销售商品、提供劳务收到的现金 42,973,143.00 506,004,223.49\n收到的税费返还\n收到其他与经营活动有关的现金 328,613,009.44 244,148,942.54\n经营活动现金流入小计 371,586,152.44 750,153,166.03\n购买商品、接受劳务支付的现金 416,915,341.80 2,364,532.35\n支付给职工以及为职工支付的现金 57,847,146.32 56,145,336.75\n支付的各项税费 2,311,018.29 8,140,571.37"
+                    },
+                    {
+                      "company_id": "002371.SZ",
+                      "document_id": "cninfo-002371-2024-ar-1223309278",
+                      "evidence_id": "cninfo-002371-2024-ar-1223309278:p0099:l1-22:e36db9566b430",
+                      "evidence_sha256": "36db9566b43070b5a6ca758ee4c2aeaad4e323bd373e3b361f60825dda53066d",
+                      "line_end": 22,
+                      "line_start": 1,
+                      "matched_terms": [],
+                      "page_id": "cninfo-002371-2024-ar-1223309278:p0099:af6b13b4657e8fdd",
+                      "pdf_page": 99,
+                      "retrieval_rank": 2,
+                      "retrieval_score": 0.0,
+                      "text": "北方华创科技集团股份有限公司2024年年度报告全文\n5、合并现金流量表\n单位:元\n项目 2024年度 2023年度\n一、经营活动产生的现金流量:\n销售商品、提供劳务收到的现金 26,078,556,527.85 21,262,719,976.21\n客户存款和同业存放款项净增加额\n向中央银行借款净增加额\n向其他金融机构拆入资金净增加额\n收到原保险合同保费取得的现金\n收到再保业务现金净额\n保户储金及投资款净增加额\n收取利息、手续费及佣金的现金\n拆入资金净增加额\n回购业务资金净增加额\n代理买卖证券收到的现金净额\n收到的税费返还 715,439,085.83 587,664,826.85\n收到其他与经营活动有关的现金 3,241,462,088.58 1,993,429,623.40\n经营活动现金流入小计 30,035,457,702.26 23,843,814,426.46\n购买商品、接受劳务支付的现金 19,934,653,320.77 15,193,333,549.88\n客户贷款及垫款净增加额\n存放中央银行和同业款项净增加额"
+                    },
+                    {
+                      "company_id": "002371.SZ",
+                      "document_id": "cninfo-002371-2024-ar-1223309278",
+                      "evidence_id": "cninfo-002371-2024-ar-1223309278:p0120:l22-34:e9a42feaa7a7a",
+                      "evidence_sha256": "9a42feaa7a7abcbeec6644fa554e91fafe52e4c036c6c9dc6e2e6148d6fe9622",
+                      "line_end": 34,
+                      "line_start": 22,
+                      "matched_terms": [],
+                      "page_id": "cninfo-002371-2024-ar-1223309278:p0120:95916dc4656e1a92",
+                      "pdf_page": 120,
+                      "retrieval_rank": 3,
+                      "retrieval_score": 0.0,
+                      "text": "待售类别:该组成部分代表一项独立的主要业务或一个单独的主要经营地区;该组成部分是拟对一项独立的主要业务或\n一个单独的主要经营地区进行处置的一项相关联计划的一部分;该组成部分是专为转售而取得的子公司。\n本公司在利润表中分别列示持续经营损益和终止经营损益。终止经营的减值损失和转回金额等经营损益及处置损益\n作为终止经营损益列报。在附注中披露终止经营的收入、费用、利润总额、所得税费用(收益)和净利润,终止经营的\n资产或处置组确认的减值损失及其转回金额,终止经营的处置损益总额、所得税费用(收益)和处置净损益,终止经营\n的经营活动、投资活动和筹资活动现金流量净额,归属于母公司所有者的持续经营损益和终止经营损益。\n19、债权投资\n20、其他债权投资\n21、长期应收款\n长期应收款项目,反映资产负债表日企业的长期应收款项,包括融资租赁产生的应收款项、采用递延方式具有融资\n性质的销售商品和提供劳务等产生的应收款项、租赁业务保证金等。\n(1)预期信用损失的确定方法及会计处理方法\n120"
+                    }
+                  ],
+                  "note": "已定位候选原文窗口，语义支持仍需独立审核",
+                  "observations": [],
+                  "status": "FOUND"
+                }
+              },
+              {
+                "action": {
+                  "action_id": "action-a99b4bfa6fed97a198e214eb19b876ad0372251aada1f7705f2f06776a748ff0",
+                  "arguments": {
+                    "need": "TIMING_DETAIL",
+                    "question": "经营现金流变动原因说明 回款 结算 付款时点",
+                    "reporting_year": 2024
+                  },
+                  "as_of_date": "2025-04-30",
+                  "company_id": "002371.SZ",
+                  "corpus_snapshot_id": "s3-semiconductor-equipment-ar-v1",
+                  "gap_id": "s5-context-002371.SZ-TIMING_DETAIL",
+                  "reason": "定位TIMING_DETAIL相关原文；不自动认证语义支持",
+                  "tool": "SEARCH_DISCLOSURE"
+                },
+                "changed_gap_status": "RESOLVED",
+                "failure_type": null,
+                "result": {
+                  "action_id": "action-a99b4bfa6fed97a198e214eb19b876ad0372251aada1f7705f2f06776a748ff0",
+                  "evidence": [
+                    {
+                      "company_id": "002371.SZ",
+                      "document_id": "cninfo-002371-2024-ar-1223309278",
+                      "evidence_id": "cninfo-002371-2024-ar-1223309278:p0032:l1-17:e18ed266bd6ae",
+                      "evidence_sha256": "18ed266bd6ae0dce56ca19cdc79549226f2a8758e3151d928c205c9d8bf09c02",
+                      "line_end": 17,
+                      "line_start": 1,
+                      "matched_terms": [],
+                      "page_id": "cninfo-002371-2024-ar-1223309278:p0032:2df344bb90b450a5",
+                      "pdf_page": 32,
+                      "retrieval_rank": 1,
+                      "retrieval_score": 0.0,
+                      "text": "北方华创科技集团股份有限公司2024年年度报告全文\n6、2024年筹资活动产生的现金流量净额为740,310,181.13元,比上年同期减少55.06%,其主要原因是:取得借款收到\n的现金较上期减少。\n7、2024年现金及现金等价物净增加额为106,901,086.40元,比上年同期减少94.57%,其主要原因是:筹资活动现金流\n净额减少9亿。\n报告期内公司经营活动产生的现金净流量与本年度净利润存在重大差异的原因说明\n□适用不适用\n五、非主营业务分析\n适用□不适用\n单位:元\n金额 占利润总额比例 形成原因说明 是否具有可持续性\n投资收益 3,253,045.43 0.05% 主要为联营公司投资收益 是\n公允价值变动损益 6,260,374.55 0.10% 参股公司公允价值变动 是\n资产减值 -74,717,679.10 -1.15% 主要为存货计提减值准备 否\n主要为核销长期应付款、违\n营业外收入 18,042,366.87 0.28% 否\n约金收入"
+                    },
+                    {
+                      "company_id": "002371.SZ",
+                      "document_id": "cninfo-002371-2024-ar-1223309278",
+                      "evidence_id": "cninfo-002371-2024-ar-1223309278:p0099:l26-45:e40667259788f",
+                      "evidence_sha256": "40667259788fd446dab3fddde908d5a574478be0e21a4a1b6da633692d68a14c",
+                      "line_end": 45,
+                      "line_start": 26,
+                      "matched_terms": [],
+                      "page_id": "cninfo-002371-2024-ar-1223309278:p0099:af6b13b4657e8fdd",
+                      "pdf_page": 99,
+                      "retrieval_rank": 2,
+                      "retrieval_score": 0.0,
+                      "text": "支付保单红利的现金\n支付给职工以及为职工支付的现金 5,026,108,297.27 3,875,370,885.80\n支付的各项税费 1,969,593,701.07 1,671,196,199.94\n支付其他与经营活动有关的现金 1,531,937,328.88 738,906,056.30\n经营活动现金流出小计 28,462,292,647.99 21,478,806,691.92\n经营活动产生的现金流量净额 1,573,165,054.27 2,365,007,734.54\n二、投资活动产生的现金流量:\n收回投资收到的现金 2,549,346.03\n取得投资收益收到的现金 834,828.02\n处置固定资产、无形资产和其他长\n6,667,395.42 278,930.90\n期资产收回的现金净额\n处置子公司及其他营业单位收到的\n现金净额\n收到其他与投资活动有关的现金\n投资活动现金流入小计 7,502,223.44 2,828,276.93\n购建固定资产、无形资产和其他长\n2,046,154,256.83 1,979,981,583.31\n期资产支付的现金\n投资支付的现金 166,773,913.22 72,967,134.61"
+                    },
+                    {
+                      "company_id": "002371.SZ",
+                      "document_id": "cninfo-002371-2024-ar-1223309278",
+                      "evidence_id": "cninfo-002371-2024-ar-1223309278:p0031:l28-44:e237755d36d95",
+                      "evidence_sha256": "237755d36d9547a02b996c09f173489ad728a21b1f83c6c50de38353ee1c46bc",
+                      "line_end": 44,
+                      "line_start": 28,
+                      "matched_terms": [],
+                      "page_id": "cninfo-002371-2024-ar-1223309278:p0031:e514d9c8a36c5579",
+                      "pdf_page": 31,
+                      "retrieval_rank": 3,
+                      "retrieval_score": 0.0,
+                      "text": "投资活动产生的现金流量净\n-2,211,726,416.11 -2,058,487,501.81 -7.44%\n额\n筹资活动现金流入小计 1,989,199,903.07 2,931,309,095.10 -32.14%\n筹资活动现金流出小计 1,248,889,721.94 1,284,107,109.89 -2.74%\n筹资活动产生的现金流量净\n740,310,181.13 1,647,201,985.21 -55.06%\n额\n现金及现金等价物净增加额 106,901,086.40 1,967,624,537.42 -94.57%\n相关数据同比发生重大变动的主要影响因素说明\n适用□不适用\n1、2024年经营活动现金流入小计为30,035,457,702.26元,比上年同期增加25.97%,其主要原因是:2024年销售订单继\n续保持良好趋势,收到的货款增加。\n2、2024年经营活动现金流出小计为28,462,292,647.99元,比上年同期增加32.51%,其主要原因是:公司为了满足订单\n需求,生产规模较上期增加,材料采购及人工成本支付的现金增加。\n3、2024年经营活动产生的现金流量净额为1,573,165,054.27元,比上年同期减少33.48%,其主要原因是:公司为了满足\n订单需求,采购商品支付的货款增加。"
+                    }
+                  ],
+                  "note": "已定位候选原文窗口，语义支持仍需独立审核",
+                  "observations": [],
+                  "status": "FOUND"
+                }
+              }
+            ],
+            "no_progress_rounds": 0,
+            "rounds": 3,
+            "stop_reason": null
+          }
+        },
+        "runtime": {
+          "cancel_requested": false,
+          "checkpoint_sha256": null,
+          "clarification_status": "NONE",
+          "connection_state": "CONNECTED",
+          "current_step_id": null,
+          "event_cursor": 1,
+          "event_stream_id": "fixture:b2-rounds:v1",
+          "queue_state": "UNKNOWN",
+          "resume_readiness": "UNKNOWN",
+          "waiting_gap_ids": [],
+          "worker_state": "UNKNOWN"
+        },
+        "schema_version": "1.0.0",
+        "steps": [
+          {
+            "acceptance": "UNKNOWN",
+            "attempt": null,
+            "identity_kind": "SYNTHETIC",
+            "instance_id": "fixture-baseline:reuse",
+            "lifecycle": "REUSED",
+            "node_id": "baseline",
+            "occurred_at": null,
+            "origin": "RESULT_REUSE",
+            "output_ids": [],
+            "round": null,
+            "source": null,
+            "step_id": "baseline"
+          },
+          {
+            "acceptance": "CHECKPOINT_CONFIRMED",
+            "attempt": 1,
+            "identity_kind": "SYNTHETIC",
+            "instance_id": "fixture-b2-rounds:round-3",
+            "lifecycle": "FUNCTION_RETURNED",
+            "node_id": "execute_actions",
+            "occurred_at": null,
+            "origin": "WEB_FIXTURE",
+            "output_ids": [],
+            "round": 3,
+            "source": null,
+            "step_id": "round-3"
+          }
+        ],
+        "task": {
+          "access_mode": "MOCK",
+          "available_actions": [
+            {
+              "authority": "READ_ONLY",
+              "enabled": false,
+              "operation": "VIEW_REPORT",
+              "reason": "正式报告尚未通过发布核验。"
+            },
+            {
+              "authority": "READ_ONLY",
+              "enabled": true,
+              "operation": "VIEW_STEPS",
+              "reason": null
+            },
+            {
+              "authority": "READ_ONLY",
+              "enabled": false,
+              "operation": "VIEW_EVIDENCE",
+              "reason": "当前记录没有可读取的原文。"
+            },
+            {
+              "authority": "SIMULATED",
+              "enabled": false,
+              "operation": "FOLLOWUP",
+              "reason": "追问需要已发布结果和可写入的当前会话。"
+            },
+            {
+              "authority": "SIMULATED",
+              "enabled": true,
+              "operation": "CANCEL",
+              "reason": null
+            },
+            {
+              "authority": "SIMULATED",
+              "enabled": false,
+              "operation": "CLARIFY",
+              "reason": "仅当前等待检查点可接收新的澄清决定。"
+            },
+            {
+              "authority": "SIMULATED",
+              "enabled": false,
+              "operation": "RESUME",
+              "reason": "恢复需要协调层明确核验安全；等待任务还需要已记录决定。"
+            },
+            {
+              "authority": "SIMULATED",
+              "enabled": true,
+              "operation": "NEW_TASK",
+              "reason": null
+            }
+          ],
+          "baseline": {
+            "final_state_sha256": null,
+            "label": "【合成过程】复用已有基线，不重播B1",
+            "origin": "RESULT_REUSE",
+            "task_id": "fixture-baseline"
+          },
+          "company_labels": {
+            "002371.SZ": "北方华创",
+            "688072.SH": "拓荆科技",
+            "688082.SH": "盛美上海"
+          },
+          "context": {
+            "as_of_date": "2025-04-30",
+            "company_ids": [
+              "002371.SZ",
+              "688072.SH",
+              "688082.SH"
+            ],
+            "corpus_snapshot_id": "s3-semiconductor-equipment-ar-v1",
+            "fiscal_years": [
+              2023,
+              2024
+            ],
+            "protocol_config_sha256": "0a9a877083f262f29407bfcfa0c7d3bea39c31bfc83e83e1db5c7be68c6ed52a",
+            "protocol_id": "revenue_quality_v1",
+            "protocol_version": "1.0.0",
+            "run_id": "fixture-b2-rounds"
+          },
+          "created_at": null,
+          "execution_mode": "RULES",
+          "origin": "WEB_FIXTURE",
+          "question": "【页面样本】比较收入、经营现金流和应收账款，核查披露与局限。",
+          "task_id": "fixture-b2-rounds",
+          "task_status": "RUNNING",
+          "workflow": "B2"
+        },
+        "ui": {
+          "anchor": null,
+          "editing_followup": false,
+          "follow_progress": true,
+          "manual_browsing": false,
+          "panel": "PROCESS",
+          "reader_open": false,
+          "reduced_motion": false,
+          "scroll_y": 0,
+          "selected_evidence_id": null,
+          "selected_round": null,
+          "selected_step_id": null,
+          "text_selection_active": false
+        }
+      }
+    }
+  ],
+  "scenario_id": "b2-rounds",
+  "schema_version": "1.0.0",
+  "synthetic_execution": true,
+  "title": "历史基线与独立补查轮次"
+}

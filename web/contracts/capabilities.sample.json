@@ -1,0 +1,83 @@
+{
+  "cli_combinations": [
+    {
+      "execution_mode": "LIVE",
+      "workflow": "B1"
+    },
+    {
+      "execution_mode": "REPLAY",
+      "workflow": "B1"
+    },
+    {
+      "execution_mode": "LIVE",
+      "workflow": "B2"
+    },
+    {
+      "execution_mode": "RULES",
+      "workflow": "B2"
+    }
+  ],
+  "http_service": "NOT_IMPLEMENTED",
+  "is_sample": true,
+  "notes": [
+    "公司简称沿用第二版范围说明；实际代码、年份、截止日与快照取自历史context；样本不是在线capabilities接口。"
+  ],
+  "pending_capabilities": [
+    "HTTP_ASYNC_COORDINATOR",
+    "READ_ONLY_API",
+    "SAME_RUN_B1_TO_B2",
+    "NEW_SNAPSHOT_INGESTION",
+    "INDEPENDENT_CAUSAL_REVIEW"
+  ],
+  "schema_version": "1.0.0",
+  "scope": {
+    "as_of_date": "2025-04-30",
+    "company_ids": [
+      "002371.SZ",
+      "688072.SH",
+      "688082.SH"
+    ],
+    "company_labels": {
+      "002371.SZ": "北方华创",
+      "688072.SH": "拓荆科技",
+      "688082.SH": "盛美上海"
+    },
+    "corpus_snapshot_id": "s3-semiconductor-equipment-ar-v1",
+    "fiscal_years": [
+      2023,
+      2024
+    ],
+    "metric_ids": [
+      "revenue",
+      "operating_cash_flow_net",
+      "accounts_receivable"
+    ]
+  },
+  "source_artifacts": [
+    {
+      "path": "runs/s6/s6-live-20260930-02/publication.json",
+      "pointer": "",
+      "sha256": "e48d1c11d679d572cdb4f1375da44bc6294bcb4aa37d1b04f912d3485d20eafc"
+    },
+    {
+      "path": "runs/s6/s6-live-20260930-02/report.md",
+      "pointer": "",
+      "sha256": "ad8f048db3186f7756cb958c270c49c8801b44838af864873e6664600f2587ae"
+    },
+    {
+      "path": "runs/s6/s6-live-20260930-02/final_state.json",
+      "pointer": "",
+      "sha256": "712a58a4326ba3b4ec669c33edd38f1cdcf10b9f4b482d2601d0eba9eea43f61"
+    },
+    {
+      "path": "runs/s6/s6-live-20260930-02/context_capsule.json",
+      "pointer": "",
+      "sha256": "34479a080981c5899498b72b24ccf614449a231e434c07c15748f3d1aad0c351"
+    },
+    {
+      "path": "storage/s6/tasks/s6-live-20260930-02/session.sqlite",
+      "pointer": "",
+      "sha256": "0a8f85a6b97aed75a70dd8b84649cb2cf3aa223be2fb2685c4716fde4f074403"
+    }
+  ]
+}

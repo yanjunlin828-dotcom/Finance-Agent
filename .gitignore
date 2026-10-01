@@ -1,0 +1,17 @@
+/storage/
+/runs/
+/indexes/
+.venv/
+__pycache__/
+.pytest_cache/
+node_modules/
+.env
+.env.*
+!.env.example
+*.pyc
+*.db
+*.sqlite
+*.sqlite3
+*.sqlite-wal
+*.sqlite-shm
+*.lock

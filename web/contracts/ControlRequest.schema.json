@@ -1,0 +1,23 @@
+{
+  "$id": "urn:finresearch:web:ControlRequest:1.0.0",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "expected_cursor": {
+      "minimum": 0,
+      "title": "Expected Cursor",
+      "type": "integer"
+    },
+    "request_id": {
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,99}$",
+      "title": "Request Id",
+      "type": "string"
+    }
+  },
+  "required": [
+    "request_id",
+    "expected_cursor"
+  ],
+  "title": "ControlRequest",
+  "type": "object"
+}

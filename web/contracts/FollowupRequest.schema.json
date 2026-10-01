@@ -1,0 +1,42 @@
+{
+  "$id": "urn:finresearch:web:FollowupRequest:1.0.0",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "question": {
+      "maxLength": 2000,
+      "minLength": 1,
+      "title": "Question",
+      "type": "string"
+    },
+    "request_id": {
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,99}$",
+      "title": "Request Id",
+      "type": "string"
+    },
+    "topic": {
+      "anyOf": [
+        {
+          "enum": [
+            "revenue",
+            "cash_flow",
+            "receivables",
+            "all"
+          ],
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Topic"
+    }
+  },
+  "required": [
+    "request_id",
+    "question"
+  ],
+  "title": "FollowupRequest",
+  "type": "object"
+}

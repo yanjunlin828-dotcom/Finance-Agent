@@ -1,0 +1,92 @@
+{
+  "schema_version": "0.1.0",
+  "status": "DRAFT_FOR_S0_PILOT",
+  "metrics": [
+    {
+      "metric_id": "revenue",
+      "display_name": "营业收入",
+      "definition_status": "CONFIRMED",
+      "source_label": "营业收入",
+      "statement_scope": "合并利润表",
+      "temporal_type": "期间流量",
+      "measurement_basis": "会计准则列报金额",
+      "unit": "元",
+      "currency": "CNY",
+      "period_rule": "完整财年",
+      "allowed_calculations": [
+        "同比增长率=(本期-上期)/上期；仅在口径与期间一致时"
+      ],
+      "missing_policy": "UNAVAILABLE，不补零",
+      "open_decision_ids": []
+    },
+    {
+      "metric_id": "operating_cash_flow_net",
+      "display_name": "经营活动产生的现金流量净额",
+      "definition_status": "CONFIRMED",
+      "source_label": "经营活动产生的现金流量净额",
+      "statement_scope": "合并现金流量表",
+      "temporal_type": "期间流量",
+      "measurement_basis": "现金流入小计减现金流出小计后的净额",
+      "unit": "元",
+      "currency": "CNY",
+      "period_rule": "完整财年",
+      "allowed_calculations": [
+        "同比增长率=(本期-上期)/上期；仅在口径与期间一致时",
+        "经营现金流/营业收入；仅作描述性辅助指标"
+      ],
+      "missing_policy": "UNAVAILABLE，不补零",
+      "open_decision_ids": []
+    },
+    {
+      "metric_id": "accounts_receivable",
+      "display_name": "应收账款",
+      "definition_status": "CONFIRMED",
+      "source_label": "应收账款",
+      "statement_scope": "合并资产负债表",
+      "temporal_type": "时点余额",
+      "measurement_basis": "资产负债表列报账面价值",
+      "unit": "元",
+      "currency": "CNY",
+      "period_rule": "财年末与上年末比较",
+      "allowed_calculations": [
+        "余额增长率；仅在列报口径一致时",
+        "应收账款/营业收入；必须声明时点余额与期间流量混合的局限"
+      ],
+      "missing_policy": "UNAVAILABLE，不补零",
+      "open_decision_ids": []
+    },
+    {
+      "metric_id": "inventory",
+      "display_name": "存货",
+      "definition_status": "CONFIRMED",
+      "source_label": "存货",
+      "statement_scope": "合并资产负债表",
+      "temporal_type": "时点余额",
+      "measurement_basis": "资产负债表列报账面价值",
+      "unit": "元",
+      "currency": "CNY",
+      "period_rule": "财年末与上年末比较",
+      "allowed_calculations": [
+        "余额增长率；仅在列报口径一致时",
+        "存货/营业收入；必须声明时点余额与期间流量混合的局限"
+      ],
+      "missing_policy": "UNAVAILABLE，不补零",
+      "open_decision_ids": []
+    }
+  ],
+  "unresolved_metrics": [
+    {
+      "metric_id": "net_profit_for_quality_analysis",
+      "display_name": "收入质量分析采用的净利润口径",
+      "definition_status": "UNRESOLVED",
+      "candidate_labels": [
+        "净利润",
+        "归属于上市公司股东的净利润",
+        "扣除非经常性损益后的归母净利润"
+      ],
+      "open_decision_ids": [
+        "OD-S2-001-PROFIT-DEFINITION"
+      ]
+    }
+  ]
+}

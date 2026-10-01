@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0.0",
+  "status": "READY_FOR_LIVE_PROBE",
+  "provider": "deepseek",
+  "model": "deepseek-flash",
+  "base_url": "https://api.deepseek.com",
+  "credential_environment_variable": "DEEPSEEK_API_KEY",
+  "credential_present": true,
+  "approved_external_data_scope": "PUBLIC_ANNUAL_REPORT_RETRIEVED_EVIDENCE_ONLY",
+  "currency": "USD",
+  "currency_limit": "0.10",
+  "maximum_total_calls": 10,
+  "maximum_attempts_per_probe": 2,
+  "single_call_timeout_seconds": 60,
+  "maximum_input_tokens": 8000,
+  "maximum_output_tokens": 1200,
+  "thinking_mode": "disabled",
+  "estimated_reservation_per_call": "0.01",
+  "pricing_assumption": {
+    "as_of_date": "2026-09-22",
+    "source": "https://api-docs.deepseek.com/quick_start/pricing/",
+    "method": "CONSERVATIVE_PEAK_ALL_INPUT_AS_CACHE_MISS",
+    "input_usd_per_million_tokens": "0.30",
+    "output_usd_per_million_tokens": "1.20"
+  },
+  "online_probe_ids": [
+    "S0-Q1-REVENUE",
+    "S0-Q2-OCF",
+    "S0-Q3-AR",
+    "S0-Q4-BUSINESS",
+    "S0-Q5-OCF-EXPLANATION",
+    "S1-N3-INJECTION"
+  ],
+  "execution_rule": "五题各一次主调用；仅结构解析失败可重试一次；总调用不超过10次且总费用不超过0.10美元",
+  "input_counting_policy": "UTF8_BYTE_UPPER_BOUND_INCLUDING_SCHEMA_AND_TOOLS",
+  "retry_policy": "STRUCTURED_OUTPUT_ONLY_WITHIN_SHARED_CALL_AND_COST_BUDGET_NO_TRANSPORT_RETRY",
+  "pricing_limitations": "按2026-09-22配置假设估算，不宣称为账单实付；失败无usage时保留预留额并显式标记费用未知"
+}

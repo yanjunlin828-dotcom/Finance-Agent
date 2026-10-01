@@ -1,0 +1,10 @@
+{
+  "version": "1.0.0",
+  "maximum_rounds": 3,
+  "maximum_actions_per_round": 2,
+  "maximum_actions": 6,
+  "maximum_no_progress_rounds": 2,
+  "maximum_model_calls": 4,
+  "maximum_cost_usd": "0.05",
+  "allowed_tools": ["QUERY_METRIC", "SEARCH_DISCLOSURE", "READ_CONTEXT", "REVIEW_TABLE", "VERIFY_VERSION", "REQUEST_CLARIFICATION"]
+}

@@ -1,0 +1,6 @@
+{
+  "version": 1,
+  "kind": "S6",
+  "run_id": "s7-live-20261001-01-b1",
+  "reason": "S7 repairs disclosed-claim citation loss; old S4 input locks are not inherited. This freshly verified B1 must exist before B2 creation."
+}

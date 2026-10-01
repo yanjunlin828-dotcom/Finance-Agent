@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0.0",
+  "cases": {
+    "S0-Q1-REVENUE": {
+      "expected_status": "ANSWERABLE",
+      "expected_period": "FY2024",
+      "expected_unit": "CNY yuan",
+      "required_pages": [95],
+      "required_numeric_tokens": ["29838069162.26"],
+      "required_term_groups": []
+    },
+    "S0-Q2-OCF": {
+      "expected_status": "ANSWERABLE",
+      "expected_period": "FY2024",
+      "expected_unit": "CNY yuan",
+      "required_pages": [99],
+      "required_numeric_tokens": ["1573165054.27"],
+      "required_term_groups": []
+    },
+    "S0-Q3-AR": {
+      "expected_status": "ANSWERABLE",
+      "expected_period": "2024-12-31",
+      "expected_unit": "CNY yuan",
+      "required_pages": [90, 91],
+      "required_numeric_tokens": ["6044952733.01"],
+      "required_term_groups": [["应收账款"], ["合并资产负债表"], ["账面价值", "列示金额", "列示的"]]
+    },
+    "S0-Q4-BUSINESS": {
+      "expected_status": "ANSWERABLE",
+      "expected_period": "FY2024",
+      "expected_unit": null,
+      "required_pages": [16],
+      "required_numeric_tokens": [],
+      "required_term_groups": [
+        ["半导体基础产品"], ["研发"], ["生产"], ["销售"], ["技术服务"],
+        ["电子工艺装备"], ["电子元器件"], ["半导体装备"], ["真空及新能源装备"]
+      ]
+    },
+    "S0-Q5-OCF-EXPLANATION": {
+      "expected_status": "ANSWERABLE",
+      "expected_period": "FY2024",
+      "expected_unit": null,
+      "required_pages": [31],
+      "required_numeric_tokens": ["33.48%"],
+      "required_term_groups": [
+        ["公司披露", "公司解释"], ["订单需求"], ["采购商品支付的货款增加"],
+        ["不能", "不足以", "无法"],
+        ["独立验证", "无法排除其他因素"],
+        ["唯一性", "唯一因果", "唯一原因", "其他因素"]
+      ]
+    }
+  }
+}

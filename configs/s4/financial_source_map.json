@@ -1,0 +1,137 @@
+{
+  "schema_version": "1.0.0",
+  "mapping_version": "source-table-columns-v1",
+  "review_status": "SOURCE_TEXT_AND_VISUAL_CHECKED",
+  "scope": "Reviewed rows only; not generic annual report table extraction",
+  "documents": [
+    {
+      "company_id": "002371.SZ",
+      "document_id": "cninfo-002371-2024-ar-1223309278",
+      "reporting_year": 2024,
+      "rows": [
+        {
+          "metric_id": "revenue",
+          "pdf_page": 95,
+          "header_page": 95,
+          "row_prefix": "其中:营业收入",
+          "row_line_count": 1,
+          "header_excerpts": [
+            "合并利润表",
+            "单位:元",
+            "2024年度 2023年度"
+          ]
+        },
+        {
+          "metric_id": "operating_cash_flow_net",
+          "pdf_page": 99,
+          "header_page": 99,
+          "row_prefix": "经营活动产生的现金流量净额",
+          "row_line_count": 1,
+          "header_excerpts": [
+            "合并现金流量表",
+            "单位:元",
+            "2024年度 2023年度"
+          ]
+        },
+        {
+          "metric_id": "accounts_receivable",
+          "pdf_page": 91,
+          "header_page": 90,
+          "row_prefix": "应收账款 ",
+          "row_line_count": 1,
+          "header_excerpts": [
+            "合并资产负债表",
+            "2024年12月31日",
+            "单位:元"
+          ]
+        }
+      ]
+    },
+    {
+      "company_id": "688072.SH",
+      "document_id": "cninfo-688072-2024-ar-1223286833",
+      "reporting_year": 2024,
+      "rows": [
+        {
+          "metric_id": "revenue",
+          "pdf_page": 156,
+          "header_page": 156,
+          "row_prefix": "其中:营业收入",
+          "row_line_count": 1,
+          "header_excerpts": [
+            "合并利润表",
+            "单位:元 币种:人民币",
+            "2024年度 2023年度"
+          ]
+        },
+        {
+          "metric_id": "operating_cash_flow_net",
+          "pdf_page": 160,
+          "header_page": 159,
+          "row_prefix": "经营活动产生的现金流",
+          "row_line_count": 3,
+          "header_excerpts": [
+            "合并现金流量表",
+            "单位:元 币种:人民币",
+            "2024年度 2023年度"
+          ]
+        },
+        {
+          "metric_id": "accounts_receivable",
+          "pdf_page": 152,
+          "header_page": 152,
+          "row_prefix": "应收账款 ",
+          "row_line_count": 1,
+          "header_excerpts": [
+            "合并资产负债表",
+            "2024年12月31日 2023年12月31日",
+            "单位:元 币种:人民币"
+          ]
+        }
+      ]
+    },
+    {
+      "company_id": "688082.SH",
+      "document_id": "cninfo-688082-2024-ar-1222651596",
+      "reporting_year": 2024,
+      "rows": [
+        {
+          "metric_id": "revenue",
+          "pdf_page": 130,
+          "header_page": 130,
+          "row_prefix": "其中:营业收入",
+          "row_line_count": 1,
+          "header_excerpts": [
+            "合并利润表",
+            "单位:元 币种:人民币",
+            "2024年度 2023年度"
+          ]
+        },
+        {
+          "metric_id": "operating_cash_flow_net",
+          "pdf_page": 134,
+          "header_page": 134,
+          "row_prefix": "经营活动产生的现金流量净",
+          "row_line_count": 3,
+          "header_excerpts": [
+            "合并现金流量表",
+            "单位:元 币种:人民币",
+            "2024年度 2023年度"
+          ]
+        },
+        {
+          "metric_id": "accounts_receivable",
+          "pdf_page": 126,
+          "header_page": 126,
+          "row_prefix": "应收账款 ",
+          "row_line_count": 1,
+          "header_excerpts": [
+            "合并资产负债表",
+            "2024年12月31日 2023年12月31日",
+            "单位:元 币种:人民币"
+          ]
+        }
+      ]
+    }
+  ]
+}

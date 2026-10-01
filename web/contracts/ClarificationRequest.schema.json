@@ -1,0 +1,43 @@
+{
+  "$id": "urn:finresearch:web:ClarificationRequest:1.0.0",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "checkpoint_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "title": "Checkpoint Sha256",
+      "type": "string"
+    },
+    "decision": {
+      "enum": [
+        "continue_with_limitations",
+        "new_snapshot_required"
+      ],
+      "title": "Decision",
+      "type": "string"
+    },
+    "expected_cursor": {
+      "minimum": 0,
+      "title": "Expected Cursor",
+      "type": "integer"
+    },
+    "gap_id": {
+      "title": "Gap Id",
+      "type": "string"
+    },
+    "request_id": {
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,99}$",
+      "title": "Request Id",
+      "type": "string"
+    }
+  },
+  "required": [
+    "request_id",
+    "expected_cursor",
+    "gap_id",
+    "checkpoint_sha256",
+    "decision"
+  ],
+  "title": "ClarificationRequest",
+  "type": "object"
+}

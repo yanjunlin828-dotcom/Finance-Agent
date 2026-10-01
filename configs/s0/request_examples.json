@@ -1,0 +1,45 @@
+{
+  "schema_version": "0.1.0",
+  "valid": [
+    {
+      "request_id": "s0-valid-001",
+      "topic_id": "revenue_quality_v0",
+      "company_ids": ["002371.SZ"],
+      "reporting_years": [2024],
+      "as_of_date": "2025-04-25",
+      "cutoff_policy": "ASIA_SHANGHAI_END_OF_DAY",
+      "timezone": "Asia/Shanghai",
+      "document_snapshot_id": "s0-naura-2024-v1",
+      "question": "北方华创2024年度合并营业收入是多少？",
+      "output_language": "zh-CN",
+      "budget_profile_id": "s0-local-only"
+    }
+  ],
+  "invalid": [
+    {
+      "case_id": "missing_as_of_date",
+      "expected_error": "Field required",
+      "payload_patch": {"remove": ["as_of_date"]}
+    },
+    {
+      "case_id": "ambiguous_company_name",
+      "expected_error": "company_ids 必须使用带交易所后缀的证券代码",
+      "payload_patch": {"replace": {"company_ids": ["北方华创"]}}
+    },
+    {
+      "case_id": "company_outside_pilot_scope",
+      "expected_error": "company_ids 包含先行范围之外的公司",
+      "payload_patch": {"replace": {"company_ids": ["688082.SH"]}}
+    },
+    {
+      "case_id": "wrong_snapshot",
+      "expected_error": "document_snapshot_id 与范围合同不一致",
+      "payload_patch": {"replace": {"document_snapshot_id": "unknown-snapshot"}}
+    },
+    {
+      "case_id": "unsupported_intraday_cutoff",
+      "expected_error": "Input should be 'ASIA_SHANGHAI_END_OF_DAY'",
+      "payload_patch": {"replace": {"cutoff_policy": "BEFORE_MARKET_OPEN"}}
+    }
+  ]
+}

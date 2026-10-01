@@ -1,0 +1,16 @@
+{
+  "version": "1.0.0",
+  "role": "DEVELOPMENT_REGRESSION_LABELS_NOT_MODEL_CONTEXT",
+  "review_origin": "Prior S3/S4 source row visual review; S7 independent arithmetic, no new independent human label claim",
+  "rows": [
+    {"company_id":"002371.SZ","document_id":"cninfo-002371-2024-ar-1223309278","metric_id":"revenue","pdf_page":95,"header_page":95,"row_prefix":"其中:营业收入","row_line_count":1,"header_excerpts":["合并利润表","单位:元","2024年度 2023年度"],"values":{"2024":"29838069162.26","2023":"22079458092.37"}},
+    {"company_id":"002371.SZ","document_id":"cninfo-002371-2024-ar-1223309278","metric_id":"operating_cash_flow_net","pdf_page":99,"header_page":99,"row_prefix":"经营活动产生的现金流量净额","row_line_count":1,"header_excerpts":["合并现金流量表","单位:元","2024年度 2023年度"],"values":{"2024":"1573165054.27","2023":"2365007734.54"}},
+    {"company_id":"002371.SZ","document_id":"cninfo-002371-2024-ar-1223309278","metric_id":"accounts_receivable","pdf_page":91,"header_page":90,"row_prefix":"应收账款 ","row_line_count":1,"header_excerpts":["合并资产负债表","2024年12月31日","单位:元"],"values":{"2024":"6044952733.01","2023":"3767378764.55"}},
+    {"company_id":"688072.SH","document_id":"cninfo-688072-2024-ar-1223286833","metric_id":"revenue","pdf_page":156,"header_page":156,"row_prefix":"其中:营业收入","row_line_count":1,"header_excerpts":["合并利润表","单位:元 币种:人民币","2024年度 2023年度"],"values":{"2024":"4103453853.41","2023":"2704974035.48"}},
+    {"company_id":"688072.SH","document_id":"cninfo-688072-2024-ar-1223286833","metric_id":"operating_cash_flow_net","pdf_page":160,"header_page":159,"row_prefix":"经营活动产生的现金流","row_line_count":3,"header_excerpts":["合并现金流量表","单位:元 币种:人民币","2024年度 2023年度"],"values":{"2024":"-282525331.06","2023":"-1657342652.77"}},
+    {"company_id":"688072.SH","document_id":"cninfo-688072-2024-ar-1223286833","metric_id":"accounts_receivable","pdf_page":152,"header_page":152,"row_prefix":"应收账款 ","row_line_count":1,"header_excerpts":["合并资产负债表","2024年12月31日 2023年12月31日","单位:元 币种:人民币"],"values":{"2024":"1473185667.99","2023":"529709337.36"}},
+    {"company_id":"688082.SH","document_id":"cninfo-688082-2024-ar-1222651596","metric_id":"revenue","pdf_page":130,"header_page":130,"row_prefix":"其中:营业收入","row_line_count":1,"header_excerpts":["合并利润表","单位:元 币种:人民币","2024年度 2023年度"],"values":{"2024":"5617740375.66","2023":"3888342742.05"}},
+    {"company_id":"688082.SH","document_id":"cninfo-688082-2024-ar-1222651596","metric_id":"operating_cash_flow_net","pdf_page":134,"header_page":134,"row_prefix":"经营活动产生的现金流量净","row_line_count":3,"header_excerpts":["合并现金流量表","单位:元 币种:人民币","2024年度 2023年度"],"values":{"2024":"1216142991.74","2023":"-426963656.49"}},
+    {"company_id":"688082.SH","document_id":"cninfo-688082-2024-ar-1222651596","metric_id":"accounts_receivable","pdf_page":126,"header_page":126,"row_prefix":"应收账款 ","row_line_count":1,"header_excerpts":["合并资产负债表","2024年12月31日 2023年12月31日","单位:元 币种:人民币"],"values":{"2024":"2132274574.65","2023":"1590013373.87"}}
+  ]
+}

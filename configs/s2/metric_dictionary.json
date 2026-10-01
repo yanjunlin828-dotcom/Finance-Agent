@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.1.0",
+  "calculation_version": "1.1.0",
+  "dictionary_id": "revenue_quality_core_v1",
+  "definitions": [
+    {
+      "metric_id": "revenue",
+      "name_zh": "营业收入",
+      "definition": "合并利润表列示的营业收入；首版使用营业总收入与其中营业收入相等的工业企业报表场景，并保留原始标签。",
+      "metric_kind": "FLOW",
+      "currency": "CNY",
+      "canonical_unit": "CNY_YUAN",
+      "allowed_raw_units": {"CNY_YUAN": "1", "CNY_TEN_THOUSAND_YUAN": "10000", "CNY_HUNDRED_MILLION_YUAN": "100000000"},
+      "statement_scope": "CONSOLIDATED",
+      "measurement_basis": "INCOME_STATEMENT_REPORTED_AMOUNT",
+      "allowed_formula_ids": ["period_growth_v1", "flow_to_flow_ratio_v1", "stock_to_flow_ratio_v1"],
+      "prohibited_equivalences": ["营业收入不等同于回款", "营业收入增长不自动等同于收入质量改善"],
+      "version": "1.0.0",
+      "status": "ACTIVE"
+    },
+    {
+      "metric_id": "operating_cash_flow_net",
+      "name_zh": "经营活动产生的现金流量净额",
+      "definition": "合并现金流量表列示的经营活动产生的现金流量净额。",
+      "metric_kind": "FLOW",
+      "currency": "CNY",
+      "canonical_unit": "CNY_YUAN",
+      "allowed_raw_units": {"CNY_YUAN": "1", "CNY_TEN_THOUSAND_YUAN": "10000", "CNY_HUNDRED_MILLION_YUAN": "100000000"},
+      "statement_scope": "CONSOLIDATED",
+      "measurement_basis": "CASH_FLOW_STATEMENT_REPORTED_AMOUNT",
+      "allowed_formula_ids": ["period_growth_v1", "flow_to_flow_ratio_v1"],
+      "prohibited_equivalences": ["单期经营现金流下降不自动等同于经营恶化", "管理层解释不等同于独立验证的唯一因果"],
+      "version": "1.0.0",
+      "status": "ACTIVE"
+    },
+    {
+      "metric_id": "accounts_receivable",
+      "name_zh": "应收账款",
+      "definition": "合并资产负债表列示的应收账款账面价值，而非未扣减坏账准备的账面余额。",
+      "metric_kind": "STOCK",
+      "currency": "CNY",
+      "canonical_unit": "CNY_YUAN",
+      "allowed_raw_units": {"CNY_YUAN": "1", "CNY_TEN_THOUSAND_YUAN": "10000", "CNY_HUNDRED_MILLION_YUAN": "100000000"},
+      "statement_scope": "CONSOLIDATED",
+      "measurement_basis": "BALANCE_SHEET_CARRYING_AMOUNT",
+      "allowed_formula_ids": ["period_growth_v1", "stock_to_flow_ratio_v1"],
+      "prohibited_equivalences": ["列示账面价值不等同于未扣减值准备的账面余额", "期末余额除以收入不称为应收账款周转率"],
+      "version": "1.0.0",
+      "status": "ACTIVE"
+    }
+  ],
+  "formulas": [
+    {"formula_id": "period_growth_v1", "expression": "(current - previous) / abs(previous)", "output_unit": "RATIO"},
+    {"formula_id": "flow_to_flow_ratio_v1", "expression": "numerator / denominator", "output_unit": "RATIO"},
+    {"formula_id": "stock_to_flow_ratio_v1", "expression": "ending_stock / period_flow", "output_unit": "RATIO"},
+    {"formula_id": "growth_gap_pp_v1", "expression": "(growth_a - growth_b) * 100", "output_unit": "PERCENTAGE_POINT"}
+  ]
+}

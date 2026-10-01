@@ -1,0 +1,212 @@
+{
+  "covered_codes": [
+    "TOOL_FAILURE"
+  ],
+  "description": "合成执行仅用于页面验收。",
+  "followups": [],
+  "frames": [
+    {
+      "events": [],
+      "expected": {
+        "auto_enter_report": true,
+        "enabled_operations": [
+          "VIEW_REPORT",
+          "VIEW_STEPS",
+          "FOLLOWUP",
+          "NEW_TASK"
+        ],
+        "result_available": true,
+        "suggested_panel": "REPORT"
+      },
+      "name": "stop",
+      "snapshot": {
+        "budget": {
+          "baseline_historical_estimate": null,
+          "currency": "USD",
+          "estimate_kind": "USAGE_ESTIMATE_NOT_INVOICE",
+          "note": "未提供金额表示未知，不能显示为零；组合总预算尚未建立。",
+          "pending_reservation": null,
+          "settled_estimate": null,
+          "source": null,
+          "total_calls": null
+        },
+        "outputs": [],
+        "provenance": {
+          "kind": "SYNTHETIC",
+          "label": "合成页面场景，非真实研究执行",
+          "notes": [
+            "数据模型与状态规则用于W1验收；操作只在样本内生效。"
+          ],
+          "source_artifacts": [],
+          "source_revalidation": "NOT_CHECKED"
+        },
+        "publication": {
+          "business_validation": "UNKNOWN",
+          "files": [],
+          "publication_status": "PARTIAL",
+          "reasons": [],
+          "result_available": true,
+          "scope_matches": null,
+          "verification": "SIMULATED_VALID"
+        },
+        "research": {
+          "calculation_slots": {},
+          "calculations": [],
+          "claims": [],
+          "dependency_issues": [],
+          "documents": [],
+          "evidence": [],
+          "gaps": [],
+          "observations": [],
+          "report_markdown": "# 合成页面报告\n\n此内容仅验证报告布局与状态，没有执行真实研究。",
+          "supplement": {
+            "action_count": 1,
+            "gaps": [
+              {
+                "affected_claim_ids": [],
+                "attempted_action_ids": [],
+                "closing_condition": "NEW_SNAPSHOT_OR_USER_INPUT",
+                "company_id": "002371.SZ",
+                "description": "【合成等待场景】当前资料不足，需要明确保留局限或另建新快照。",
+                "evidence_id": null,
+                "fiscal_year": null,
+                "gap_id": "fixture-source-gap",
+                "gap_type": "SOURCE_REQUEST",
+                "metric_id": null,
+                "need": null,
+                "resolution_note": null,
+                "severity": "MATERIAL",
+                "status": "FAILED"
+              }
+            ],
+            "history": [],
+            "no_progress_rounds": 0,
+            "rounds": 1,
+            "stop_reason": "TOOL_FAILURE"
+          }
+        },
+        "runtime": {
+          "cancel_requested": false,
+          "checkpoint_sha256": null,
+          "clarification_status": "NONE",
+          "connection_state": "CONNECTED",
+          "current_step_id": null,
+          "event_cursor": 0,
+          "event_stream_id": "fixture:b2-stop-tool-failure:v1",
+          "queue_state": "UNKNOWN",
+          "resume_readiness": "UNKNOWN",
+          "waiting_gap_ids": [],
+          "worker_state": "UNKNOWN"
+        },
+        "schema_version": "1.0.0",
+        "steps": [],
+        "task": {
+          "access_mode": "MOCK",
+          "available_actions": [
+            {
+              "authority": "READ_ONLY",
+              "enabled": true,
+              "operation": "VIEW_REPORT",
+              "reason": null
+            },
+            {
+              "authority": "READ_ONLY",
+              "enabled": true,
+              "operation": "VIEW_STEPS",
+              "reason": null
+            },
+            {
+              "authority": "READ_ONLY",
+              "enabled": false,
+              "operation": "VIEW_EVIDENCE",
+              "reason": "当前记录没有可读取的原文。"
+            },
+            {
+              "authority": "SIMULATED",
+              "enabled": true,
+              "operation": "FOLLOWUP",
+              "reason": null
+            },
+            {
+              "authority": "SIMULATED",
+              "enabled": false,
+              "operation": "CANCEL",
+              "reason": "当前终态或已受理取消不需要重复请求。"
+            },
+            {
+              "authority": "SIMULATED",
+              "enabled": false,
+              "operation": "CLARIFY",
+              "reason": "仅当前等待检查点可接收新的澄清决定。"
+            },
+            {
+              "authority": "SIMULATED",
+              "enabled": false,
+              "operation": "RESUME",
+              "reason": "恢复需要协调层明确核验安全；等待任务还需要已记录决定。"
+            },
+            {
+              "authority": "SIMULATED",
+              "enabled": true,
+              "operation": "NEW_TASK",
+              "reason": null
+            }
+          ],
+          "baseline": {
+            "final_state_sha256": null,
+            "label": "【合成过程】复用已有基线，不重播B1",
+            "origin": "RESULT_REUSE",
+            "task_id": "fixture-baseline"
+          },
+          "company_labels": {
+            "002371.SZ": "北方华创",
+            "688072.SH": "拓荆科技",
+            "688082.SH": "盛美上海"
+          },
+          "context": {
+            "as_of_date": "2025-04-30",
+            "company_ids": [
+              "002371.SZ",
+              "688072.SH",
+              "688082.SH"
+            ],
+            "corpus_snapshot_id": "s3-semiconductor-equipment-ar-v1",
+            "fiscal_years": [
+              2023,
+              2024
+            ],
+            "protocol_config_sha256": "0a9a877083f262f29407bfcfa0c7d3bea39c31bfc83e83e1db5c7be68c6ed52a",
+            "protocol_id": "revenue_quality_v1",
+            "protocol_version": "1.0.0",
+            "run_id": "fixture-b2-stop-tool-failure"
+          },
+          "created_at": null,
+          "execution_mode": "RULES",
+          "origin": "WEB_FIXTURE",
+          "question": "【页面样本】比较收入、经营现金流和应收账款，核查披露与局限。",
+          "task_id": "fixture-b2-stop-tool-failure",
+          "task_status": "PARTIAL",
+          "workflow": "B2"
+        },
+        "ui": {
+          "anchor": null,
+          "editing_followup": false,
+          "follow_progress": true,
+          "manual_browsing": false,
+          "panel": "PROCESS",
+          "reader_open": false,
+          "reduced_motion": false,
+          "scroll_y": 0,
+          "selected_evidence_id": null,
+          "selected_round": null,
+          "selected_step_id": null,
+          "text_selection_active": false
+        }
+      }
+    }
+  ],
+  "scenario_id": "b2-stop-tool-failure",
+  "schema_version": "1.0.0",
+  "synthetic_execution": true,
+  "title": "工具执行失败，保留已有成果"
+}
